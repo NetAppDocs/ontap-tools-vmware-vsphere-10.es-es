@@ -50,7 +50,7 @@ NOTE: Antes de continuar con la implementación, establezca el Programador de Re
 +
 El soporte ASUP solo puede habilitarse o deshabilitarse durante la implementación.
 
-.. Nombre de usuario del administrador y contraseña del administrador: Esta es la contraseña utilizada para iniciar sesión en la interfaz de usuario del Administrador de herramientas de ONTAP*.
+.. Nombre de usuario del administrador y contraseña del administrador: Esta es la contraseña utilizada para iniciar sesión en la interfaz de usuario de *ONTAP TOOLS MANAGER*.
 .. Introduzca la información del servidor NTP en el campo *Servidores NTP*.
 .. Contraseña de usuario de mantenimiento: Se utiliza para otorgar acceso a “Opciones de consola de mantenimiento”.
 

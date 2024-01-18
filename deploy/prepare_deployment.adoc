@@ -27,6 +27,7 @@ A continuación se muestran los requisitos de las herramientas de ONTAP antes de
 * Asegúrese de que el host o el grupo de recursos donde se implementa el OVA tenga los recursos mínimos mencionados en la sección *Requisitos para implementar las herramientas de ONTAP*.
 * Elimine la caché del explorador.
 * Se necesitan dos IP virtuales para el equilibrador de carga y el servidor API de Kubernetes. Obtenga dos direcciones IP gratuitas en la VLAN, utilizadas para la implementación, que se utiliza para acceder a los servicios después de la implementación.
+* Obtenga certificados de CA (certificados raíz, hoja e intermedios) de la CA comercial.
 * En caso de implementación de varios vCenter donde los certificados de CA personalizados son obligatorios, asigne el *Nombre de dominio* en el que se emite el certificado a la *IP virtual*. Realice una comprobación de ping en el nombre de dominio para comprobar si el dominio se está resolviendo a la IP deseada.
 * Se necesita una máquina virtual de almacenamiento en ONTAP con NFS habilitado. Siga estos pasos para configurar la máquina virtual de almacenamiento:
 +

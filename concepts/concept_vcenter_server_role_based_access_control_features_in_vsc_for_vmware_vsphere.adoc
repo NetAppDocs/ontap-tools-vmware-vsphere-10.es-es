@@ -38,7 +38,7 @@ Para completar correctamente una tarea, debe contar con los roles de RBAC de vCe
 
 NOTE: Los roles de vCenter Server se aplican a los usuarios de las herramientas de ONTAP de vCenter, no a los administradores. De forma predeterminada, los administradores tienen acceso completo al producto y no requieren roles asignados a ellos.
 
-Los usuarios y grupos no tienen roles asignados. Ellos obtienen acceso a una función mediante el hecho de formar parte de un rol de vCenter Server.
+Los usuarios y los grupos obtienen acceso a un rol formando parte de un rol de vCenter Server.
 
 
 
