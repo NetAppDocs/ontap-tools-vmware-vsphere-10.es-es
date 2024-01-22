@@ -441,7 +441,6 @@ Ejemplo: Para una configuración multi-tenant, puede añadir el back-end de alma
   <block id="f6a8c4418598dbac9139a7fe52e99cd9" category="admonition">Como usuario existente, debe realizar la copia de seguridad OVA de 9,10/9,11 antes de actualizar a 9,10D parche o 9,11D parche</block>
   <block id="2db68a279bc2b75d7d1a4b6e68d05ff4" category="list-text">Habilite EL PUERTO 1527 de Derby en las herramientas de ONTAP existentes para VMware vSphere 9.10D2 y 9.11D4. Para habilitar el puerto, inicie sesión en la CLI con el usuario root y ejecute el siguiente comando:</block>
   <block id="e695b432b77d6bddfcb785c76f5e5442" category="inline-link-macro">Herramientas de ONTAP Inicio rápido</block>
-  <block id="6f6b7bd58886693f11eb96bd0341b5b3" category="list-text">Implemente OVA para herramientas de ONTAP para la versión VMware vSphere 10,0. Consulte <block ref="a02083ee995a4c6975877ba810ab5474" category="inline-link-macro-rx"></block></block>
   <block id="17a7ed8efe05072366e69496ed1711fb" category="list-text">Añada el vCenter que desea migrar a las herramientas de ONTAP para la versión VMware vSphere 10,0. Consulte <block ref="a10f9e2fb5f93213a95f892ddd0bf865" category="inline-link-macro-rx"></block>.</block>
   <block id="184c4f313c0a230f7a83d7121fa485d7" category="inline-link-macro">Back-end de almacenamiento incorporado</block>
   <block id="bf632d416dbc3267749473a4eedebc79" category="list-text">El back-end de almacenamiento incorporado localmente desde las API de vCenter de complementos remotos. Consulte <block ref="3019410685f421965726529ee880cf27" category="inline-link-macro-rx"></block>. Agregue almacenamiento como ámbito local para la migración.</block>
@@ -675,7 +674,6 @@ El menú de informe de resumen de máquina virtual vVols proporciona las métric
   <block id="ff31982aef870d546d52f49bb30ef34b" category="section-title">Requisitos de puesta en marcha</block>
   <block id="26d3524e83da73ce160fdf15b9ee1f7f" category="paragraph">Antes de implementar las herramientas ONTAP para VMware vSphere, debe estar familiarizado con los requisitos de espacio para el paquete de puesta en marcha y algunos requisitos básicos del sistema host.</block>
   <block id="f4930bf161a0a7075db869066f0839f9" category="paragraph">Las herramientas de ONTAP se pueden usar con un servidor Windows vCenter Server o con un servidor vCenter Server VirtualAppliance (vcsa) de VMware. Debe implementar las herramientas de ONTAP en una instancia de vSphere compatible que incluya el sistema ESXi.</block>
-  <block id="ec86808f81c82b9651e18a844d1ea19f" category="paragraph">Para obtener más información, consulte <block ref="cab16d3be602ba465c507fec284cffbd" category="inline-link-macro-rx"></block></block>
   <block id="86f56c72e0832c1bb59b9394dbcb0853" category="section-title">Requisitos de las herramientas de ONTAP</block>
   <block id="dfa57bc5abba0952197bf25265b987c7" category="list-text">Descargue el archivo .ova.</block>
   <block id="a81177e1cbc66e893d0b2b880b7fb4f4" category="list-text">Las credenciales de inicio de sesión para la instancia de vCenter Server.</block>
@@ -841,4 +839,6 @@ Almacenamiento back-ends y realizar la tarea de herramientas ONTAP. Los roles ON
   <block id="31b887a5d4bfcf42237476c03005131d" category="paragraph">Los usuarios y los grupos obtienen acceso a un rol formando parte de un rol de vCenter Server.</block>
   <block id="8a52f25f3fca1f3b4922e7e5dc09fb04" category="admonition">El flujo de trabajo Delete vVols Datastore elimina los volúmenes de los almacenes de datos si se superó la marca delete_volume como true con independencia de si se gestiona o no el volumen del almacén de datos.</block>
   <block id="d0119a1425315c47822975d16de6de70" category="sidebar">Información general del control de acceso basado en roles para herramientas de ONTAP</block>
+  <block id="9984e4b52821af66b163b37639e5ffca" category="list-text">Implemente OVA para herramientas de ONTAP para la versión VMware vSphere 10,0. Consulte <block ref="09991ee05a1b93f3c38bbfed0e5d1010" category="inline-link-macro-rx"></block></block>
+  <block id="e5317f6738020b54574baa6f35cf9f92" category="paragraph">Para obtener más información, consulte <block ref="cab16d3be602ba465c507fec284cffbd" category="inline-link-macro-rx"></block></block>
 </blocks>
