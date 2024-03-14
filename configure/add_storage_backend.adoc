@@ -19,7 +19,7 @@ Esta tarea le ayuda a incorporar el clúster de ONTAP.
 
 * Pasos*
 
-. Iniciar https://loadBalanceIP:8443/virtualization/ui/[] Desde el explorador con las credenciales de administrador de las herramientas de ONTAP proporcionadas durante la implementación.
+. Iniciar `\https://loadBalanceIP:8443/virtualization/ui/` Desde el explorador con las credenciales de administrador de las herramientas de ONTAP proporcionadas durante la implementación.
 . Seleccione *Backends de almacenamiento* en la barra lateral.
 . Seleccione *Agregar*.
 . Proporcione los detalles de la dirección IP del servidor o FQDN, nombre de usuario y contraseña y seleccione *Agregar*.

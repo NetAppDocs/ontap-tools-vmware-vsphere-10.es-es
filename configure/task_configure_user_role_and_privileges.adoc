@@ -15,7 +15,7 @@ Es posible configurar nuevos roles y privilegios de usuario para gestionar back-
 
 *Lo que necesitará*
 
-* Debe haber descargado el archivo de privilegios de ONTAP de las herramientas de ONTAP mediante \https://<loadbalancerIP>:8443/virtualization/user-privileges/users_roles.zip.
+* Debe haber descargado el archivo de privilegios de ONTAP de las herramientas de ONTAP mediante `\https://<loadbalancerIP>:8443/virtualization/user-privileges/users_roles.zip`.
 +
 
 NOTE: Puede crear usuarios en el clúster o a nivel de SVM. También puede crear usuarios sin utilizar el archivo user_roles.json y, si hace esto, debe tener un conjunto mínimo de privilegios en el nivel de SVM.

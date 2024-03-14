@@ -21,7 +21,7 @@ Siga estos pasos para añadir back-ends de almacenamiento.
 
 * Pasos*
 
-. Iniciar https://loadBalanceIP:8443/virtualization/ui/[] Desde el explorador con las credenciales de administrador de las herramientas de ONTAP proporcionadas durante la implementación.
+. Iniciar `\https://loadBalanceIP:8443/virtualization/ui/` Desde el explorador con las credenciales de administrador de las herramientas de ONTAP proporcionadas durante la implementación.
 . Seleccione *Backends de almacenamiento* en la barra lateral.
 . Seleccione *Agregar*.
 
@@ -32,7 +32,7 @@ Siga estos pasos para añadir back-ends de almacenamiento.
 
 Siga los pasos que se indican a continuación para modificar el back-end de almacenamiento existente.
 
-. Iniciar https://loadBalanceIP:8443/virtualization/ui/[] Desde el explorador con las credenciales de administrador de las herramientas de ONTAP proporcionadas durante la implementación.
+. Iniciar `\https://loadBalanceIP:8443/virtualization/ui/` Desde el explorador con las credenciales de administrador de las herramientas de ONTAP proporcionadas durante la implementación.
 . Seleccione los back-ends de almacenamiento en la barra lateral.
 . Seleccione el *Storage Backend* que desea modificar
 . Haga clic en el menú de elipsis vertical y seleccione *Modificar*.
@@ -46,7 +46,7 @@ Siga los pasos que se indican a continuación para modificar el back-end de alma
 Debe eliminar todos los almacenes de datos conectados al back-end de almacenamiento antes de quitar el back-end de almacenamiento.
 Siga los pasos a continuación para quitar el back-end de almacenamiento.
 
-. Iniciar https://loadBalanceIP:8443/virtualization/ui/[] Desde el explorador con las credenciales de administrador de las herramientas de ONTAP proporcionadas durante la implementación.
+. Iniciar `\https://loadBalanceIP:8443/virtualization/ui/` Desde el explorador con las credenciales de administrador de las herramientas de ONTAP proporcionadas durante la implementación.
 . Seleccione *Backends de almacenamiento* en la barra lateral.
 . Seleccione el back-end de almacenamiento que desea quitar
 . Haga clic en el menú de elipsis vertical y seleccione * Eliminar *.

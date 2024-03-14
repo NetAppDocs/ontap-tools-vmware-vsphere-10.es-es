@@ -19,7 +19,7 @@ Puede añadir y gestionar varios vCenter con una instancia de herramientas de ON
 
 * Pasos*
 
-. Iniciar https://loadBalanceIP:8443/virtualization/ui/[] Desde el explorador con las credenciales de administrador de las herramientas de ONTAP proporcionadas durante la implementación.
+. Iniciar `\https://loadBalanceIP:8443/virtualization/ui/` Desde el explorador con las credenciales de administrador de las herramientas de ONTAP proporcionadas durante la implementación.
 . Seleccione vCenters en la barra lateral
 . Seleccione *ADD* para los vCenters integrados con la dirección IP/nombre de host de vCenter, nombre de usuario, contraseña y puerto.
 

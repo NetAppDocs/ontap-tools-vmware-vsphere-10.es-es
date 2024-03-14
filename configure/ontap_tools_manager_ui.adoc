@@ -26,7 +26,7 @@ Ejemplo: Para una configuración multi-tenant, puede añadir el back-end de alma
 * Descargas del paquete de registros
 
 
-Para acceder a la IU de herramientas de ONTAP, inicie https://loadBalanceIP:8443/virtualization/ui/[] Desde el explorador e inicie sesión con las credenciales de administrador de herramientas de ONTAP que se proporcionan durante la implementación.
+Para acceder a la IU de herramientas de ONTAP, inicie `\https://loadBalanceIP:8443/virtualization/ui/` Desde el explorador e inicie sesión con las credenciales de administrador de herramientas de ONTAP que se proporcionan durante la implementación.
 
 image::../media/ontap_tools_manager.png[IU del gestor de herramientas de ONTAP]
 

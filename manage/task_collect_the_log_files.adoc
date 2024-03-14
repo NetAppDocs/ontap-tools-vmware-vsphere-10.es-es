@@ -15,7 +15,7 @@ Puede recoger los archivos de registro para las herramientas de ONTAP para VMwar
 
 * Pasos*
 
-. Iniciar https://loadBalanceIP:8443/virtualization/ui/[] Desde el explorador con las credenciales de administrador de las herramientas de ONTAP proporcionadas durante la implementación.
+. Iniciar `\https://loadBalanceIP:8443/virtualization/ui/` Desde el explorador con las credenciales de administrador de las herramientas de ONTAP proporcionadas durante la implementación.
 . Seleccione *Log Bundles* en la barra lateral.
 +
 Esta operación puede llevar varios minutos.

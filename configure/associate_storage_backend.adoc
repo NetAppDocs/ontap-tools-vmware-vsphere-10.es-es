@@ -19,7 +19,7 @@ Esta tarea le ayuda a crear un mapeo entre el back-end de almacenamiento y la vC
 
 * Pasos*
 
-. Iniciar https://loadBalanceIP:8443/virtualization/ui/[] Desde el explorador con las credenciales de administrador de las herramientas de ONTAP proporcionadas durante la implementación.
+. Iniciar `\https://loadBalanceIP:8443/virtualization/ui/` Desde el explorador con las credenciales de administrador de las herramientas de ONTAP proporcionadas durante la implementación.
 . Seleccione vCenters en la barra lateral.
 . Haga clic en los tres puntos verticales en la instancia de vCenter que desea asociar con back-ends de almacenamiento.
 . En el menú desplegable, seleccione el back-end de almacenamiento.
