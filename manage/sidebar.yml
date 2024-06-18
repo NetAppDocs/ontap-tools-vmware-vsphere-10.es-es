@@ -4,32 +4,66 @@ title: Gestione las herramientas de ONTAP
 entries:
 - title: Gestionar almacenes de datos
   entries:
-  - title: Expanda o reduzca el almacenamiento de almacén de datos de VVOL
-    url: "/manage/expand_storage_of_vvol_datastore.html"
-  - title: Elimine el almacén de datos vVols
-    url: "/manage/task_remove_storage_from_a_vvols_datastore.html"
-  - title: Montar y desmontar un almacén de datos de vVols
-    url: "/manage/task_mount_a_vvols_datastore.html"
+  - title: Montar almacenes de datos de NFS y VMFS
+    url: "/manage/mount-datastores-on-host.html"
+  - title: Montar el almacén de datos de vVols
+    url: "/manage/mount-a-vvols-datastore.html"
+  - title: Cambie el tamaño de los almacenes de datos NFS y VMFS
+    url: "/manage/resize-datastores.html"
+  - title: Expanda VVol datastores
+    url: "/manage/expand-storage-of-vvol-datastore.html"
+  - title: Reducir los almacenes de datos de vVols
+    url: "/manage/remove-storage-from-a-vvols-datastore.html"
+  - title: Eliminar almacenes de datos
+    url: "/manage/delete-vvols.html"
+  - title: Vistas de almacenamiento ONTAP para almacenes de datos
+    url: "/manage/storage-view-datastore.html"
+  - title: Vista de almacenamiento de equipos virtuales
+    url: "/manage/virtual-machine-storage-view-datastore.html"
+- title: Permite gestionar el umbral de almacenamiento
+  url: "/manage/manage-storage-threshold.html"
 - title: Gestione el back-end de almacenamiento
-  url: "/manage/storage_backend.html"
-- title: Gestión de vCenter
-  url: "/manage/manage_vcenter.html"
-- title: Gestionar el ciclo de vida de VVol
-  url: "/manage/vvol_lifecycle_management.html"
-- title: Políticas de exportación y iGroup gestionadas
-  url: "/manage/igroup_management.html"
-- title: Acceda a la consola de mantenimiento de las herramientas de ONTAP
+  url: "/manage/storage-backend.html"
+- title: Gestione la instancia de vCenter Server
+  url: "/manage/manage-vcenter.html"
+- title: Gestionar certificados
+  url: "/manage/certificate-manage.html"
+- title: Gestione los igroups y las políticas de exportación
+  url: "/manage/igroup-management.html"
+- title: Acceda a las herramientas de ONTAP para la consola de mantenimiento de VMware
+    vSphere
   entries:
-  - title: Descripción general de la consola de mantenimiento de las herramientas
-      de ONTAP
-    url: "/manage/reference_maintenance_console_of_ontap_tools_for_vmware_vsphere.html"
+  - title: Descripción general de las herramientas de ONTAP para la consola de mantenimiento
+      de VMware vSphere
+    url: "/manage/maintenance-console.html"
   - title: Configurar el acceso de diagnóstico remoto
-    url: "/manage/task_configure_vasa_provider_to_use_ssh_for_remote_diag_access.html"
+    url: "/manage/configure-remote-diagnostic-access.html"
   - title: Inicie SSH en otros nodos
-    url: "/manage/start_the_ssh_on_other_nodes.html"
+    url: "/manage/start-the-ssh-on-other-nodes.html"
   - title: Actualice las credenciales de vCenter y ONTAP
-    url: "/manage/update_vcenter_ontap_credentials.html"
+    url: "/manage/update-vcenter-credentials.html"
+- title: Informes sobre la herramienta ONTAP
+  url: "/manage/reports.html"
 - title: Recoja los archivos de registro
-  url: "/manage/task_collect_the_log_files.html"
-- title: Detección
-  url: "/manage/discovery.html"
+  url: "/manage/collect-the-log-files.html"
+- title: Gestión de máquinas virtuales
+  entries:
+  - title: Consideraciones para migrar o clonar máquinas virtuales
+    url: "/manage/migrate-virtual-machines.html"
+  - title: Migre máquinas virtuales con almacenes de datos NFS y VMFS a almacenes
+      de datos vVols
+    url: "/manage/migrate-standard-virtual-machines-to-vvols-datastores.html"
+  - title: Limpieza de VASA
+    url: "/manage/delete-virtual-machines.html"
+- title: Modifique la configuración del host ESXi
+  url: "/manage/edit-esxi-host-settings.html"
+- title: Gestionar contraseñas
+  entries:
+  - title: Cambiar la contraseña del Administrador de herramientas de ONTAP
+    url: "/manage/change-manager-password.html"
+  - title: Restablezca la contraseña del administrador de herramientas de ONTAP
+    url: "/manage/reset-manager-password.html"
+  - title: Restablecer contraseña de usuario de aplicación
+    url: "/manage/reset-app-password.html"
+  - title: Restablezca la contraseña de usuario de la consola de mantenimiento
+    url: "/manage/reset-maint-password.html"

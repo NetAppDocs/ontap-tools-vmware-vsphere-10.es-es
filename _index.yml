@@ -1,32 +1,35 @@
 ---
 indexpage:
+  title: Documentación de las herramientas de ONTAP para VMware vSphere
   lead: Las herramientas de ONTAP para VMware vSphere permiten configurar, gestionar
     y proteger los almacenes de datos virtuales en el entorno de vCenter Server.
   tiles:
   - title: Manos a la obra
     links:
     - title: Notas de la versión
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886542
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3319071
     - title: Obtenga información sobre las herramientas de ONTAP para VMware vSphere
-      url: "/concepts/concept_ontap_tools_overview.html"
-    - title: Herramientas de ONTAP Inicio rápido
-      url: "/deploy/qsg_10.html"
-    - title: Ponga en funcionamiento las herramientas de ONTAP
-      url: "/deploy/prepare_deployment.html"
-    - title: Migrar herramientas de ONTAP
-      url: migrate/migrate_to_ng.html
-  - title: Utilice las herramientas de ONTAP
+      url: "/concepts/ontap-tools-overview.html"
+    - title: Ponga en marcha herramientas de ONTAP para VMware vSphere
+      url: "/deploy/prepare-deployment.html"
+    - title: Actualiza a la última versión de herramientas de ONTAP para VMware vSphere
+      url: "/upgrade/upgrade-ontap-tools.html"
+    - title: Migre herramientas de ONTAP para VMware vSphere
+      url: migrate/migrate-to-latest-ontaptools.html
+  - title: Utilice las herramientas de ONTAP para VMware vSphere
     links:
     - title: Configure el control de acceso basado en roles
-      url: "/concepts/concept_vcenter_server_role_based_access_control_features_in_vsc_for_vmware_vsphere.html"
+      url: "/concepts/vcenter-server-role-based-access-control-features.html"
     - title: Configurar el diagnóstico remoto
-      url: "/manage/task_configure_vasa_provider_to_use_ssh_for_remote_diag_access.html"
+      url: "/manage/configure-remote-diagnostic-access.html"
     - title: Configuración de la alta disponibilidad
-      url: "/concepts/concept_configure_high_availability_for_ontap_tools_for_vmware_vsphere.html"
+      url: "/concepts/high-availability.html"
+    - title: Proteja los almacenes de datos
+      url: "/protect/enable-storage-replication-adapter.html"
   - title: Más recursos
     links:
     - title: Documentación para versiones anteriores de herramientas de ONTAP para
-        VMware
+        VMware vSphere
       url: https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=63792
     - title: Base de conocimientos de NetApp - Herramientas de ONTAP
       url: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/VSC_and_VASA_Provider
