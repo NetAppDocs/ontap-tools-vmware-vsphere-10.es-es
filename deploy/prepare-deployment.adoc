@@ -23,7 +23,7 @@ A continuación, se muestran las herramientas de ONTAP para los requisitos de VM
 . Configurar y configurar el entorno de vCenter Server.
 . Descargue el archivo _.ova_.
 . (Opcional) Utilizado para el usuario de automatización - Recopilar el archivo JSON de las colecciones Postman proporcionado por NetApp.
-. Credenciales principales de vCenter Server para implementar el OVA.
+. Credenciales principales de vCenter Server para implementar el OVA. La contraseña del servidor primario de vCenter no debe contener estos caracteres especiales($, ', ')
 . Asegúrese de que el host o el pool de recursos donde se despliega el OVA tengan los recursos mínimos mencionados en el link:../deploy/sizing-requirements.html["Requisitos previos para implementar herramientas de ONTAP para VMware vSphere"] sección.
 . Las credenciales de inicio de sesión para la instancia de vCenter Server en la cual las herramientas de ONTAP para VMware vSphere se conectarán a después de la implementación para el registro.
 . Elimine la caché del explorador.
@@ -47,7 +47,7 @@ Los nombres de host deben asignarse a las direcciones IP libres en el DNS antes 
 .. Protocolo
 .. Las direcciones IP virtuales para el plano de control de Kubernetes.
 .. Lista desplegable HA/SIN HA
-.. Lista de nombres de host)
+.. Lista de nombres de host
 .. Direcciones IP (cadena)
 .. Nombre de biblioteca de contenido
 .. Nombre de plantilla OVF

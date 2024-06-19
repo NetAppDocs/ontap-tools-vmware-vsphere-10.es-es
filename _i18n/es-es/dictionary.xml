@@ -45,7 +45,6 @@ La memoria recomendada según el tamaño de la implementación y por nodo se mue
   <block id="97157b0bbe0ba304414559c34c463fa8" category="section-title">Requisitos mínimos de almacenamiento y aplicaciones:</block>
   <block id="17d884d1bc0b828c55d255e092457a6d" category="cell">Almacenamiento, host y aplicaciones</block>
   <block id="253b40ae359ba25b56231803430c4873" category="cell">ONTAP</block>
-  <block id="8887a9a417a1629326acdb917d224337" category="cell">VSphere de VMware</block>
   <block id="42094e9e4a0f05012b8d6753300a1657" category="cell">Hosts ESXi</block>
   <block id="6a81c846c8c35b839d7586abc329dfda" category="cell">El servidor de vCenter</block>
   <block id="cc7378d924a7a641ed80e623576e3981" category="cell">Proveedor de VASA</block>
@@ -72,7 +71,6 @@ La memoria recomendada según el tamaño de la implementación y por nodo se mue
   <block id="0ab827837bc64b58b05cd348d8091ccd" category="list-text">La casilla de verificación *Activar ASUP* está seleccionada de forma predeterminada.</block>
   <block id="668e412f320c49b9f89a8e8605221e62" category="list-text">Contraseña de usuario de mantenimiento: Se utiliza para otorgar acceso a “Opciones de consola de mantenimiento”.</block>
   <block id="5465c5a8e21220567f3ba4f1efaac90d" category="list-text">En la ventana *Personalizar plantilla* &gt; *Configuración de implementación*, introduzca los siguientes detalles:</block>
-  <block id="344e7fea24fbe3dae5345953d18ee85c" category="list-text">Introduzca la contraseña de ONTAP/SVM.</block>
   <block id="08c09a05323f6950d8f48ace64dcce65" category="list-text">La VM principal está habilitada de forma predeterminada. No alteres esta opción.</block>
   <block id="c62a64bea2e2d5c666e24dfb5d069512" category="list-text">En la ventana *Personalizar plantilla* &gt; *Detalles de biblioteca de contenido*, introduzca el *Nombre de biblioteca de contenido* y el *Nombre de plantilla OVF*.</block>
   <block id="263c52df144ff2a8cb1c5fb283b06e3b" category="list-text">En la ventana *Customize template* &gt; *Node Configuration*, introduzca las propiedades de red del OVA para los tres nodos.</block>
@@ -847,9 +845,7 @@ Puede restablecer los números a los valores recomendados, que son 80 para casi 
   <block id="a57c0ce4d3d1909f36fd6d1a7910403f" category="cell">Memoria (GB)</block>
   <block id="7749f88b50568c3684b1ec4d9887097a" category="cell">Requisitos mínimos de versión</block>
   <block id="2402f961ea404a2d19f517d27391d5ce" category="cell">Versión de revisión más reciente de ONTAP 9.12.1, 9.13.1 o 9.14.1</block>
-  <block id="4a5720859f5b334d0e52f781b6d0866b" category="cell">VMware 7.0U3, 8.0U1 o 8.0U2</block>
   <block id="ec1d455e2f0ce4adc778f46d4fbf159f" category="cell">ESXi 7.0.3</block>
-  <block id="25ae27c71592ed325ef896fdb496c487" category="cell">VCenter 7.0U3, 8.0U1 o 8.0U2</block>
   <block id="88d1955de012defb14b2db6f4797ff20" category="cell">10,1</block>
   <block id="4ee667a9190fbad5088c191cedc77afb" category="paragraph">Debe tener en cuenta algunos requisitos al personalizar la implementación de las herramientas de ONTAP.</block>
   <block id="4de4e6307c23d1e06ba251e848109d58" category="paragraph">Esta es la contraseña asignada a la cuenta de administrador. Por motivos de seguridad, se recomienda que la longitud de la contraseña sea de entre 8 y 30 caracteres y contenga un mínimo de un carácter superior, uno inferior, un dígito y un carácter especial.</block>
@@ -929,9 +925,6 @@ Ejemplo: C1_sti67-vsim-ucs154k_1679633108::&gt; network route create -vserver &l
 Introduzca los siguientes detalles:
 .. Nombre de usuario y contraseña de aplicación: Este nombre de usuario y contraseña se utilizan para registrar tanto el proveedor de VASA como el SRA en vCenter Server.
 .. La casilla de verificación *Activar ASUP* está seleccionada de forma predeterminada.</block>
-  <block id="51491a1b63f1ab74ff3d5c3f04737d97" category="paragraph">+
-AutoSupport solo se puede habilitar o deshabilitar durante la implementación.</block>
-  <block id="06dada7d059c163e436d8babbfe496b2" category="list-text">Nombre de usuario del administrador y contraseña del administrador: Esta es la contraseña utilizada para iniciar sesión en el Administrador de herramientas de ONTAP.</block>
   <block id="2b86a57a5ac0aad5d414c4e50460a2d9" category="list-text">Seleccione la opción *Enable SVM Scope* cuando desee utilizar la cuenta de usuario SVM agregada directamente. Para usar el clúster de ONTAP, no seleccione la casilla de comprobación.</block>
   <block id="7bf4b753fd6180b89cfa814803b686df" category="admonition">Cuando el ámbito de SVM está habilitado, debe haber habilitado la compatibilidad de SVM con la dirección IP de gestión.</block>
   <block id="5068ca71ed06e693eb275de382372bac" category="admonition">La información proporcionada aquí se validará para los patrones adecuados durante el proceso de instalación. En caso de discrepancia, se mostrará un mensaje de error en la consola web y se le pedirá que corrija cualquier información incorrecta proporcionada.</block>
@@ -1079,17 +1072,6 @@ Puede recuperar la puesta en marcha del nodo único y las configuraciones de pue
   <block id="041bb037e3c06caf84dedc58c6457aab" category="list-text">En la ventana *Seleccionar redes*, seleccione una red de destino para cada red de origen.</block>
   <block id="33f9aca743a2e76b383f29162f592587" category="admonition">Es necesario conservar la dirección IP del balanceador de carga y la dirección IP de Kubernetes API Server. Se puede cambiar la dirección IP del nodo o conservar la misma dirección IP.</block>
   <block id="95a5639e9ced3c2a924d88f72bf15202" category="list-text">Nombre de usuario y contraseña de aplicación: Este nombre de usuario y contraseña se utilizan para registrar tanto el proveedor de VASA como el SRA en vCenter Server. Puede ser diferente del nombre de usuario y la contraseña proporcionados durante la implementación inicial.</block>
-  <block id="e0d1be9dd9681bb313cf7fc3d4d2466a" category="paragraph">AutoSupport solo se puede habilitar o deshabilitar durante la implementación.</block>
-  <block id="d760d8124a3b7b4f25d7a060fbbe28c2" category="list-text">Nombre de usuario del administrador y contraseña del administrador: Esta es la contraseña utilizada para iniciar sesión en el Administrador de herramientas de ONTAP. Puede ser diferente del nombre de usuario y la contraseña proporcionados durante la implementación inicial.</block>
-  <block id="fbc464170efb8207d41115c5aa6b9f5c" category="list-text">Contraseña de usuario de mantenimiento: Se utiliza para otorgar acceso a las opciones de la consola de mantenimiento.</block>
-  <block id="56a705dd58842237be39c9dc6690dc11" category="list-text">En la ventana *Personalizar plantilla* &gt; *Configuración de implementación*, introduzca los detalles proporcionados durante la implementación. Todos los valores de esta sección deben ser iguales que los proporcionados durante la puesta en marcha inicial, excepto el valor de la LIF de datos.</block>
-  <block id="1878c6b5e06a450ebbda55598dd1f46c" category="admonition">No se debe cambiar el nombre de la SVM de almacenamiento, ya que es donde se almacenan los datos de recuperación. Esto se aplica a la cuenta de usuario de SVM que se añade directamente también.</block>
-  <block id="8996b03753e9ce7a80c11afe0264c52b" category="list-text">Si se trata de una recuperación en la puesta en marcha de alta disponibilidad, facilite los siguientes detalles:</block>
-  <block id="1f53b41bbade1ab389a3607b4142c02b" category="list-text">Detalles de la biblioteca de contenido.</block>
-  <block id="740a5b1a45f3bf1d6aafe19c7e697d76" category="list-text">Detalles de la configuración de vCenter.</block>
-  <block id="6451c3c167ea5dc647d10405f29fbe55" category="list-text">En la ventana *Personalizar plantilla* &gt; *Configuración del nodo*, introduzca los detalles según la configuración que está intentando recuperar, configuración no HA o HA.</block>
-  <block id="8c5fb624497b2b75cfb141fd905af66d" category="list-text">Al seleccionar *OK* o *Cancel*, los valores proporcionados se volverán a validar. Usted tiene la disposición para corregir cualquier valor por 3 veces. Si no se corrige en los 3 intentos, la instalación del producto se detiene y se recomienda que pruebe la instalación en una máquina virtual nueva.</block>
-  <block id="195da22c42b67fa5228bd7b955f4c001" category="list-text">Después de la instalación correcta, la consola web muestra el estado de las herramientas de ONTAP para VMware vSphere. Después de una instalación correcta, debe editar manualmente los requisitos de hardware según las directrices de <block ref="6def0b647efb922e7343ea3e904763b4" category="inline-link-macro-rx"></block> página.</block>
   <block id="dd47efe31efd4cc6180876f236c1c622" category="doc">Descargue las herramientas de ONTAP para VMware vSphere</block>
   <block id="4c322557b2037165ab2dfd286fa6a839" category="paragraph">Puede descargar la<block ref="daf4de58883c030f033f07e61debf025" prefix=" " category="inline-code"></block> Archivo que contiene binarios (_.ova_) y certificados firmados para herramientas de ONTAP para VMware vSphere del<block ref="c28762f698ce57f013f1f9dff01575ab" category="inline-link-rx"></block>.</block>
   <block id="5a3fc9b654cc05d821feead33114167a" category="paragraph">Una vez finalizada la puesta en marcha, las herramientas de ONTAP para VMware vSphere y los productos VASA se instalan en el entorno. De forma predeterminada, las herramientas de ONTAP para VMware vSphere comienzan a funcionar tan pronto como se decida el siguiente modelo de puesta en marcha y elija si desea habilitar el proveedor VASA en función de sus requisitos. Consulte <block ref="a322950c1b9e940cddaca5a47e2d5895" category="inline-link-macro-rx"></block> para obtener más detalles.</block>
@@ -1106,7 +1088,6 @@ Cree la biblioteca de contenido mediante los siguientes pasos:</block>
 Planificar con antelación la implementación y decidir cómo desea configurar las herramientas de ONTAP para VMware vSphere en su entorno.</block>
   <block id="e34466eda4e5b5f68501a10425c10513" category="paragraph">A continuación, se muestran las herramientas de ONTAP para los requisitos de VMware vSphere antes de continuar con la implementación:</block>
   <block id="1584251f717b5c5b67df88454cbd8688" category="list-text">(Opcional) Utilizado para el usuario de automatización - Recopilar el archivo JSON de las colecciones Postman proporcionado por NetApp.</block>
-  <block id="44e7cf5dfde42bfb03c0f3e90458f84e" category="list-text">Credenciales principales de vCenter Server para implementar el OVA.</block>
   <block id="d8cea021ae68f06628331588ee1f7b9f" category="list-text">Asegúrese de que el host o el pool de recursos donde se despliega el OVA tengan los recursos mínimos mencionados en el <block ref="6def0b647efb922e7343ea3e904763b4" category="inline-link-macro-rx"></block> sección.</block>
   <block id="3aa072fa38b0383a0d289fde6a7bdb7c" category="list-text">Las credenciales de inicio de sesión para la instancia de vCenter Server en la cual las herramientas de ONTAP para VMware vSphere se conectarán a después de la implementación para el registro.</block>
   <block id="0d129795e915c1dfe3e328d2bb4d641e" category="list-text">Para la implementación que no sea de alta disponibilidad, necesita tres direcciones IP libres: Una dirección IP libre para el balanceador de carga y una dirección IP libre para el plano de control de Kubernetes y una dirección IP para el nodo. Para la implementación de alta disponibilidad, junto con estas tres direcciones IP, necesitará dos direcciones IP más para el segundo y el tercer nodo.
@@ -1128,7 +1109,6 @@ Los nombres de host deben asignarse a las direcciones IP libres en el DNS antes 
   <block id="888a77f5ac0748b6c8001822417df8b6" category="list-text">Protocolo</block>
   <block id="85c3dba7de47b75da65759dc70b8b923" category="list-text">Las direcciones IP virtuales para el plano de control de Kubernetes.</block>
   <block id="a3163c4ad052022f35412b6401e0b839" category="list-text">Lista desplegable HA/SIN HA</block>
-  <block id="0013740280b976265b3a365f87034e52" category="list-text">Lista de nombres de host)</block>
   <block id="1d05598e5b2e831093de6c37162ef10e" category="list-text">Direcciones IP (cadena)</block>
   <block id="511ff4e20173d429ce366128f541bc37" category="list-text">Nombre de biblioteca de contenido</block>
   <block id="e32539630c3af1f9f5940e0473d0ed81" category="list-text">Nombre de plantilla OVF</block>
@@ -1651,7 +1631,6 @@ Por ejemplo, si la configuración del administrador de cabinas se encuentra en e
   <block id="7ceb96cf2f53ab82cf68115087e42798" category="inline-link">Documentación de VMware vSphere: Cambie la configuración del proveedor de almacenamiento</block>
   <block id="b16f93be354af7771dc8708241003863" category="paragraph"><block ref="b16f93be354af7771dc8708241003863" category="inline-link-rx"></block></block>
   <block id="6deaa5e1cafca832bac1b468485b9454" category="section-title">Configuración de almacenamiento</block>
-  <block id="c98cb9d5c24721c2e52ce120aae0abef" category="paragraph">En entornos de alta escala, debe definir el valor de<block ref="e7a7316b2dab3875c5aa0977c256ae38" prefix=" " category="inline-code"></block> y..<block ref="b6c033f4806640a2a2858512cf9f8c1b" prefix=" " category="inline-code"></block> intervalo de tiempo de espera de 99.999 segundos.</block>
   <block id="00a510939945fb6eb144a70baf6f9fd4" category="admonition">El intervalo de tiempo de espera especificado es el valor máximo. No es necesario esperar hasta que se llegue al tiempo de espera máximo. La mayoría de comandos terminan dentro del intervalo máximo de tiempo de espera establecido.</block>
   <block id="b2dacb077897e6e20eab5019528b0b4d" category="paragraph">La documentación de VMware sobre la modificación de la configuración del proveedor DE SAN tiene más información.</block>
   <block id="c106a2cd545fb9665a990784905584ee" category="inline-link">Documentación de VMware Site Recovery Manager: Cambiar la configuración de almacenamiento</block>
@@ -1867,4 +1846,39 @@ Los códigos de error tienen una longitud de cinco dígitos, donde los dos prime
   <block id="6956cfc9382ccb41c8ac57f99255b409" category="sidebar">Comprobar los sistemas de almacenamiento replicados</block>
   <block id="437c283786a19efa2a883c2776477f2a" category="sidebar">Migre a las herramientas de ONTAP más recientes para la versión de VMware vSphere</block>
   <block id="a2fa58344be7fbd9a2be0320a8df0f77" category="sidebar">Actualice las herramientas de ONTAP</block>
+  <block id="42ac03a8bab25efc61489f3923976820" category="summary">Si ha olvidado la contraseña del administrador de herramientas de ONTAP, puede restablecer las credenciales de administrador con el token generado por las herramientas de ONTAP para la consola de mantenimiento de VMware vSphere.</block>
+  <block id="5f479a62f2104046972d10f2cbf88255" category="paragraph">Cuando alcance un tiempo de espera, aumente los valores de<block ref="e7a7316b2dab3875c5aa0977c256ae38" prefix=" " category="inline-code"></block> y..<block ref="b6c033f4806640a2a2858512cf9f8c1b" prefix=" " category="inline-code"></block> a un valor superior.</block>
+  <block id="2aa80bb65f090b8d6c9ff632d1836a2b" category="list-text">Credenciales principales de vCenter Server para implementar el OVA. La contraseña del servidor primario de vCenter no debe contener estos caracteres especiales($, ', ')</block>
+  <block id="7443ebb7d3e5fd61a07b688ed33f3c1c" category="list-text">Lista de nombres de host</block>
+  <block id="78188fd22202c681b7a1e12f470fb065" category="paragraph">AutoSupport solo se puede habilitar o deshabilitar durante la implementación.
+.. En el campo *URL de proxy ASUP*, proporcione esta URL para evitar el bloqueo del firewall para la transmisión de datos AutoSupport.
+.. Nombre de usuario del administrador y contraseña del administrador: Esta es la contraseña utilizada para iniciar sesión en el Administrador de herramientas de ONTAP. Puede ser diferente del nombre de usuario y la contraseña proporcionados durante la implementación inicial.
+.. Ingrese la información de su servidor NTP en el campo *Servidores NTP*.
+.. Contraseña de usuario de mantenimiento: Se utiliza para otorgar acceso a las opciones de la consola de mantenimiento.
+. En la ventana *Personalizar plantilla* &gt; *Configuración de implementación*, introduzca los detalles proporcionados durante la implementación. Todos los valores de esta sección deben ser iguales que los proporcionados durante la puesta en marcha inicial, excepto el valor de la LIF de datos.</block>
+  <block id="59ccb8025c048802013b2da5a2e36f2e" category="admonition">No se debe cambiar el nombre de la SVM de almacenamiento, ya que es donde se almacenan los datos de recuperación. Esto se aplica a la cuenta de usuario de SVM que se añade directamente también.
+. Si se trata de una recuperación en la puesta en marcha de alta disponibilidad, facilite los siguientes detalles:
+.. Detalles de la biblioteca de contenido.
+.. Detalles de la configuración de vCenter.
+. En la ventana *Personalizar plantilla* &gt; *Configuración del nodo*, introduzca los detalles según la configuración que está intentando recuperar, configuración no HA o HA.
+. Revise los detalles en la ventana *Listo para completar*, seleccione *Finalizar*.</block>
+  <block id="4a3c1579f0245205d5b4f1e7a0fb0199" category="paragraph">+
+A medida que se crea la tarea de implementación, el progreso se muestra en la barra de tareas de vSphere.
+. Encienda la máquina virtual después de completar la tarea.</block>
+  <block id="ac13898d80338928a374c608bab436b1" category="paragraph">+
+Comienza la instalación. Puede realizar un seguimiento del progreso de la instalación en la consola web de VM.
+Como parte de la instalación, se validan las configuraciones de nodos. Se validan las entradas proporcionadas en diferentes secciones de la plantilla Personalizar en el formulario OVF. En caso de discrepancias, un cuadro de diálogo le solicita que realice una acción correctiva.
+. Realice los cambios necesarios en el indicador de diálogo. Utilice el botón Tab para navegar por el panel e ingresar sus valores, *OK* o *Cancel*.
+. Al seleccionar *OK* o *Cancel*, los valores proporcionados se volverán a validar. Usted tiene la disposición para corregir cualquier valor por 3 veces. Si no se corrige en los 3 intentos, la instalación del producto se detiene y se recomienda que pruebe la instalación en una máquina virtual nueva.
+. Después de la instalación correcta, la consola web muestra el estado de las herramientas de ONTAP para VMware vSphere. Después de una instalación correcta, debe editar manualmente los requisitos de hardware según las directrices de <block ref="6def0b647efb922e7343ea3e904763b4" category="inline-link-macro-rx"></block> página.</block>
+  <block id="a84fd12354047a6ec2a5b6b1711524f5" category="cell">VCenter 7.0U3</block>
+  <block id="b5a405460149721025d3f0b33b133321" category="list-text">Introduzca la contraseña de ONTAP/SVM. La contraseña de inicio de sesión de ONTAP/SVM para esta máquina virtual de almacenamiento no debe contener estos caracteres especiales($,',»).</block>
+  <block id="94f46bf8acbeafbae8c2da9d2cc27158" category="paragraph">AutoSupport solo se puede habilitar o deshabilitar durante la implementación.
+.. En el campo *URL de proxy ASUP*, proporcione esta URL para evitar el bloqueo del firewall para la transmisión de datos AutoSupport.
+.. Nombre de usuario del administrador y contraseña del administrador: Esta es la contraseña utilizada para iniciar sesión en el Administrador de herramientas de ONTAP.
+.. Ingrese la información de su servidor NTP en el campo *Servidores NTP*.
+.. Contraseña de usuario de mantenimiento: Se utiliza para otorgar acceso a “Opciones de consola de mantenimiento”.
+. En la ventana *Personalizar plantilla* &gt; *Configuración de implementación*, introduzca los siguientes detalles:</block>
+  <block id="b8237d978365427c8b91b5f11293f5e5" category="paragraph">+
+<block ref="89d79dbcc89ba4076180d653020a5110" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>

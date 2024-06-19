@@ -50,13 +50,10 @@ La memoria recomendada según el tamaño de la implementación y por nodo se mue
 | ONTAP | Versión de revisión más reciente de ONTAP 9.12.1, 9.13.1 o 9.14.1 
 
 
-| VSphere de VMware | VMware 7.0U3, 8.0U1 o 8.0U2 
-
-
 | Hosts ESXi | ESXi 7.0.3 
 
 
-| El servidor de vCenter | VCenter 7.0U3, 8.0U1 o 8.0U2 
+| El servidor de vCenter | VCenter 7.0U3 
 
 
 | Proveedor de VASA | 3,0 
