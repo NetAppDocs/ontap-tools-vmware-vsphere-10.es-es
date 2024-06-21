@@ -36,6 +36,10 @@ NOTE: Antes de continuar con el despliegue, establezca el planificador de recurs
 +
 .. Inicie sesión en vSphere Server.
 .. Navegue hasta el grupo de recursos o el host donde desea implementar el OVA y haga clic con el botón derecho en la ubicación requerida donde desea implementar la VM, y seleccione *Desplegar plantilla OVF...*
++
+
+NOTE: No implemente herramientas de ONTAP para máquinas virtuales VMware vSphere en un almacén de datos vVols que gestiona.
+
 .. Puede introducir la URL del archivo _.ova_ o navegar hasta la carpeta donde se guarda el archivo _.ova_ y, a continuación, seleccionar *Siguiente*
 
 

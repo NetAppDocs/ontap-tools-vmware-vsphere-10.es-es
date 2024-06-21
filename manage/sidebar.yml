@@ -67,3 +67,5 @@ entries:
     url: "/manage/reset-app-password.html"
   - title: Restablezca la contraseña de usuario de la consola de mantenimiento
     url: "/manage/reset-maint-password.html"
+- title: Limpie los volúmenes
+  url: "/manage/delete-deployment.html"

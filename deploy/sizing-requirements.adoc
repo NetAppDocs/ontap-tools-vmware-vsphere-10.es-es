@@ -18,7 +18,7 @@ Puede usar herramientas de ONTAP para VMware vSphere con VMware vCenter Server V
 * * Requisitos de espacio del paquete de instalación por nodo*
 +
 ** 10 GB para instalaciones con Thin Provisioning
-** 200 GB para instalaciones con aprovisionamiento pesado
+** 248 GB para instalaciones con aprovisionamiento pesado
 
 
 * * Requisitos de tamaño del sistema host por nodo*

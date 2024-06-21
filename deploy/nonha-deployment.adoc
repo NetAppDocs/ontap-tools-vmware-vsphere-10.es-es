@@ -27,6 +27,10 @@ Ejemplo: C1_sti67-vsim-ucs154k_1679633108::> network route create -vserver <SVM>
 . Inicie sesión en vSphere Server.
 . Desplácese hasta el pool de recursos, el clúster o el host en el que desea implementar el OVA.
 . Haga clic con el botón derecho en la ubicación requerida y seleccione *Implementar plantilla OVF...*.
++
+
+NOTE: No implemente herramientas de ONTAP para máquinas virtuales VMware vSphere en un almacén de datos vVols que gestiona.
+
 . Puede introducir la URL del archivo _.ova_ o navegar hasta la carpeta donde se guarda el archivo _.ova_ y, a continuación, seleccionar *Siguiente*.
 . Seleccione un nombre y una carpeta para la máquina virtual y seleccione *Siguiente*.
 . Seleccione el host y seleccione *Siguiente*
