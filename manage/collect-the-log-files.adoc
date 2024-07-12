@@ -41,4 +41,4 @@ Puede ver la opción de descarga cuando se generan los archivos. La descarga pue
 
 
 
-NOTE: El paquete de logs generado reemplaza el grupo de logs generado en los últimos 3 días o 72 horas.
+NOTE: El paquete de logs generado sustituye el paquete de logs generado en los últimos 3 días o 72 horas.

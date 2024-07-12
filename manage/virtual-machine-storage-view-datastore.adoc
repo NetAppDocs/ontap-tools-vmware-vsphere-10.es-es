@@ -18,7 +18,7 @@ NOTE: Esta vista es aplicable a la máquina virtual, que tiene al menos un ONTAP
 
 .Pasos
 . Desde vSphere Client desplácese hasta la máquina virtual.
-. Haga clic en la pestaña *Monitor* en el panel lateral derecho.
+. Haga clic en la pestaña *Monitor* en el panel derecho.
 . Selecciona *Herramientas de NetApp ONTAP* > *Almacenamiento*. Los detalles de *Almacenamiento* aparecen en el panel derecho. Puede ver la lista de vVols presentes en la máquina virtual.
 +
 Puede utilizar la opción 'Gestionar columnas' para ocultar o mostrar columnas diferentes.

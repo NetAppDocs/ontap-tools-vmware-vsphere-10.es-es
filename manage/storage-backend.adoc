@@ -17,7 +17,7 @@ Los back-ends de almacenamiento son los sistemas que los hosts ESXi utilizan par
 
 == Descubra el almacenamiento
 
-Puede ejecutar la detección de un back-end de almacenamiento bajo demanda sin esperar a que la detección programada actualice los detalles del almacenamiento.
+Puede ejecutar la detección de un back-end de almacenamiento bajo demanda sin esperar a que una detección programada actualice los detalles del almacenamiento.
 
 Siga estos pasos para detectar los back-ends de almacenamiento.
 
@@ -32,9 +32,9 @@ Puede realizar un seguimiento del progreso en el panel Tareas recientes.
 
 
 
-== Modificar el back-end de almacenamiento
+== Modificar los back-ends de almacenamiento
 
-Siga los pasos de esta sección para modificar el back-end de almacenamiento existente.
+Siga los pasos de esta sección para modificar un back-end de almacenamiento.
 
 . Inicie sesión en el cliente de vSphere mediante `\https://vcenterip/ui`
 . En la página de accesos directos, haga clic en *NetApp ONTAP tools* en la sección de plugins.
@@ -43,22 +43,21 @@ Siga los pasos de esta sección para modificar el back-end de almacenamiento exi
 Puede realizar un seguimiento del progreso en el panel Tareas recientes.
 
 
-Puede realizar la operación Modificar para clústeres de ONTAP globales mediante el Administrador de herramientas de ONTAP mediante los siguientes pasos
+Puede realizar la operación Modificar para clústeres de ONTAP globales mediante el Administrador de herramientas de ONTAP mediante los siguientes pasos.
 
 . Inicie ONTAP TOOLS Manager desde un explorador web: `\https://loadBalanceIP:8443/virtualization/ui/`
 . Inicie sesión con las herramientas de ONTAP para las credenciales de administrador de VMware vSphere que proporcionó durante la implementación.
 . Seleccione los back-ends de almacenamiento en la barra lateral.
-. Seleccione el backend de almacenamiento que desea modificar
+. Seleccione el backend de almacenamiento que desea modificar.
 . Haga clic en el menú de elipses verticales y seleccione *Modificar*.
 . Puede modificar las credenciales o el puerto. Introduzca el *Nombre de usuario* y *Contraseña* para modificar el backend de almacenamiento.
 
 
 
 
-== Quite el back-end del almacenamiento
+== Retire los back-ends de almacenamiento
 
-Debe eliminar todos los almacenes de datos conectados al back-end de almacenamiento antes de quitar el back-end de almacenamiento.
-Siga los pasos a continuación para quitar el back-end de almacenamiento.
+Debe eliminar todos los almacenes de datos conectados al back-end de almacenamiento antes de quitar el back-end de almacenamiento. Siga los pasos que se indican a continuación para quitar un back-end de almacenamiento.
 
 . Inicie sesión en el cliente de vSphere mediante `\https://vcenterip/ui`
 . En la página de accesos directos, haga clic en *NetApp ONTAP tools* en la sección de plugins.

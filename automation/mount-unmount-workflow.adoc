@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: REST APIs, swagger 
 summary: 'Puede montar un almacén de datos de VMware Virtual Volumes (vVols) en uno o varios hosts adicionales para proporcionar acceso al almacenamiento a hosts adicionales. Es posible desmontar el almacén de datos vVols mediante las API de.' 
 ---
-= Montar y desmontar el almacén de datos de vVols
+= Montar y desmontar un almacén de datos de vVols
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

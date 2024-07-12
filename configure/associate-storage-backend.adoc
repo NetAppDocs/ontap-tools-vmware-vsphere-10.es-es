@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: necesita información. 
 ---
-= Asocie el back-end de almacenamiento a una instancia de vCenter Server
+= Asocie un back-end de almacenamiento a una instancia de vCenter Server
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

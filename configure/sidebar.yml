@@ -22,9 +22,9 @@ entries:
     url: "/configure/esxi-host-values.html"
 - title: Detectar sistemas de almacenamiento y hosts
   url: "/configure/discover-storage-systems-and-hosts.html"
-- title: Añadir back-end de almacenamiento
+- title: Añada un back-end de almacenamiento
   url: "/configure/add-storage-backend.html"
-- title: Asocie el back-end de almacenamiento con vCenter Server
+- title: Asocie un back-end de almacenamiento a una instancia de vCenter Server
   url: "/configure/associate-storage-backend.html"
 - title: Configure el acceso a la red
   url: "/configure/configure-network-access.html"
@@ -33,5 +33,5 @@ entries:
 - title: Información general de la consola del complemento de herramientas de NetApp
     ONTAP para VMware vSphere
   url: "/configure/dashboard-overview.html"
-- title: Cree el almacén de datos
+- title: Cree un almacén de datos
   url: "/configure/create-vvols-datastore.html"

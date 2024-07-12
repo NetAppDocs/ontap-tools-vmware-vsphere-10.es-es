@@ -28,10 +28,10 @@ Aparece el asistente Crear asignación de carpetas.
 
 . En el asistente Crear asignación de carpetas, realice lo siguiente:
 +
-.. Seleccione *preparar automáticamente asignaciones para carpetas con nombres coincidentes* y haga clic en *Siguiente*.
-.. Seleccione los objetos de centro de datos necesarios para los sitios protegidos y de recuperación y haga clic en *Agregar asignaciones*.
+.. Seleccione *Preparar automáticamente asignaciones para carpetas con nombres coincidentes* y haga clic en *Siguiente*.
+.. Seleccione los objetos del centro de datos necesarios para los sitios protegidos y de recuperación y haga clic en *Agregar asignaciones*.
 .. Haga clic en *Siguiente* después de crear correctamente las asignaciones.
-.. Seleccione el objeto utilizado anteriormente para crear una asignación inversa y, a continuación, haga clic en * Finalizar *.
+.. Seleccione el objeto utilizado anteriormente para crear una asignación inversa y luego haga clic en *Finalizar*.
 
 
 

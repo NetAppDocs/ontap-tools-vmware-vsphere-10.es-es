@@ -32,7 +32,7 @@ Los nombres de host deben asignarse a las direcciones IP libres en el DNS antes 
 . La plantilla de biblioteca de contenido una vez cargada no se debe eliminar después de la implementación, ya que se utilizará durante los reinicios.
 . En una implementación de varios vCenter donde los certificados de CA personalizados son obligatorios, asigne el nombre de dominio en el que se emite el certificado a la dirección IP virtual. Realice una comprobación _nslookup_ en el nombre de dominio para comprobar si el dominio se está resolviendo a la dirección IP deseada. Los certificados se deben crear con el nombre de dominio y la dirección IP de la dirección IP del equilibrador de carga.
 . VLAN compatible con IPv4/IPv6: No se admite Pure IPv6. El modo mixto es compatible con una VLAN que tenga direcciones IPv6 e IPv4.
-. NTP Server, que se proporciona en vCenter Server para Time Sync.
+. NTP Server, que se proporciona en vCenter Server para sincronización de tiempo.
 . Dirección IP estática Detalles de configuración para el nodo o la máquina virtual donde se implementa el OVA (obligatorio) y otros detalles.
 +
 .. Nombre de host de vCenter Server (vCenter donde se implementa OVA)

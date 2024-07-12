@@ -24,7 +24,7 @@ entries:
     url: "/automation/onboard-svm-workflow.html"
   - title: Crear el almacén de datos vVols
     url: "/automation/create-vvol-workflow.html"
-  - title: Montar y desmontar el almacén de datos de vVols
+  - title: Montar y desmontar un almacén de datos de vVols
     url: "/automation/mount-unmount-workflow.html"
   - title: Expanda o reduzca el almacenamiento de almacén de datos de VVOL
     url: "/automation/expand-shrink-workflow.html"

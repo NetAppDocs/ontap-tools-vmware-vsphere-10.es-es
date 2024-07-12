@@ -24,7 +24,7 @@ Debe verificar que el sitio protegido y el sitio de recuperación se hayan empar
 
 . Inicie sesión en vCenter Server.
 . Vaya a *Site Recovery* > *Array Based Replication*.
-. Seleccione el ArrayPair requerido y verifique los detalles correspondientes.
+. Seleccione la pareja de cabinas requerida y verifique los detalles correspondientes.
 +
 Los sistemas de almacenamiento deben ser descubiertos en el sitio protegido y el sitio de recuperación con el estado “habilitado”.
 

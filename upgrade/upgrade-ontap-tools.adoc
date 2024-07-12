@@ -2,7 +2,7 @@
 permalink: upgrade/upgrade-ontap-tools.html 
 sidebar: sidebar 
 keywords: upgrade 
-summary: Cuando se actualiza desde las herramientas de ONTAP para VMware vSphere 10,0 a la 10,1, se crea un volumen de recuperación y se introducen todos los detalles necesarios en el volumen de recuperación. 
+summary: Cuando se actualiza desde las herramientas de ONTAP para VMware vSphere 10,0 y 10,1 a 10,2, se crea un volumen de recuperación y se llevan a cabo todos los detalles necesarios en el volumen de recuperación. 
 ---
 = Actualice a la versión más reciente de herramientas de ONTAP
 :allow-uri-read: 
@@ -11,8 +11,7 @@ summary: Cuando se actualiza desde las herramientas de ONTAP para VMware vSphere
 
 
 [role="lead"]
-Cuando se actualiza desde las herramientas de ONTAP para VMware vSphere 10,0 a la 10,1, se crea un volumen de recuperación y se introducen todos los detalles necesarios en el volumen de recuperación. El volumen de recuperación puede usarse para recuperar las herramientas de ONTAP para la configuración de VMware vSphere si es necesario recuperar la configuración. Si va a realizar una actualización a nivel de parches de las herramientas de ONTAP para VMware vSphere 10,1, se utiliza el mismo volumen de recuperación y se actualizan los detalles.
-La actualización es compatible con puestas en marcha tanto de alta disponibilidad como con otras de alta disponibilidad.
+Cuando se actualiza desde las herramientas de ONTAP para VMware vSphere 10,0 y 10,1 a 10,2, se crea un volumen de recuperación y se llevan a cabo todos los detalles necesarios en el volumen de recuperación. El volumen de recuperación puede usarse para recuperar las herramientas de ONTAP para la configuración de VMware vSphere si es necesario recuperar la configuración. Si va a realizar una actualización a nivel de parches de las herramientas de ONTAP para VMware vSphere 10,2, se utiliza el mismo volumen de recuperación y se actualizan los detalles. La actualización es compatible con puestas en marcha tanto de alta disponibilidad como con otras de alta disponibilidad.
 
 *Antes de empezar*
 
@@ -50,7 +49,7 @@ Ejecute los siguientes comandos para realizar un backup de MongoDB:
 
 
 
-* Tome la instantánea de las herramientas de ONTAP para las máquinas virtuales de VMware vSphere en vCenter (3VMs en caso de implementación de alta disponibilidad, 1 VM en caso de implementación no de alta disponibilidad)*
+* Tome la instantánea de las herramientas de ONTAP para las máquinas virtuales VMware vSphere en vCenter (3VMs en caso de implementación de alta disponibilidad, 1 VM en caso de implementación no de alta disponibilidad)*
 
 * En la interfaz de usuario del cliente de vSphere, seleccione la máquina virtual.
 * Vaya a la pestaña Instantáneas y haga clic en el botón *Tomar Instantánea*.

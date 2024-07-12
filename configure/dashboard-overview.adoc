@@ -2,7 +2,7 @@
 permalink: configure/dashboard-overview.html 
 sidebar: sidebar 
 keywords: user roles 
-summary: Cuando se seleccionan las herramientas de NetApp ONTAP para el icono del plugin de VMware vSphere en la sección de accesos directos del cliente de vCenter, la interfaz de usuario navega a la página Descripción general. Esta página actúa como la consola que ofrece el resumen de las herramientas de ONTAP para el plugin de VMware vSphere. 
+summary: Cuando se selecciona el icono del plugin de las herramientas de NetApp ONTAP para VMware vSphere en la sección de accesos directos del cliente de vCenter, la interfaz de usuario navega a la página de información general. Esta página actúa como la consola que ofrece el resumen de las herramientas de ONTAP para el plugin de VMware vSphere. 
 ---
 = Información general sobre la consola del plugin de las herramientas de NetApp ONTAP para VMware vSphere
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Cuando se seleccionan las herramientas de NetApp ONTAP para el icono de
 
 
 [role="lead"]
-Cuando se seleccionan las herramientas de NetApp ONTAP para el icono del plugin de VMware vSphere en la sección de accesos directos del cliente de vCenter, la interfaz de usuario navega a la página de información general. Esta página actúa como la consola que ofrece el resumen de las herramientas de ONTAP para el plugin de VMware vSphere.
+Cuando se selecciona el icono del plugin de las herramientas de NetApp ONTAP para VMware vSphere en la sección de accesos directos del cliente de vCenter, la interfaz de usuario navega a la página de información general. Esta página actúa como la consola que ofrece el resumen de las herramientas de ONTAP para el plugin de VMware vSphere.
 
 En el caso de la configuración de modo vinculado mejorado (ELM), aparece el menú desplegable SELECT de vCenter Server y puede seleccionar la instancia de vCenter Server que desee para ver los datos relevantes para él. Esta lista desplegable está disponible para todas las otras vistas de listado del plugin.
 La selección de vCenter Server realizada en una página persiste en las pestañas del plugin.
@@ -25,14 +25,7 @@ La consola tiene varias tarjetas que muestran diferentes elementos del sistema. 
 | *Nombre de la tarjeta* | *Descripción* 
 
 
-| Estado | La tarjeta de estado muestra el número de back-ends de almacenamiento añadido y el estado general de los back-ends de almacenamiento y el estado del proveedor de VASA de un vCenter.
-
-El estado de los back-ends de almacenamiento se muestra como «correcto» cuando todo el estado de los back-ends de almacenamiento es normal.
-El estado de los back-ends de almacenamiento se muestra como «incorrecto» si alguno de los back-ends de almacenamiento tiene un problema (estado Desconocido/Inaccesible/Degradado).
-
-Al hacer clic en el estado «En mal estado», se abre una sugerencia de herramienta con el estado de los back-ends de almacenamiento. Los nombres de los clústeres están hipervinculados, puede hacer clic en el enlace para abrir la página de resumen del back-end de almacenamiento para obtener más detalles.
-
-El enlace Otros estados del proveedor de VASA (VP) muestra el estado actual del vicepresidente que se registró en vCenter Server. 
+| Estado | La tarjeta de estado muestra el número de back-ends de almacenamiento añadido y el estado general de los back-ends de almacenamiento y el estado del proveedor de VASA de un vCenter. El estado de los back-ends de almacenamiento se muestra como «correcto» cuando todo el estado de los back-ends de almacenamiento es normal. El estado de los back-ends de almacenamiento se muestra como «incorrecto» si alguno de los back-ends de almacenamiento tiene un problema (estado Desconocido/Inaccesible/Degradado). Al hacer clic en el estado «En mal estado», se abre una sugerencia de herramienta con el estado de los back-ends de almacenamiento. Puede hacer clic en cualquier back-end de almacenamiento para obtener más información. El enlace Otros estados del proveedor de VASA (VP) muestra el estado actual del vicepresidente que se registró en vCenter Server. 
 
 
 | Back-ends de almacenamiento: Capacidad | Esta tarjeta muestra la capacidad agregada utilizada y disponible de todos los back-ends de almacenamiento para la instancia de vCenter Server seleccionada. 

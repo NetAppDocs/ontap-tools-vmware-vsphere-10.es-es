@@ -11,7 +11,7 @@ summary: El administrador de herramientas de ONTAP proporciona un mayor control 
 
 
 [role="lead"]
-Las herramientas de ONTAP para VMware vSphere es un sistema multi-tenant, que gestiona varias instancias de vCenter Server. El administrador de herramientas de ONTAP proporciona un mayor control a las herramientas de ONTAP para el administrador de VMware vSphere a través de las instancias gestionadas de vCenter Server y los back-ends de almacenamiento incorporados.
+Las herramientas de ONTAP para VMware vSphere son un sistema multi-tenant que puede gestionar varias instancias de vCenter Server. El administrador de herramientas de ONTAP proporciona un mayor control a las herramientas de ONTAP para el administrador de VMware vSphere a través de las instancias gestionadas de vCenter Server y los back-ends de almacenamiento incorporados.
 
 El Gestor de herramientas de ONTAP ayuda en:
 

@@ -1,0 +1,36 @@
+---
+permalink: manage/protect-cluster.html 
+sidebar: sidebar 
+keywords: vVols datastore,delete vVol 
+summary: La acción Eliminar el almacén de datos elimina el almacén de datos. En el caso de un almacén de datos NFS o VMFS, se muestra un cuadro de diálogo con la lista de máquinas virtuales que utilizan el almacén de datos. 
+---
+= Proteger el clúster de hosts
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+:firstname: [.lead]
+:author: [.lead]
+:authorinitials: [
+:authors: [.lead]
+:revdate: ONTAP tools for VMware vSphere manages protection of a host cluster.
+
+
+Todos los almacenes de datos que pertenecen a la SVM seleccionada (y montados en uno o varios hosts del clúster) están protegidos (para SMAS) en un clúster de hosts.
+
+.Requisitos previos
+Asegúrese de que se cumplan las siguientes condiciones antes de proteger el clúster de hosts: . El clúster de hosts tiene almacenes de datos solo de una SVM. La versión de SVM (SB) debe ser mayor que 9.15.1 . Ningún almacén de datos montado en el clúster de hosts debe montarse en ningún host fuera del clúster. . Todos los almacenes de datos montados en el clúster de hosts deben ser almacenes de datos VMFS. . Ningún almacén de datos FlexVol/LUN que forme parte del clúster de hosts montado en el clúster de hosts no debe formar parte de ningún CG existente. . Cualquier FlexVol o LUN no debe formar parte de una relación de SnapMirror
+
+.Pasos
+. Inicie sesión en el cliente de vSphere mediante `\https://vcenterip/ui`
+. Haga clic con el botón derecho en un clúster de host y seleccione *Herramientas de NetApp ONTAP* > *Proteger clúster*.
+. En la ventana Protect cluster, introduzca la configuración de protección para los almacenes de datos que van a proteger. El clúster de hosts solo puede tener almacenes de datos de una SVM (clúster).
+. Seleccione una de las opciones cluster de ONTAP and Storage VM de destino.
+. Seleccione la casilla de verificación *Activar instantánea local* para adjuntar una política de instantánea local a los volúmenes de respaldo de los almacenes de datos.
+. Seleccione la casilla de verificación *Enable SnapMirror* to y *Add Relationship* para proteger los almacenes de datos con la política AutomatedFailoverDuplex seleccionada, el clúster de destino y la VM de almacenamiento de destino.
+. Para una configuración uniforme, seleccione el botón de alternar *Uniform Host Configuration* en true.
+. Proporciona *Proximidad del host* o *Acceso* para cada host, dependiendo de la selección uniforme del botón de alternar de configuración del host.
+. Seleccione *Agregar*.
+. Revise la página de resumen y seleccione Proteger.
+
+
+Se crea una tarea en vCenter. Utilice el ID de puesto generado para supervisar la tarea.
