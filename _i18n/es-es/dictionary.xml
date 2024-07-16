@@ -188,10 +188,6 @@ La memoria recomendada según el tamaño de la implementación y por nodo se mue
   <block id="87c93b9816d806cccc58f0b610872eda" category="list-text">Introduzca<block ref="a87ff679a2f3e71d9181a67b7542122c" prefix=" " category="inline-code"></block> Para seleccionar Support and Diagnostics.</block>
   <block id="ef7a1860bfa2c5f2ea33155989f85ee5" category="list-text">Introduzca<block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block> Para seleccionar el shell de diagnóstico de Access.</block>
   <block id="78efad1f6bb75b53e0c5236fd154c135" category="list-text">Introduzca<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> para continuar.</block>
-  <block id="6e1ee8250e4dc3ce6e26c0ebdbaab54a" category="list-text">Actualice las credenciales según sea necesario:</block>
-  <block id="512e6df6579ba9be187fcdaf015cd5e6" category="paragraph">otv-update --ontapUsername &lt;new username&gt; --ontapPassword &lt;new password&gt;</block>
-  <block id="7291058dd83795e1ab1d74629e7b59d5" category="paragraph">otv-update --vcenterUsername &lt;new username&gt; --vcenterPassword &lt;new password&gt;</block>
-  <block id="1c7a1c71a372b297fb2ddde652f24fcc" category="paragraph">otv-update --dataLif &lt;new Datalif IP&gt;</block>
   <block id="f2bf379ad5a0f05a54bbcdb5678a796e" category="inline-image-macro">Botón de reproducción</block>
   <block id="0b8a80106a177e9178ec383905046532" category="cell">*Menú de consola*</block>
   <block id="2c639d8cf692c100e3eba8b611821414" category="cell">*Opciones*</block>
@@ -1696,7 +1692,6 @@ Los códigos de error tienen una longitud de cinco dígitos, donde los dos prime
 A medida que se crea la tarea de implementación, el progreso se muestra en la barra de tareas de vSphere.
 . Encienda la máquina virtual después de completar la tarea.</block>
   <block id="a84fd12354047a6ec2a5b6b1711524f5" category="cell">VCenter 7.0U3</block>
-  <block id="b5a405460149721025d3f0b33b133321" category="list-text">Introduzca la contraseña de ONTAP/SVM. La contraseña de inicio de sesión de ONTAP/SVM para esta máquina virtual de almacenamiento no debe contener estos caracteres especiales($,',»).</block>
   <block id="b8237d978365427c8b91b5f11293f5e5" category="paragraph">+
 <block ref="89d79dbcc89ba4076180d653020a5110" category="inline-image-macro-rx" type="image"></block></block>
   <block id="99126fb772977a83acb4723e429a29c0" category="admonition">No implemente herramientas de ONTAP para máquinas virtuales VMware vSphere en un almacén de datos vVols que gestiona.</block>
@@ -1825,9 +1820,6 @@ Ejecute el siguiente comando para buscar el primer nombre de igroup:</block>
   <block id="62d979a8af29380891d017376cb44c65" category="section-title">Retire los back-ends de almacenamiento</block>
   <block id="9ca9be4cf1830049310642af0d8597cf" category="paragraph">Debe eliminar todos los almacenes de datos conectados al back-end de almacenamiento antes de quitar el back-end de almacenamiento. Siga los pasos que se indican a continuación para quitar un back-end de almacenamiento.</block>
   <block id="492536f303a280d3ebdae80179b9c31a" category="list-text">Haga clic en la pestaña *Configure* en el panel derecho.</block>
-  <block id="167eaea484341a685fe24829668ec35c" category="list-text">Para actualizar las credenciales de ONTAP, ejecute el comando:</block>
-  <block id="a2e55f135d38f547623aac8e3523ca89" category="list-text">Para actualizar las credenciales de vCenter, ejecute el comando:</block>
-  <block id="4b2505432ca227b6c7b2991e5b223d7d" category="list-text">Para actualizar la LIF de datos ejecute el comando:</block>
   <block id="d8fadf5b37e6090e5c48155442e6dd13" category="list-text">Haga clic en la pestaña *Monitor* en el panel derecho.</block>
   <block id="3afd1d6d6eee36d82c692f7555428de3" category="list-text">Añada las herramientas de ONTAP para el proveedor de almacenamiento VMware vSphere a vCenter Server y. <block ref="5d4adca70c5644b1b13c61d5e49e1ff7" category="inline-link-macro-rx"></block></block>
   <block id="e93b5d3770694f17c18a300557f18fd2" category="paragraph">Una vez que se ha detenido el antiguo proveedor de VASA, vCenter Server conmuta al nodo de respaldo a las herramientas de ONTAP para VMware vSphere. Todos los almacenes de datos y máquinas virtuales son accesibles y se proporcionan desde las herramientas de ONTAP para VMware vSphere.</block>
@@ -1867,4 +1859,8 @@ Ejecute el siguiente comando para buscar el primer nombre de igroup:</block>
   <block id="33857256a63a7aef7c5bdd248e2cbd12" category="summary">Cuando se actualiza desde las herramientas de ONTAP para VMware vSphere 10,0 y 10,1 a 10,1, se crea un volumen de recuperación y se llevan a cabo todos los detalles necesarios en el volumen de recuperación.</block>
   <block id="05138d33f74ef24966432b76ee85d18f" category="paragraph">Cuando se actualiza desde las herramientas de ONTAP para VMware vSphere 10,0 y 10,1 a 10,1, se crea un volumen de recuperación y se llevan a cabo todos los detalles necesarios en el volumen de recuperación. El volumen de recuperación puede usarse para recuperar las herramientas de ONTAP para la configuración de VMware vSphere si es necesario recuperar la configuración. Si va a realizar una actualización a nivel de parches de las herramientas de ONTAP para VMware vSphere 10,1, se utiliza el mismo volumen de recuperación y se actualizan los detalles. La actualización es compatible con puestas en marcha tanto de alta disponibilidad como con otras de alta disponibilidad.</block>
   <block id="2a18716f8022631c1d2fd79a8fbb75e8" category="sidebar">Herramientas de ONTAP para documentos de VMware vSphere 10,1</block>
+  <block id="344e7fea24fbe3dae5345953d18ee85c" category="list-text">Introduzca la contraseña de ONTAP/SVM.</block>
+  <block id="cea5a13834803a12adaeb249165351df" category="list-text">Acceda<block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block> a para seleccionar Menú de configuración del sistema.</block>
+  <block id="86ce6e9c3af571980099ca308cd245e3" category="list-text">Introduzca<block ref="45c48cce2e2d7fbdea1afc51c7c6ad26" prefix=" " category="inline-code"></block> para cambiar las credenciales de ONTAP.</block>
+  <block id="207c00a73dde0270cc0fbc7ce9c5f2fd" category="list-text">Introduzca<block ref="d3d9446802a44259755d38e6d163e820" prefix=" " category="inline-code"></block> para cambiar las credenciales de vCenter.</block>
 </blocks>

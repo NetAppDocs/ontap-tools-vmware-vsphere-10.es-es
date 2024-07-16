@@ -88,7 +88,7 @@ NOTE: Cuando el ámbito de SVM está habilitado, debe haber habilitado la compat
 .. Introduzca el clúster de ONTAP o la SVM ONTAP/SVM Data LIF. La LIF de datos debe pertenecer al protocolo seleccionado. Por ejemplo, si se selecciona el protocolo iSCSI, debería proporcionarse una LIF de datos iSCSI.
 .. Para VM de almacenamiento, puede optar por proporcionar los detalles de VM de almacenamiento predeterminados de ONTAP o crear una nueva VM de almacenamiento. No introduzca el valor en el campo *Storage VM* cuando Activar ámbito de SVM está seleccionado, ya que este campo se ignora.
 .. Introduzca el nombre de usuario de ONTAP/SVM. Se requieren un nombre de usuario y una contraseña de ONTAP/SVM para que Trident cree volúmenes para almacenar los datos de servicios en caso de una implementación avanzada o de alta disponibilidad y para recuperar los datos de los volúmenes durante un fallo del nodo.
-.. Introduzca la contraseña de ONTAP/SVM. La contraseña de inicio de sesión de ONTAP/SVM para esta máquina virtual de almacenamiento no debe contener estos caracteres especiales($,',»).
+.. Introduzca la contraseña de ONTAP/SVM.
 .. La VM principal está habilitada de forma predeterminada. No alteres esta opción.
 
 
