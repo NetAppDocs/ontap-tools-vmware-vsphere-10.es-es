@@ -26,7 +26,7 @@ Debe tener los siguientes programas instalados en el sitio protegido y el sitio 
 La documentación sobre la instalación de SRM se encuentra en el sitio de VMware.
 
 +
-https://www.vmware.com/support/pubs/srm_pubs.html["Documentación de VMware Site Recovery Manager"]
+https://docs.vmware.com/en/Site-Recovery-Manager/index.html["Documentación de VMware Site Recovery Manager"]
 
 * SRA.
 +
@@ -58,7 +58,7 @@ Debe tener los siguientes programas instalados en el sitio protegido y el sitio 
 Puede encontrar documentación sobre la instalación de SRM en el sitio de VMware.
 
 +
-https://www.vmware.com/support/pubs/srm_pubs.html["Documentación de VMware Site Recovery Manager"]
+https://docs.vmware.com/en/Site-Recovery-Manager/index.html["Documentación de VMware Site Recovery Manager"]
 
 * SRA.
 +

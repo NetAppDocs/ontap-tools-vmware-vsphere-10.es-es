@@ -24,9 +24,6 @@ NOTE: Puede crear usuarios en el clúster o directamente en el nivel de las máq
 * Debe haber iniciado sesión con privilegios de administrador para el back-end de almacenamiento.
 
 
-
-NOTE: Es posible crear usuarios a nivel del clúster o a nivel de SVM. También puede crear usuarios sin utilizar el archivo user_roles.json y, si hace esto, debe tener un conjunto mínimo de privilegios en el nivel de SVM.
-
 * Pasos*
 
 . Extraiga el archivo descargado _\https://<loadbalancerIP>:8443/virtualization/user-privileges/users_roles.zip_.

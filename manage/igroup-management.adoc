@@ -11,7 +11,7 @@ summary: En ONTAP, las políticas de exportación se utilizan para proporcionar 
 
 
 [role="lead"]
-En ONTAP, las políticas de exportación se utilizan para proporcionar acceso de ruta de datos de volumen a los hosts y los iGroups se utilizan para proporcionar acceso de la ruta de datos de número de unidad lógica (LUN) a los hosts ESXi.
+En ONTAP, las políticas de exportación se utilizan para proporcionar acceso de ruta de datos de volumen a los hosts y los iGroups se utilizan para proporcionar acceso de la ruta de datos de número de unidad lógica (LUN) a los hosts ESXi. Las herramientas de ONTAP para VMware vSphere hacen que la creación de igroups sea fácil e intuitiva, y proporcionan flujos de trabajo integrales muy enriquecidos. Para garantizar la consistencia, no se admite la creación directa de iGroups en plataformas de almacenamiento.
 
 Cuando se crean almacenes de datos de volúmenes virtuales o se montan en hosts en vCenter Server, los hosts deben tener acceso a volúmenes (NFS) o LUN (iSCSI) según el tipo de protocolo del almacén de datos.
 

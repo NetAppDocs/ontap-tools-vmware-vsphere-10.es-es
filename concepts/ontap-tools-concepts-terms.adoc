@@ -21,6 +21,12 @@ CA es una entidad de confianza que emite certificados SSL (Secure Sockets Layer)
 
 
 
+=== Pila doble
+
+Una red de pila doble es un entorno de red que admite el uso simultáneo de direcciones IPv4 e IPv6.
+
+
+
 === Alta disponibilidad
 
 Los nodos en clúster están configurados en pares de alta disponibilidad para realizar operaciones no disruptivas.

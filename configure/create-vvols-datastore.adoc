@@ -11,7 +11,7 @@ summary: Es posible crear un almacén de datos vVols con volúmenes nuevos o con
 
 
 [role="lead"]
-Según el destino seleccionado para la acción, el almacén de datos se crea y se monta en todos los hosts del destino y la acción se activa sólo si el usuario actual tiene privilegios para ejecutar.
+Cuando se crea un almacén de datos en el nivel del clúster de hosts, el almacén de datos se crea y se monta en todos los hosts del destino, y la acción solo se habilita si el usuario actual tiene privilegio para ejecutar.
 
 El asistente de acción create Datastore admite la creación de almacenes de datos NFS, VMFS y vVols.
 
@@ -24,20 +24,19 @@ Es posible crear un almacén de datos vVols con volúmenes nuevos o existentes. 
 
 NOTE: Compruebe que los agregados raíz no se asignen a SVM.
 
+.Antes de empezar
+Compruebe que el proveedor de VASA esté registrado en la instancia de vCenter seleccionada.
+
 .Pasos
 . Inicie sesión en el cliente de vSphere mediante `\https://vcenterip/ui`
 . Haga clic con el botón derecho en un sistema host, en un clúster host o en un centro de datos y, a continuación, seleccione *Herramientas de NetApp ONTAP* > *Crear almacén de datos*.
 . En el panel *Type*, seleccione vVols en *Datastore Type*.
-+
-
-NOTE: Obtiene la opción vVols solo si el proveedor de VASA está registrado en la instancia de vCenter seleccionada.
-
 . En el panel *Nombre y protocolo*, proporcione información sobre *Nombre del almacén de datos* y *Protocolo*.
 . En el panel *Almacenamiento*, seleccione *Plataforma* y *VM de almacenamiento*. En la sección *Opciones avanzadas*, seleccione la política de exportación personalizada (para el protocolo NFS) o el nombre de grupo de iniciadores personalizado (para el protocolo iSCSI) según corresponda.
 +
 ** Las opciones asimétricas y de plataforma le ayudan a filtrar las opciones de lista desplegable de SVM. Debe seleccionar la SVM para crear o usar los volúmenes para la creación del almacén de datos.
 ** El botón de conmutación *Asimétrico* solo es visible si iSCSI fue seleccionado en el paso anterior y el rendimiento o la capacidad está seleccionado en el menú desplegable de la plataforma.
-** Asimétrico es válido para la plataforma AFF y falso para la plataforma ASA.
+** Seleccione el botón de alternar *Asimétrico* para la plataforma AFF y desactívelo para la plataforma ASA.
 
 
 . En el panel *Atributos de almacenamiento*, puede crear nuevos volúmenes o utilizar los volúmenes existentes. Al crear un volumen nuevo, es posible habilitar la calidad de servicio en el almacén de datos.
@@ -54,7 +53,7 @@ Un almacén de datos de sistema de archivos de red (NFS) de VMware utiliza el pr
 . Inicie sesión en el cliente de vSphere mediante `\https://vcenterip/ui`
 . Haga clic con el botón derecho en un sistema host, un clúster host o un centro de datos y, a continuación, seleccione *Herramientas de NetApp ONTAP* > *Crear almacén de datos*.
 . En el panel *Type*, seleccione NFS en *Datastore Type*.
-. En el panel *Nombre y protocolo*, introduzca el nombre del almacén de datos, el tamaño y la información del protocolo. En las opciones avanzadas, seleccione *Datastore cluster* y Kerberos Authentication.
+. En el panel *Nombre y protocolo*, introduzca el nombre del almacén de datos, el tamaño y la información del protocolo. En las opciones avanzadas, seleccione *Datastore cluster* y *Kerberos Authentication*.
 +
 
 NOTE: La autenticación Kerberos está disponible solo si se selecciona el protocolo NFS 4,1.
@@ -76,25 +75,6 @@ El almacén de datos de NFS se crea y se monta en todos los hosts.
 == Cree un almacén de datos de VMFS
 
 Virtual Machine File System (VMFS) es un sistema de archivos en clúster específicamente diseñado para almacenar archivos de máquinas virtuales en entornos de VMware vSphere. Permite que varios hosts ESXi accedan a los mismos archivos de máquina virtual de forma simultánea, lo cual permite funciones como vMotion y alta disponibilidad.
-
-*Antes de empezar*
-
-Compruebe los siguientes elementos antes de continuar:
-
-* Compruebe si todos los hosts de destino están en buen estado y compruebe si el host admite el protocolo.
-* Cree un volumen nuevo (tamaño mín. 2GB)
-* Establezca las opciones de volumen con QOS
-* Cree LUN del tipo VMWare
-* Obtener iniciadores para todos los hosts de destino
-* Cree/reutilice igroup según iniciadores coincidentes
-* Asigne la LUN a igroup
-* Añada destinos iSCSI a los hosts ESXi
-* Vuelva a analizar los adaptadores de bus de host (HBA) en todos los hosts
-* Montar volumen como almacén de datos VMFS6 (para más de 6,5 hosts)
-* Vuelva a analizar el almacenamiento de VMFS en hosts ESXi
-* Mueva el almacén de datos al clúster de almacenes de datos
-* Reequilibrio de rutas de iSCSI
-
 
 .Pasos
 . Inicie sesión en el cliente de vSphere mediante `\https://vcenterip/ui`
