@@ -49,7 +49,7 @@ Consulte link:../deploy/config-limits.html["Límites de configuración para pone
 | Almacenamiento, host y aplicaciones | Requisitos mínimos de versión 
 
 
-| ONTAP | Versión de revisión más reciente de ONTAP 9.12.1, 9.13.1 o 9.14.1 
+| ONTAP | Versión de revisión más reciente de ONTAP 9.12,1, 9.13.1, 9.14.1 y 9.15.1. 
 
 
 | Hosts ESXi | ESXi 7.0.3 

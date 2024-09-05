@@ -42,28 +42,6 @@ Para obtener más información sobre los requisitos de tamaño del sistema host 
 La siguiente tabla muestra los números admitidos por instancia de SRM con herramientas de ONTAP para VMware vSphere.
 
 |===
-
-
-| Cantidad total de máquinas virtuales configuradas para la protección mediante la replicación basada en cabinas | 5000 
-
-
-| Número total de grupos de protección de replicación basados en cabinas | 250 
-
-
-| Número total de grupos de protección por plan de recuperación | 50 
-
-
-| Número de almacenes de datos replicados | 255 
-|===
-Para obtener más información acerca de los requisitos de tamaño del sistema host por nodo, consulte link:../deploy/sizing-requirements.html["Requisitos previos para implementar herramientas de ONTAP para VMware vSphere"].
-
-
-
-== Herramientas de ONTAP para VMware vSphere: Storage Replication Adapter (SRA)
-
-La siguiente tabla muestra los números admitidos por instancia de SRM con herramientas de ONTAP para VMware vSphere.
-
-|===
 | *Tamaño de implementación de vCenter* | *Pequeño* | *Media* 
 
 
