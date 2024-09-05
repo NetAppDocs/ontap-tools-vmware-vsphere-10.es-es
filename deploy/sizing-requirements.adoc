@@ -61,7 +61,7 @@ Consulte link:../deploy/config-limits.html["Límites de configuración para pone
 | Proveedor de VASA | 3,0 
 
 
-| Aplicación ova | 10,1 
+| Aplicación ova | 10,2 
 |===
 La herramienta de matriz de interoperabilidad (IMT) contiene la información más reciente sobre las versiones compatibles de ONTAP, vCenter Server, hosts ESXi y aplicaciones de plugins.
 
