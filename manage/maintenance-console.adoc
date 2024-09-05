@@ -41,7 +41,7 @@ Configuración del sistema
  a| 
 . Reiniciar la máquina virtual
 . Apagar la máquina virtual
-. Generar token para restablecer la contraseña de la interfaz de usuario del gestor
+. Cambiar la contraseña de usuario "mant"
 . Cambiar zona horaria
 . Añada el nuevo servidor NTP
 . Aumentar el tamaño de los discos de cárcel (/prisión)

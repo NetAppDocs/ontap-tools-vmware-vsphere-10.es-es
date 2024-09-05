@@ -17,7 +17,7 @@ Una vez finalizada la puesta en marcha, las herramientas de ONTAP para VMware vS
 
 
 
-== Biblioteca de contenidos
+== Crear biblioteca de contenido
 
 Una biblioteca de contenido en VMware es un objeto contenedor que almacena plantillas de máquinas virtuales, plantillas de vApp y otros tipos de archivos. La implementación con biblioteca de contenido le proporciona una experiencia perfecta, ya que no depende de la conectividad de red.
 

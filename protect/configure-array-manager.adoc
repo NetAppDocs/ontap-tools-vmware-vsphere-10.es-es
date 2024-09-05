@@ -25,7 +25,7 @@ El SRA admite la gestión a nivel de clúster y la gestión a nivel de SVM. Si a
 
 * Pasos*
 
-. En SRM, haga clic en *Array Managers* y, a continuación, haga clic en *Agregar Array Manager*.
+. En SRM, haga clic en *Array Managers* y haga clic en *Add Array Manager*.
 . Introduzca la siguiente información para describir la cabina en SRM:
 +
 .. Introduzca un nombre para identificar al administrador de matrices en el campo *Nombre para mostrar*.

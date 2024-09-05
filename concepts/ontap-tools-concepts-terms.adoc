@@ -21,6 +21,12 @@ CA es una entidad de confianza que emite certificados SSL (Secure Sockets Layer)
 
 
 
+=== Grupo de consistencia
+
+Un grupo de coherencia es una recogida de volúmenes que se gestionan como una sola unidad. En ONTAP, los grupos de coherencia proporcionan una gestión fácil y una garantía de protección para una carga de trabajo de la aplicación que abarca varios volúmenes. Más información sobre https://docs.netapp.com/us-en/ontap/consistency-groups/index.html["grupo de consistencia"].
+
+
+
 === Pila doble
 
 Una red de pila doble es un entorno de red que admite el uso simultáneo de direcciones IPv4 e IPv6.
@@ -39,6 +45,12 @@ Una LUN es un número utilizado para identificar una unidad lógica dentro de un
 
 
 
+=== Subsistema y espacio de nombres NVMe
+
+Un espacio de nombres NVMe es una cantidad de memoria no volátil que se puede formatear en bloques lógicos. Los espacios de nombres son el equivalente de LUN para los protocolos FC e iSCSI, y un subsistema NVMe es análogo a un igroup. Los iniciadores asociados pueden acceder a un subsistema NVMe con iniciadores para que los espacios de nombres dentro del subsistema puedan acceder a ellos.
+
+
+
 === Gestor de herramientas de ONTAP
 
 El administrador de herramientas de ONTAP proporciona un mayor control a las herramientas de ONTAP para el administrador de VMware vSphere a través de las instancias gestionadas de vCenter Server y los back-ends de almacenamiento incorporados. ONTAP tools Manager ayuda en la gestión de instancias de vCenter Server, back-ends de almacenamiento, certificados, contraseñas y descargas de paquetes de registros.
@@ -51,9 +63,9 @@ OVA es un estándar abierto para empaquetar y distribuir dispositivos virtuales 
 
 
 
-=== SnapMirror activo (SMAS)
+=== Sincronización activa de SnapMirror (SMAS)
 
-La sincronización activa de SnapMirror permite que los servicios empresariales continúen funcionando incluso si se produce un fallo completo del sitio, lo que permite a las aplicaciones conmutar por error de forma transparente mediante una copia secundaria. Se requiere intervención manual ni secuencias de comandos personalizadas para activar una recuperación tras fallos con SnapMirror: Sincronización activa.
+La sincronización activa de SnapMirror permite que los servicios empresariales continúen funcionando incluso si se produce un fallo completo del sitio, lo que permite a las aplicaciones conmutar por error de forma transparente mediante una copia secundaria. Se requiere intervención manual ni secuencias de comandos personalizadas para activar una recuperación tras fallos con SnapMirror: Sincronización activa. Lea más sobre https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html["SnapMirror síncrono activo"].
 
 
 
@@ -66,6 +78,18 @@ SRA es el software específico del proveedor de almacenamiento que se instala en
 === Máquina virtual de almacenamiento (SVM)
 
 Al igual que una máquina virtual que se ejecuta en un hipervisor, la SVM es una entidad lógica que abstrae los recursos físicos. SVM contiene volúmenes de datos y una o varias LIF a través de los cuales proporcionan datos a los clientes.
+
+
+
+=== Configuración uniforme y no uniforme
+
+* * El acceso uniforme a host* significa que los hosts de ambos sitios están conectados a todas las rutas a los clústeres de almacenamiento en ambos sitios. Los caminos de cruce se extienden a lo largo de la distancia.
+* * El acceso no uniforme del host* significa que los hosts en cada sitio están conectados solo al clúster en el mismo sitio. Las rutas entre sitios y las rutas extendidas no están conectadas.
++
+
+NOTE: Se admite el acceso uniforme de hosts en cualquier implementación de sincronización activa de SnapMirror; el acceso no uniforme de host solo se admite para implementaciones activo-activo simétricas.
+
+
 
 
 
@@ -102,6 +126,12 @@ VASA es un conjunto de API que integran cabinas de almacenamiento con vCenter Se
 === API de almacenamiento VMware vSphere - Integración de cabina (VAAI)
 
 VAAI es un conjunto de API que permite la comunicación entre hosts ESXi de VMware vSphere y dispositivos de almacenamiento. Las API incluyen un conjunto de operaciones primitivas que utilizan los hosts para descargar las operaciones de almacenamiento hacia la cabina. VAAI puede proporcionar mejoras de rendimiento significativas para tareas que consumen mucho almacenamiento.
+
+
+
+=== Clúster de almacenamiento Metro de vSphere
+
+VSphere Metro Storage Cluster (VMSC) es una tecnología que habilita y admite vSphere en una puesta en marcha de clúster ampliada. Las soluciones VMSC son compatibles con NetApp MetroCluster y SnapMirror Active Sync (anteriormente SMBC). Estas soluciones proporcionan una mayor continuidad del negocio en caso de fallo de dominio. El modelo de flexibilidad se basa en sus opciones de configuración específicas. Más información sobre https://core.vmware.com/resource/vmware-vsphere-metro-storage-cluster-vmsc["VMware vSphere Metro Storage Cluster"].
 
 
 

@@ -4,18 +4,20 @@ title: Gestione las herramientas de ONTAP
 entries:
 - title: Gestionar almacenes de datos
   entries:
-  - title: Montar almacenes de datos de NFS y VMFS
+  - title: Montar NFS y almacén de datos VMFS
     url: "/manage/mount-datastores-on-host.html"
+  - title: Desmonte NFS y el almacén de datos de VMFS
+    url: "/manage/unmount-datastores-on-host.html"
   - title: Monte un almacén de datos vVols
     url: "/manage/mount-a-vvols-datastore.html"
-  - title: Cambie el tamaño de los almacenes de datos NFS y VMFS
+  - title: Cambie el tamaño de NFS y almacén de datos VMFS
     url: "/manage/resize-datastores.html"
-  - title: Expanda VVol datastores
+  - title: Expanda el almacén de datos de VVol
     url: "/manage/expand-storage-of-vvol-datastore.html"
-  - title: Reducir los almacenes de datos de vVols
+  - title: Reducir el almacén de datos vVols
     url: "/manage/remove-storage-from-a-vvols-datastore.html"
   - title: Eliminar almacenes de datos
-    url: "/manage/delete-vvols.html"
+    url: "/manage/delete-ds.html"
   - title: Vistas de almacenamiento ONTAP para almacenes de datos
     url: "/manage/storage-view-datastore.html"
   - title: Vista de almacenamiento de equipos virtuales
@@ -40,7 +42,7 @@ entries:
     url: "/manage/configure-remote-diagnostic-access.html"
   - title: Inicie SSH en otros nodos
     url: "/manage/start-the-ssh-on-other-nodes.html"
-  - title: Actualice las credenciales de vCenter y ONTAP
+  - title: Actualice las credenciales de vCenter Server y ONTAP
     url: "/manage/update-vcenter-credentials.html"
 - title: Informes sobre la herramienta ONTAP
   url: "/manage/reports.html"
@@ -69,3 +71,9 @@ entries:
     url: "/manage/reset-maint-password.html"
 - title: Limpie los volúmenes
   url: "/manage/delete-deployment.html"
+- title: Gestione la protección del clúster de hosts
+  entries:
+  - title: Modificar la protección del clúster de hosts
+    url: "/manage/edit-hostcluster-protection.html"
+  - title: Quite la protección del clúster de hosts
+    url: "/manage/delete-hostcluster-protection.html"

@@ -28,7 +28,7 @@ Debe haber conectado los sitios protegidos y de recuperación.
 * Pasos*
 
 . Inicie sesión en vCenter Server y haga clic en *Site Recovery* > *Sites*.
-. Seleccione su sitio protegido y, a continuación, haga clic en *Administrar*.
+. Seleccione su sitio protegido y haga clic en *Administrar*.
 . En la ficha Administrar, seleccione *asignaciones de red*.
 . Haga clic en *Nuevo* para crear un nuevo mapeo de red.
 +

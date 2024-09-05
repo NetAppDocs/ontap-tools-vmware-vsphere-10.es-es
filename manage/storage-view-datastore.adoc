@@ -35,10 +35,11 @@ La vista de almacenamiento ONTAP en la pestaña de configuración de herramienta
 .Pasos
 . Desde vSphere Client, desplácese hasta el almacén de datos de VMFS.
 . Haga clic en la pestaña *Configure* en el panel derecho.
-. Selecciona *Herramientas de NetApp ONTAP* > *Almacenamiento de ONTAP*. Los detalles de *Almacenamiento* y *LUN* aparecen en el panel derecho.
+. Selecciona *Herramientas de NetApp ONTAP* > *Almacenamiento de ONTAP*. Los detalles de *Almacenamiento* y *Detalles de la LUN* o *Detalles del espacio de nombres* en el caso del protocolo NVMe/TCP o NVMe/FC aparecen en el panel derecho.
 +
 ** La página de detalles de almacenamiento contiene información acerca de back-ends de almacenamiento, el agregado y el volumen.
 ** La página de detalles de LUN contiene datos relacionados con el LUN.
+** Cuando se utiliza el protocolo NVMe/TCP o NVMe/FC para almacén de datos VMFS, la página de detalles Namespace contiene datos relacionados con Namespace.
 
 
 
@@ -53,6 +54,6 @@ La vista de almacenamiento ONTAP en la pestaña de configuración de herramienta
 . Selecciona *Herramientas de NetApp ONTAP* > *Almacenamiento de ONTAP*.
 . La vista de almacenamiento de ONTAP enumera todos los volúmenes. Puede ampliar o quitar el almacenamiento desde el panel de almacenamiento de ONTAP.
 +
-Siga las instrucciones de link:../manage/expand-storage-of-vvol-datastore.html["Expanda vVols datastores"] Sección para añadir el almacén de datos vVols y. link:../manage/remove-storage-from-a-vvols-datastore.html["Reducir los almacenes de datos de vVols"] sección para eliminar el almacén de datos.
+Siga las instrucciones de link:../manage/expand-storage-of-vvol-datastore.html["Expanda vVols Datastore"] la sección para añadir el almacén de datos vVols y link:../manage/remove-storage-from-a-vvols-datastore.html["Reducir el almacén de datos vVols"] la sección para eliminar el almacén de datos.
 
 

@@ -66,27 +66,3 @@ Consulte link:../deploy/config-limits.html["Límites de configuración para pone
 La herramienta de matriz de interoperabilidad (IMT) contiene la información más reciente sobre las versiones compatibles de ONTAP, vCenter Server, hosts ESXi y aplicaciones de plugins.
 
 https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT["Herramienta de matriz de interoperabilidad"^]
-
-
-
-== Consideraciones adicionales sobre la puesta en marcha
-
-Debe tener en cuenta algunos requisitos al personalizar la implementación de las herramientas de ONTAP.
-
-
-
-=== Contraseña de usuario de la aplicación
-
-Esta es la contraseña asignada a la cuenta de administrador. Por motivos de seguridad, se recomienda que la longitud de la contraseña sea de entre 8 y 30 caracteres y contenga un mínimo de un carácter superior, uno inferior, un dígito y un carácter especial.
-
-
-
-=== Credenciales de la consola de mantenimiento del dispositivo
-
-Debe acceder a la consola de mantenimiento utilizando el nombre de usuario «pintoresco». Puede establecer la contraseña para el usuario «mant» durante la implementación. Puede usar la opción Restart Guest OS disponible durante el reinicio de la máquina virtual en vCenter Server para cambiar la contraseña.
-
-
-
-=== Propiedades de la red del dispositivo
-
-Especifique un nombre de host DNS válido (no cualificado), así como la dirección IP estática para las herramientas de ONTAP para VMware vSphere y los demás parámetros de red. Es necesario acceder a las direcciones IP proporcionadas desde la red VLAN que se selecciona durante la implementación. DHCP no es compatible con las herramientas de ONTAP para la versión VMware vSphere 10,1. Todos estos parámetros son necesarios para una instalación y un funcionamiento adecuados.

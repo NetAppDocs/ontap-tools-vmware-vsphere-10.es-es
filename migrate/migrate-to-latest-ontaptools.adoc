@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: migrate 
 summary: Cuando se migran datos de almacenamiento, los back-ends de almacenamiento se incorporan manualmente mediante las API DE REST. Al migrar datos del proveedor VASA, los datos se exportan desde la base de datos de Derby existente e se importan a la base de datos MongoDB. 
 ---
-= Migrar a la última versión de herramientas de ONTAP
+= Migre desde ONTAP Tools para VMware vSphere 9.x a 10,2
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,7 +14,7 @@ summary: Cuando se migran datos de almacenamiento, los back-ends de almacenamien
 Cuando se migran datos de almacenamiento, los back-ends de almacenamiento se incorporan manualmente mediante las API DE REST. Al migrar datos del proveedor VASA, los datos se exportan desde la base de datos de Derby existente e se importan a la base de datos MongoDB.
 
 
-NOTE: Se recomienda migrar herramientas de ONTAP para la configuración de VMware vSphere 9.xx solo si la configuración está prestando servicio solamente a la función del proveedor de VASA. Si tiene almacenes de datos de NVMe y replicación de VVOL, no se recomienda migrar la configuración a herramientas ONTAP para VMware vSphere 10,1.
+NOTE: Se recomienda migrar herramientas de ONTAP para la configuración de VMware vSphere 9.xx solo si la configuración está prestando servicio solamente a la función del proveedor de VASA.
 
 *Acerca de esta tarea*
 
@@ -27,6 +27,10 @@ NOTE: Como usuario existente, debe realizar la copia de seguridad OVA de la vers
 
 == Pasos de migración comunes
 
+. Implemente OVA para herramientas de ONTAP para la versión VMware vSphere 10,2.
+. Añada la instancia de vCenter Server que desee migrar a las herramientas de ONTAP para la versión de VMware vSphere 10,2. Consulte link:../configure/add-vcenter.html["Añada y gestione instancias de vCenter Server"]
+. Back-end de almacenamiento incorporado localmente desde las herramientas de ONTAP para las API del complemento de VMware vSphere vCenter Server. Añada almacenamiento como almacenamiento de ámbito local para la migración.
+. Los almacenes de datos de NFS y VMFS migrados desde las herramientas de ONTAP para VMware vSphere 9.xx solo se pueden ver en las herramientas de ONTAP para VMware vSphere 10,2 después de activar el trabajo de detección del almacén de datos, que puede demorar hasta 30 minutos en activarse. Compruebe si los almacenes de datos están visibles en la página Overview de la página de interfaz de usuario del complemento de ONTAP tools for VMware vSphere.
 . Implemente OVA para herramientas de ONTAP para la versión VMware vSphere 10,1.
 . Añada la instancia de vCenter Server que desee migrar a las herramientas de ONTAP para la versión de VMware vSphere 10,1. Consulte link:../configure/add-vcenter.html["Añada y gestione instancias de vCenter Server"]
 . El back-end de almacenamiento incorporado localmente desde las herramientas de ONTAP para las API del complemento de vCenter de VMware vSphere. Añada almacenamiento como almacenamiento de ámbito local para la migración.
@@ -70,9 +74,9 @@ Lleve a cabo estos pasos en sitios de protección y recuperación.
 ----
 iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 ----
-. Implemente OVA para herramientas de ONTAP para la versión VMware vSphere 10,1.
-. Añada la instancia de vCenter Server que desee migrar a las herramientas de ONTAP para la versión de VMware vSphere 10,1. Consulte link:../configure/add-vcenter.html["Agregue una instancia de vCenter Server"].
-. Back-end de almacenamiento incorporado localmente desde las API de vCenter de complemento remoto. Agregue almacenamiento como ámbito local para la migración.
+. Implemente OVA para herramientas de ONTAP para la versión VMware vSphere 10,2.
+. Añada la instancia de vCenter Server que desee migrar a las herramientas de ONTAP para la versión de VMware vSphere 10,2. Consulte link:../configure/add-vcenter.html["Agregue una instancia de vCenter Server"].
+. El back-end de almacenamiento incorporado localmente desde las API del complemento remoto de vCenter Server. Agregue almacenamiento como ámbito local para la migración.
 . Emita la siguiente llamada API para migrar:
 +
 []

@@ -125,5 +125,23 @@ Los últimos tres dígitos del código de error indican el error de flujo de tra
 
 
 | 088 | Fallo al configurar la rotación de log para el diario | Vuelva a intentar la actualización. 
+
+
+| 089 | Fallo al cambiar la propiedad del archivo de configuración de rotación de registro de resumen | Vuelva a intentar la actualización. 
+
+
+| 091 | Se produjo un error en la actualización de iSCSI | Vuelva a intentar la actualización. 
+
+
+| 092 | Se produjo un error en la reversión de iSCSI | Vuelva a intentar la actualización. 
+
+
+| 093 | fallo en la actualización de Trident | Vuelva a intentar la actualización. 
+
+
+| 094 | se produjo un error en la reversión de Trident | Vuelva a intentar la actualización. 
+
+
+| 095 | Fallo en la actualización de Debian | No hay recuperación para la actualización debian. Los servicios se actualizan y se ejecutan nuevos pods 
 |===
 Más información acerca de https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/How_to_restore_ONTAP_tools_for_VMware_vSphere_if_upgrade_fails_from_version_10.0_to_10.1["Cómo restaurar las herramientas de ONTAP para VMware vSphere si la actualización falla de la versión 10,0 a 10,1"]

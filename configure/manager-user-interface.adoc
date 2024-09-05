@@ -18,8 +18,7 @@ El Gestor de herramientas de ONTAP ayuda en:
 * Gestión de instancias de vCenter Server: Añada y gestione instancias de vCenter Server a herramientas de ONTAP.
 * Gestión del back-end de almacenamiento: Añada y gestione clústeres de almacenamiento de ONTAP a las herramientas de ONTAP para VMware vSphere y asígnelos a instancias integradas de vCenter Server a nivel global.
 * Descargas del paquete de registro: Recoja archivos de registro para las herramientas de ONTAP para VMware vSphere.
-* Gestión de certificados: Cambie el certificado autofirmado a un certificado de CA personalizado y renueve
-o actualice todos los certificados.
+* Gestión de certificados: Cambie el certificado autofirmado a un certificado de CA personalizado y renueve o actualice todos los certificados del proveedor VASA.
 * Gestión de contraseñas: Restablece la contraseña de la aplicación OVA para el usuario.
 
 

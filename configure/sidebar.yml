@@ -33,5 +33,7 @@ entries:
 - title: Información general de la consola del complemento de herramientas de NetApp
     ONTAP para VMware vSphere
   url: "/configure/dashboard-overview.html"
+- title: Cree la protección del clúster de hosts
+  url: "/configure/protect-cluster.html"
 - title: Cree un almacén de datos
   url: "/configure/create-vvols-datastore.html"

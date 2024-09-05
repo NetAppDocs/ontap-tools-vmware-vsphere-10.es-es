@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Remove vVol datastore 
 summary: La acción Delete datastore elimina el almacén de datos cuando no hay vVols en el almacén de datos seleccionado. 
 ---
-= Reducir los almacenes de datos de vVols
+= Reducir el almacén de datos vVols
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
