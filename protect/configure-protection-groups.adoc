@@ -17,7 +17,7 @@ Debe crear grupos de protección para proteger un grupo de máquinas virtuales e
 
 Debe asegurarse de que los sitios de origen y destino están configurados para lo siguiente:
 
-* Misma versión de SRM instalada
+* Misma versión de VMware Live Site Recovery instalada
 * Equipos virtuales
 * Sitios protegidos y de recuperación emparejados
 * Los almacenes de datos de origen y destino deben montarse en las ubicaciones respectivas

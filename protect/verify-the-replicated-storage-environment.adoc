@@ -16,7 +16,7 @@ Debe verificar que el sitio protegido y el sitio de recuperación se hayan empar
 *Lo que necesitará*
 
 * Debe haber configurado el sistema de almacenamiento.
-* Debe haber emparejado el sitio protegido y el sitio de recuperación mediante el administrador de cabinas SRM.
+* Debe haber emparejado el sitio protegido y el sitio de recuperación mediante el administrador de la cabina Live Site Recovery de VMware.
 * Debe haber habilitado la licencia de FlexClone y la licencia de SnapMirror antes de realizar la operación de prueba de conmutación por error y la operación de conmutación por error para SRA.
 
 

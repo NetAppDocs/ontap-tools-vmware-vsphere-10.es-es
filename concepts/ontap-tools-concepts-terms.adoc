@@ -53,7 +53,7 @@ Un espacio de nombres NVMe es una cantidad de memoria no volátil que se puede f
 
 === Gestor de herramientas de ONTAP
 
-El administrador de herramientas de ONTAP proporciona un mayor control a las herramientas de ONTAP para el administrador de VMware vSphere a través de las instancias gestionadas de vCenter Server y los back-ends de almacenamiento incorporados. ONTAP tools Manager ayuda en la gestión de instancias de vCenter Server, back-ends de almacenamiento, certificados, contraseñas y descargas de paquetes de registros.
+El administrador de herramientas de ONTAP proporciona un mayor control a las herramientas de ONTAP para el administrador de VMware vSphere a través de las instancias gestionadas de vCenter Server y los back-ends de almacenamiento incorporados. El Administrador de herramientas de ONTAP ayuda en la gestión de instancias de vCenter Server, back-ends de almacenamiento, certificados, contraseñas y descargas de paquetes de registros.
 
 
 
@@ -71,7 +71,7 @@ La sincronización activa de SnapMirror permite que los servicios empresariales 
 
 === Adaptador de replicación de almacenamiento (SRA)
 
-SRA es el software específico del proveedor de almacenamiento que se instala en el dispositivo SRM. El adaptador habilita la comunicación entre Site Recovery Manager y una controladora de almacenamiento en el nivel de Storage Virtual Machine (SVM) y la configuración a nivel del clúster.
+SRA es el software específico del proveedor de almacenamiento que se instala en el dispositivo de recuperación Live Site de VMware. El adaptador habilita la comunicación entre Site Recovery Manager y una controladora de almacenamiento en el nivel de Storage Virtual Machine (SVM) y la configuración a nivel del clúster.
 
 
 
@@ -111,9 +111,9 @@ Las políticas de almacenamiento de máquinas virtuales se crean en vCenter Serv
 
 
 
-=== VMware Site Recovery Manager (SRM)
+=== Recuperación de sitio en vivo de VMware
 
-SRM proporciona continuidad empresarial, recuperación ante desastres, migración de sitios y funcionalidades de prueba sin interrupciones para entornos virtuales de VMware.
+Live Site Recovery de VMware proporciona continuidad de negocio, recuperación de desastres, migración de sitios y funcionalidades de pruebas sin interrupciones para entornos virtuales VMware.
 
 
 

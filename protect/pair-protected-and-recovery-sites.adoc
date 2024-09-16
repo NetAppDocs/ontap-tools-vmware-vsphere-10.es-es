@@ -14,11 +14,11 @@ summary: 'Debe emparejar los sitios protegidos y de recuperación creados median
 Debe emparejar los sitios protegidos y de recuperación creados mediante vSphere Client para habilitar el Storage Replication Adapter (SRA) para detectar los sistemas de almacenamiento.
 
 
-NOTE: El adaptador de replicación de almacenamiento (SRA) no admite las configuraciones de SnapMirror con ventilador fuera. Las configuraciones de dispersión de SnapMirror son las que permiten replicar un volumen de origen en dos destinos diferentes. Estas crean un problema durante la recuperación cuando SRM necesita recuperar la máquina virtual desde su destino.
+NOTE: El adaptador de replicación de almacenamiento (SRA) no admite las configuraciones de SnapMirror con ventilador fuera. Las configuraciones de dispersión de SnapMirror son las que permiten replicar un volumen de origen en dos destinos diferentes. Éstas crean un problema durante la recuperación cuando VMware Live Site Recovery necesita recuperar la máquina virtual desde su destino.
 
 *Lo que necesitará*
 
-* Debe tener Site Recovery Manager (SRM) instalado en los sitios protegidos y de recuperación.
+* Debe tener VMware Live Site Recovery instalado en los sitios protegidos y de recuperación.
 * Debe tener el SRA instalado en los sitios protegidos y de recuperación.
 
 

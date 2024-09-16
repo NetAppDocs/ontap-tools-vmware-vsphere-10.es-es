@@ -49,9 +49,9 @@ Antes de migrar, asegúrese de que uno de los sitios esté en estado protegido y
 NOTE: No migre si la recuperación tras fallos acaba de completarse y la nueva protección está pendiente. Complete la reprotección y, a continuación, lleve a cabo la migración.
 Lo mismo se aplica a la prueba del plan de recuperación. Una vez finalizada la prueba del plan de recuperación, limpie la recuperación de pruebas y, a continuación, inicie la migración.
 
-. Realice los siguientes pasos para eliminar las herramientas de ONTAP para el adaptador del SRA de la versión 9.xx de VMware vSphere en la interfaz de usuario de SRM:
+. Realice los siguientes pasos para eliminar las herramientas de ONTAP para el adaptador SRA de la versión 9.xx de VMware vSphere en la IU de VMware Live Site Recovery:
 +
-.. Vaya a la página de gestión de configuración de SRM
+.. Vaya a la página de gestión de VMware Live Site Recovery Configuration
 .. Vaya a la sección Storage Replication Adapter
 .. Haga clic en el menú de Kebab y haga clic en *Restablecer configuración*
 .. Haga clic en el menú de Kebab y seleccione * Eliminar *
@@ -60,8 +60,8 @@ Lleve a cabo estos pasos en sitios de protección y recuperación.
 
 
 
-. Instale herramientas de ONTAP para el adaptador SRA de VMware vSphere 10,1 en sitios tanto de protección como de recuperación siguiendo los pasos del link:../protect/configure-on-srm-appliance.html["Configure el SRA en el dispositivo SRM"]
-. En la página de interfaz de usuario de SRM, realice operaciones de *Discover Arrays* y *Discover Devices* y verifique que los dispositivos se muestran como antes de la migración.
+. Instale herramientas de ONTAP para el adaptador SRA de VMware vSphere 10,1 en sitios tanto de protección como de recuperación siguiendo los pasos del link:../protect/configure-on-srm-appliance.html["Configurar el SRA en el dispositivo VMware Live Site Recovery"]
+. En la página de interfaz de usuario de VMware Live Site Recovery, realice las operaciones de *Discover Arrays* y *Discover Devices* y verifique que los dispositivos se muestran como antes de la migración.
 
 
 

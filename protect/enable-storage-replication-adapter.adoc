@@ -22,9 +22,8 @@ Las herramientas de ONTAP para VMware vSphere ofrecen la opción de habilitar la
 
 * Pasos*
 
-. Inicie sesión en la interfaz de gestión de dispositivos SRM mediante la URL `\https://:<srm_ip>:5480`: Y, a continuación, vaya a Adaptadores de replicación de almacenamiento en la interfaz de gestión de dispositivos VMware SRM.
+. Inicie sesión en la interfaz de gestión del dispositivo VMware Live Site Recovery mediante la URL `\https://:<srm_ip>:5480`: Y, a continuación, vaya a Adaptadores de replicación de almacenamiento en la interfaz de gestión del dispositivo VMware Live Site Recovery.
 . Seleccione *Nuevo adaptador*.
-. Cargue el instalador _.tar.gz_ del plugin de SRA en SRM.
-. Vuelva a analizar los adaptadores para verificar que los detalles se hayan actualizado en los adaptadores de replicación de almacenamiento de SRM
-página.
+. Cargue el instalador _.tar.gz_ para el plugin de SRA en Live Site Recovery de VMware.
+. Vuelva a analizar los adaptadores para verificar que los detalles se hayan actualizado en la página Adaptadores de replicación de almacenamiento de recuperación de sitio activo de VMware.
 

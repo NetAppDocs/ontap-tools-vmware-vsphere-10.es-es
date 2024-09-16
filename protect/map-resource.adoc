@@ -18,7 +18,7 @@ Debe asignar los recursos en el sitio protegido y el sitio de recuperación de m
 Debe haber conectado los sitios protegidos y de recuperación.
 
 
-NOTE: En Site Recovery Manager (SRM), los recursos pueden ser pools de recursos, hosts ESXi o clústeres de vSphere.
+NOTE: En VMware Live Site Recovery, los recursos pueden ser pools de recursos, hosts ESXi o clústeres de vSphere.
 
 * Pasos*
 
