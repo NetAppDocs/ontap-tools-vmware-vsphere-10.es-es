@@ -31,10 +31,6 @@ NOTE: Como usuario existente, debe realizar la copia de seguridad OVA de la vers
 . Añada la instancia de vCenter Server que desee migrar a las herramientas de ONTAP para la versión de VMware vSphere 10,2. Consulte link:../configure/add-vcenter.html["Añada y gestione instancias de vCenter Server"]
 . Back-end de almacenamiento incorporado localmente desde las herramientas de ONTAP para las API del complemento de VMware vSphere vCenter Server. Añada almacenamiento como almacenamiento de ámbito local para la migración.
 . Los almacenes de datos de NFS y VMFS migrados desde las herramientas de ONTAP para VMware vSphere 9.xx solo se pueden ver en las herramientas de ONTAP para VMware vSphere 10,2 después de activar el trabajo de detección del almacén de datos, que puede demorar hasta 30 minutos en activarse. Compruebe si los almacenes de datos están visibles en la página Overview de la página de interfaz de usuario del complemento de ONTAP tools for VMware vSphere.
-. Implemente OVA para herramientas de ONTAP para la versión VMware vSphere 10,1.
-. Añada la instancia de vCenter Server que desee migrar a las herramientas de ONTAP para la versión de VMware vSphere 10,2. Consulte link:../configure/add-vcenter.html["Añada y gestione instancias de vCenter Server"]
-. El back-end de almacenamiento incorporado localmente desde las herramientas de ONTAP para las API del complemento de vCenter de VMware vSphere. Añada almacenamiento como almacenamiento de ámbito local para la migración.
-. Los almacenes de datos de NFS y VMFS migrados desde las herramientas de ONTAP para VMware vSphere 9.xx solo se pueden ver en las herramientas de ONTAP para VMware vSphere 10,2 después de activar el trabajo de detección del almacén de datos, que puede demorar hasta 30 minutos en activarse. Compruebe si los almacenes de datos están visibles en la página Overview de la página de interfaz de usuario del complemento de ONTAP tools for VMware vSphere.
 
 
 
@@ -60,7 +56,7 @@ Lleve a cabo estos pasos en sitios de protección y recuperación.
 
 
 
-. Instale herramientas de ONTAP para el adaptador SRA de VMware vSphere 10,1 en sitios tanto de protección como de recuperación siguiendo los pasos del link:../protect/configure-on-srm-appliance.html["Configurar el SRA en el dispositivo VMware Live Site Recovery"]
+. Instale herramientas de ONTAP para el adaptador SRA de VMware vSphere 10,2 en sitios tanto de protección como de recuperación siguiendo los pasos del link:../protect/configure-on-srm-appliance.html["Configurar el SRA en el dispositivo VMware Live Site Recovery"]
 . En la página de interfaz de usuario de VMware Live Site Recovery, realice las operaciones de *Discover Arrays* y *Discover Devices* y verifique que los dispositivos se muestran como antes de la migración.
 
 
@@ -226,7 +222,7 @@ Esta API elimina la migración por el ID de migración y elimina la migración e
 ====
 
 
-Una vez realizada correctamente la migración y después de registrar las herramientas de ONTAP 10,1 en vCenter Server, haga lo siguiente:
+Una vez realizada correctamente la migración y después de registrar las herramientas de ONTAP 10,2 en vCenter Server, haga lo siguiente:
 
 * Actualice el certificado en todos los hosts.
 * Espere un tiempo antes de realizar las operaciones de Datastore (DS) y Virtual Machine (VM). El tiempo de espera depende del número de hosts, DS y VM que estén presentes en la configuración. Cuando no espera, es posible que las operaciones fallen de forma intermitente.

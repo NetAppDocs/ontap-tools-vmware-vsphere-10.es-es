@@ -80,7 +80,10 @@ El almacén de datos de NFS se crea y se monta en todos los hosts.
 
 == Cree un almacén de datos de VMFS
 
-Virtual Machine File System (VMFS) es un sistema de archivos en clúster específicamente diseñado para almacenar archivos de máquinas virtuales en entornos de VMware vSphere. Permite que varios hosts ESXi accedan a los mismos archivos de máquina virtual de forma simultánea, lo cual permite funciones como vMotion y alta disponibilidad. .Antes de comenzar Compruebe los siguientes elementos antes de continuar:
+Virtual Machine File System (VMFS) es un sistema de archivos en clúster específicamente diseñado para almacenar archivos de máquinas virtuales en entornos de VMware vSphere. Permite que varios hosts ESXi accedan a los mismos archivos de máquina virtual de forma simultánea, lo cual permite funciones como vMotion y alta disponibilidad.
+
+.Antes de empezar
+Compruebe los siguientes elementos antes de continuar:
 
 * Para cada protocolo en el almacenamiento de ONTAP, es necesario habilitar los servicios y LIF respectivos.
 * Si utiliza el protocolo NVMe/TCP, realice los siguientes pasos para configurar el host ESXi:
