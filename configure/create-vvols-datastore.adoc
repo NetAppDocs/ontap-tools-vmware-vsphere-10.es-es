@@ -21,10 +21,10 @@ El asistente de acción create Datastore admite la creación de almacenes de dat
 * Un almacén de datos VMFS se puede crear en un host, solo cuando tiene una relación asíncrona.
 
 
-
-
-== Cree un almacén de datos vVols
-
+[role="tabbed-block"]
+====
+.Cree un almacén de datos vVols
+--
 Es posible crear un almacén de datos vVols con volúmenes nuevos o existentes. No es posible crear un almacén de datos vVols con la combinación de volúmenes nuevos y existentes.
 
 
@@ -49,10 +49,9 @@ Compruebe que el proveedor de VASA esté registrado en la instancia de vCenter s
 . Revise su selección en el panel *Resumen* y haga clic en *Finalizar*. Se crea y se monta el almacén de datos vVols en todos los hosts.
 
 
-
-
-== Cree un almacén de datos NFS
-
+--
+.Cree un almacén de datos NFS
+--
 Un almacén de datos de sistema de archivos de red (NFS) de VMware utiliza el protocolo NFS para conectar los hosts ESXi a un dispositivo de almacenamiento compartido a través de una red. Los almacenes de datos NFS se utilizan habitualmente en entornos VMware vSphere y ofrecen muchas ventajas, como simplicidad y flexibilidad.
 
 .Pasos
@@ -76,10 +75,9 @@ NOTE: La autenticación Kerberos está disponible solo si se selecciona el proto
 
 El almacén de datos de NFS se crea y se monta en todos los hosts.
 
-
-
-== Cree un almacén de datos de VMFS
-
+--
+.Cree un almacén de datos de VMFS
+--
 Virtual Machine File System (VMFS) es un sistema de archivos en clúster específicamente diseñado para almacenar archivos de máquinas virtuales en entornos de VMware vSphere. Permite que varios hosts ESXi accedan a los mismos archivos de máquina virtual de forma simultánea, lo cual permite funciones como vMotion y alta disponibilidad.
 
 .Antes de empezar
@@ -129,11 +127,12 @@ Si eliges la opción *any* en el menú desplegable de la plataforma, podrás ver
 
 NOTE: Para la creación del almacén de datos VMFS con el protocolo NVMe/FC o NVMe/TCP, no se puede usar el volumen existente, debe crear un volumen nuevo.
 
-
-
 . Revise los detalles del almacén de datos en el panel *Summary* y haga clic en *Finish*.
 +
 
 NOTE: Si está creando el almacén de datos en un clúster protegido, puede ver un mensaje de solo lectura que indica que el almacén de datos se está montando en un clúster protegido. El almacén de datos de VMFS se crea y se monta en todos los hosts.
 
 
+
+--
+====

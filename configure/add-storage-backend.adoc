@@ -11,19 +11,16 @@ summary: Los back-ends de almacenamiento son los sistemas que los hosts ESXi uti
 
 
 [role="lead"]
-Los back-ends de almacenamiento son los sistemas que los hosts ESXi utilizan para el almacenamiento de datos.
+Los back-ends de almacenamiento son los sistemas que los hosts ESXi utilizan para el almacenamiento de datos. Puede añadir un back-end de almacenamiento mediante el administrador de herramientas de ONTAP o la interfaz de usuario del cliente de vSphere.
 
 *Acerca de esta tarea*
 
 Con esta tarea, se puede incorporar un clúster de ONTAP. Cuando se agrega un back-end de almacenamiento mediante el Administrador de herramientas de ONTAP, el back-end de almacenamiento se agrega al clúster global. Asocie el clúster global a una instancia de vCenter Server para habilitar un usuario de SVM para el aprovisionamiento de almacén de datos de vVols.
 
-
-NOTE: Cuando se añade un back-end de almacenamiento mediante la interfaz de usuario del cliente de vSphere, el almacén de datos de vVols no admite directamente la adición de un usuario de SVM.
-
-
-
-== Añadir back-end de almacenamiento con el Gestor de herramientas de ONTAP
-
+[role="tabbed-block"]
+====
+.Mediante el Administrador de herramientas de ONTAP
+--
 
 NOTE: Un back-end de almacenamiento es global al añadirlo desde el Administrador de herramientas de ONTAP o las API de herramientas de ONTAP. Un back-end de almacenamiento es local cuando se añade desde las API de vCenter Server. Por ejemplo, en una configuración multi-tenant, puede añadir un back-end de almacenamiento (clúster) de forma global y SVM de forma local para utilizar las credenciales de usuario de SVM.
 
@@ -40,9 +37,11 @@ NOTE: Se admiten los LIF de GESTIÓN de IPv4 y IPv6. También se admiten credenc
 
 
 
+--
+.Use la interfaz de usuario del cliente de vSphere
+--
 
-
-== Añadir back-end de almacenamiento mediante la IU del cliente de vSphere:
+NOTE: Cuando se añade un back-end de almacenamiento mediante la interfaz de usuario del cliente de vSphere, el almacén de datos de vVols no admite directamente la adición de un usuario de SVM.
 
 . Inicie sesión en el cliente de vSphere mediante `\https://vcenterip/ui`
 . En la página de accesos directos, haga clic en *NetApp ONTAP tools* en la sección de plugins.
@@ -55,3 +54,6 @@ NOTE: Puede añadir credenciales basadas en clúster y LIF de GESTIÓN de IPv4 y
 
 
 La lista se actualizará y podrá ver el back-end de almacenamiento que acaba de añadir en la lista.
+
+--
+====

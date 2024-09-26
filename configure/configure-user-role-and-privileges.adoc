@@ -143,7 +143,7 @@ Uso de las API:
 |===
 
 
-=== Actualice las herramientas de ONTAP para un usuario de VMware vSphere 10,1 a 10,2 usuario
+== Actualice las herramientas de ONTAP para un usuario de VMware vSphere 10,1 a 10,2 usuario
 
 Si el usuario de las herramientas de ONTAP para VMware vSphere 10,1 es un usuario de ámbito de clúster creado mediante el archivo json, ejecute los siguientes comandos en la interfaz de línea de comandos de ONTAP utilizando el usuario admin para actualizar a la versión 10,2.
 

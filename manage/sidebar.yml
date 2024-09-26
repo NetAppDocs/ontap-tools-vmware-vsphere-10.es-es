@@ -22,11 +22,11 @@ entries:
     url: "/manage/storage-view-datastore.html"
   - title: Vista de almacenamiento de equipos virtuales
     url: "/manage/virtual-machine-storage-view-datastore.html"
-- title: Permite gestionar el umbral de almacenamiento
+- title: Gestione los umbrales de almacenamiento
   url: "/manage/manage-storage-threshold.html"
-- title: Gestione el back-end de almacenamiento
+- title: Gestione los back-ends de almacenamiento
   url: "/manage/storage-backend.html"
-- title: Gestione la instancia de vCenter Server
+- title: Gestione instancias de vCenter Server
   url: "/manage/manage-vcenter.html"
 - title: Gestionar certificados
   url: "/manage/certificate-manage.html"

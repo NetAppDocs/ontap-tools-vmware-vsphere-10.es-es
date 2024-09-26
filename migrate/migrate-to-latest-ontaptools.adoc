@@ -28,7 +28,7 @@ NOTE: Como usuario existente, debe realizar la copia de seguridad OVA de la vers
 == Pasos de migración comunes
 
 . Implemente OVA para herramientas de ONTAP para la versión VMware vSphere 10,2.
-. Añada la instancia de vCenter Server que desee migrar a las herramientas de ONTAP para la versión de VMware vSphere 10,2. Consulte link:../configure/add-vcenter.html["Añada y gestione instancias de vCenter Server"]
+. Añada la instancia de vCenter Server que desee migrar a las herramientas de ONTAP para la versión de VMware vSphere 10,2. Consulte link:../configure/add-vcenter.html["Añada instancias de vCenter Server"]
 . Back-end de almacenamiento incorporado localmente desde las herramientas de ONTAP para las API del complemento de VMware vSphere vCenter Server. Añada almacenamiento como almacenamiento de ámbito local para la migración.
 . Los almacenes de datos de NFS y VMFS migrados desde las herramientas de ONTAP para VMware vSphere 9.xx solo se pueden ver en las herramientas de ONTAP para VMware vSphere 10,2 después de activar el trabajo de detección del almacén de datos, que puede demorar hasta 30 minutos en activarse. Compruebe si los almacenes de datos están visibles en la página Overview de la página de interfaz de usuario del complemento de ONTAP tools for VMware vSphere.
 
