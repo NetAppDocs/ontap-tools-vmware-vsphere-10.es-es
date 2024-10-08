@@ -18,7 +18,7 @@ NOTE: Se recomienda migrar herramientas de ONTAP para la configuración de VMwar
 
 *Acerca de esta tarea*
 
-La migración es compatible con las herramientas de ONTAP para las versiones 9.10D2, 9.11D4, 9,12 y 9,13 de VMware vSphere a la versión 10,2.
+La migración es compatible con las herramientas de ONTAP para las versiones VMware vSphere 9.10D2, 9.11D4, 9.12D1 y 9.13D2 a la versión 10,2.
 
 
 NOTE: Como usuario existente, debe realizar la copia de seguridad OVA de la versión actual antes de actualizar a las versiones de parches.
