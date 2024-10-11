@@ -14,7 +14,10 @@ summary: Cuando se migran datos de almacenamiento, los back-ends de almacenamien
 Cuando se migran datos de almacenamiento, los back-ends de almacenamiento se incorporan manualmente mediante las API DE REST. Al migrar datos del proveedor VASA, los datos se exportan desde la base de datos de Derby existente e se importan a la base de datos MongoDB.
 
 
-NOTE: Se recomienda migrar herramientas de ONTAP para la configuración de VMware vSphere 9.xx solo si la configuración está prestando servicio solamente a la función del proveedor de VASA.
+NOTE: Se recomienda migrar herramientas de ONTAP para la configuración de VMware vSphere 9.x solo si la configuración está prestando servicio solamente a la función del proveedor de VASA.
+
+
+NOTE: Después de migrar desde las herramientas de ONTAP para VMware vSphere 9.x a 10,2, los almacenes de datos de vVols con protocolo NVMe/FC no funcionan porque las herramientas de ONTAP 10,2 solo admiten NVMe-oF con almacenes de datos VMFS.
 
 *Acerca de esta tarea*
 
