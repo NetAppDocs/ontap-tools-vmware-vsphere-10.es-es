@@ -308,9 +308,6 @@ Puede hacer clic en el encabezado para obtener los 10 almacenes de datos princip
   <block id="27e514c64c8a3970155422f887b4e4c9" category="cell">Tarjeta de cumplimiento de normativas del host ESXi</block>
   <block id="37a7aee5902e5e8b7d36af678ff3baf3" category="cell">Esta tarjeta muestra el estado de cumplimiento general de todos los hosts ESXi (para la configuración de vCenter seleccionada) con respecto a la configuración de host NetApp recomendada por grupo de ajustes/categoría.
 Puede hacer clic en el enlace Aplicar configuración recomendada para aplicar la configuración recomendada. Puede hacer clic en Problemas/desconocidos para ver la lista de hosts.</block>
-  <block id="ea87c4ef97995827b2d23fec795f9cbd" category="summary">Puede ejecutar una detección bajo demanda en el host ESXi para obtener las actualizaciones más recientes en los datos de almacenamiento.</block>
-  <block id="de458ad6ecb99cfc8e4cc7fa762462c4" category="doc">Actualizar los datos del host</block>
-  <block id="6099322beed408d39a0c31a402ba9f04" category="list-text">En la ventana emergente *Actualizar datos del host*, seleccione *Sí* para reiniciar la detección de todos los sistemas de almacenamiento conectados.</block>
   <block id="1772747eceb4be4c72a7b0ba5c7c5a67" category="summary">Es posible configurar nuevos roles de usuario para gestionar back-ends de almacenamiento mediante el archivo JSON proporcionado con las herramientas de ONTAP para VMware vSphere y ONTAP System Manager.</block>
   <block id="fde3f7a850bbaaac2a3706bf8c7df54c" category="doc">Configure los roles y privilegios de usuario de ONTAP</block>
   <block id="322c3ffbc77c8245a48d32406a927fb6" category="paragraph">Es posible configurar nuevos roles y privilegios de usuario para gestionar back-ends de almacenamiento mediante el archivo JSON proporcionado con las herramientas de ONTAP para VMware vSphere y el administrador del sistema de ONTAP.</block>
@@ -1301,9 +1298,7 @@ Los códigos de error tienen una longitud de cinco dígitos, donde los dos prime
   <block id="721041095b64df665034c0b19c967475" category="sidebar">Alta disponibilidad para herramientas de ONTAP para VMware vSphere</block>
   <block id="01c23a6022de21870627c656bac73ece" category="sidebar">Automatización mediante API de REST</block>
   <block id="f724dfae8a2bb3b34e049dcedf88d10d" category="sidebar">Proteja los almacenes de datos y las máquinas virtuales</block>
-  <block id="30dcbadaeab2008f15a279a602f8b6e2" category="sidebar">Configuración del sistema de almacenamiento para la recuperación ante desastres</block>
   <block id="25890161c3df1f2618234e8f48e2c18b" category="sidebar">Configure SRA para entornos con gran escala</block>
-  <block id="3d7d171ecad1cba0c2d8d707b648b023" category="sidebar">Configuración de sitios protegidos y de recuperación</block>
   <block id="a239701adb72159a71164b036c18a53a" category="sidebar">Configurar los recursos del sitio de recuperación y protegidos</block>
   <block id="6956cfc9382ccb41c8ac57f99255b409" category="sidebar">Comprobar los sistemas de almacenamiento replicados</block>
   <block id="a2fa58344be7fbd9a2be0320a8df0f77" category="sidebar">Actualice las herramientas de ONTAP</block>
@@ -1524,7 +1519,6 @@ Ejecute el siguiente comando para buscar el primer nombre de igroup:</block>
   <block id="521a15c47fb41d8055141333f4c3f248" category="inline-link">Añada adaptadores de software NVMe sobre RDMA o NVMe over TCP</block>
   <block id="7b30cf0bf941c59665059610f32765b2" category="list-text">Para la versión de VMware vSphere 7, siga las instrucciones del sitio de VMware<block ref="78ea54819b62ddbcd655a4671d8a5b88" category="inline-link-rx"></block> para configurar adaptadores de software NVMe/TCP. Para la versión VMware vSphere 8, siga<block ref="d7f2ab4a5e61632cb53ab17b5775b973" category="inline-link-rx"></block> para configurar los adaptadores de software NVMe/TCP.</block>
   <block id="f897e941469c1def0ceaad5904784393" category="inline-link">Cómo configurar NVMe/TCP con vSphere 8,0 Update 1 y ONTAP 9.13,1 para almacenes de datos VMFS</block>
-  <block id="81dc7c047ef799c2030ebccbe36d3322" category="list-text">Ejecute <block ref="6c4ebf1ca886332539cd9c26d849d11e" category="inline-link-macro-rx"></block> la acción en el host ESXi. Para obtener más información, consulte<block ref="08964a7c7e6cd9155ed7286907a68824" category="inline-link-rx"></block></block>
   <block id="b52744b7fe6a50a639b45ebe19c17f96" category="list-text">Si utiliza el protocolo NVME/FC, realice los siguientes pasos para configurar el host ESXi:</block>
   <block id="0d2e4cff54d6f550e6b15a47007a161c" category="list-text">Habilite NVMe over Fabrics(NVMe-oF) en los hosts ESXi.</block>
   <block id="802068251371051bc6ae5a5f001b4460" category="list-text">Complete la división en zonas de SCSI.</block>
@@ -1839,7 +1833,6 @@ Ejecute el siguiente comando para buscar el primer nombre de igroup:</block>
   <block id="c93b5a9d65c77be9a5dfa309362afe22" category="sidebar">Añada vCenter Server</block>
   <block id="3d7fe3e43f9f24fffe5ed0d546d12f13" category="sidebar">Ponga en funcionamiento las herramientas de ONTAP</block>
   <block id="4b10c0328f31fc426beffe86fb80aa8e" category="sidebar">Recuperar herramientas de ONTAP</block>
-  <block id="d3dc6537536e641facaa2e80efee8fc5" category="sidebar">Recupere sus herramientas de ONTAP</block>
   <block id="65411d7178112726bcaf549fb0afd1f2" category="paragraph">La migración es compatible con las herramientas de ONTAP para las versiones VMware vSphere 9.10D2, 9.11D4, 9.12D1 y 9.13D2 a la versión 10,2.</block>
   <block id="7cf21d459cdbb9c2a1e4864da9f56b5a" category="summary">Conozca las herramientas de ONTAP para VMware vSphere 9 y las herramientas de ONTAP para VMware vSphere 10 comparativas de las funciones</block>
   <block id="8db6f8bda67c3085df85aeea7d620ac7" category="doc">Comparación de las herramientas de ONTAP para VMware vSphere 9 y las herramientas de ONTAP para VMware vSphere 10</block>
@@ -1905,4 +1898,8 @@ Ejecute el siguiente comando para buscar el primer nombre de igroup:</block>
   <block id="78ea61f628036a39a60fcb38cdcb0095" category="list-text">En el cuadro de diálogo *Pair Site Recovery Manager Servers*, introduzca la dirección del controlador de servicios de plataforma del sitio protegido y, a continuación, haga clic en *Siguiente*.</block>
   <block id="310782e61fec1bb5ccb93c0b13bfd162" category="list-text">Asegúrese de que tiene tres direcciones IP libres disponibles para la implementación que no sea de alta disponibilidad: Una dirección IP gratuita para el balanceador de carga y una dirección IP libre para el plano de control de Kubernetes y una dirección IP para el nodo. Para la implementación de alta disponibilidad, junto con estas tres direcciones IP, necesitará dos direcciones IP más para el segundo y el tercer nodo. Los nombres de host deben asignarse a las direcciones IP libres en DNS antes de asignar para implementaciones de alta disponibilidad y no de alta disponibilidad. Todas las cinco direcciones IP incluidas en la puesta en marcha de alta disponibilidad y las tres direcciones IP en una puesta en marcha sin alta disponibilidad deben estar en la misma VLAN que se ha seleccionado para la puesta en marcha.</block>
   <block id="598d1a03a9fabe277211c3c65adbfbc6" category="admonition">El nombre de usuario y la contraseña de la aplicación se establecen durante la implementación de las herramientas de ONTAP. Esto es necesario para el registro del proveedor VASA/SRA.</block>
+  <block id="9fc56e301e08de92885a49e832294c9b" category="list-text">Ejecute <block ref="d7dfa373f3b590500a261c503f3d702f" category="inline-link-macro-rx"></block> la acción en el host ESXi. Para obtener más información, consulte<block ref="08964a7c7e6cd9155ed7286907a68824" category="inline-link-rx"></block></block>
+  <block id="1bf63b567c68de7fcd78fcc89f42f93c" category="sidebar">Proteja mediante la protección del clúster de hosts</block>
+  <block id="d8ddfdd9298e5862ca00168195c4be29" category="sidebar">Protege usando la protección SRA</block>
+  <block id="f6af7ed15ad67767270b003672cdfdbb" category="sidebar">Recuperar la configuración de sus herramientas ONTAP</block>
 </blocks>
