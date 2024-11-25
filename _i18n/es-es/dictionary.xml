@@ -243,8 +243,6 @@ La memoria recomendada según el tamaño de la implementación y por nodo se mue
   <block id="7cd974572a0712e3f4e007a1ceb0f760" category="paragraph">Cuando se quitan las instancias de vCenter Server en las herramientas de ONTAP, las siguientes acciones se ejecutan automáticamente:</block>
   <block id="32d5cbccaec76a2688c3f202f4a0fc0c" category="list-text">El plugin se ha cancelado del registro.</block>
   <block id="bc4832cad0eb15905b3945a4b071a06d" category="list-text">Se quitaron los privilegios de plugins y los roles de plugins.</block>
-  <block id="d5fb672b62a493a68492dfcdac746c0b" category="summary">Compruebe que la SVM incorporada se muestre en VASA Provider desde la interfaz de usuario del cliente de vCenter.</block>
-  <block id="53d752e3cc33b6d74616d71f03425e0f" category="doc">Verifique el proveedor de VASA registrado</block>
   <block id="b05db788b95e64cca7587ea1c9a8d4fe" category="paragraph">Compruebe que el proveedor de VASA incorporado aparezca en la lista VASA Provider desde la interfaz de usuario del cliente de vCenter y desde la interfaz de usuario del plugin remoto.</block>
   <block id="12c4b643913312ffb0ca49cedfcedd35" category="list-text">Para verificar el proveedor VASA en la interfaz de usuario del cliente de vCenter, siga estos pasos:</block>
   <block id="45b4fd4eef700c8aca7d8e7d745b8cbd" category="list-text">En el proveedor de almacenamiento/back-ends de almacenamiento, compruebe que el proveedor de VASA incorporado aparezca correctamente.</block>
@@ -1902,4 +1900,5 @@ Ejecute el siguiente comando para buscar el primer nombre de igroup:</block>
   <block id="1bf63b567c68de7fcd78fcc89f42f93c" category="sidebar">Proteja mediante la protección del clúster de hosts</block>
   <block id="d8ddfdd9298e5862ca00168195c4be29" category="sidebar">Protege usando la protección SRA</block>
   <block id="f6af7ed15ad67767270b003672cdfdbb" category="sidebar">Recuperar la configuración de sus herramientas ONTAP</block>
+  <block id="a2635d75789f249837881cc5136979e1" category="paragraph">*Después de terminar*</block>
 </blocks>
