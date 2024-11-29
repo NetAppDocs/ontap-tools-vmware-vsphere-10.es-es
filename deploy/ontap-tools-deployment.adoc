@@ -135,6 +135,7 @@ NOTE: No implemente herramientas de ONTAP para máquinas virtuales VMware vSpher
 . Seleccione la red de destino para cada red de origen y haga clic en *Siguiente*.
 . En la ventana *Personalizar plantilla*, rellena los campos requeridos y haz clic en *Siguiente*.
 +
+** En el modo HA de puesta en marcha, no cambie el nombre de las máquinas virtuales después de la puesta en marcha.
 ** Cuando el ámbito de SVM está habilitado, debe haber habilitado la compatibilidad de SVM con la dirección IP de gestión.
 ** La información proporcionada aquí se valida para los patrones adecuados durante el proceso de instalación. En caso de discrepancia, se muestra un mensaje de error en la consola web y se le solicita que corrija cualquier información incorrecta proporcionada.
 ** Los nombres de host deben consistir en letras mayúsculas (A-Z), letras minúsculas (a-z), dígitos (0-9) o el guión (-) carácter especial. Si desea configurar la pila doble, especifique el nombre de host asignado a la dirección IPv6.
