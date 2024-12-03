@@ -28,20 +28,24 @@ NOTE: Puede crear usuarios en el clúster o directamente en el nivel de las máq
 
 . Extraiga el archivo descargado _\https://<loadbalancerIP>:8443/virtualization/user-privileges/users_roles.zip_.
 . Acceda a ONTAP System Manager mediante la dirección IP de gestión del clúster.
-. Inicie sesión como el usuario del clúster o de SVM.
-. Seleccione *Cluster* > *Settings* > *Users and Roles*.
-. Seleccione *Agregar* en Usuarios.
-. En el cuadro de diálogo *Agregar usuario*, seleccione *Productos de virtualización*.
-. *Examinar* para seleccionar y cargar el archivo JSON de privilegios ONTAP.
+. Inicie sesión en el clúster con la Privileges de administrador. Para configurar un usuario, realice los siguientes pasos:
++
+.. Para configurar el usuario de las herramientas ONTAP del clúster, seleccione el panel *Clúster* > *Configuración* > *Usuarios y roles*.
+.. Para configurar el usuario de las herramientas ONTAP de SVM, seleccione el panel *SVM de almacenamiento* > *Configuración* > *Usuarios y roles*.
+.. Seleccione *Agregar* en Usuarios.
+.. En el cuadro de diálogo *Agregar usuario*, seleccione *Productos de virtualización*.
+.. *Examinar* para seleccionar y cargar el archivo JSON de privilegios ONTAP.
 +
 El campo Producto se rellena automáticamente.
 
-. Seleccione la capacidad necesaria en el menú desplegable Capacidad del producto.
+.. Seleccione la capacidad necesaria en el menú desplegable Capacidad del producto.
 +
 El campo *Rol* se rellena automáticamente según la capacidad del producto seleccionada.
 
-. Introduzca el nombre de usuario y la contraseña necesarios.
-. Seleccione los privilegios (Detección, Crear almacenamiento, Modificar almacenamiento, Destruir almacenamiento, Función NAS/SAN) necesarios para el usuario y, a continuación, haga clic en *Agregar*.
+.. Introduzca el nombre de usuario y la contraseña necesarios.
+.. Seleccione los privilegios (Detección, Crear almacenamiento, Modificar almacenamiento, Destruir almacenamiento, Función NAS/SAN) necesarios para el usuario y, a continuación, haga clic en *Agregar*.
+
+
 
 
 Se agregan el nuevo rol y usuario, y puede ver los privilegios detallados bajo el rol que ha configurado.
@@ -74,8 +78,12 @@ sti115_vsim_ucs630f_aggr1 vserver show-aggregates                               
 Siga las instrucciones de esta sección para crear el usuario y los roles manualmente sin utilizar el archivo JSON.
 
 . Acceda a ONTAP System Manager mediante la dirección IP de gestión del clúster.
-. Inicie sesión como el usuario del clúster o de SVM.
-. Seleccione *Cluster* > *Settings* > *Users and Roles*.
+. Inicie sesión en el clúster con la Privileges de administrador.
++
+.. Para configurar las funciones de las herramientas ONTAP de clúster, seleccione el panel *Clúster* > *Configuración* > *Usuarios y roles*.
+.. Para configurar las funciones de las herramientas ONTAP de SVM de clúster, seleccione el panel *Storage SVM* > *Settings* > *Users and Roles*
+
+
 . Crear Roles:
 +
 .. Seleccione *Agregar* en la tabla *Roles*.
