@@ -160,4 +160,5 @@ NOTE: La contraseña del servidor primario de vCenter no debe contener estos car
 
 
 * Compruebe que el nombre de dominio donde se emite el certificado se asigne a la dirección IP virtual en una implementación de varias instancias de vCenter donde los certificados de CA personalizados son obligatorios. _Nslookup_ se realiza una comprobación del nombre de dominio para comprobar si el dominio se está resolviendo a la dirección IP deseada. Los certificados se deben crear con el nombre de dominio y la dirección IP de la dirección IP del equilibrador de carga.
+* Antes de instalar las herramientas de ONTAP para VMware vSphere 10,2 en configuraciones no avanzadas de alta disponibilidad y alta disponibilidad, consulte el artículo de la base de conocimientos: https://kb.netapp.com/on-prem/ontap/da/NAS/NAS-KBs/pre-requisites_for_installing_OTV_10.1_and_10.2_in_NonHA_Advanced_and_HA["Requisitos previos para una configuración sin alta disponibilidad avanzada y de alta disponibilidad"]
 
