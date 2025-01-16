@@ -17,7 +17,7 @@ Las instancias de vCenter Server son plataformas de gestión central que permite
 
 == Asocie o disocie los back-ends de almacenamiento con la instancia de vCenter Server
 
-La página enumerada de vCenter Server muestra el número asociado de back-ends de almacenamiento. Cada instancia de vCenter Server tiene la opción de asociar o desasociar un back-end de almacenamiento. Esta tarea le ayuda a crear una asignación entre el back-end de almacenamiento y la instancia incorporada de vCenter Server a nivel global.
+La página enumerada de vCenter Server muestra el número asociado de back-ends de almacenamiento. Cada instancia de vCenter Server tiene la opción de asociar o desasociar con un back-end de almacenamiento. Esta tarea le ayuda a crear una asignación entre el back-end de almacenamiento y la instancia incorporada de vCenter Server a nivel global.
 
 * Pasos*
 

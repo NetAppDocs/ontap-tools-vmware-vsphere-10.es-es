@@ -28,7 +28,7 @@ Siga estos pasos para detectar los back-ends de almacenamiento.
 . Haga clic en el menú de elipses verticales y seleccione *Descubrir almacenamiento*
 
 
-Puede realizar un seguimiento del progreso en el panel Tareas recientes.
+Puede realizar un seguimiento del progreso en el panel de tareas recientes.
 
 
 
@@ -39,8 +39,7 @@ Siga los pasos de esta sección para modificar un back-end de almacenamiento.
 . Inicie sesión en el cliente de vSphere mediante `\https://vcenterip/ui`
 . En la página de accesos directos, haga clic en *NetApp ONTAP tools* en la sección de plugins.
 . En el panel izquierdo de las herramientas de ONTAP, navegue hasta *Backends de almacenamiento* y seleccione un backend de almacenamiento.
-. Haga clic en el menú de puntos suspensivos verticales y seleccione *Modificar* para modificar las credenciales o el nombre del puerto.
-Puede realizar un seguimiento del progreso en el panel Tareas recientes.
+. Haga clic en el menú de puntos suspensivos verticales y seleccione *Modificar* para modificar las credenciales o el nombre del puerto. Puede realizar un seguimiento del progreso en el panel de tareas recientes.
 
 
 Puede realizar la operación Modificar para clústeres de ONTAP globales mediante el Administrador de herramientas de ONTAP mediante los siguientes pasos.
@@ -62,8 +61,7 @@ Debe eliminar todos los almacenes de datos conectados al back-end de almacenamie
 . Inicie sesión en el cliente de vSphere mediante `\https://vcenterip/ui`
 . En la página de accesos directos, haga clic en *NetApp ONTAP tools* en la sección de plugins.
 . En el panel izquierdo de las herramientas de ONTAP, navegue hasta *Backends de almacenamiento* y seleccione un backend de almacenamiento.
-. Haga clic en el menú de elipses verticales y seleccione * Eliminar *. Asegúrese de que el back-end de almacenamiento no contenga ningún almacén de datos.
-Puede realizar un seguimiento del progreso en el panel Tareas recientes.
+. Haga clic en el menú de elipses verticales y seleccione * Eliminar *. Asegúrese de que el back-end de almacenamiento no contenga ningún almacén de datos. Puede realizar un seguimiento del progreso en el panel de tareas recientes.
 
 
 Puede realizar la operación de eliminación para clústeres de ONTAP globales mediante el Administrador de herramientas de ONTAP.
@@ -79,9 +77,9 @@ Puede realizar la operación de eliminación para clústeres de ONTAP globales m
 
 == Vista detallada del back-end de almacenamiento
 
-La página del back-end de almacenamiento incluye todos los back-ends de almacenamiento. Puede realizar operaciones de detección de almacenamiento, modificación y eliminación en los back-ends de almacenamiento añadidos y no el secundario individual bajo el clúster.
+La página del back-end de almacenamiento incluye todos los back-ends de almacenamiento. Puede realizar operaciones de detección de almacenamiento, modificación y eliminación en los back-ends de almacenamiento añadido y no en la SVM secundaria individual en el clúster.
 
-Al hacer clic en el clúster primario o en el secundario bajo el back-end de almacenamiento, puede ver el resumen general del componente. Al hacer clic en el clúster principal, tiene la lista desplegable de acciones desde la que puede realizar las operaciones de detección, modificación y eliminación de almacenamiento. Esta opción no aparece al hacer clic en la SVM secundaria.
+Al hacer clic en el clúster primario o en el secundario bajo el back-end de almacenamiento, puede ver el resumen general del componente. Al hacer clic en el clúster principal, tiene la lista desplegable de acciones desde la que puede realizar las operaciones de detección, modificación y eliminación de almacenamiento.
 
 La página de resumen proporciona los siguientes detalles:
 
@@ -90,8 +88,11 @@ La página de resumen proporciona los siguientes detalles:
 * Información básica acerca de la máquina virtual
 * Información de red como la dirección IP y el puerto de la red. Para la SVM secundaria, la información será la misma que el back-end del almacenamiento primario.
 * Privilegios permitidos y restringidos para el back-end de almacenamiento. Para la SVM secundaria, la información será la misma que el back-end del almacenamiento primario. Los privilegios solo se muestran en los back-ends de almacenamiento basado en clúster. Si añade la SVM como back-end de almacenamiento, no se mostrará la información de privilegios.
+* La vista de desglose de clústeres de ASA R2 no incluye el separador de niveles locales cuando la propiedad desagregada se establece como «true» para la SVM o el clúster.
+* Para los sistemas de SVM R2 de ASA, no se muestra el portlet de capacidad. El portal de capacidad solo es necesario cuando la propiedad desagregada se establece como «true» para la SVM o el clúster.
+* Para los sistemas ASA R2 SVM, la sección de información básica muestra el tipo de plataforma.
 
 
 La pestaña Interfaz proporciona información detallada sobre la interfaz.
 
-El separador Niveles Locales proporciona información detallada sobre la lista de agregados.
+La pestaña de niveles locales proporciona información detallada sobre la lista de agregados.

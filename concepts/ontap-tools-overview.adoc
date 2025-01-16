@@ -21,4 +21,5 @@ Las herramientas de ONTAP para VMware vSphere constan de:
 * Proveedor VASA para la gestión granular de VM
 * Gestión basada en políticas de almacenamiento
 * Adaptador de replicación de almacenamiento (SRA)
+* Sincronización activa de SnapMirror (SMAS)
 

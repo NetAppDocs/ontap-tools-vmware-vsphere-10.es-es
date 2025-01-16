@@ -16,7 +16,7 @@ Puede instalar las API del plugin de NFS de NetApp para vSphere para la integrac
 *Lo que necesitará*
 
 * Debe haber descargado el paquete de instalación del plugin de NFS para VAAI (`.vib`) Desde el sitio de soporte de NetApp. https://mysupport.netapp.com/site/products/all/details/nfsplugin-vmware-vaai/downloads-tab["Plugin NFS de NetApp para VAAI de VMware"]
-* Debe haber instalado la revisión más reciente de ESXi host 7.0U3 como versión mínima y ONTAP 9.12.1Px (última versión P) 9.13.1Px, 9.14.1Px o posterior.
+* Debe haber instalado la revisión más reciente del host ESXi 7.0U3 como versión mínima y ONTAP 9.14.1, 9.15.1 y 9.16.0.
 * Debe haber encendido el host ESXi y montado un almacén de datos NFS.
 * Debe haber establecido los valores de `DataMover.HardwareAcceleratedMove`, `DataMover.HardwareAcceleratedInit`, y. `VMFS3.HardwareAcceleratedLocking` ajustes del host a «'1'».
 +
@@ -36,7 +36,7 @@ Estos valores se establecen automáticamente en el host ESXi cuando se actualiza
 . Busque y seleccione el `.vib` archivo y haga clic en *Cargar* para cargar el archivo a las herramientas de ONTAP.
 . Haga clic en *Instalar en el host ESXI*, seleccione el host ESXi en el que desea instalar el plugin VAAI NFS y, a continuación, haga clic en *Instalar*.
 +
-Solo se muestran los hosts ESXi elegibles para la instalación del plugin. Debe seguir las instrucciones que aparecen en pantalla para completar la instalación. Puede supervisar el progreso de la instalación en la sección Recent Tasks de vSphere Web Client.
+Solo se muestran los hosts ESXi elegibles para la instalación del plugin. Debe seguir las instrucciones que aparecen en pantalla para completar la instalación. Puede supervisar el progreso de la instalación en la sección Tareas recientes de vSphere Web Client.
 
 . Debe reiniciar manualmente el host ESXi después de que finalice la instalación.
 +

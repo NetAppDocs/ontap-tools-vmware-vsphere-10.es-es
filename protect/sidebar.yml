@@ -18,10 +18,12 @@ entries:
     url: "/protect/configure-on-srm-appliance.html"
   - title: Actualice las credenciales del SRA
     url: "/protect/update-credentials.html"
-  - title: Configure los grupos de protección
-    url: "/protect/configure-protection-groups.html"
-  - title: Sitios protegidos para pares y de recuperación
-    url: "/protect/pair-protected-and-recovery-sites.html"
+  - title: Configuración de sitios protegidos y de recuperación
+    entries:
+    - title: Configure los grupos de protección
+      url: "/protect/configure-protection-groups.html"
+    - title: Sitios protegidos para pares y de recuperación
+      url: "/protect/pair-protected-and-recovery-sites.html"
   - title: Configurar los recursos del sitio de recuperación y protegidos
     entries:
     - title: Configure las asignaciones de red

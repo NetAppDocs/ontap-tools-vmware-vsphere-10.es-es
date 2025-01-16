@@ -2,7 +2,7 @@
 permalink: configure/registration-process.html 
 sidebar: sidebar 
 keywords:  
-summary: Puede registrar y cancelar el registro del proveedor de VASA con una instancia de vCenter Server mediante las herramientas de ONTAP para la interfaz de plugin remoto de VMware vSphere. 
+summary: Es posible registrar y cancelar el registro del proveedor VASA con una instancia de vCenter Server mediante las herramientas de ONTAP para la interfaz de plugin remoto de VMware vSphere. 
 ---
 = Registre el proveedor de VASA en una instancia de vCenter Server
 :allow-uri-read: 
@@ -11,8 +11,7 @@ summary: Puede registrar y cancelar el registro del proveedor de VASA con una in
 
 
 [role="lead"]
-Puede registrar y cancelar el registro del proveedor de VASA con una instancia de vCenter Server mediante las herramientas de ONTAP para la interfaz de plugin remoto de VMware vSphere.
-La sección VASA Provider Settings muestra el estado de registro del proveedor de VASA para la instancia de vCenter Server seleccionada.
+Es posible registrar y cancelar el registro del proveedor VASA con una instancia de vCenter Server mediante las herramientas de ONTAP para la interfaz de plugin remoto de VMware vSphere. La sección VASA Provider Settings muestra el estado de registro del proveedor de VASA para la instancia de vCenter Server seleccionada.
 
 * Pasos*
 
@@ -40,8 +39,7 @@ Compruebe que el proveedor de VASA incorporado aparezca en la lista VASA Provide
 +
 .. Desplácese hasta vCenter Server.
 .. Inicie sesión con las credenciales de administrador.
-.. Seleccione *Proveedores de almacenamiento*.
-.. Seleccione *Configurar*.
+.. Selecciona *Proveedores de almacenamiento* > *Configurar*.
 .. En el proveedor de almacenamiento/back-ends de almacenamiento, compruebe que el proveedor de VASA incorporado aparezca correctamente.
 
 

@@ -8,12 +8,9 @@ summary: Las herramientas de ONTAP para VMware vSphere gestionan la protección 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
-:firstname: [.lead]
-:author: [.lead]
-:authorinitials: [
-:authors: [.lead]
 
 
+[role="lead"]
 Las herramientas de ONTAP para VMware vSphere gestionan la protección de los clústeres de hosts. Todos los almacenes de datos que pertenecen a la SVM seleccionada y montados en uno o varios hosts del clúster están protegidos en un clúster de hosts.
 
 .Requisitos previos
@@ -21,7 +18,7 @@ Asegúrese de que se cumplen los siguientes requisitos previos:
 
 * El clúster de hosts tiene almacenes de datos solo de una SVM.
 * El almacén de datos montado en el clúster de hosts no debe montarse en ningún host fuera del clúster.
-* Todos los almacenes de datos montados en el clúster de hosts deben ser almacenes de datos VMFS con protocolo iSCSI/FC. No se admiten los almacenes de datos VMFS con protocolos NVMe/FC y NVMe/TCP.
+* Todos los almacenes de datos montados en el clúster de hosts deben ser almacenes de datos VMFS con protocolo iSCSI/FC. No se admiten almacenes de datos vVols, NFS o VMFS con protocolos NVMe/FC y NVMe/TCP.
 * Los almacenes de datos que forman FlexVol/LUN montados en el clúster de hosts no deben formar parte de ningún grupo de consistencia (CG) existente.
 * Los almacenes de datos que forman FlexVol/LUN montados en el clúster de hosts no deben formar parte de ninguna relación de SnapMirror existente.
 * El clúster de hosts debe tener al menos un almacén de datos.
@@ -45,7 +42,7 @@ En el tipo de política AutomatedFailOverDuplex, hay una configuración de host 
 
 . Si elige tener una configuración de host no uniforme, seleccione el acceso de host (origen/destino) para cada host dentro de ese clúster.
 . Seleccione *Agregar*.
-. En la ventana *Protect cluster*, durante la operación de creación, solo se admite la acción de eliminación. Puede eliminar y volver a agregar la protección. Durante la operación de protección Modificar clúster de hosts, la opción de edición está disponible. Puede editar o eliminar las relaciones mediante las opciones del menú de kebab.
+. En la ventana *Protect cluster*, durante la operación de creación, solo se admite la acción de eliminación. Puede eliminar y volver a agregar la protección. Durante la operación de protección Modificar clúster de hosts, la opción de edición está disponible. Puede editar o eliminar las relaciones mediante las opciones del menú de puntos suspensivos.
 . Seleccione el botón *Proteger*.
 +
 Una tarea de vCenter se crea con detalles de ID de trabajo y el progreso se muestra en el panel de tareas recientes. Esta es una tarea asíncrona, la interfaz de usuario muestra sólo el estado de envío de la solicitud y no espera a que se complete la tarea.

@@ -26,22 +26,6 @@ Es posible acceder a la API de REST de ONTAP de diferentes maneras.
 
 
 
-== Consideraciones sobre la red
-
-Es posible conectarse a la API DE REST a través de las siguientes interfaces:
-
-* LIF de gestión de clústeres
-* LIF de gestión de nodos
-* LIF de gestión de SVM
-
-
-La LIF que opta por utilizar debe configurarse para admitir el protocolo de gestión HTTPS. Además, la configuración del firewall en la red debe permitir el tráfico HTTPS.
-
-
-NOTE: Siempre debe utilizar una LIF de gestión de clúster. Esto equilibrará la carga de las solicitudes de API en todos los nodos y evitará que los nodos estén desconectados o tengan problemas de conectividad. Si tiene configuradas varias LIF de gestión de clústeres, todas son equivalentes en cuanto al acceso a la API DE REST.
-
-
-
 == Página de documentación en línea de las herramientas de ONTAP para la API de VMware vSphere
 
 Puede acceder a Swagger desde el enlace de la página de soporte de las herramientas de NetApp ONTAP para el plugin de VMware vSphere.

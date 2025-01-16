@@ -15,7 +15,10 @@ Los back-ends de almacenamiento son los sistemas que los hosts ESXi utilizan par
 
 *Acerca de esta tarea*
 
-Con esta tarea, se puede incorporar un clúster de ONTAP. Cuando se agrega un back-end de almacenamiento mediante el Administrador de herramientas de ONTAP, el back-end de almacenamiento se agrega al clúster global. Asocie el clúster global a una instancia de vCenter Server para habilitar un usuario de SVM para el aprovisionamiento de almacén de datos de vVols.
+Con esta tarea, se puede incorporar un clúster de ONTAP. Cuando se agrega un back-end de almacenamiento mediante el Administrador de herramientas de ONTAP, el back-end de almacenamiento se agrega al clúster global. Asocie el clúster global a una instancia de vCenter Server para habilitar un usuario de SVM para el aprovisionamiento de almacén de datos de vVols. Solo puede añadir almacenamiento en vCenter usando la SVM.
+
+
+NOTE: Para flujos de trabajo multi-tenant, debe añadir clústeres de ONTAP de forma global mediante el Administrador de herramientas de ONTAP y asociarlos con los inquilinos de vCenter deseados. El inquilino de vCenter debe incorporar las máquinas virtuales de almacenamiento (SVM) deseadas. Si no requiere multi-tenancy, debe añadir sus sistemas ONTAP directamente mediante solo la interfaz de usuario de vCenter.
 
 [role="tabbed-block"]
 ====
@@ -33,7 +36,7 @@ NOTE: Un back-end de almacenamiento es global al añadirlo desde el Administrado
 . Proporcione la dirección IP del servidor o FQDN, nombre de usuario y contraseña y seleccione *Agregar*.
 +
 
-NOTE: Se admiten los LIF de GESTIÓN de IPv4 y IPv6. También se admiten credenciales basadas en usuario de SVM con LIF de gestión.
+NOTE: Se admiten los LIF de gestión de IPv4 y IPv6. También se admiten credenciales basadas en usuario de SVM con LIF de gestión.
 
 
 
@@ -49,7 +52,7 @@ NOTE: Cuando se añade un back-end de almacenamiento mediante la interfaz de usu
 . En la ventana *Add Storage Backend*, proporcione la dirección IP del servidor, el nombre de usuario, la contraseña y los detalles del puerto y haga clic en *Add*.
 +
 
-NOTE: Puede añadir credenciales basadas en clúster y LIF de GESTIÓN de IPv4 y IPv6 o proporcionar credenciales basadas en SVM con LIF de gestión de SVM para añadir un usuario de SVM directamente.
+NOTE: Puede añadir credenciales basadas en clúster y LIF de gestión de direcciones IPv4 y IPv6 o proporcionar credenciales basadas en SVM con LIF de gestión de SVM para añadir directamente un usuario de SVM.
 
 
 

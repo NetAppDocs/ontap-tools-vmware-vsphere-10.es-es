@@ -8,12 +8,9 @@ summary: Cuando se quita la protección del clúster de hosts, los almacenes de 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
-:firstname: [.lead]
-:author: [.lead]
-:authorinitials: [
-:authors: [.lead]
 
 
+[role="lead"]
 Cuando se quita la protección del clúster de hosts, los almacenes de datos se vuelven desprotegidos.
 
 .Pasos
@@ -21,5 +18,5 @@ Cuando se quita la protección del clúster de hosts, los almacenes de datos se 
 +
 En esta página, se pueden supervisar los clústeres de hosts protegidos junto con su estado de protección, la relación de SnapMirror y el estado SnapMirror correspondiente.
 
-. En la ventana *Protección del clúster de host*, haga clic en el menú de kebab contra el clúster y, a continuación, seleccione *Eliminar protección*.
+. En la ventana *Protección del clúster de host*, haga clic en el menú de puntos suspensivos contra el clúster y, a continuación, seleccione *Eliminar protección*.
 

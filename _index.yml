@@ -7,7 +7,7 @@ indexpage:
   - title: Manos a la obra
     links:
     - title: Notas de la versión
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3327064
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3334864
     - title: Obtenga información sobre las herramientas de ONTAP para VMware vSphere
       url: "/concepts/ontap-tools-overview.html"
     - title: Ponga en marcha herramientas de ONTAP para VMware vSphere
@@ -28,6 +28,8 @@ indexpage:
       url: "/protect/enable-storage-replication-adapter.html"
   - title: Más recursos
     links:
+    - title: Documentación para herramientas de ONTAP para VMware vSphere 10,2
+      url: https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere-102/index.html
     - title: Documentación para herramientas de ONTAP para VMware vSphere 10,1
       url: https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere-101/index.html
     - title: Documentación para versiones anteriores de herramientas de ONTAP para

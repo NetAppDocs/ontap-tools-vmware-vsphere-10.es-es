@@ -13,6 +13,9 @@ summary: La acción Delete datastore elimina el almacén de datos cuando no hay 
 [role="lead"]
 La acción Delete datastore elimina el almacén de datos cuando no hay vVols en el almacén de datos seleccionado.
 
+
+NOTE: La operación de reducción del almacén de datos vVols no es compatible con el almacén de datos vVols basado en ASA R2.
+
 .Pasos
 . En la página de inicio de vSphere Client, haga clic en *hosts and Clusters*.
 . En el panel de navegación, seleccione el centro de datos que contiene el almacén de datos.

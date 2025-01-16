@@ -8,12 +8,9 @@ summary: La acción del almacén de datos desmonta un almacén de datos NFS o VM
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
-:firstname: [.lead]
-:author: [.lead]
-:authorinitials: [
-:authors: [.lead]
 
 
+[role="lead"]
 La acción del almacén de datos desmonta un almacén de datos NFS o VMFS de los hosts ESXi. La acción de desmontaje del almacén de datos se habilita para los almacenes de datos NFS y VMFS que las herramientas de ONTAP para VMware vSphere detectan o gestionan.
 
 * Pasos*
