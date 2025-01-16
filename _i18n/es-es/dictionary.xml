@@ -2008,4 +2008,5 @@ Los códigos de error tienen una longitud de cinco dígitos, donde los dos prime
   <block id="3c8480343462c93f8ec9ed8f6c4a4282" category="sidebar">Documentación para herramientas de ONTAP para VMware vSphere 10,2</block>
   <block id="2e0332b2709dcff7df5d28c654c54066" category="sidebar">Herramientas de ONTAP para VMware vSphere 10,3</block>
   <block id="3d7d171ecad1cba0c2d8d707b648b023" category="sidebar">Configuración de sitios protegidos y de recuperación</block>
+  <block id="039f647b3ad55c89a6a5ff0d6109bd4f" category="paragraph">Las herramientas de ONTAP para VMware vSphere 10,3 amplían el soporte de las métricas de observabilidad para los almacenes de datos VMFS y VVOL y sus respectivos equipos virtuales.</block>
 </blocks>
