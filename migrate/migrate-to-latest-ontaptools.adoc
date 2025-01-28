@@ -14,26 +14,26 @@ summary: Cuando se migran datos de almacenamiento, los back-ends de almacenamien
 Cuando se migran datos de almacenamiento, los back-ends de almacenamiento se incorporan manualmente mediante las API DE REST. Cuando se migran datos del proveedor VASA, los datos se exportan desde la base de datos de Derby existente e se importan a la base de datos MongoDB.
 
 
-NOTE: Se recomienda migrar las herramientas de ONTAP para la configuración de VMware vSphere 9.xx solo si la configuración está prestando servicio solamente a la función de proveedor de VASA.
+NOTE: Debe migrar las herramientas de ONTAP para la configuración de VMware vSphere 9.xx solo si la configuración está prestando servicio solamente a la función VASA Provider.
 
 
-NOTE: Después de migrar desde las herramientas de ONTAP para VMware de 9.x a 10,3, los almacenes de datos de vVols con el protocolo NVMe/FC no funcionan porque las herramientas de ONTAP 10,3 solo admiten NVMe-oF con almacenes de datos VMFS.
+NOTE: Después de migrar desde las herramientas de ONTAP para VMware vSphere 9.x a 10,3, los almacenes de datos de vVols con el protocolo NVMe/FC no funcionan porque las herramientas de ONTAP 10,3 solo admiten NVMe-oF con almacenes de datos VMFS.
 
 *Acerca de esta tarea*
 
-La migración es compatible con las herramientas de ONTAP para las versiones 9.12D1 y 9.13D2 de VMware vSphere a la versión 10,3.
+Puede migrar desde las herramientas de ONTAP para las versiones de VMware vSphere 9.12D1 y 9.13D2 a 10,3.
 
 
-NOTE: Como usuario existente, debe realizar la copia de seguridad OVA de la versión actual antes de actualizar a las versiones de parches.
+NOTE: Debe realizar la copia de seguridad de OVA de la versión actual antes de actualizar a las versiones de revisión.
 
 
 
 == Pasos de migración comunes
 
 . Implemente OVA para herramientas de ONTAP para la versión VMware vSphere 10,3.
-. Añada la instancia de vCenter Server que desee migrar a las herramientas de ONTAP para la versión de VMware vSphere 10,3. Consulte link:../configure/add-vcenter.html["Añada instancias de vCenter Server"]
+. Agregue la instancia de vCenter Server que desea migrar a las herramientas de ONTAP para la versión de VMware vSphere 10,3. Consulte link:../configure/add-vcenter.html["Añada instancias de vCenter Server"]
 . Back-end de almacenamiento incorporado localmente desde las herramientas de ONTAP para las API del complemento de VMware vSphere vCenter Server. Añada almacenamiento como almacenamiento de ámbito local para la migración.
-. Los almacenes de datos de NFS y VMFS migrados desde las herramientas de ONTAP para VMware vSphere 9.xx solo se pueden ver en las herramientas de ONTAP para VMware vSphere 10,3 después de activar el trabajo de detección del almacén de datos, que puede demorar hasta 30 minutos en activarse. Compruebe si los almacenes de datos están visibles en la página Overview de la página de interfaz de usuario del complemento de ONTAP tools for VMware vSphere.
+. Los almacenes de datos de NFS y VMFS migrados desde las herramientas de ONTAP para VMware vSphere 9.xx solo se pueden ver en las herramientas de ONTAP para VMware vSphere 10,3 después de activar el trabajo de detección del almacén de datos, que puede demorar hasta 30 minutos en activarse. Compruebe si los almacenes de datos están visibles en la página Overview de las herramientas de ONTAP para la página de interfaz de usuario del complemento de VMware vSphere.
 
 
 
@@ -42,17 +42,16 @@ NOTE: Como usuario existente, debe realizar la copia de seguridad OVA de la vers
 
 *Antes de empezar*
 
-Antes de migrar, asegúrese de que uno de los sitios esté en estado protegido y el otro en estado de recuperación.
+Antes de migrar, asegúrese de que uno de los sitios esté en estado protegido y el otro tenga estado de recuperación.
 
 
-NOTE: No migre si la recuperación tras fallos acaba de completarse y la nueva protección está pendiente. Complete la reprotección y, a continuación, lleve a cabo la migración.
-Lo mismo se aplica a la prueba del plan de recuperación. Una vez finalizada la prueba del plan de recuperación, limpie la recuperación de pruebas y, a continuación, inicie la migración.
+NOTE: No migre si se acaba de completar la conmutación por error y la nueva protección está pendiente. Complete la nueva protección y, a continuación, lleve a cabo la migración. Después de completar la prueba del plan de recuperación, borre la recuperación de pruebas e inicie la migración.
 
 . Realice los siguientes pasos para eliminar las herramientas de ONTAP para el adaptador SRA de la versión 9.xx de VMware vSphere en la IU de VMware Live Site Recovery:
 +
 .. Vaya a la página de gestión de VMware Live Site Recovery Configuration
-.. Vaya a la sección Storage Replication Adapter
-.. Haga clic en el menú de puntos suspensivos y haga clic en *Restablecer configuración*
+.. Vaya a la sección *Storage Replication Adapter*
+.. Haga clic en el menú de puntos suspensivos y seleccione *Restablecer configuración*
 .. Haga clic en el menú de puntos suspensivos y seleccione *Eliminar*
 +
 Lleve a cabo estos pasos en sitios de protección y recuperación.
@@ -60,7 +59,7 @@ Lleve a cabo estos pasos en sitios de protección y recuperación.
 
 
 . Instale herramientas de ONTAP para el adaptador SRA de VMware vSphere 10,3 en sitios tanto de protección como de recuperación siguiendo los pasos del link:../protect/configure-on-srm-appliance.html["Configurar el SRA en el dispositivo VMware Live Site Recovery"]
-. En la página de interfaz de usuario de VMware Live Site Recovery, realice las operaciones de *Discover Arrays* y *Discover Devices* y verifique que los dispositivos se muestran como antes de la migración.
+. En la página de interfaz de usuario de VMware Live Site Recovery, realice las operaciones de *Discover Arrays* y *Discover Devices* y verifique que los dispositivos se muestran como estaban antes de la migración.
 
 
 
@@ -73,8 +72,8 @@ Lleve a cabo estos pasos en sitios de protección y recuperación.
 ----
 iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 ----
-. Implemente OVA para herramientas de ONTAP para la versión VMware vSphere 10,3.
-. Añada la instancia de vCenter Server que desee migrar a las herramientas de ONTAP para la versión de VMware vSphere 10,3. Consulte link:../configure/add-vcenter.html["Agregue una instancia de vCenter Server"].
+. Ponga en marcha OVA para herramientas de ONTAP para VMware vSphere 10,3.
+. Agregue la instancia de vCenter Server que desea migrar a las herramientas de ONTAP para la versión de VMware vSphere 10,3. Consulte link:../configure/add-vcenter.html["Agregue una instancia de vCenter Server"].
 . El back-end de almacenamiento incorporado localmente desde las API del complemento remoto de vCenter Server. Agregue almacenamiento como ámbito local para la migración.
 . Emita la siguiente llamada API para migrar:
 +
@@ -140,10 +139,10 @@ Se devuelve un objeto de trabajo. Debe guardar el identificador de trabajo para 
 https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true
 ----
 +
-Una vez completado el trabajo, valide el informe de migración. Puede ver el informe de la respuesta de trabajo como parte de los datos de trabajo.
+Una vez completado el trabajo, valide el informe de migración. El informe forma parte de los datos del puesto y se puede ver en la respuesta del trabajo.
 
 . Añada las herramientas de ONTAP para el proveedor de almacenamiento VMware vSphere a vCenter Server y. link:../configure/registration-process.html["Registre el proveedor de VASA en una instancia de vCenter Server"]
-. Detenga el servicio de proveedor de almacenamiento VASA 9,10/9,11/9,12/9,13 de las herramientas de ONTAP para el proveedor de almacenamiento VMware vSphere desde la consola de mantenimiento.
+. Detenga el servicio de proveedor de almacenamiento VASA 9,10/9,11/9,12/9,13 de las herramientas de ONTAP para VMware vSphere desde la consola de mantenimiento.
 +
 No elimine el proveedor de VASA.
 
@@ -197,7 +196,7 @@ El cuerpo de la solicitud está vacío para la operación de parche.
 
 NOTE: uuid es el uuid de migración devuelto en la respuesta de la API posterior a la migración.
 
-Una vez que la API de migración de parches se haya realizado correctamente, todas las máquinas virtuales cumplirán con la normativa de almacenamiento.
+Una vez que la API de migración de revisiones se ha ejecutado correctamente, todas las máquinas virtuales cumplen con la normativa de almacenamiento.
 
 ====
 . La API de eliminación para la migración es:
@@ -220,7 +219,7 @@ Asíncrona
 
 /api/v1/vcenters/{vcguid}/migration-jobs/{migration_id}
 
-Esta API elimina la migración por el ID de migración y elimina la migración en la instancia de vCenter Server dada.
+Esta API elimina la migración por el ID de migración y elimina la migración en la instancia específica de vCenter Server.
 
 ====
 
@@ -228,9 +227,22 @@ Esta API elimina la migración por el ID de migración y elimina la migración e
 Una vez realizada correctamente la migración y después de registrar las herramientas de ONTAP 10,3 en vCenter Server, haga lo siguiente:
 
 * Actualice el certificado en todos los hosts.
-* Espere un tiempo antes de realizar las operaciones de Datastore (DS) y Virtual Machine (VM). El tiempo de espera depende del número de hosts, DS y VM que estén presentes en la configuración. Cuando no espera, es posible que las operaciones fallen de forma intermitente.
+* Espere un tiempo antes de realizar las operaciones de Datastore (DS) y Virtual Machine (VM). El tiempo de espera depende del número de hosts, DS y VM de la configuración. Cuando no espera, es posible que las operaciones fallen de forma intermitente.
 
 
 *Después de terminar*
 
-Después de migrar desde versiones antiguas de herramientas de ONTAP para VMware vSphere a la versión 10,3, vuelva a analizar los adaptadores del SRA para verificar que los detalles estén actualizados en la página de adaptadores de replicación de almacenamiento de recuperación de sitio activo de VMware.
+Después de migrar desde versiones antiguas de herramientas de ONTAP para VMware vSphere a 10,3, vuelva a analizar los adaptadores del SRA para verificar que los detalles estén actualizados en la página Adaptadores de replicación del almacenamiento de recuperación del sitio activo de VMware.
+
+Tras la actualización, si el estado de cumplimiento de normativas de la máquina virtual no está actualizado, vuelva a aplicar la política de almacenamiento de la máquina virtual siguiendo los siguientes pasos:
+
+. Navegue hasta el almacén de datos y seleccione *Resumen* > *VM Storage policies*.
++
+En *Cumplimiento de la política de almacenamiento de VM*, puede ver el estado de cumplimiento. Se muestra como *desfasado*
+
+. Seleccione la política de Storage VM y la máquina virtual correspondiente
+. Seleccione *Aplicar*
++
+El estado de cumplimiento en *VM storage policy compliance* ahora se muestra como conforme.
+
+
