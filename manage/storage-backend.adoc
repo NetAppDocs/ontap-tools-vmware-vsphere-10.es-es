@@ -22,10 +22,10 @@ Puede ejecutar la detección de un back-end de almacenamiento bajo demanda sin e
 Siga estos pasos para detectar los back-ends de almacenamiento.
 
 .Pasos
-. Inicie sesión en el cliente de vSphere mediante `\https://vcenterip/ui`
-. En la página de accesos directos, haga clic en *NetApp ONTAP tools* en la sección de plugins.
+. Inicie sesión en el cliente de vSphere mediante `\https://<vcenterip>/<ui>`
+. En la página de accesos directos, seleccione *Herramientas de NetApp ONTAP* en la sección de plugins.
 . En el panel izquierdo de las herramientas de ONTAP, navegue hasta *Backends de almacenamiento* y seleccione un backend de almacenamiento.
-. Haga clic en el menú de elipses verticales y seleccione *Descubrir almacenamiento*
+. Seleccione el menú de elipses verticales y seleccione *Descubrir almacenamiento*
 
 
 Puede realizar un seguimiento del progreso en el panel de tareas recientes.
@@ -36,19 +36,19 @@ Puede realizar un seguimiento del progreso en el panel de tareas recientes.
 
 Siga los pasos de esta sección para modificar un back-end de almacenamiento.
 
-. Inicie sesión en el cliente de vSphere mediante `\https://vcenterip/ui`
-. En la página de accesos directos, haga clic en *NetApp ONTAP tools* en la sección de plugins.
+. Inicie sesión en el cliente de vSphere mediante `\https://<vcenterip>/<ui>`
+. En la página de accesos directos, seleccione *Herramientas de NetApp ONTAP* en la sección de plugins.
 . En el panel izquierdo de las herramientas de ONTAP, navegue hasta *Backends de almacenamiento* y seleccione un backend de almacenamiento.
-. Haga clic en el menú de puntos suspensivos verticales y seleccione *Modificar* para modificar las credenciales o el nombre del puerto. Puede realizar un seguimiento del progreso en el panel de tareas recientes.
+. Seleccione el menú de elipses verticales y seleccione *Modificar* para modificar las credenciales o el nombre del puerto. Puede realizar un seguimiento del progreso en el panel de tareas recientes.
 
 
 Puede realizar la operación Modificar para clústeres de ONTAP globales mediante el Administrador de herramientas de ONTAP mediante los siguientes pasos.
 
-. Inicie ONTAP TOOLS Manager desde un explorador web: `\https://loadBalanceIP:8443/virtualization/ui/`
+. Inicie ONTAP TOOLS Manager desde un explorador web: `\https://loadBalancerIP:8443/virtualization/ui/`
 . Inicie sesión con las herramientas de ONTAP para las credenciales de administrador de VMware vSphere que proporcionó durante la implementación.
 . Seleccione los back-ends de almacenamiento en la barra lateral.
 . Seleccione el backend de almacenamiento que desea modificar.
-. Haga clic en el menú de elipses verticales y seleccione *Modificar*.
+. Seleccione el menú de elipses verticales y seleccione *Modificar*.
 . Puede modificar las credenciales o el puerto. Introduzca el *Nombre de usuario* y *Contraseña* para modificar el backend de almacenamiento.
 
 
@@ -58,19 +58,19 @@ Puede realizar la operación Modificar para clústeres de ONTAP globales mediant
 
 Debe eliminar todos los almacenes de datos conectados al back-end de almacenamiento antes de quitar el back-end de almacenamiento. Siga los pasos que se indican a continuación para quitar un back-end de almacenamiento.
 
-. Inicie sesión en el cliente de vSphere mediante `\https://vcenterip/ui`
-. En la página de accesos directos, haga clic en *NetApp ONTAP tools* en la sección de plugins.
+. Inicie sesión en el cliente de vSphere mediante `\https://<vcenterip>/<ui>`
+. En la página de accesos directos, seleccione *Herramientas de NetApp ONTAP* en la sección de plugins.
 . En el panel izquierdo de las herramientas de ONTAP, navegue hasta *Backends de almacenamiento* y seleccione un backend de almacenamiento.
-. Haga clic en el menú de elipses verticales y seleccione * Eliminar *. Asegúrese de que el back-end de almacenamiento no contenga ningún almacén de datos. Puede realizar un seguimiento del progreso en el panel de tareas recientes.
+. Seleccione el menú de elipses verticales y seleccione *Eliminar*. Asegúrese de que el back-end de almacenamiento no contenga ningún almacén de datos. Puede realizar un seguimiento del progreso en el panel de tareas recientes.
 
 
 Puede realizar la operación de eliminación para clústeres de ONTAP globales mediante el Administrador de herramientas de ONTAP.
 
-. Inicie ONTAP TOOLS Manager desde un explorador web: `\https://loadBalanceIP:8443/virtualization/ui/`
+. Inicie ONTAP TOOLS Manager desde un explorador web: `\https://loadBalancerIP:8443/virtualization/ui/`
 . Inicie sesión con las herramientas de ONTAP para las credenciales de administrador de VMware vSphere que proporcionó durante la implementación.
 . Seleccione *Backends de almacenamiento* en la barra lateral.
 . Seleccione el back-end de almacenamiento que desea quitar
-. Haga clic en el menú de elipses verticales y seleccione * Eliminar *.
+. Seleccione el menú de elipses verticales y seleccione *Eliminar*.
 
 
 
@@ -79,7 +79,7 @@ Puede realizar la operación de eliminación para clústeres de ONTAP globales m
 
 La página del back-end de almacenamiento incluye todos los back-ends de almacenamiento. Puede realizar operaciones de detección de almacenamiento, modificación y eliminación en los back-ends de almacenamiento añadido y no en la SVM secundaria individual en el clúster.
 
-Al hacer clic en el clúster primario o en el secundario bajo el back-end de almacenamiento, puede ver el resumen general del componente. Al hacer clic en el clúster principal, tiene la lista desplegable de acciones desde la que puede realizar las operaciones de detección, modificación y eliminación de almacenamiento.
+Cuando selecciona el clúster primario o el secundario bajo el back-end de almacenamiento, puede ver el resumen general del componente. Cuando selecciona el clúster principal, tiene la lista desplegable de acciones desde la que puede realizar las operaciones de detección, modificación y eliminación de almacenamiento.
 
 La página de resumen proporciona los siguientes detalles:
 

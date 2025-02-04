@@ -55,7 +55,7 @@ Si cambia los privilegios dentro de un rol, el usuario asociado a ese rol debe c
 
 Para simplificar el uso de privilegios de vCenter Server y el control de acceso basado en roles, las herramientas de ONTAP para VMware vSphere proporcionan herramientas estándar de ONTAP para roles de VMware vSphere que permiten realizar herramientas de ONTAP clave para tareas de VMware vSphere. También hay un rol de solo lectura que permite ver la información, pero no ejecutar tareas.
 
-Puede ver las herramientas de ONTAP para las funciones estándar de VMware vSphere haciendo clic en *Roles* en la página inicial de vSphere Client. Los roles que las herramientas de ONTAP para VMware vSphere proporcionan le permiten realizar las siguientes tareas:
+Puede ver las herramientas de ONTAP para las funciones estándar de VMware vSphere seleccionando *Roles* en la página inicial de vSphere Client. Los roles que las herramientas de ONTAP para VMware vSphere proporcionan le permiten realizar las siguientes tareas:
 
 |===
 

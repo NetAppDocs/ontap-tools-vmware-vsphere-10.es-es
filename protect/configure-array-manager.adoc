@@ -25,7 +25,7 @@ El SRA admite la gestión a nivel de clúster y la gestión a nivel de SVM. Si a
 
 * Pasos*
 
-. En VMware Live Site Recovery, haga clic en *Array Managers* y haga clic en *Add Array Manager*.
+. En Live Site Recovery de VMware, seleccione *Array Managers* > *Add Array Manager*.
 . Introduzca la siguiente información para describir la cabina en VMware Live Site Recovery:
 +
 .. Introduzca un nombre para identificar al administrador de matrices en el campo *Nombre para mostrar*.
@@ -62,7 +62,7 @@ Por ejemplo, si desea excluir el volumen _src_vol1_ que está en una relación d
 
 
 . Haga clic en *Siguiente*.
-. Verifique que la matriz se detecte y se muestre en la parte inferior de la ventana Agregar Array Manager y haga clic en * Finalizar *.
+. Verifique que la matriz se detecte y se muestre en la parte inferior de la ventana Agregar Array Manager y seleccione *Finalizar*.
 
 
 Puede seguir los mismos pasos para el sitio de recuperación usando las direcciones IP de gestión de SVM y las credenciales adecuadas. En la pantalla Habilitar parejas de cabinas del asistente Añadir administrador de cabinas, debe verificar que se haya seleccionado la pareja de cabinas correcta y que esté lista para habilitarse.

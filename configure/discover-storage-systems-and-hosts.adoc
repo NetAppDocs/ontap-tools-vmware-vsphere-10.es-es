@@ -36,7 +36,7 @@ ONTAP TOOLS para VMware vSphere muestra un cuadro de diálogo *Confirmar* con el
 «Esta acción reiniciará la detección de todos los sistemas de almacenamiento conectados y puede demorar unos minutos. ¿Desea continuar?
 
 . Haga clic en *Sí*.
-. Seleccione los controladores de almacenamiento detectados que tengan el estado `Authentication Failure` y haga clic en *Acciones* > *Modificar*.
+. Seleccione los controladores de almacenamiento detectados que tengan el estado `Authentication Failure` y seleccione *Acciones* > *Modificar*.
 . Rellene la información necesaria en el cuadro de diálogo *Modificar sistema de almacenamiento*.
 . Repita los pasos 4 y 5 para todas las controladoras de almacenamiento con `Authentication Failure` estado.
 

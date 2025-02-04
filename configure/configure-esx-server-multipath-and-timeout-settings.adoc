@@ -11,24 +11,26 @@ summary: Las herramientas de ONTAP para VMware vSphere comprueba y establece los
 
 
 [role="lead"]
+La configuración de los ajustes de tiempo de espera y multivía del servidor ESXi garantiza una alta disponibilidad e integridad de los datos, ya que permite cambiar sin problemas a una ruta de almacenamiento de backup en caso de que falle una ruta primaria.
+
 Las herramientas de ONTAP para VMware vSphere comprueban y establecen la configuración de multivía del host ESXi y el tiempo de espera de HBA que funcionan mejor con los sistemas de almacenamiento de NetApp.
 
 *Acerca de esta tarea*
 
-Este proceso puede llevar mucho tiempo, según la configuración y la carga del sistema. El progreso de la tarea se muestra en el panel *Tareas recientes*. A medida que se completan las tareas, el icono de alerta de estado del host se sustituye por el icono normal o el icono de reinicio pendiente.
+Dependiendo de la configuración y la carga del sistema, este proceso puede tardar mucho tiempo. El progreso de la tarea se muestra en el panel Recent Tasks.
 
 * Pasos*
 
-. En la página inicial de VMware vSphere Web Client, haga clic en *Hosts and Clusters*.
+. En la página de inicio de VMware vSphere Web Client, seleccione *Hosts and Clusters*.
 . Haga clic con el botón derecho en un host y seleccione *Herramientas de NetApp ONTAP* > *Actualizar datos de host*.
-. En la página de accesos directos, haga clic en *NetApp ONTAP tools* en la sección de plugins.
+. En la página de accesos directos del cliente web de VMware vSphere, seleccione *NetApp ONTAP tools* en la sección de plugins.
 . Vaya a la tarjeta *Conformidad de host ESXi* en la descripción general (consola) de las herramientas de ONTAP para el complemento de VMware vSphere.
 . Selecciona *Aplicar ajustes recomendados* link.
-. En la ventana *Aplicar configuración de host recomendada*, seleccione los hosts que desea cumplir con la configuración de host recomendada por NetApp y haga clic en *Siguiente*.
+. En la ventana *Aplicar configuración de host recomendada*, selecciona los hosts que deseas actualizar para cumplir con la configuración recomendada de NetApp y selecciona *Siguiente*.
 +
 
 NOTE: Puede expandir el host ESXi para ver los valores actuales.
 
 . En la página settings, seleccione los valores recomendados según sea necesario.
-. En el panel de resumen, compruebe los valores y haga clic en * Finalizar *. Puede realizar un seguimiento del progreso en el panel de tareas recientes.
+. En el panel de resumen, compruebe los valores y seleccione *Finalizar*. Puede realizar un seguimiento del progreso en el panel de tareas recientes.
 

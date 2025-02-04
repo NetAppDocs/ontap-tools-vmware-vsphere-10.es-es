@@ -16,8 +16,8 @@ Cuando tiene varias direcciones IP de host ESXi, de forma predeterminada, todas 
 Puede optar por permitir algunas direcciones de host ESXi específicas para la operación de montaje de almacenes de datos. Si no se proporciona la configuración, la política de exportación agrega todas las direcciones IP detectadas en el paso previo al montaje. Si se proporciona la configuración, las herramientas de ONTAP para VMware vSphere agregan únicamente las que se encuentran dentro del rango o las direcciones IP indicadas. Si ninguna de las direcciones IP de un host pertenece a las direcciones IP mostradas, el montaje en ese host falla.
 
 .Pasos
-. Inicie sesión en el cliente de vSphere mediante `\https://vcenterip/ui`
-. En la página de accesos directos, haga clic en *NetApp ONTAP tools* en la sección de plugins.
+. Inicie sesión en el cliente de vSphere mediante `\https://<vcenterip>/<ui>`
+. En la página de accesos directos, seleccione *Herramientas de NetApp ONTAP* en la sección de plugins.
 . En el panel izquierdo de las herramientas de ONTAP, navegue hasta *Ajustes* > *Administrar acceso a la red* > *Editar*.
 +
 Utilice una coma (,) para separar las direcciones IP. Puede especificar una dirección IP específica, o un rango de direcciones IP o direcciones IPv6.

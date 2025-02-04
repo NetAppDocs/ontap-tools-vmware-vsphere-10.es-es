@@ -18,7 +18,7 @@ Descubre si migrar desde herramientas de ONTAP para VMware vSphere 9 a herramien
 | Función | Herramientas de ONTAP 9,13 | Herramientas de ONTAP 10,1 | ONTAP TOOLS 10,2 en adelante 
 
 
-| Propuesta de valor clave | Optimiza y simplifica las operaciones del día 0 al día 2 con funcionalidades de seguridad, cumplimiento de normativas y automatización mejoradas | Evolución de las herramientas de ONTAP 10.x hacia la paridad de 9.x mientras aumenta los límites de alta disponibilidad, rendimiento y escalado | Compatibilidad ampliada para incluir FC para VMFS y vVols, y NVMe-oF/FC, NVMe-oF/TCP solo para VMFS. Facilidad de uso para NetApp SnapMirror, configuración sencilla para clústeres de almacenamiento metropolitano de vSphere y compatibilidad con SRM en tres sitios 
+| Propuesta de valor clave | Optimiza y simplifica las operaciones del día 0 al día 2 con funcionalidades de seguridad, cumplimiento de normativas y automatización mejoradas | Evolución de las herramientas de ONTAP 10.x hacia la paridad de 9.x mientras aumenta los límites de alta disponibilidad, rendimiento y escalado | Compatibilidad ampliada para incluir FC para VMFS y vVols, y NVMe-oF/FC, NVMe-oF/TCP solo para VMFS. Facilidad de uso para NetApp SnapMirror, configuración sencilla para clústeres de almacenamiento metropolitano de vSphere y soporte de VMware Live Site Recovery de tres sitios 
 
 
 | Cualificación de versiones de ONTAP | ONTAP 9.9,1 a ONTAP 9.15,1 | ONTAP 9.12,1 a ONTAP 9.14,1 | Herramientas de ONTAP 9.12.1 a ONTAP 9.15.1 para ONTAP 10,2 ONTAP 9.14.1, 9.15.1 y 9.16.0 para herramientas de ONTAP 10,3. 
@@ -36,7 +36,7 @@ Descubre si migrar desde herramientas de ONTAP para VMware vSphere 9 a herramien
 | Observabilidad | Informes dinámicos de máquinas virtuales y almacenes de datos de rendimiento, capacidad y cumplimiento de normativas de host | Informes dinámicos de máquinas virtuales y almacenes de datos actualizados de rendimiento, capacidad y cumplimiento de normativas de host | Informes dinámicos de máquinas virtuales y almacenes de datos actualizados de rendimiento, capacidad y cumplimiento de normativas de host 
 
 
-| Protección de datos | Replicación de SRA para VMFS y NFS FlexVols basada en replicación para integración de vVols SCV y interoperable para backup | Replicación SRA para iSCSI VMFS y almacenes de datos NFS v3 | Replicación de SRA para almacenes de datos iSCSI VMFS y NFS v3 protección en tres sitios que combina SMAS y SRM. 
+| Protección de datos | Replicación de SRA para VMFS y NFS FlexVols basada en replicación para integración de vVols SCV y interoperable para backup | Replicación SRA para iSCSI VMFS y almacenes de datos NFS v3 | Replicación SRA para almacenes de datos iSCSI VMFS y NFS v3 protección en tres sitios que combina SMAS y Live Site Recovery de VMware. 
 
 
 | Compatibilidad con el proveedor de VASA | VASA 4,0 | VASA 3,0 | VASA 3,0 

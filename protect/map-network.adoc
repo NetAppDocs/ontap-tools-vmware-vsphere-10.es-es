@@ -27,8 +27,8 @@ Debe haber conectado los sitios protegidos y de recuperación.
 
 * Pasos*
 
-. Inicie sesión en vCenter Server y haga clic en *Site Recovery* > *Sites*.
-. Seleccione su sitio protegido y haga clic en *Administrar*.
+. Inicie sesión en vCenter Server y seleccione *Site Recovery* > *Sites*.
+. Seleccione su sitio protegido y seleccione *Administrar*.
 . En la ficha Administrar, seleccione *asignaciones de red*.
 . Haga clic en *Nuevo* para crear un nuevo mapeo de red.
 +
@@ -36,10 +36,10 @@ Aparece el asistente Create Network Mapping (Crear asignación de red).
 
 . En el asistente Create Network Mapping, realice lo siguiente:
 +
-.. Seleccione *Preparar automáticamente asignaciones para redes con nombres coincidentes* y haga clic en *Siguiente*.
-.. Seleccione los objetos del centro de datos necesarios para los sitios protegidos y de recuperación y haga clic en *Agregar asignaciones*.
+.. Selecciona *Preparar automáticamente asignaciones para redes con nombres coincidentes* y selecciona *Siguiente*.
+.. Seleccione los objetos del centro de datos necesarios para los sitios protegidos y de recuperación y seleccione *Agregar asignaciones*.
 .. Haga clic en *Siguiente* después de crear correctamente las asignaciones.
-.. Seleccione el objeto utilizado anteriormente para crear una asignación inversa y, a continuación, haga clic en * Finalizar *.
+.. Seleccione el objeto utilizado anteriormente para crear una asignación inversa y, a continuación, seleccione * Finalizar *.
 
 
 

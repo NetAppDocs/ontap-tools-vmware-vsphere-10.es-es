@@ -21,11 +21,11 @@ Debe configurar un almacén de datos de marcador de posición para que contenga 
 
 * Pasos*
 
-. Inicie sesión en vCenter Server y haga clic en *Site Recovery* > *Sites*.
-. Seleccione su sitio protegido y haga clic en *Administrar*.
+. Inicie sesión en vCenter Server y seleccione *Site Recovery* > *Sites*.
+. Seleccione su sitio protegido y seleccione *Administrar*.
 . En la pestaña Manage, seleccione *Placeholder datastores*.
 . Haga clic en *Nuevo* para crear un nuevo almacén de datos de marcador de posición.
-. Seleccione el almacén de datos apropiado y haga clic en *OK*.
+. Seleccione el almacén de datos apropiado y seleccione *OK*.
 +
 
 NOTE: Los almacenes de datos de marcador de posición pueden ser locales o remotos y no deben replicarse.

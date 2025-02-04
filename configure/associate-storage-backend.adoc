@@ -19,10 +19,10 @@ Esta tarea permite crear una asignación entre el back-end del almacenamiento y 
 
 * Pasos*
 
-. Inicie ONTAP TOOLS Manager desde un explorador web: `\https://loadBalanceIP:8443/virtualization/ui/`
+. Inicie ONTAP TOOLS Manager desde un explorador web: `\https://loadBalancerIP:8443/virtualization/ui/`
 . Inicie sesión con las herramientas de ONTAP para las credenciales de administrador de VMware vSphere que proporcionó durante la implementación.
 . Seleccione vCenter en la barra lateral.
-. Haga clic en los tres puntos verticales en la instancia de vCenter que desea asociar con los back-ends de almacenamiento.
+. Seleccione los tres puntos verticales en relación con la instancia de vCenter que desea asociar con los back-ends de almacenamiento.
 . En el menú desplegable, seleccione el back-end de almacenamiento.
 . Seleccione la opción *Associate Storage Backend* para asociar la instancia de vCenter Server con el backend de almacenamiento requerido.
 

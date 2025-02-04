@@ -22,7 +22,7 @@ El Gestor de herramientas de ONTAP ayuda en:
 * Gestión de contraseñas: Restablece la contraseña de la aplicación OVA del usuario.
 
 
-Para acceder al Administrador de herramientas de ONTAP, inicie `\https://loadBalanceIP:8443/virtualization/ui/` Desde el explorador e inicie sesión con las credenciales de administrador de ONTAP para VMware vSphere que proporcionó durante la implementación.
+Para acceder al Administrador de herramientas de ONTAP, `\https://loadBalancerIP:8443/virtualization/ui/` inicie sesión desde el explorador e inicie sesión con las herramientas de ONTAP para las credenciales de administrador de VMware vSphere que proporcionó durante la implementación.
 
 La sección de descripción general del Administrador de herramientas de ONTAP ayuda a gestionar la configuración del dispositivo, como la gestión de servicios, el aumento del tamaño de nodos y la habilitación de alta disponibilidad (HA). También puede supervisar información general de las herramientas de ONTAP relacionadas con los nodos, como el estado, los detalles de la red y las alertas.
 
@@ -32,11 +32,11 @@ image:../media/ontap-tools-manager-overview.png["Información general de la cons
 | *Tarjeta* | *Descripción* 
 
 
-| Tarjeta del aparato | La tarjeta del dispositivo proporciona el estado general de las herramientas ONTAP del dispositivo. Muestra los detalles de configuración del dispositivo y el estado de los servicios activados. Para obtener información adicional sobre el dispositivo de herramientas ONTAP, haga clic en el enlace *Ver detalles*. Cuando un trabajo de acción de edición de configuración de dispositivo está en curso, el portlet de dispositivo muestra el estado y los detalles del trabajo. 
+| Tarjeta del aparato | La tarjeta del dispositivo proporciona el estado general de las herramientas ONTAP del dispositivo. Muestra los detalles de configuración del dispositivo y el estado de los servicios activados. Para obtener información adicional sobre el dispositivo de herramientas ONTAP, seleccione el enlace *Ver detalles*. Cuando un trabajo de acción de edición de configuración de dispositivo está en curso, el portlet de dispositivo muestra el estado y los detalles del trabajo. 
 
 
-| Tarjeta de alertas | La tarjeta de Alertas enumera las alertas de las herramientas ONTAP por tipo, incluidas las alertas de nivel de nodo de alta disponibilidad. Puede ver la lista de alertas haciendo clic en el texto de recuento (hipervínculo). El enlace le dirige a la página de vista de alertas filtrada por el tipo seleccionado. 
+| Tarjeta de alertas | La tarjeta de Alertas enumera las alertas de las herramientas ONTAP por tipo, incluidas las alertas de nivel de nodo de alta disponibilidad. Puede ver la lista de alertas seleccionando en el texto de recuento (hipervínculo). El enlace le dirige a la página de vista de alertas filtrada por el tipo seleccionado. 
 
 
-| Tarjeta de nodos de herramientas de ONTAP | La tarjeta de nodos de herramientas ONTAP muestra la lista de nodos con nombre de nodo, nombre de máquina virtual de nodo, estado y todos los datos relacionados con la red. Puede hacer clic en *Ver detalles* para ver los detalles adicionales relacionados con el nodo seleccionado. [NOTA] En una configuración sin alta disponibilidad, solo se muestra un nodo. En la configuración de alta disponibilidad, se muestran tres nodos. 
+| Tarjeta de nodos de herramientas de ONTAP | La tarjeta de nodos de herramientas ONTAP muestra la lista de nodos con nombre de nodo, nombre de máquina virtual de nodo, estado y todos los datos relacionados con la red. Puede seleccionar en *Ver detalles* para ver los detalles adicionales relacionados con el nodo seleccionado. [NOTA] En una configuración sin alta disponibilidad, solo se muestra un nodo. En la configuración de alta disponibilidad, se muestran tres nodos. 
 |===

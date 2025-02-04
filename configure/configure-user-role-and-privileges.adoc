@@ -43,7 +43,7 @@ El campo Producto se rellena automáticamente.
 El campo *Rol* se rellena automáticamente según la capacidad del producto seleccionada.
 
 .. Introduzca el nombre de usuario y la contraseña necesarios.
-.. Seleccione los privilegios (Detección, Crear almacenamiento, Modificar almacenamiento, Destruir almacenamiento, Función NAS/SAN) necesarios para el usuario y, a continuación, haga clic en *Agregar*.
+.. Seleccione la función Privileges (Detección, Crear almacenamiento, Modificar almacenamiento, Destruir almacenamiento, Función NAS/SAN) necesaria para el usuario y, a continuación, seleccione *Agregar*.
 
 
 

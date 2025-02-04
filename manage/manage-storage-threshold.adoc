@@ -14,8 +14,8 @@ summary: Es posible establecer el umbral para recibir notificaciones en vCenter 
 Es posible establecer el umbral para recibir notificaciones en vCenter Server cuando la capacidad del volumen y del agregado alcanzan ciertos niveles.
 
 .Pasos:
-. Inicie sesión en el cliente de vSphere mediante `\https://vcenterip/ui`
-. En la página de accesos directos, haga clic en *NetApp ONTAP tools* en la sección de plugins.
+. Inicie sesión en el cliente de vSphere mediante `\https://<vcenterip>/<ui>`
+. En la página de accesos directos, seleccione *Herramientas de NetApp ONTAP* en la sección de plugins.
 . En el panel izquierdo de las herramientas de ONTAP, navegue hasta *Ajustes* > *Ajustes de umbral* > *Editar*.
-. En la ventana *Editar Umbral*, proporcione los valores deseados en los campos *Casi Completo* y *Completo* y haga clic en *Guardar*. Puede restablecer los números a los valores recomendados, que son 80 para casi completo y 90 para completo.
+. En la ventana *Editar umbral*, proporcione los valores deseados en los campos *Casi lleno* y *Completo* y seleccione *Guardar*. Puede restablecer los números a los valores recomendados, que son 80 para casi completo y 90 para completo.
 

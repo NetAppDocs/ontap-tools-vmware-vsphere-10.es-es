@@ -51,8 +51,8 @@ NOTE: No migre si se acaba de completar la conmutación por error y la nueva pro
 +
 .. Vaya a la página de gestión de VMware Live Site Recovery Configuration
 .. Vaya a la sección *Storage Replication Adapter*
-.. Haga clic en el menú de puntos suspensivos y seleccione *Restablecer configuración*
-.. Haga clic en el menú de puntos suspensivos y seleccione *Eliminar*
+.. Seleccione el menú de puntos suspensivos y seleccione *Restablecer configuración*
+.. Seleccione el menú de puntos suspensivos y seleccione *Eliminar*
 +
 Lleve a cabo estos pasos en sitios de protección y recuperación.
 
@@ -231,8 +231,6 @@ Una vez realizada correctamente la migración y después de registrar las herram
 
 
 *Después de terminar*
-
-Después de migrar desde versiones antiguas de herramientas de ONTAP para VMware vSphere a 10,3, vuelva a analizar los adaptadores del SRA para verificar que los detalles estén actualizados en la página Adaptadores de replicación del almacenamiento de recuperación del sitio activo de VMware.
 
 Tras la actualización, si el estado de cumplimiento de normativas de la máquina virtual no está actualizado, vuelva a aplicar la política de almacenamiento de la máquina virtual siguiendo los siguientes pasos:
 

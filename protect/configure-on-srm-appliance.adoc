@@ -23,7 +23,7 @@ La configuración del SRA en el dispositivo VMware Live Site Recovery almacena l
 
 * Pasos*
 
-. En la pantalla del dispositivo VMware Live Site Recovery, haga clic en *Storage Replication Adapter* > *New Adapter*.
+. En la pantalla del dispositivo VMware Live Site Recovery, seleccione *Storage Replication Adapter* > *New Adapter*.
 . Cargue el archivo _.tar.gz_ en Live Site Recovery de VMware.
 . Inicie sesión con la cuenta de administrador en el dispositivo VMware Live Site Recovery mediante putty.
 . Cambie al usuario raíz mediante el comando: `su root`

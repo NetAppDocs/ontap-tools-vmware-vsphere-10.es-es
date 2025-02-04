@@ -29,7 +29,7 @@ Si aún no tiene una biblioteca de contenido adecuada, cree una mediante los sig
 NOTE: Si sólo pretende utilizar un despliegue de nodo único pequeño, no es necesario crear una biblioteca de contenido.
 
 . Descargue el `.zip` archivo que contiene archivos binarios (_.ova_) y certificados firmados para herramientas de ONTAP para VMware vSphere desde el https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["Sitio de soporte de NetApp"^].
-. Inicie sesión en el cliente de vSphere mediante `\https://vcenterip/ui`
+. Inicie sesión en el cliente de vSphere mediante `\https://<vcenterip>/<ui>`
 . Seleccione las elipses horizontales junto al cliente vSphere y seleccione *Biblioteca de contenido*.
 . Selecciona *Crear* a la derecha de la página.
 . Proporcione un nombre para la biblioteca y cree la biblioteca de contenido.
@@ -55,20 +55,20 @@ NOTE: Antes de continuar con el despliegue, establezca el planificador de recurs
 
 NOTE: Nunca almacene las herramientas de ONTAP para máquinas virtuales de VMware vSphere en almacenes de datos vVols que gestionen.
 
-. Seleccione el archivo OVA a través de la URL del archivo _.ova_ o vaya a la carpeta donde se guarda el archivo _.ova_ y, a continuación, haga clic en *Siguiente*.
+. Seleccione el archivo OVA a través de la URL del archivo _.ova_ o vaya a la carpeta donde se guarda el archivo _.ova_ y, a continuación, seleccione *Siguiente*.
 . Para implementar herramientas de ONTAP para VMware vSphere desde la biblioteca de contenido:
 +
-.. Vaya a la biblioteca de contenidos y haga clic en el elemento de biblioteca que desea desplegar.
-.. Haga clic en *Acciones* > *Nueva VM desde esta plantilla*
+.. Vaya a la biblioteca de contenido y seleccione el elemento de biblioteca que desea desplegar.
+.. Selecciona *Acciones* > *Nueva VM de esta plantilla*
 
 
 . En el *Seleccione un nombre y una carpeta* para la ventana de la máquina virtual, introduzca el nombre de la máquina virtual y seleccione la ubicación de la máquina virtual. Si marca la casilla de verificación que dice *Personalizar el hardware de esta máquina virtual*, se activará un paso llamado *Personalizar hardware* antes de llegar a la ventana *Listo para completar*.
-. Seleccione un recurso informático y haga clic en *Siguiente*. Puede elegir marcar la casilla de verificación para *encender automáticamente la VM implementada*.
-. Revise los detalles de la plantilla y haga clic en *Siguiente*.
-. Lea y acepte el contrato de licencia y haga clic en *Siguiente*.
-. Seleccione el almacenamiento para la configuración y los archivos de disco y haga clic en *Siguiente*.
-. Seleccione la red de destino para cada red de origen y haga clic en *Siguiente*.
-. En la ventana *Personalizar plantilla*, rellena los campos requeridos y haz clic en *Siguiente*.
+. Seleccione un recurso informático y seleccione *Siguiente*. Puede elegir marcar la casilla de verificación para *encender automáticamente la VM implementada*.
+. Revisa los detalles de la plantilla y selecciona *Siguiente*.
+. Lea y acepte el contrato de licencia y seleccione *Siguiente*.
+. Seleccione el almacenamiento para la configuración y los archivos de disco y seleccione *Siguiente*.
+. Seleccione la red de destino para cada red de origen y seleccione *Siguiente*.
+. En la ventana *Personalizar plantilla*, rellena los campos requeridos y selecciona *Siguiente*.
 +
 ** La información proporcionada aquí se valida para los patrones adecuados durante el proceso de instalación. En caso de discrepancia, se muestra un mensaje de error en la consola web y se le solicita que corrija cualquier información incorrecta proporcionada.
 ** Los nombres de host deben consistir en letras mayúsculas (A-Z), letras minúsculas (a-z), dígitos (0-9) o el guión (-) carácter especial. Si desea configurar la pila doble, especifique el nombre de host asignado a la dirección IPv6.

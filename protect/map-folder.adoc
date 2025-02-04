@@ -19,8 +19,8 @@ Debe haber conectado los sitios protegidos y de recuperación.
 
 * Pasos*
 
-. Inicie sesión en vCenter Server y haga clic en *Site Recovery* > *Sites*.
-. Seleccione su sitio protegido y haga clic en *Administrar*.
+. Inicie sesión en vCenter Server y seleccione *Site Recovery* > *Sites*.
+. Seleccione su sitio protegido y seleccione *Administrar*.
 . En la ficha Administrar, seleccione *asignaciones de carpetas*.
 . Seleccione el icono *Carpeta* para crear una nueva asignación de carpetas.
 +
@@ -28,10 +28,10 @@ Aparece el asistente Crear asignación de carpetas.
 
 . En el asistente Crear asignación de carpetas, realice lo siguiente:
 +
-.. Seleccione *Preparar automáticamente asignaciones para carpetas con nombres coincidentes* y haga clic en *Siguiente*.
-.. Seleccione los objetos del centro de datos necesarios para los sitios protegidos y de recuperación y haga clic en *Agregar asignaciones*.
+.. Seleccione *Preparar automáticamente asignaciones para carpetas con nombres coincidentes* y seleccione *Siguiente*.
+.. Seleccione los objetos del centro de datos necesarios para los sitios protegidos y de recuperación y seleccione *Agregar asignaciones*.
 .. Haga clic en *Siguiente* después de crear correctamente las asignaciones.
-.. Seleccione el objeto utilizado anteriormente para crear una asignación inversa y luego haga clic en *Finalizar*.
+.. Seleccione el objeto utilizado anteriormente para crear una asignación inversa y luego seleccione *Finalizar*.
 
 
 

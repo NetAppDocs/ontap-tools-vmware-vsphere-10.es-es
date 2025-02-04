@@ -18,7 +18,7 @@ NOTE: La generación de registros desde el Administrador de herramientas de ONTA
 
 * Pasos*
 
-. Inicie ONTAP TOOLS Manager desde un explorador web: `\https://loadBalanceIP:8443/virtualization/ui/`
+. Inicie ONTAP TOOLS Manager desde un explorador web: `\https://loadBalancerIP:8443/virtualization/ui/`
 . Inicie sesión con las herramientas de ONTAP para las credenciales de administrador de VMware vSphere que proporcionó durante la implementación.
 . Seleccione *Log Bundles* en la barra lateral.
 +
@@ -34,7 +34,7 @@ Descargue el archivo tar.gz y envíelo al soporte técnico.
 Siga los pasos a continuación para generar paquete de registros con la interfaz de usuario del cliente de vCenter:
 
 .Pasos
-. Inicie sesión en el cliente de vSphere mediante `\https://vcenterip/ui`
+. Inicie sesión en el cliente de vSphere mediante `\https://<vcenterip>/<ui>`
 . En la página de inicio de vSphere Client, vaya a *Support* > *Log bundle* > *Generar*.
 . Proporcione la etiqueta del paquete de logs y genere el paquete de logs.
 Puede ver la opción de descarga cuando se generan los archivos. La descarga puede tardar algún tiempo.

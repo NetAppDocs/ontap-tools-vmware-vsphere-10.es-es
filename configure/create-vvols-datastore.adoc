@@ -38,7 +38,7 @@ A partir de las herramientas de ONTAP para VMware vSphere 10,3, puede crear un a
 
 
 .Pasos
-. Inicie sesión en el cliente de vSphere mediante `\https://vcenterip/ui`
+. Inicie sesión en el cliente de vSphere mediante `\https://<vcenterip>/<ui>`
 . Haga clic con el botón derecho en un sistema host, un clúster host o un centro de datos y seleccione *Herramientas de NetApp ONTAP* > *Crear almacén de datos*.
 . En el panel *Type*, seleccione vVols en *Datastore Type*.
 . En el panel *Nombre y protocolo*, proporcione información sobre *Nombre del almacén de datos* y *Protocolo*.
@@ -52,7 +52,7 @@ NOTE: El tipo de almacenamiento ASA R2 solo admite el protocolo iSCSI y FC para 
 NOTE: En la SVM de tipo de almacenamiento de ASA R2, las unidades de almacenamiento (LUN/espacio de nombres) no se crean como un almacén de datos es solo un contenedor lógico.
 
 . En el panel *Atributos de almacenamiento*, puede crear nuevos volúmenes o utilizar los volúmenes existentes. Al crear un volumen nuevo, es posible habilitar la calidad de servicio en el almacén de datos. Este paso no es aplicable para los almacenes de datos de vVols que utilizan el tipo de almacenamiento ONTAP ASA R2, ya que el almacén de datos de VVOL no tiene volúmenes de respaldo. Se crearía un volumen en cada solicitud de creación de LUN de forma predeterminada.
-. Revise su selección en el panel *Resumen* y haga clic en *Finalizar*. Se crea y se monta el almacén de datos vVols en todos los hosts.
+. Revise su selección en el panel *Resumen* y seleccione *Finalizar*. Se crea y se monta el almacén de datos vVols en todos los hosts.
 
 
 --
@@ -61,7 +61,7 @@ NOTE: En la SVM de tipo de almacenamiento de ASA R2, las unidades de almacenamie
 Un almacén de datos de sistema de archivos de red (NFS) de VMware utiliza el protocolo NFS para conectar los hosts ESXi a un dispositivo de almacenamiento compartido a través de una red. Los almacenes de datos NFS se utilizan habitualmente en entornos VMware vSphere y ofrecen muchas ventajas, como simplicidad y flexibilidad.
 
 .Pasos
-. Inicie sesión en el cliente de vSphere mediante `\https://vcenterip/ui`
+. Inicie sesión en el cliente de vSphere mediante `\https://<vcenterip>/<ui>`
 . Haga clic con el botón derecho en un sistema host o en un clúster host o en un centro de datos y seleccione *Herramientas de NetApp ONTAP* > *Crear almacén de datos*.
 . En el panel *Type*, seleccione NFS en *Datastore Type*.
 . En el panel *Nombre y protocolo*, introduzca el nombre del almacén de datos, el tamaño y la información del protocolo. En las opciones avanzadas, seleccione *Datastore cluster* y *Kerberos Authentication*.
@@ -76,7 +76,7 @@ NOTE: La autenticación Kerberos está disponible solo si se selecciona el proto
 
 
 . En el panel *Atributos de almacenamiento*, seleccione el agregado para la creación del volumen. En las opciones avanzadas, elija *Space Reserve* y *Enable QoS* según sea necesario.
-. Revise las selecciones en el panel *Resumen* y haga clic en *Finalizar*.
+. Revise las selecciones en el panel *Resumen* y seleccione *Finalizar*.
 
 
 El almacén de datos de NFS se crea y se monta en todos los hosts.
@@ -121,7 +121,7 @@ Para obtener más información sobre el uso del protocolo NVMe/FC con VMware vSp
 Para obtener más información sobre el uso de NVMe/FC con VMware vSphere 7,0, consulte https://docs.netapp.com/us-en/ontap-sanhost/nvme_esxi_8.html["Guía de configuración de hosts ONTAP NVMe/FC"] y http://www.netapp.com/us/media/tr-4684.pdf["TR-4684"].
 
 .Pasos
-. Inicie sesión en el cliente de vSphere mediante `\https://vcenterip/ui`
+. Inicie sesión en el cliente de vSphere mediante `\https://<vcenterip>/<ui>`
 . Haga clic con el botón derecho en un sistema host, un clúster host o un almacén de datos y seleccione *Herramientas de NetApp ONTAP* > *Crear almacén de datos*.
 . En el panel *Type*, seleccione VMFS en *Datastore Type*.
 . En el panel *Name and Protocol*, introduzca el nombre del almacén de datos, el tamaño y la información del protocolo. Si decide agregar el nuevo almacén de datos a un clúster de almacenes de datos VMFS existente, seleccione el selector de clústeres de almacenes de datos en *Opciones avanzadas*.
@@ -148,7 +148,7 @@ NOTE: Para la creación del almacén de datos VMFS con el protocolo NVMe/FC o NV
 
 
 
-. Revise los detalles del almacén de datos en el panel *Summary* y haga clic en *Finish*.
+. Revise los detalles del almacén de datos en el panel *Summary* y seleccione *Finish*.
 
 
 

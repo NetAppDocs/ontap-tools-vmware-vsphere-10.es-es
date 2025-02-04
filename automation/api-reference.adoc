@@ -29,5 +29,5 @@ Puede acceder a las herramientas de ONTAP para la documentación en línea de la
 +
 `\https://10.61.25.33:8443/`
 
-. Como ejemplo de una llamada individual a la API, desplácese hacia abajo hasta la categoría *vCenters* y haga clic en *GET* junto al punto final `/virtualization/api/v1/vcenters`
+. Como ejemplo de una llamada individual a la API, desplácese hacia abajo hasta la categoría *vCenters* y seleccione *GET* junto al punto final `/virtualization/api/v1/vcenters`
 

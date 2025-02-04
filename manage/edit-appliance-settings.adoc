@@ -21,48 +21,48 @@ Asegúrese de que la plantilla OVA que proporcione tenga la misma versión de OV
 
 * Pasos*
 
-. Inicie ONTAP TOOLS Manager desde un explorador web: `\https://loadBalanceIP:8443/virtualization/ui/`
+. Inicie ONTAP TOOLS Manager desde un explorador web: `\https://loadBalancerIP:8443/virtualization/ui/`
 . Inicie sesión con las herramientas de ONTAP para las credenciales de administrador de VMware vSphere que proporcionó durante la implementación.
-. Haga clic en *Editar configuración de electrodomésticos* en la sección de descripción general.
-. En la sección *Servicios* puedes habilitar servicios opcionales como VASA Provider, importación de la configuración vVols y recuperación ante desastres (SRA) según tus necesidades.
+. Seleccione la opción *Editar configuración del aparato* en la sección de descripción general.
+. En la sección *Servicios*, puede habilitar servicios opcionales como VASA Provider, importación de la configuración vVols y recuperación ante desastres (SRA) según sus necesidades.
 +
 Cuando habilite los servicios por primera vez, debe crear credenciales del proveedor de VASA/SRA. Esto se utiliza para registrar o habilitar los servicios del proveedor VASA/SRA en vCenter Server.
 
 +
 
-NOTE: Para deshabilitar cualquiera de los servicios opcionales, asegúrese de que ninguna instancia de vCenter Server gestionada por las herramientas de ONTAP esté usando estos servicios.
+NOTE: Para deshabilitar cualquiera de los servicios opcionales, asegúrese de que no los esté utilizando ninguna instancia de vCenter Server gestionada por las herramientas de ONTAP.
 
 +
 *Permitir la importación de la configuración de vVols* se muestra solo cuando el servicio VASA Provider está habilitado. Esta opción permite la migración de datos vVols desde ONTAP tools 9.x a ONTAP tools 10,3.
 
-. En la sección *Configuración* puede escalar el tamaño de cada nodo de las herramientas de ONTAP y habilitar la configuración HA según sus necesidades. Se necesitan las credenciales de vCenter Server para realizar cambios.
+. En la sección *Configuración*, puede ampliar el tamaño de cada nodo de las herramientas de ONTAP y habilitar la configuración HA según sus necesidades. Se necesitan las credenciales de vCenter Server para realizar cambios.
 +
-Cuando las herramientas de ONTAP están en una configuración de alta disponibilidad, puede cambiar los detalles de la biblioteca de contenido. Debe proporcionar la contraseña de nuevo para la nueva ejecución de edición.
+Cuando las herramientas de ONTAP están en una configuración de alta disponibilidad, puede cambiar los detalles de la biblioteca de contenido. Debe volver a proporcionar la contraseña para la nueva presentación de edición.
 
 +
 
-NOTE: Solo puede escalar verticalmente el tamaño del nodo de las herramientas de ONTAP. No se puede escalar horizontalmente el nodo del tamaño actual a un tamaño más pequeño. Para una configuración no alta disponibilidad máxima admitida es media. Para alta disponibilidad se admiten configuraciones medianas y grandes.
+NOTE: Solo puede escalar verticalmente el tamaño del nodo de las herramientas de ONTAP. No se puede escalar horizontalmente el nodo de su tamaño actual a un tamaño más pequeño. La configuración máxima admitida para entornos no HA es media. Para alta disponibilidad, se admiten las configuraciones medianas y grandes.
 
 . Utilice el botón de alternar HA para habilitar la configuración de alta disponibilidad. Al elegir la configuración HA, aparece una página adicional *HA settings* para las entradas relacionadas con HA.
 +
-** La biblioteca de contenido debe pertenecer al mismo servidor vCenter donde se ejecutan los equipos virtuales de nodo de herramientas de ONTAP. Las credenciales de vCenter Server se utilizan para validar y descargar la plantilla OVA para realizar cambios en el dispositivo.
-** Para habilitar la puesta en marcha de alta disponibilidad, la máquina virtual que aloja las herramientas de ONTAP no se debe poner en marcha directamente en un host ESXi. En su lugar, debe ponerse en marcha en un clúster o en un pool de recursos.
+** La biblioteca de contenido debe pertenecer a la misma instancia de vCenter Server donde se ejecutan los equipos virtuales de nodo de herramientas de ONTAP. Las credenciales de vCenter Server se utilizan para validar y descargar la plantilla OVA para realizar cambios en el dispositivo.
+** Para habilitar la implementación de alta disponibilidad, la máquina virtual que aloja las herramientas de ONTAP no debe ponerse en marcha directamente en un host ESXi. En su lugar, debe ponerse en marcha en un clúster o un pool de recursos.
 ** Una vez habilitada, no se puede revertir desde la configuración de alta disponibilidad a una configuración de nodo único sin alta disponibilidad.
 
 
-. En la sección *Configuración HA* de la ventana *Editar configuración de dispositivo*, puede ingresar los detalles del Nodo 2 y Nodo 3. El nodo 1 es el nodo predeterminado de las herramientas ONTAP puesto en marcha como parte del OVA. Las herramientas de ONTAP para VMware vSphere admiten tres nodos en una configuración de alta disponibilidad.
+. En la sección *HA settings* de la ventana *Edit Appliance Settings*, puedes ingresar los detalles del Nodo 2 y Nodo 3. El nodo 1 es el nodo predeterminado de las herramientas ONTAP puesto en marcha como parte del OVA. Las herramientas de ONTAP para VMware vSphere admiten tres nodos en una configuración de alta disponibilidad.
 +
 
-NOTE: La mayoría de las opciones de entrada se rellenan previamente con detalles de red del nodo 1 para facilitar el flujo de trabajo. Sin embargo, puede editar los datos de entrada antes de navegar a la página final del asistente. Solo cuando la dirección IPv6 esté habilitada en el primer nodo, puede introducir detalles de IPv6 para los otros dos nodos.
+NOTE: La mayoría de las opciones de entrada se rellenan previamente con detalles de red del nodo 1 para facilitar el flujo de trabajo. Sin embargo, puede editar los datos de entrada antes de navegar a la página final del asistente. Solo cuando la dirección IPv6 está habilitada en el primer nodo puede introducir detalles de IPv6 para los otros dos nodos.
 
 +
 Compruebe que un host ESXi contenga solo una máquina virtual de ONTAP Tools. Las entradas se validan cada vez que se mueve a la siguiente ventana.
 
-. En la sección *resumen*, revise los detalles y haga clic en *Guardar* para aplicar los cambios.
+. En la sección *resumen*, revise los detalles y seleccione *Guardar* para aplicar los cambios.
 
 
-La página *Overview* muestra el estado de la implementación. También puede realizar un seguimiento del estado del trabajo de edición de la configuración del dispositivo desde la vista de trabajos mediante el ID de trabajo.
+La página *Overview* muestra el estado del despliegue. Con el ID de trabajo, también puede realizar un seguimiento del estado del trabajo de edición de la configuración del dispositivo desde la vista de trabajos.
 
-Si se produce un error en la puesta en marcha de alta disponibilidad y el estado de los nuevos nodos aparece como «Nuevo», elimine la nueva máquina virtual en vCenter antes de volver a intentar la operación de habilitación de alta disponibilidad.
+Si falla la puesta en marcha de alta disponibilidad y el estado del nuevo nodo aparece como «New» (Nuevo), elimine la nueva máquina virtual en vCenter antes de volver a intentar la operación de habilitación de alta disponibilidad.
 
 La pestaña *Alertas* en el panel izquierdo muestra las alertas de las herramientas de ONTAP para VMware vSphere.

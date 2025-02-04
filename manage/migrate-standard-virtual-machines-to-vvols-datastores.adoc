@@ -23,8 +23,8 @@ Cuando se migra de un almacén de datos NFS y VMFS a un almacén de datos vVols,
 
 * Pasos*
 
-. Haga clic con el botón derecho en la máquina virtual que desea migrar y haga clic en *Migrar*.
-. Seleccione *Cambiar solo almacenamiento* y luego haga clic en *Siguiente*.
+. Haga clic con el botón derecho en la máquina virtual que desea migrar y seleccione *Migrate*.
+. Seleccione *Cambiar solo almacenamiento* y luego seleccione *Siguiente*.
 . Seleccione un formato de disco virtual, una política de almacenamiento de máquina virtual y un almacén de datos de VVol que coincida con las funciones del almacén de datos que desea migrar. Haga clic en *Siguiente*.
-. Revise la configuración y haga clic en *Finalizar*.
+. Revise los ajustes y seleccione *Finalizar*.
 

@@ -33,8 +33,8 @@ Estos valores se establecen automáticamente en el host ESXi cuando se actualiza
 . Haga clic en *Configuración* en la página de inicio de las herramientas de ONTAP para VMware vSphere.
 . Haga clic en la ficha *NFS VAAI Tools*.
 . Cuando el complemento VAAI se cargue en vCenter Server, seleccione *Cambiar* en la sección *Versión existente*. Si no se carga un complemento VAAI en vCenter Server, seleccione el botón *Cargar*.
-. Busque y seleccione el `.vib` archivo y haga clic en *Cargar* para cargar el archivo a las herramientas de ONTAP.
-. Haga clic en *Instalar en el host ESXI*, seleccione el host ESXi en el que desea instalar el plugin VAAI NFS y, a continuación, haga clic en *Instalar*.
+. Busque y seleccione el `.vib` archivo y seleccione *Cargar* para cargar el archivo en las herramientas de ONTAP.
+. Haga clic en *Instalar en el HOST ESXi*, seleccione el host ESXi en el que desea instalar el plugin VAAI NFS y, a continuación, seleccione *Instalar*.
 +
 Solo se muestran los hosts ESXi elegibles para la instalación del plugin. Debe seguir las instrucciones que aparecen en pantalla para completar la instalación. Puede supervisar el progreso de la instalación en la sección Tareas recientes de vSphere Web Client.
 
