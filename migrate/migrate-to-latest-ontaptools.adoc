@@ -244,3 +244,7 @@ En *Cumplimiento de la política de almacenamiento de VM*, puede ver el estado d
 El estado de cumplimiento en *VM storage policy compliance* ahora se muestra como conforme.
 
 
+
+*Información relacionada*
+
+link:../upgrade/upgrade-ontap-tools.html["Actualice desde ONTAP tools para VMware vSphere 10.x a 10,3"]
