@@ -19,7 +19,7 @@ La vista de almacenamiento ONTAP en la pestaña de configuración de herramienta
 
 .Pasos
 . Desde vSphere Client, desplácese hasta el almacén de datos NFS.
-. Haga clic en la pestaña *Configure* en el panel derecho.
+. Seleccione la pestaña *Configure* en el panel derecho.
 . Selecciona *Herramientas de NetApp ONTAP* > *Almacenamiento de ONTAP*. Los detalles de *Almacenamiento* y *NFS* aparecen en el panel derecho.
 +
 ** La página de detalles de almacenamiento contiene información acerca de back-ends de almacenamiento, el agregado y el volumen.
@@ -34,7 +34,7 @@ La vista de almacenamiento ONTAP en la pestaña de configuración de herramienta
 
 .Pasos
 . Desde vSphere Client, desplácese hasta el almacén de datos de VMFS.
-. Haga clic en la pestaña *Configure* en el panel derecho.
+. Seleccione la pestaña *Configure* en el panel derecho.
 . Selecciona *Herramientas de NetApp ONTAP* > *Almacenamiento de ONTAP*. Los detalles de *Almacenamiento* y *Detalles de la LUN* o *Detalles del espacio de nombres* según el protocolo aparecen en el panel derecho.
 +
 ** La página de detalles de almacenamiento contiene información acerca de back-ends de almacenamiento, el agregado y el volumen.
@@ -54,7 +54,7 @@ NOTE: Esta vista no se admite para el almacén de datos vVols basado en ASA R2.
 
 .Pasos
 . Desde vSphere Client, desplácese hasta el almacén de datos vVols.
-. Haga clic en la pestaña *Configure* en el panel derecho.
+. Seleccione la pestaña *Configure* en el panel derecho.
 . Selecciona *Herramientas de NetApp ONTAP* > *Almacenamiento de ONTAP*.
 . La vista de almacenamiento de ONTAP enumera todos los volúmenes. Puede ampliar o quitar el almacenamiento desde el panel de almacenamiento de ONTAP.
 +

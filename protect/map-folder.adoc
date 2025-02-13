@@ -13,29 +13,22 @@ summary: Debe asignar sus carpetas en el sitio protegido y el sitio de recuperac
 [role="lead"]
 Debe asignar sus carpetas en el sitio protegido y el sitio de recuperación para permitir la comunicación entre ellos.
 
-*Lo que necesitará*
-
+.Antes de empezar
 Debe haber conectado los sitios protegidos y de recuperación.
 
-* Pasos*
-
+.Pasos
 . Inicie sesión en vCenter Server y seleccione *Site Recovery* > *Sites*.
 . Seleccione su sitio protegido y seleccione *Administrar*.
-. En la ficha Administrar, seleccione *asignaciones de carpetas*.
-. Seleccione el icono *Carpeta* para crear una nueva asignación de carpetas.
-+
-Aparece el asistente Crear asignación de carpetas.
-
+. Seleccione *Asignaciones de carpetas* > *Carpeta* en la pestaña Administrar para crear una nueva asignación de carpetas.
 . En el asistente Crear asignación de carpetas, realice lo siguiente:
 +
 .. Seleccione *Preparar automáticamente asignaciones para carpetas con nombres coincidentes* y seleccione *Siguiente*.
 .. Seleccione los objetos del centro de datos necesarios para los sitios protegidos y de recuperación y seleccione *Agregar asignaciones*.
-.. Haga clic en *Siguiente* después de crear correctamente las asignaciones.
+.. Seleccione *Siguiente* después de que las asignaciones se hayan creado correctamente.
 .. Seleccione el objeto utilizado anteriormente para crear una asignación inversa y luego seleccione *Finalizar*.
 
 
 
 
-*resultado*
-
+.Resultado
 La página asignaciones de carpetas muestra los recursos del sitio protegido y los recursos del sitio de recuperación. Puede seguir los mismos pasos para otras redes del entorno.

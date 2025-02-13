@@ -25,8 +25,7 @@ Puede usar herramientas de ONTAP para VMware vSphere con VMware vCenter Server V
 ** 348 GB para instalaciones con aprovisionamiento pesado
 
 
-* * Requisitos de tamaño del sistema host por nodo*
-La memoria recomendada según el tamaño de la implementación y por nodo se muestra en la tabla siguiente:
+* * Requisitos de tamaño del sistema host * La memoria recomendada según el tamaño de la implementación es como se muestra en la tabla a continuación:
 
 
 |===
@@ -41,13 +40,13 @@ La memoria recomendada según el tamaño de la implementación y por nodo se mue
 | Medio sin alta disponibilidad | 13 | 26 | 350 
 
 
-| HA pequeña | 27 | 54 | 1050 
+| ALTA DISPONIBILIDAD pequeño (acumulación de tres nodos) | 27 | 54 | 1050 
 
 
-| MEDIO HA | 39 | 78 | 1050 
+| MEDIO DE ALTA DISPONIBILIDAD (acumulativo de tres nodos) | 39 | 78 | 1050 
 
 
-| ALTA disponibilidad | 51 | 102 | 1050 
+| ALTA DISPONIBILIDAD grande (acumulación de tres nodos) | 51 | 102 | 1050 
 |===
 
 
@@ -143,7 +142,7 @@ La siguiente tabla muestra el número de Live Site Recovery de VMware y el tama�
 
 | Más de 8 | Grande 
 |===
-Para obtener más información, consulte https://docs.vmware.com/en/VMware-Live-Recovery/services/vmware-live-site-recovery/GUID-3AD7D565-8A27-450C-8493-7B53F995BB14.html["Límites operativos de Live Site Recovery de VMware"].
+Para obtener más información, consulte https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/overview/site-recovery-manager-system-requirements/operational-limits-of-site-recovery-manager.html["Límites operativos de Live Site Recovery de VMware"].
 
 
 

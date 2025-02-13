@@ -13,16 +13,14 @@ summary: Debe iniciar SSH en otros nodos antes de actualizar.
 [role="lead"]
 Debe iniciar SSH en otros nodos antes de actualizar.
 
-*Lo que necesitará*
-
+.Antes de empezar
 La extensión VASA Provider debe habilitarse para la instancia de vCenter Server.
 
 *Acerca de esta tarea*
 
 Ejecute este procedimiento en cada uno de los nodos antes de actualizar.
 
-* Pasos*
-
+.Pasos
 . En vCenter Server, abra una consola al proveedor VASA.
 . Inicie sesión como el usuario de mantenimiento.
 . Introduzca `4` Para seleccionar Support and Diagnostics.

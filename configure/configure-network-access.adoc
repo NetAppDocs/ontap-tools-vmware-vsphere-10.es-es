@@ -22,5 +22,5 @@ Puede optar por permitir algunas direcciones de host ESXi específicas para la o
 +
 Utilice una coma (,) para separar las direcciones IP. Puede especificar una dirección IP específica, o un rango de direcciones IP o direcciones IPv6.
 
-. Haga clic en *Guardar*.
+. Seleccione *Guardar*.
 

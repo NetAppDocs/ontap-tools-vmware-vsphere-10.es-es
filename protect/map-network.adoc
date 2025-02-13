@@ -21,29 +21,22 @@ Debe completar las siguientes configuraciones de recursos:
 * Almacenes de datos de marcadores de posición
 
 
-*Lo que necesitará*
-
+.Antes de empezar
 Debe haber conectado los sitios protegidos y de recuperación.
 
-* Pasos*
-
+.Pasos
 . Inicie sesión en vCenter Server y seleccione *Site Recovery* > *Sites*.
 . Seleccione su sitio protegido y seleccione *Administrar*.
-. En la ficha Administrar, seleccione *asignaciones de red*.
-. Haga clic en *Nuevo* para crear un nuevo mapeo de red.
-+
-Aparece el asistente Create Network Mapping (Crear asignación de red).
-
-. En el asistente Create Network Mapping, realice lo siguiente:
+. Seleccione *Asignaciones de red* > *Nuevo* en la pestaña Administrar para crear una nueva asignación de red.
+. En el asistente Create Network Mapping, haga lo siguiente:
 +
 .. Selecciona *Preparar automáticamente asignaciones para redes con nombres coincidentes* y selecciona *Siguiente*.
 .. Seleccione los objetos del centro de datos necesarios para los sitios protegidos y de recuperación y seleccione *Agregar asignaciones*.
-.. Haga clic en *Siguiente* después de crear correctamente las asignaciones.
+.. Seleccione *Siguiente* después de que las asignaciones se hayan creado correctamente.
 .. Seleccione el objeto utilizado anteriormente para crear una asignación inversa y, a continuación, seleccione * Finalizar *.
 
 
 
 
-*resultado*
-
+.Resultado
 La página Network Mappings muestra los recursos del sitio protegidos y los recursos del sitio de recuperación. Puede seguir los mismos pasos para otras redes del entorno.

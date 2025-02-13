@@ -13,16 +13,14 @@ summary: 'Debe emparejar los sitios protegidos y de recuperación creados median
 [role="lead"]
 Debe emparejar los sitios protegidos y de recuperación creados mediante vSphere Client para habilitar el Storage Replication Adapter (SRA) para detectar los sistemas de almacenamiento.
 
-*Lo que necesitará*
-
+.Antes de empezar
 * Debe tener VMware Live Site Recovery instalado en los sitios protegidos y de recuperación.
 * Debe tener el SRA instalado en los sitios protegidos y de recuperación.
 
 
-* Pasos*
-
+.Pasos
 . Haga doble clic en *Site Recovery* en la página de inicio de vSphere Client y seleccione *Sites*.
-. Haga clic en *objetos* > *acciones* > *Vincular sitios*.
+. Selecciona *Objetos* > *Acciones* > *Emparejar sitios*.
 . En el cuadro de diálogo *Emparejar servidores de Site Recovery Manager*, introduzca la dirección del controlador de servicios de plataforma del sitio protegido y, a continuación, seleccione *Siguiente*.
 . En la sección Select vCenter Server, realice lo siguiente:
 +
@@ -33,6 +31,5 @@ Debe emparejar los sitios protegidos y de recuperación creados mediante vSphere
 . Si se le solicita, seleccione *Sí* para aceptar los certificados de seguridad.
 
 
-*resultado*
-
+.Resultado
 Tanto los sitios protegidos como los de recuperación aparecerán en el cuadro de diálogo objetos.

@@ -13,8 +13,7 @@ summary: Debe crear grupos de protección para proteger un grupo de máquinas vi
 [role="lead"]
 Debe crear grupos de protección para proteger un grupo de máquinas virtuales en el sitio protegido.
 
-*Lo que necesitará*
-
+.Antes de empezar
 Debe asegurarse de que los sitios de origen y destino están configurados para lo siguiente:
 
 * Misma versión de VMware Live Site Recovery instalada
@@ -23,8 +22,7 @@ Debe asegurarse de que los sitios de origen y destino están configurados para l
 * Los almacenes de datos de origen y destino deben montarse en las ubicaciones respectivas
 
 
-* Pasos*
-
+.Pasos
 . Inicie sesión en vCenter Server y, a continuación, seleccione *Site Recovery* > *Protection Groups*.
 . En el panel *Grupos de protección*, selecciona *Nuevo*.
 . Especifique un nombre y una descripción para el grupo de protección, la dirección y seleccione *Siguiente*.

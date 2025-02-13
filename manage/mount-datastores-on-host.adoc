@@ -18,8 +18,7 @@ El montaje de un almacén de datos proporciona acceso de almacenamiento a hosts 
 * El montaje del almacén de datos se deshabilita cuando el clúster de hosts está protegido con configuraciones uniformes.
 
 
-* Pasos*
-
+.Pasos
 . En la página inicial de vSphere Client, seleccione *Hosts and Clusters*.
 . En el panel de navegación, seleccione el centro de datos que contiene el host.
 . Repita el paso 2 para cualquier host adicional.

@@ -27,7 +27,7 @@ Siga los pasos a continuación para eliminar un almacén de datos NFS, VMFS o VV
 
 .Pasos
 . Inicie sesión en el cliente de vSphere mediante `\https://<vcenterip>/<ui>`
-. Haga clic con el botón derecho en un sistema host o en un clúster host o en un almacén de datos y seleccione *Herramientas de NetApp ONTAP* > *Eliminar almacén de datos*.
+. Haga clic con el botón derecho en un sistema host o en un clúster host o en un centro de datos y seleccione *Herramientas de NetApp ONTAP* > *Eliminar almacén de datos*.
 +
 
 NOTE: No es posible eliminar los almacenes de datos si existen máquinas virtuales que utilizan ese almacén de datos. Debe mover las máquinas virtuales a otro almacén de datos antes de eliminar el almacén de datos. No se puede seleccionar la casilla de comprobación Volume delete si el almacén de datos pertenece a un clúster de hosts protegido.

@@ -11,7 +11,7 @@ summary: Es posible configurar tiempos de espera y otros valores en los hosts ES
 
 
 [role="lead"]
-Es posible configurar tiempos de espera y otros valores en los hosts ESXi mediante las herramientas de ONTAP para VMware vSphere con el fin de garantizar el mejor rendimiento y una conmutación al respaldo correcta. Los valores que las herramientas ONTAP para conjuntos de VMware vSphere se basan en las pruebas internas de NetApp.
+Con las herramientas de ONTAP para VMware vSphere, puede establecer tiempos de espera y otros valores en los hosts ESXi para garantizar el mejor rendimiento y una conmutación al respaldo correcta. Los valores que las herramientas ONTAP para conjuntos de VMware vSphere se basan en las pruebas internas de NetApp.
 
 Puede configurar los siguientes valores en un host ESXi:
 
@@ -40,7 +40,7 @@ Configura los ajustes de tiempo de espera recomendados del adaptador de bus de h
 
 == Configuración de MPIO
 
-La configuración de MPIO define las rutas preferidas para los sistemas de almacenamiento de NetApp. La configuración de MPIO determina cuáles de las rutas disponibles están optimizadas (a diferencia de las rutas no optimizadas que atraviesan el cable de interconexión) y establece la ruta preferida en una de estas rutas.
+La configuración de MPIO define las rutas preferidas para los sistemas de almacenamiento de NetApp. Determinan cuáles de las rutas disponibles están optimizadas (en contraposición a las rutas no optimizadas que atraviesan el cable de interconexión) y establecen la ruta preferida en una de esas rutas.
 
 En entornos de alto rendimiento, o cuando esté probando el rendimiento con un único almacén de datos LUN, considere la posibilidad de cambiar la configuración del equilibrio de carga de la política de selección de ruta (PSP) round-robin (VMW_PSP_RR) de la configuración de IOPS predeterminada de 1000 a un valor de 1.
 

@@ -17,8 +17,7 @@ La página enumerada de vCenter Server muestra el número asociado de back-ends 
 
 Esta tarea permite crear una asignación entre el back-end del almacenamiento y la instancia integrada de vCenter Server a nivel global.
 
-* Pasos*
-
+.Pasos
 . Inicie ONTAP TOOLS Manager desde un explorador web: `\https://loadBalancerIP:8443/virtualization/ui/`
 . Inicie sesión con las herramientas de ONTAP para las credenciales de administrador de VMware vSphere que proporcionó durante la implementación.
 . Seleccione vCenter en la barra lateral.

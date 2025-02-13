@@ -16,8 +16,7 @@ Cuando hace clic con el botón derecho en el objeto de almacén de datos en la v
 
 NOTE: La operación de expandir el almacén de datos vVols no es aplicable para el almacén de datos vVols basado en ASA R2.
 
-* Pasos*
-
+.Pasos
 . En la página inicial de vSphere Client, seleccione *Hosts and Clusters*.
 . En el panel de navegación, seleccione el centro de datos que contiene el almacén de datos.
 . Haga clic con el botón derecho en el almacén de datos y seleccione *Herramientas de NetApp ONTAP* > *Añadir almacenamiento al almacén de datos*.

@@ -13,32 +13,25 @@ summary: Debe asignar los recursos en el sitio protegido y el sitio de recuperac
 [role="lead"]
 Debe asignar los recursos en el sitio protegido y el sitio de recuperación de modo que las máquinas virtuales estén configuradas para conmutar al nodo de respaldo a un grupo de hosts o a otro.
 
-*Lo que necesitará*
-
+.Antes de empezar
 Debe haber conectado los sitios protegidos y de recuperación.
 
 
 NOTE: En VMware Live Site Recovery, los recursos pueden ser pools de recursos, hosts ESXi o clústeres de vSphere.
 
-* Pasos*
-
+.Pasos
 . Inicie sesión en vCenter Server y seleccione *Site Recovery* > *Sites*.
 . Seleccione su sitio protegido y seleccione *Administrar*.
-. En la ficha Administrar, seleccione *asignaciones de recursos*.
-. Haga clic en *Nuevo* para crear una nueva asignación de recursos.
-+
-Aparece el asistente Create Resource Mapping (Crear asignación de recursos).
-
+. Seleccione *Asignaciones de recursos* > *Nuevo* en la pestaña Administrar para crear una nueva asignación de recursos.
 . En el asistente Create Resource Mapping, realice lo siguiente:
 +
 .. Selecciona *Preparar automáticamente asignaciones para recursos con nombres coincidentes* y selecciona *Siguiente*.
 .. Seleccione los objetos del centro de datos necesarios para los sitios protegidos y de recuperación y seleccione *Agregar asignaciones*.
-.. Haga clic en *Siguiente* después de crear correctamente las asignaciones.
+.. Seleccione *Siguiente* después de que las asignaciones se hayan creado correctamente.
 .. Seleccione el objeto utilizado anteriormente para crear una asignación inversa y luego seleccione *Finalizar*.
 
 
 
 
-*resultado*
-
+.Resultado
 La página Resource Mappings muestra los recursos del sitio protegidos y los recursos del sitio de recuperación. Puede seguir los mismos pasos para otras redes del entorno.

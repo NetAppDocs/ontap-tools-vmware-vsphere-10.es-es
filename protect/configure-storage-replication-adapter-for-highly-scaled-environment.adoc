@@ -54,9 +54,7 @@ Establecer un valor alto (por ejemplo: 99999)
 |===
 También debe habilitar el `StorageProvider.autoResignatureMode` opción.
 
-Consulte la documentación de VMware para obtener más información sobre la modificación de la configuración del proveedor de almacenamiento.
-
-https://docs.vmware.com/en/VMware-Live-Site-Recovery/9.0/vmware-live-site-recovery/GUID-E4060824-E3C2-4869-BC39-76E88E2FF9A0.html["Documentación de VMware vSphere: Cambie la configuración del proveedor de almacenamiento"]
+Consulte https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/how-do-i-protect-my-environment/advanced-srm-configuration/reconfigure-srm-settings/change-storage-provider-settings.html["Cambie la configuración del proveedor de almacenamiento"] para obtener más información sobre la modificación de la configuración del proveedor de almacenamiento.
 
 
 
@@ -67,6 +65,4 @@ Cuando alcance un tiempo de espera, aumente los valores de `storage.commandTimeo
 
 NOTE: El intervalo de tiempo de espera especificado es el valor máximo. No es necesario esperar hasta que se llegue al tiempo de espera máximo. La mayoría de comandos terminan dentro del intervalo máximo de tiempo de espera establecido.
 
-Consulte la documentación de VMware sobre la modificación de la configuración del proveedor de SAN para obtener más información.
-
-https://docs.vmware.com/en/VMware-Live-Site-Recovery/9.0/vmware-live-site-recovery/GUID-711FD223-50DB-414C-A2A7-3BEB8FAFDBD9.html["Documentación de VMware Site Recovery Manager: Cambiar la configuración de almacenamiento"]
+Consulte https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/how-do-i-protect-my-environment/advanced-srm-configuration/reconfigure-srm-settings/change-storage-settings.html["Cambie la configuración de almacenamiento"] para modificar la configuración del proveedor de SAN.

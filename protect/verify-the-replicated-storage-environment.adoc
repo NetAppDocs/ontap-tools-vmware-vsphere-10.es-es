@@ -21,8 +21,7 @@ Debe verificar que el sitio protegido y el sitio de recuperación se hayan empar
 * Debe tener las mismas políticas y las mismas programaciones de SnapMirror en los sitios de origen y de destino.
 
 
-* Pasos*
-
+.Pasos
 . Inicie sesión en vCenter Server.
 . Vaya a *Site Recovery* > *Array Based Replication*.
 . Seleccione la pareja de cabinas requerida y verifique los detalles correspondientes.

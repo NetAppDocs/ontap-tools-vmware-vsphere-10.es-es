@@ -13,8 +13,7 @@ summary: 'Puede montar un almacén de datos VMware Virtual Volumes \(vVols\) en 
 [role="lead"]
 Puede montar un almacén de datos de VMware Virtual Volumes (vVols) en uno o varios hosts adicionales para proporcionar acceso al almacenamiento a hosts adicionales. El almacén de datos vVols solo se puede desmontar mediante las API de.
 
-* Pasos*
-
+.Pasos
 . En la página inicial de vSphere Client, seleccione *Hosts and Clusters*.
 . En el panel de navegación, seleccione el centro de datos que contiene el almacén de datos.
 . Haga clic con el botón derecho en el almacén de datos y seleccione *Herramientas de NetApp ONTAP* > *Almacén de datos de montaje*.

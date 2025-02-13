@@ -109,7 +109,7 @@ Ejecute los siguientes comandos para realizar un backup de MongoDB:
 * Tome la instantánea de las herramientas de ONTAP para las máquinas virtuales VMware vSphere en vCenter (3VMs en caso de implementación de alta disponibilidad, 1 VM en caso de implementación no de alta disponibilidad)*
 
 * En la interfaz de usuario del cliente de vSphere, seleccione la máquina virtual.
-* Vaya a la pestaña Instantáneas y seleccione el botón *Tomar Instantánea*. Tomar una instantánea en modo inactivo de la máquina virtual. Consulte https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-9720B104-9875-4C2C-A878-F1C351A4F3D8.html["Tome una instantánea de una máquina virtual"^] si desea obtener más información.
+* Vaya a la pestaña Instantáneas y seleccione el botón *Tomar Instantánea*. Tomar una instantánea en modo inactivo de la máquina virtual. Consulte https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/take-snapshots-of-a-virtual-machine.html["Tome una instantánea de una máquina virtual"^] para obtener más información.
 
 
 Antes de realizar la actualización, elimine los pods completados del paquete de registro con el prefijo “generate-support-bundle-job”. Si la generación de paquetes de soporte está en curso, espere a que finalice y elimine el pod.
@@ -119,15 +119,14 @@ Para cualquier tipo de actualización, debe agregar una unidad de disco duro (HD
 . Seleccione la máquina virtual en la configuración de nodo único o las tres máquinas virtuales en la configuración de alta disponibilidad.
 . Haga clic con el botón derecho del ratón en las máquinas virtuales y seleccione *Añadir nuevo dispositivo* > *Disco duro*
 . Agregue un disco duro de 100 GB en el campo * Nuevo disco duro *.
-. Haga clic en *Aplicar*
+. Seleccione *Aplicar*
 
 
 Después de agregar el disco duro, actualice los recursos del equipo virtual para las configuraciones respectivas y reinicie el equipo virtual principal.
 
 Se creará un nuevo disco duro. el aprovisionador de almacenamiento dinámico utiliza este HDD para generar o replicar los volúmenes.
 
-* Pasos*
-
+.Pasos
 . Cargue ISO de las herramientas de ONTAP para la actualización de VMware vSphere a la biblioteca de contenido.
 . En la página principal de VM, seleccione *Acciones* > *Editar configuración*
 . Seleccione el archivo ISO de la biblioteca de contenido en la ventana de configuración de edición bajo el campo *Unidad de CD/DVD*.

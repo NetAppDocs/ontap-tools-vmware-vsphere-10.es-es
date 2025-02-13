@@ -54,7 +54,7 @@ Use este procedimiento para proteger los almacenes de datos o los hosts recién 
 
 NOTE: En caso de relación de tipo asíncrono, la acción de edición no se admite, ya que no se puede agregar la SVM de destino para el sitio terciario a la misma instancia de herramientas de ONTAP. Sin embargo, puede usar System Manager o la interfaz de línea de comandos de la SVM de destino para cambiar la configuración de relaciones.
 
-. Haga clic en *Guardar* después de realizar los cambios necesarios.
+. Seleccione *Guardar* después de realizar los cambios necesarios.
 . Puedes ver los cambios en la ventana *Protect Cluster*.
 
 
@@ -74,8 +74,10 @@ Se crea una tarea de vCenter y puede realizar un seguimiento del progreso en el 
 
 . Seleccione *Añadir relación*.
 . Agregue una nueva relación como tipo de política *Asynchronous* o *AutomatedFailOverDuplex*.
-. Haga clic en *proteger*.
-. Puedes ver los cambios en la ventana *Protect Cluster*.
+. Seleccione *Proteger*.
++
+Puedes ver los cambios en la ventana *Protect Cluster*.
+
 
 
 Se crea una tarea de vCenter y puede realizar un seguimiento del progreso en el panel *recent task*.

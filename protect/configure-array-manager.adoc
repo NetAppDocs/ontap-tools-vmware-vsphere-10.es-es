@@ -13,8 +13,7 @@ summary: 'Puede configurar el adaptador de replicación de almacenamiento \(SRA\
 [role="lead"]
 Puede configurar el adaptador de replicación de almacenamiento (SRA) mediante el asistente Array Manager de VMware Live Site Recovery para habilitar interacciones entre VMware Live Site Recovery y las máquinas virtuales de almacenamiento (SVM).
 
-*Lo que necesitará*
-
+.Antes de empezar
 * Debería haber emparejado los sitios protegidos y los sitios de recuperación en Live Site Recovery de VMware.
 * Debe haber configurado el almacenamiento integrado antes de configurar el administrador de cabinas.
 * Debe haber configurado y replicado las relaciones de SnapMirror entre los sitios protegidos y los sitios de recuperación.
@@ -23,8 +22,7 @@ Puede configurar el adaptador de replicación de almacenamiento (SRA) mediante e
 
 El SRA admite la gestión a nivel de clúster y la gestión a nivel de SVM. Si añade almacenamiento en el nivel de clúster, puede detectar y realizar operaciones en todas las SVM del clúster. Si añade almacenamiento a nivel de SVM, solo podrá gestionar esa SVM específica.
 
-* Pasos*
-
+.Pasos
 . En Live Site Recovery de VMware, seleccione *Array Managers* > *Add Array Manager*.
 . Introduzca la siguiente información para describir la cabina en VMware Live Site Recovery:
 +
@@ -61,7 +59,7 @@ Por ejemplo, si desea excluir el volumen _src_vol1_ que está en una relación d
 
 
 
-. Haga clic en *Siguiente*.
+. Seleccione *Siguiente*.
 . Verifique que la matriz se detecte y se muestre en la parte inferior de la ventana Agregar Array Manager y seleccione *Finalizar*.
 
 

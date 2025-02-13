@@ -62,7 +62,7 @@ Un almacén de datos de sistema de archivos de red (NFS) de VMware utiliza el pr
 
 .Pasos
 . Inicie sesión en el cliente de vSphere mediante `\https://<vcenterip>/<ui>`
-. Haga clic con el botón derecho en un sistema host o en un clúster host o en un centro de datos y seleccione *Herramientas de NetApp ONTAP* > *Crear almacén de datos*.
+. Haga clic con el botón derecho en un sistema host, un clúster host o un centro de datos y seleccione *Herramientas de NetApp ONTAP* > *Crear almacén de datos*.
 . En el panel *Type*, seleccione NFS en *Datastore Type*.
 . En el panel *Nombre y protocolo*, introduzca el nombre del almacén de datos, el tamaño y la información del protocolo. En las opciones avanzadas, seleccione *Datastore cluster* y *Kerberos Authentication*.
 +
@@ -100,9 +100,9 @@ NOTE: VMware vSphere 7,0 U3 y las versiones posteriores admiten el protocolo NVM
 
 .. Valide si el proveedor de tarjeta de interfaz de red (NIC) admite NIC ESXi con el protocolo NVMe/TCP.
 .. Configure la NIC ESXi para NVMe/TCP de acuerdo con las especificaciones del proveedor de NIC.
-.. Cuando utilice la versión de VMware vSphere 7, siga las instrucciones del sitio de VMware https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-D047AFDD-BC68-498B-8488-321753C408C2.html#GUID-D047AFDD-BC68-498B-8488-321753C408C2["Configure el enlace de VMkernel para el adaptador de NVMe over TCP"] para configurar el enlace de puerto NVMe/TCP. Al utilizar la versión VMware vSphere 8, siga https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-storage/GUID-5F776E6E-62B1-445D-854C-BEA689DD4C92.html#GUID-D047AFDD-BC68-498B-8488-321753C408C2["Configurar NVMe over TCP en ESXi"] a , para configurar el enlace de puerto NVMe/TCP.
-.. Para la versión de VMware vSphere 7, siga las instrucciones del sitio de VMware https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-8BBD672E-0829-4CF2-84B2-26A3A89ABD2E.html["Habilite los adaptadores de software de NVMe over RDMA o NVMe over TCP"] para configurar adaptadores de software NVMe/TCP. Para la versión VMware vSphere 8, siga https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-storage/GUID-F4B42510-9E6D-4446-816A-5012866E0038.html#GUID-8BBD672E-0829-4CF2-84B2-26A3A89ABD2E["Añada adaptadores de software NVMe sobre RDMA o NVMe over TCP"] para configurar los adaptadores de software NVMe/TCP.
-.. Ejecute link:../configure/discover-storage-systems-and-hosts.html["Detectar sistemas de almacenamiento y hosts"] la acción en el host ESXi. Para obtener más información, consulte https://community.netapp.com/t5/Tech-ONTAP-Blogs/How-to-Configure-NVMe-TCP-with-vSphere-8-0-Update-1-and-ONTAP-9-13-1-for-VMFS/ba-p/445429["Cómo configurar NVMe/TCP con vSphere 8,0 Update 1 y ONTAP 9.13,1 para almacenes de datos VMFS"]
+.. Cuando utilice la versión de VMware vSphere 7, siga las instrucciones del sitio de VMware https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/about-vmware-nvme-storage/configure-adapters-for-nvme-over-tcp-storage/configure-vmkernel-binding-for-the-tcp-adapter.html["Configure el enlace de VMkernel para el adaptador de NVMe over TCP"] para configurar el enlace de puerto NVMe/TCP. Al utilizar la versión VMware vSphere 8, siga https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/about-vmware-nvme-storage/configuring-nvme-over-tcp-on-esxi.html["Configurar NVMe over TCP en ESXi"] a , para configurar el enlace de puerto NVMe/TCP.
+.. Para la versión de VMware vSphere 7, siga las instrucciones de la página https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/about-vmware-nvme-storage/add-software-nvme-over-rdma-or-nvme-over-tcp-adapters.html["Habilite los adaptadores de software de NVMe over RDMA o NVMe over TCP"] para configurar los adaptadores de software NVMe/TCP. Para la versión VMware vSphere 8, siga https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/about-vmware-nvme-storage/configuring-nvme-over-rdma-roce-v2-on-esxi/add-software-nvme-over-rdma-or-nvme-over-tcp-adapters.html["Añada adaptadores de software NVMe sobre RDMA o NVMe over TCP"] para configurar los adaptadores de software NVMe/TCP.
+.. Ejecute link:../configure/discover-storage-systems-and-hosts.html["Detectar sistemas de almacenamiento y hosts"] la acción en el host ESXi. Para obtener más información, consulte https://community.netapp.com/t5/Tech-ONTAP-Blogs/How-to-Configure-NVMe-TCP-with-vSphere-8-0-Update-1-and-ONTAP-9-13-1-for-VMFS/ba-p/445429["Cómo configurar NVMe/TCP con vSphere 8,0 Update 1 y ONTAP 9.13,1 para almacenes de datos VMFS"].
 
 
 * Si utiliza el protocolo NVME/FC, realice los siguientes pasos para configurar el host ESXi:
@@ -122,12 +122,12 @@ Para obtener más información sobre el uso de NVMe/FC con VMware vSphere 7,0, c
 
 .Pasos
 . Inicie sesión en el cliente de vSphere mediante `\https://<vcenterip>/<ui>`
-. Haga clic con el botón derecho en un sistema host, un clúster host o un almacén de datos y seleccione *Herramientas de NetApp ONTAP* > *Crear almacén de datos*.
-. En el panel *Type*, seleccione VMFS en *Datastore Type*.
-. En el panel *Name and Protocol*, introduzca el nombre del almacén de datos, el tamaño y la información del protocolo. Si decide agregar el nuevo almacén de datos a un clúster de almacenes de datos VMFS existente, seleccione el selector de clústeres de almacenes de datos en *Opciones avanzadas*.
-. Seleccione Storage VM en el panel *Storage*. Proporcione el nombre de grupo de iniciadores *Custom* en la sección *Opciones avanzadas* del panel (opcional). Puede seleccionar un igroup existente para el almacén de datos o crear un igroup nuevo con un nombre personalizado.
+. Haga clic con el botón derecho en un sistema host, un clúster host o un centro de datos y seleccione *Herramientas de NetApp ONTAP* > *Crear almacén de datos*.
+. Seleccione el tipo de almacén de datos VMFS.
+. Introduzca el nombre del almacén de datos, el tamaño y la información del protocolo en el panel *Nombre y Protocolo*. Si decide agregar el nuevo almacén de datos a un clúster de almacenes de datos VMFS existente, seleccione el selector de clústeres de almacenes de datos en *Opciones avanzadas*.
+. Seleccione Storage VM en el panel *Storage*. Proporcione el nombre de grupo de iniciadores *Custom* en la sección *Opciones avanzadas* del panel (opcional). Es posible seleccionar un igroup existente para el almacén de datos o crear un igroup nuevo con un nombre personalizado.
 +
-Cuando el protocolo se selecciona como NVMe/FC o NVMe/TCP, se crea un nuevo subsistema de espacio de nombres que se utiliza para la asignación de espacio de nombres. De manera predeterminada, el subsistema de espacio de nombres se crea con el nombre generado automáticamente que incluye el nombre del almacén de datos. Puede cambiar el nombre del subsistema de espacio de nombres en el campo *nombre del subsistema de espacio de nombres personalizado* en las opciones avanzadas del panel *Almacenamiento*.
+Cuando el protocolo se selecciona como NVMe/FC o NVMe/TCP, se crea un nuevo subsistema de espacio de nombres que se utiliza para la asignación de espacio de nombres. De forma predeterminada, el subsistema de espacio de nombres se crea con el nombre generado automáticamente, incluido el nombre del almacén de datos. Puede cambiar el nombre del subsistema de espacio de nombres en el campo *nombre del subsistema de espacio de nombres personalizado* en las opciones avanzadas del panel *Almacenamiento*.
 
 . Desde el panel *storage attributes*:
 +
@@ -136,11 +136,11 @@ Cuando el protocolo se selecciona como NVMe/FC o NVMe/TCP, se crea un nuevo subs
 
 NOTE: Para los sistemas de almacenamiento ASA R2, la opción *aggregate* no es necesaria, ya que el almacenamiento ASA R2 es un almacenamiento desagregado. Cuando selecciona ASA R2 tipo SVM, la página de atributos de almacenamiento muestra las opciones para habilitar QoS.
 
-.. Según el protocolo seleccionado, se crea una unidad de almacenamiento (LUN/espacio de nombres) con reserva de espacio de tipo Thin.
-.. Seleccione *Usar volumen existente*, y *Activar QoS* opciones según sea necesario y proporcione los detalles según sea necesario.
+.. Según el protocolo seleccionado, se crea una unidad de almacenamiento (LUN/espacio de nombres) con una reserva de espacio de tipo Thin.
+.. Seleccione *Usar volumen existente*, *Activar QoS* opciones según sea necesario, y proporcione los detalles según sea necesario.
 +
 
-NOTE: En el tipo de almacenamiento ASA R2, la creación o selección del volumen no es aplicable para la creación de unidades de almacenamiento (LUN/espacio de nombre), por lo tanto estas opciones no se muestran.
+NOTE: En el tipo de almacenamiento ASA R2, la creación o la selección de volúmenes no es aplicable para la creación de unidades de almacenamiento (LUN/espacio de nombres). Por lo tanto, estas opciones no se muestran.
 
 +
 
@@ -152,7 +152,7 @@ NOTE: Para la creación del almacén de datos VMFS con el protocolo NVMe/FC o NV
 
 
 
-NOTE: Si está creando el almacén de datos en un clúster protegido, puede ver un mensaje de solo lectura que indica que el almacén de datos se está montando en un clúster protegido. El almacén de datos de VMFS se crea y se monta en todos los hosts.
+NOTE: Si crea el almacén de datos en un clúster protegido, aparece un mensaje de solo lectura que indica que el almacén de datos se está montando en un clúster protegido. El almacén de datos de VMFS se crea y se monta en todos los hosts.
 
 --
 ====
