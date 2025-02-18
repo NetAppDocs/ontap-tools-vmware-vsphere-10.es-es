@@ -14,7 +14,7 @@ summary: 'Puede recopilar archivos de registro para las herramientas de ONTAP pa
 Puede recoger archivos de registro para las herramientas de ONTAP para VMware vSphere desde las opciones disponibles en la interfaz de usuario del gestor de herramientas de ONTAP. Es posible que el soporte técnico le solicite recoger los archivos de registro que sirven como ayuda para la solución de un problema.
 
 
-NOTE: La generación de registros desde el Administrador de herramientas de ONTAP incluye todos los registros para todas las instancias de vCenter Server. La generación de registros desde la interfaz de usuario del cliente de vCenter se aplica a la instancia de vCenter Server seleccionada.
+NOTE: La generación de registros desde el Administrador de herramientas de ONTAP incluye todos los registros para todas las instancias de vCenter Server. Los registros de generación desde la interfaz de usuario del cliente de vCenter se incluyen en la instancia de vCenter Server seleccionada.
 
 .Pasos
 . Inicie ONTAP TOOLS Manager desde un explorador web: `\https://loadBalancerIP:8443/virtualization/ui/`

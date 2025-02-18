@@ -1,6 +1,6 @@
 ---
 section: upgrade
-title: Actualice las herramientas de ONTAP
+title: Actualice las herramientas de ONTAP para VMware vSphere
 entries:
 - title: Actualice desde ONTAP tools para VMware vSphere 10.x a 10,3
   url: "/upgrade/upgrade-ontap-tools.html"

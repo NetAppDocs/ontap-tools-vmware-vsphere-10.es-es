@@ -34,8 +34,7 @@ El SRA admite la gestión a nivel de clúster y la gestión a nivel de SVM. Si a
 *** Si se conecta directamente a una SVM, debe introducir la dirección IP de la LIF de gestión de SVM.
 +
 
-NOTE: Cuando configure el administrador de cabinas, debe utilizar la misma conexión (dirección IP) para el sistema de almacenamiento que se utilizó para incorporar el sistema de almacenamiento en herramientas de ONTAP.
-Por ejemplo, si la configuración del administrador de cabinas se encuentra en el ámbito de SVM, se debe agregar el almacenamiento de las herramientas de ONTAP para VMware vSphere al nivel de SVM.
+NOTE: Al configurar el administrador de cabinas, debe utilizar la misma conexión (dirección IP) para el sistema de almacenamiento que se utilizó para incorporar el sistema de almacenamiento en las herramientas ONTAP para VMware vSphere. Por ejemplo, si la configuración del administrador de cabinas se encuentra en el ámbito de SVM, se debe agregar el almacenamiento de las herramientas de ONTAP para VMware vSphere al nivel de SVM.
 
 
 

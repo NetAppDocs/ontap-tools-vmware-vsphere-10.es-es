@@ -61,7 +61,7 @@ Si cambia los privilegios dentro de un permiso, el usuario asociado a ese permis
 
 == Objetos de vSphere
 
-Los permisos se asocian con objetos de vSphere, como vCenter Server, hosts ESXi, máquinas virtuales, almacenes de datos, centros de datos, y carpetas. Puede asignar permisos a cualquier objeto de vSphere. Según el permiso que se asigna a un objeto de vSphere, vCenter Server determina quién puede ejecutar qué tareas en ese objeto. En el caso de las herramientas de ONTAP para tareas específicas de VMware vSphere, los permisos se asignan y validan solo en el nivel de carpeta raíz (vCenter Server) y no en ninguna otra entidad. Excepto para la operación del plugin VAAI, donde los permisos se validan en el host ESXi afectado.
+Los permisos se asocian con objetos de vSphere, como vCenter Server, hosts ESXi, máquinas virtuales, almacenes de datos, centros de datos y carpetas. Puede asignar permisos a cualquier objeto de vSphere. Según el permiso que se asigna a un objeto de vSphere, vCenter Server determina quién puede ejecutar qué tareas en ese objeto. En el caso de las herramientas de ONTAP para tareas específicas de VMware vSphere, los permisos se asignan y validan solo en el nivel de carpeta raíz (vCenter Server) y no en ninguna otra entidad. Excepto para la operación del plugin VAAI, donde los permisos se validan en el host ESXi afectado.
 
 
 

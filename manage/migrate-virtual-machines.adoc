@@ -2,7 +2,7 @@
 permalink: manage/migrate-virtual-machines.html 
 sidebar: sidebar 
 keywords:  
-summary: Debe conocer algunos de los aspectos que se deben tener en cuenta al migrar las máquinas virtuales exitng de su centro de datos. 
+summary: Debe tener en cuenta algunos de los aspectos que se deben tener en cuenta al migrar las máquinas virtuales existentes en el centro de datos. 
 ---
 = Consideraciones para migrar o clonar máquinas virtuales
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Debe conocer algunos de los aspectos que se deben tener en cuenta al mi
 
 
 [role="lead"]
-Debe tener en cuenta algunas de las consideraciones que se deben tener en cuenta al migrar las máquinas virtuales existentes al centro de datos.
+Debe tener en cuenta algunos de los aspectos que se deben tener en cuenta al migrar las máquinas virtuales existentes en el centro de datos.
 
 
 

@@ -33,7 +33,7 @@ La sesión de inicio de sesión solo será válida hasta la medianoche del día 
 
 
 .Pasos
-. En vCenter Server, abra una consola al proveedor VASA.
+. Desde vCenter Server, abra una consola al proveedor VASA.
 . Inicie sesión como el usuario de mantenimiento.
 . Introduzca `4` Para seleccionar Support and Diagnostics.
 . Introduzca `2` para seleccionar Habilitar acceso a diagnóstico remoto.

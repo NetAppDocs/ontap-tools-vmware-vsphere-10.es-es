@@ -18,7 +18,7 @@ Dado que las herramientas de ONTAP para VMware vSphere 10,3 utilizan un aprovisi
 == Cree una copia de seguridad y descargue el archivo de copia de seguridad
 
 .Pasos
-. En vCenter Server, abra la consola de mantenimiento.
+. Desde vCenter Server, abra la consola de mantenimiento.
 . Inicie sesión como el usuario de mantenimiento.
 . Ingrese `4` para seleccionar *Soporte y Diagnóstico*.
 . Ingrese `3` para seleccionar la opción *Habilitar copia de seguridad del sistema*.
@@ -46,7 +46,7 @@ Debe utilizar la misma dirección IP de herramientas de ONTAP (IP de equilibrado
 
 Realice los siguientes pasos para recuperar la configuración desde el archivo de copia de seguridad.
 
-. En vCenter Server, abra la consola de mantenimiento.
+. Desde vCenter Server, abra la consola de mantenimiento.
 . Inicie sesión como el usuario de mantenimiento.
 . Ingrese `4` para seleccionar *Soporte y Diagnóstico*.
 . Ingrese `2` para seleccionar la opción *Activar acceso a diagnóstico remoto* y crear una nueva contraseña para el acceso de diagnóstico.

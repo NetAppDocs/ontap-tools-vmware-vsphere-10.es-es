@@ -21,7 +21,7 @@ Se abre un cuadro de diálogo que enumera los hosts ESXi en los que está montad
 
 . Seleccione uno o varios hosts ESXi para desmontar el almacén de datos.
 +
-No es posible desmontar el almacén de datos de todos los hosts. La interfaz de usuario de sugiere que se utilice la operación de eliminación del almacén de datos.
+No es posible desmontar el almacén de datos de todos los hosts. La interfaz de usuario sugiere que se utilice la operación de eliminación del almacén de datos en su lugar.
 
 . Seleccione el botón *Desmontar*.
 +

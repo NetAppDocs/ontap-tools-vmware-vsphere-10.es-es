@@ -11,16 +11,16 @@ summary: Una única instancia de herramientas de ONTAP para VMware vSphere puede
 
 
 [role="lead"]
-Se genera un certificado autofirmado para las herramientas ONTAP y el proveedor VASA de forma predeterminada durante la puesta en marcha. Mediante la interfaz del Administrador de herramientas de ONTAP, puede renovar el certificado o actualizarlo a una CA personalizada.
+Se genera un certificado autofirmado para las herramientas ONTAP y el proveedor VASA de forma predeterminada durante la puesta en marcha. Mediante la interfaz del Administrador de herramientas de ONTAP, puede renovar el certificado o actualizarlo a una CA personalizada. Los certificados de CA personalizados son obligatorios en una puesta en marcha de varias instancias de vCenter.
 
 .Antes de empezar
-* El nombre de dominio en el que se emite el certificado debe asignarse a la dirección IP virtual en una implementación de varios vCenter en la que los certificados de CA personalizados son obligatorios .
+* El nombre de dominio en el que se emite el certificado debe asignarse a la dirección IP virtual.
 * Ejecute la comprobación nslookup en el nombre de dominio para comprobar si el dominio se está resolviendo a la dirección IP deseada.
 * Los certificados deben crearse con el nombre de dominio y la dirección IP del equilibrador de carga.
 
 
 
-NOTE: Una dirección IP del equilibrador de carga debe asignarse a un nombre de dominio completo (FQDN). Los certificados se deben generar utilizando el mismo FQDN asignado a la dirección IP del equilibrador de carga.
+NOTE: Una dirección IP del equilibrador de carga debe asignarse a un nombre de dominio completo (FQDN). Los certificados deben contener el mismo FQDN asignado a la dirección IP del equilibrador de carga en nombres alternativos de asunto o asunto.
 
 
 NOTE: No se puede pasar de un certificado firmado por CA a un certificado autofirmado.

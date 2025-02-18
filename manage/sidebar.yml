@@ -1,6 +1,6 @@
 ---
 section: manage
-title: Gestione las herramientas de ONTAP
+title: Gestione herramientas de ONTAP para VMware vSphere
 entries:
 - title: Información general de las herramientas de ONTAP para la consola de VMware
     vSphere
@@ -11,8 +11,6 @@ entries:
   url: "/manage/edit-appliance-settings.html"
 - title: Gestionar almacenes de datos
   entries:
-  - title: Cree un almacén de datos
-    url: "/configure/create-vvols-datastore.html"
   - title: Montar NFS y almacén de datos VMFS
     url: "/manage/mount-datastores-on-host.html"
   - title: Desmonte NFS y el almacén de datos de VMFS

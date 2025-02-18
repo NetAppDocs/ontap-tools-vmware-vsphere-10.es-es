@@ -27,7 +27,7 @@ Si se trata de una implementación de iSCSI, también deberá eliminar iGroups.
 +
 _Kubectl describe persistentvolumes | grep InternalName | awk -F'=' '{print $2}'_
 
-. Elimine máquinas virtuales de vCenter Server, consulte https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-virtual-machine-administration-guide-8-0/managing-virtual-machinesvsphere-vm-admin/adding-and-removing-virtual-machinesvsphere-vm-admin.html#GUID-376174FE-F936-4BE4-B8C2-48EED42F110B-en["Eliminar y volver a registrar máquinas virtuales y plantillas de máquinas virtuales"] .
+. Elimine máquinas virtuales desde vCenter Server, consulte https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-virtual-machine-administration-guide-8-0/managing-virtual-machinesvsphere-vm-admin/adding-and-removing-virtual-machinesvsphere-vm-admin.html#GUID-376174FE-F936-4BE4-B8C2-48EED42F110B-en["Eliminar y volver a registrar máquinas virtuales y plantillas de máquinas virtuales"] .
 . Elimine volúmenes del administrador del sistema ONTAP, consulte https://docs.netapp.com/us-en/ontap/volumes/delete-flexvol-task.html["Eliminar un volumen de FlexVol"] . Dé el nombre exacto del FlexVolume en el comando de la cli para eliminar el volumen.
 . En caso de implementación iSCSI, elimine los iGroups SAN de ONTAP, consulte https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html["Consulte y gestione iniciadores E iGroups SAN"] .
 

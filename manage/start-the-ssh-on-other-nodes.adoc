@@ -21,7 +21,7 @@ La extensión VASA Provider debe habilitarse para la instancia de vCenter Server
 Ejecute este procedimiento en cada uno de los nodos antes de actualizar.
 
 .Pasos
-. En vCenter Server, abra una consola al proveedor VASA.
+. Desde vCenter Server, abra una consola al proveedor VASA.
 . Inicie sesión como el usuario de mantenimiento.
 . Introduzca `4` Para seleccionar Support and Diagnostics.
 . Introduzca `1` Para seleccionar el shell de diagnóstico de Access.

@@ -38,7 +38,7 @@ NOTE: Se admiten los LIF de gestión de direcciones IPv4 y IPv6.
 
 
 --
-.Use la interfaz de usuario del cliente de vSphere
+.Mediante la interfaz de usuario del cliente de vSphere
 --
 
 NOTE: Cuando se añade un back-end de almacenamiento mediante la interfaz de usuario del cliente de vSphere, el almacén de datos de vVols no admite la adición directa de un usuario de SVM.
