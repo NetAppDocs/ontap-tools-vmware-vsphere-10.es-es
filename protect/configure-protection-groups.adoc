@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Debe crear grupos de protección para proteger un grupo de máquinas virtuales en el sitio protegido. 
 ---
-= Configure los grupos de protección
+= Configuración de sitios protegidos y de recuperación
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,6 +12,10 @@ summary: Debe crear grupos de protección para proteger un grupo de máquinas vi
 
 [role="lead"]
 Debe crear grupos de protección para proteger un grupo de máquinas virtuales en el sitio protegido.
+
+
+
+== Configure los grupos de protección
 
 .Antes de empezar
 Debe asegurarse de que los sitios de origen y destino están configurados para lo siguiente:
@@ -35,3 +39,30 @@ Todas las máquinas virtuales del grupo de replicación se agregan al grupo de p
 . Seleccione el plan de recuperación existente o cree un nuevo plan seleccionando *Añadir a nuevo plan de recuperación*.
 . En la pestaña Listo para completar, revise los detalles del grupo de protección que creó y luego seleccione *Finalizar*.
 
+
+
+
+== Sitios protegidos para pares y de recuperación
+
+Debe emparejar los sitios protegidos y de recuperación creados mediante vSphere Client para habilitar el Storage Replication Adapter (SRA) para detectar los sistemas de almacenamiento.
+
+.Antes de empezar
+* Debe tener VMware Live Site Recovery instalado en los sitios protegidos y de recuperación.
+* Debe tener el SRA instalado en los sitios protegidos y de recuperación.
+
+
+.Pasos
+. Haga doble clic en *Site Recovery* en la página de inicio de vSphere Client y seleccione *Sites*.
+. Selecciona *Objetos* > *Acciones* > *Emparejar sitios*.
+. En el cuadro de diálogo *Emparejar servidores de Site Recovery Manager*, introduzca la dirección del controlador de servicios de plataforma del sitio protegido y, a continuación, seleccione *Siguiente*.
+. En la sección Select vCenter Server, realice lo siguiente:
++
+.. Compruebe que vCenter Server del sitio protegido aparece como candidato coincidente al emparejar.
+.. Introduzca las credenciales administrativas de SSO y, a continuación, seleccione * Finalizar *.
+
+
+. Si se le solicita, seleccione *Sí* para aceptar los certificados de seguridad.
+
+
+.Resultado
+Tanto los sitios protegidos como los de recuperación aparecerán en el cuadro de diálogo objetos.

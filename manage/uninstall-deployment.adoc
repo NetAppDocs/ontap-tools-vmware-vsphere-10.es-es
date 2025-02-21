@@ -4,17 +4,14 @@ sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter 
 summary: Siga las instrucciones de esta sección para terminar sin problemas las herramientas de ONTAP para la puesta en marcha de VMware vSphere. 
 ---
-= Finalice la puesta en marcha de herramientas de ONTAP
+= Desinstale la puesta en marcha de herramientas de ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Siga las instrucciones de esta sección para finalizar con éxito las herramientas de ONTAP para la puesta en marcha de VMware vSphere.
-
-
-NOTE: Al terminar las herramientas de ONTAP para VMware vSphere se eliminarán todos los datos de las herramientas.
+Al desinstalar las herramientas de ONTAP para VMware vSphere se eliminan todos los datos de las herramientas.
 
 .Pasos
 . Elimine todas las máquinas virtuales de almacenes de datos gestionados por las herramientas de ONTAP para VMware vSphere. Puede eliminarlos (consulte https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-virtual-machine-administration-guide-8-0/managing-virtual-machinesvsphere-vm-admin/adding-and-removing-virtual-machinesvsphere-vm-admin.html#GUID-376174FE-F936-4BE4-B8C2-48EED42F110B-en["Eliminar y volver a registrar máquinas virtuales y plantillas de máquinas virtuales"] ) o utilizarlos https://techdocs.broadcom.com/it/it/vmware-cis/vsphere/vsphere/8-0/vcenter-and-host-management-8-0/migrating-virtual-machines-host-management/migration-with-vmotion-host-management/migration-with-storage-vmotion-host-management.html["VMotion de almacenamiento"] para moverlos a un almacén de datos no gestionado.
