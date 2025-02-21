@@ -30,4 +30,5 @@ El montaje de un almacén de datos permite acceder al almacenamiento a hosts adi
 . Seleccione los almacenes de datos que desea montar y seleccione *Mount*.
 
 
+.El futuro
 Puede realizar un seguimiento del progreso en el panel de tareas recientes.

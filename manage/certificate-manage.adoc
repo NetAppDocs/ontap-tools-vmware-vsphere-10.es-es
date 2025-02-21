@@ -55,7 +55,7 @@ NOTE: El sistema estará fuera de línea hasta que se complete la actualización
 
 
 --
-.Actualice el certificado de proveedor VASA
+.Actualizar el certificado de proveedor VASA
 --
 Las herramientas de ONTAP para VMware vSphere se ponen en marcha con un certificado autofirmado para el proveedor VASA. Con esto, solo se puede gestionar una instancia de vCenter Server para almacenes de datos vVols. Cuando se gestionan varias instancias de vCenter Server y se desea habilitar la funcionalidad vVols en ellas, debe cambiar el certificado autofirmado a un certificado de CA personalizado.
 

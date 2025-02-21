@@ -159,7 +159,7 @@ En la siguiente tabla se describen los puertos de red que NetApp utiliza y sus p
 | 22 (TCP) | Ansible usa este puerto SSH para la comunicación durante el aprovisionamiento del clúster. Este puerto es necesario para funcionalidades como cambiar la contraseña de usuario de mantenimiento, los mensajes de estado y para actualizar los valores en los tres nodos en caso de configuración de alta disponibilidad. 
 
 
-| 443 (TCP) | Este es el puerto de transferencia para la comunicación entrante para el servicio de proveedor VASA. El certificado autofirmado del proveedor de VASA y el certificado de CA personalizado se alojan en este puerto. 
+| 443 (TCP) | Este es el puerto de transferencia para la comunicación entrante para el servicio de proveedor VASA. El certificado autofirmado de proveedor de VASA y el certificado de CA personalizado se alojan en este puerto. 
 
 
 | 8443 (TCP) | Este puerto hospeda la documentación de la API a través de Swagger y la aplicación de interfaz de usuario Administrador. 
