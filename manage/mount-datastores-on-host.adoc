@@ -20,7 +20,7 @@ El montaje de un almacén de datos permite acceder al almacenamiento a hosts adi
 ** Desde las versiones de vSphere 7.0U3 a vSphere 8,0, aunque aparezcan las opciones, la acción se desactivará.
 
 
-* La opción Mount datastore está deshabilitada cuando el clúster de hosts está protegido con configuraciones uniformes.
+* La opción mount datastore está deshabilitada cuando el clúster de hosts está protegido con configuraciones uniformes.
 
 
 .Pasos

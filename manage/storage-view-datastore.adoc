@@ -11,53 +11,25 @@ summary: La vista de almacenamiento de ONTAP en la pestaña de configuración de
 
 
 [role="lead"]
-La vista de almacenamiento ONTAP en la pestaña de configuración de herramientas de ONTAP para VMware vSphere proporciona datos relacionados con los almacenes de datos y su volumen. Esta vista proporciona la vista lateral del almacenamiento del almacén de datos.
-
-
-
-== Vistas de almacenamiento ONTAP para almacenes de datos NFS
+Las herramientas de ONTAP para VMware vSphere muestran la vista lateral del almacenamiento ONTAP de los almacenes de datos y sus volúmenes en la pestaña Configure.
 
 .Pasos
-. Desde vSphere Client, desplácese hasta el almacén de datos NFS.
+. En el cliente de vSphere, desplácese hasta el almacén de datos.
 . Seleccione la pestaña *Configure* en el panel derecho.
-. Selecciona *Herramientas de NetApp ONTAP* > *Almacenamiento de ONTAP*. Los detalles de *Almacenamiento* y *NFS* aparecen en el panel derecho.
-+
-** La página de detalles de almacenamiento contiene información acerca de back-ends de almacenamiento, el agregado y el volumen.
-** La página de detalles de NFS contiene datos relacionados con el almacén de datos NFS.
+. Selecciona *Herramientas de NetApp ONTAP* > *Almacenamiento de ONTAP*. Según el tipo de almacén de datos, la vista cambia. Consulte la siguiente tabla para obtener más información:
 
 
+|===
 
 
+| *Tipo de almacén de datos* | *Información disponible* 
 
 
-== Vistas de almacenamiento ONTAP para almacenes de datos VMFS
-
-.Pasos
-. Desde vSphere Client, desplácese hasta el almacén de datos de VMFS.
-. Seleccione la pestaña *Configure* en el panel derecho.
-. Selecciona *Herramientas de NetApp ONTAP* > *Almacenamiento de ONTAP*. Los detalles de *Almacenamiento* y *Detalles de la LUN* o *Detalles del espacio de nombres* según el protocolo aparecen en el panel derecho.
-+
-** La página de detalles de almacenamiento contiene información acerca de back-ends de almacenamiento, el agregado y el volumen.
-** La página de detalles de LUN contiene datos relacionados con el LUN.
-** Cuando se utiliza el protocolo NVMe/TCP o NVMe/FC para almacén de datos VMFS, la página de detalles Namespace contiene datos relacionados con Namespace.
-** No se muestran los detalles de volumen y agregados en los almacenes de datos basados en el sistema ASA R2.
+| Almacén de datos NFS | La página *Detalles de almacenamiento* contiene backends de almacenamiento, datos agregados e información de volumen. La página de detalles de NFS contiene datos relacionados con el almacén de datos NFS. 
 
 
+| Almacenes de datos de VMFS | La página *Detalles de almacenamiento* contiene información de backend de almacenamiento, agregado e información de volumen. La página *LUN details* contiene datos relacionados con el LUN. La página *Detalles del espacio de nombres* contiene datos relacionados con el espacio de nombres cuando el almacén de datos VMFS utiliza el protocolo NVMe/TCP o NVMe/FC. No se muestran los detalles de volumen y agregados para los almacenes de datos basados en el sistema de almacenamiento ASA R2. 
 
 
-
-
-== Vistas de almacenamiento ONTAP para almacenes de datos vVols
-
-
-NOTE: Esta vista no se admite para el almacén de datos vVols basado en ASA R2.
-
-.Pasos
-. Desde vSphere Client, desplácese hasta el almacén de datos vVols.
-. Seleccione la pestaña *Configure* en el panel derecho.
-. Selecciona *Herramientas de NetApp ONTAP* > *Almacenamiento de ONTAP*.
-. La vista de almacenamiento de ONTAP enumera todos los volúmenes. Puede ampliar o quitar el almacenamiento desde el panel de almacenamiento de ONTAP.
-+
-Siga las instrucciones de link:../manage/expand-storage-of-vvol-datastore.html["Expanda vVols Datastore"] la sección para añadir el almacén de datos vVols y link:../manage/remove-storage-from-a-vvols-datastore.html["Reducir el almacén de datos vVols"] la sección para eliminar el almacén de datos.
-
-
+| Almacenes de datos de vVols | Enumera todos los volúmenes. Puede ampliar o quitar el almacenamiento desde el panel de almacenamiento de ONTAP. Esta vista no es compatible con el almacén de datos vVols basado en el sistema ASA R2. 
+|===
