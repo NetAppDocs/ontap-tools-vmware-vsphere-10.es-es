@@ -11,9 +11,7 @@ summary: Cuando se crea un almacén de datos en el nivel del clúster de hosts, 
 
 
 [role="lead"]
-Cuando se crea un almacén de datos en el nivel del clúster de hosts, el almacén de datos se crea y se monta en todos los hosts del destino, y la acción solo se habilita si el usuario actual tiene privilegio para ejecutar.
-
-El asistente de acción de creación de almacenes de datos admite la creación de almacenes de datos NFS, VMFS y vVols.
+Cuando se crea un almacén de datos en el nivel del clúster de hosts, este se crea y se monta en todos los hosts de destino. Puede ver esta opción solo si tiene el Privileges requerido.
 
 * Solo es posible crear almacenes de datos VMFS en un clúster protegido. Cuando se añade un almacén de datos VMFS en un clúster protegido, este se protege automáticamente.
 * No es posible crear un almacén de datos en un centro de datos que tiene uno o varios clústeres de hosts protegidos.

@@ -25,8 +25,7 @@ NOTE: Para habilitar más adelante la puesta en marcha de alta disponibilidad, l
 
 Si aún no tiene una biblioteca de contenido adecuada, cree una mediante los siguientes pasos:
 
-
-NOTE: Si sólo pretende utilizar un despliegue de nodo único pequeño, no es necesario crear una biblioteca de contenido.
+* Crear biblioteca de contenido * Si solo tiene la intención de utilizar una implementación de un solo nodo pequeño, no es necesario crear una biblioteca de contenido.
 
 . Descargue el `.zip` archivo que contiene archivos binarios (_.ova_) y certificados firmados para herramientas de ONTAP para VMware vSphere desde el https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["Sitio de soporte de NetApp"^].
 . Inicie sesión en el cliente de vSphere mediante `\https://<vcenterip>/<ui>`

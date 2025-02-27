@@ -199,35 +199,14 @@ NOTE: uuid es el uuid de migración devuelto en la respuesta de la API posterior
 Una vez que la API de migración de revisiones se ha ejecutado correctamente, todas las máquinas virtuales cumplen con la normativa de almacenamiento.
 
 ====
-. La API de eliminación para la migración es:
 +
-[]
-====
-|===
-
-
-| *Método HTTP* | *Ruta* 
-
-
-| ELIMINAR | /api/v1 
-|===
-*Tipo de procesamiento*
-
-Asíncrona
-
-*Ejemplo de Curl*
-
-/api/v1/vcenters/{vcguid}/migration-jobs/{migration_id}
-
-Esta API elimina la migración por el ID de migración y elimina la migración en la instancia específica de vCenter Server.
-
-====
-
-
 Una vez realizada correctamente la migración y después de registrar las herramientas de ONTAP 10,3 en vCenter Server, haga lo siguiente:
 
-* Actualice el certificado en todos los hosts.
-* Espere un tiempo antes de realizar las operaciones de Datastore (DS) y Virtual Machine (VM). El tiempo de espera depende del número de hosts, DS y VM de la configuración. Cuando no espera, es posible que las operaciones fallen de forma intermitente.
++
+** Actualice el certificado en todos los hosts.
+** Espere un tiempo antes de realizar las operaciones de Datastore (DS) y Virtual Machine (VM). El tiempo de espera depende del número de hosts, DS y VM de la configuración. Cuando no espera, es posible que las operaciones fallen de forma intermitente.
+
+
 
 
 *Después de terminar*
