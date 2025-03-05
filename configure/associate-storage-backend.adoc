@@ -18,6 +18,5 @@ Asocie un back-end de almacenamiento con vCenter Server para crear una asignaci�
 . Inicie sesión con las herramientas de ONTAP para las credenciales de administrador de VMware vSphere que proporcionó durante la implementación.
 . Seleccione vCenter en la barra lateral.
 . Seleccione los tres puntos verticales en la instancia de vCenter Server que desea asociar con los back-ends de almacenamiento.
-. En el menú desplegable, seleccione el back-end de almacenamiento.
-. Seleccione el back-end de almacenamiento en el menú desplegable y asocie la instancia de vCenter Server con el back-end de almacenamiento requerido.
+. Seleccione el back-end de almacenamiento del menú desplegable para asociar la instancia de vCenter Server con el back-end de almacenamiento requerido.
 

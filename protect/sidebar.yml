@@ -12,7 +12,7 @@ entries:
     url: "/protect/configure-storage-replication-adapter-for-san-environment.html"
   - title: Configure SRA para entornos con gran escala
     url: "/protect/configure-storage-replication-adapter-for-highly-scaled-environment.html"
-  - title: Configurar el SRA en el dispositivo VMware Live Site Recovery
+  - title: Configure el SRA en el dispositivo VMware Live Site Recovery
     url: "/protect/configure-on-srm-appliance.html"
   - title: Actualice las credenciales del SRA
     url: "/protect/update-credentials.html"

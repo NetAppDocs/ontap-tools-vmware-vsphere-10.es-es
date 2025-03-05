@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Después de implementar el dispositivo VMware Live Site Recovery, debe configurar el SRA en el dispositivo VMware Live Site Recovery. La configuración correcta de SRA permite que el dispositivo VMware Live Site Recovery se comunique con el SRA para la gestión de la recuperación ante desastres. Debe almacenar las herramientas de ONTAP para las credenciales de VMware vSphere \(dirección IP y contraseña de administrador\) en el dispositivo VMware Live Site Recovery para permitir la comunicación entre el dispositivo de VMware Live Site Recovery y el SRA.' 
 ---
-= Configurar el SRA en el dispositivo VMware Live Site Recovery
+= Configure el SRA en el dispositivo VMware Live Site Recovery
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -58,7 +58,7 @@ Lleve a cabo estos pasos en sitios de protección y recuperación.
 
 
 
-. Instale herramientas de ONTAP para el adaptador SRA de VMware vSphere 10,3 en sitios tanto de protección como de recuperación siguiendo los pasos del link:../protect/configure-on-srm-appliance.html["Configurar el SRA en el dispositivo VMware Live Site Recovery"]
+. Instale herramientas de ONTAP para el adaptador SRA de VMware vSphere 10,3 en sitios tanto de protección como de recuperación siguiendo los pasos del link:../protect/configure-on-srm-appliance.html["Configure el SRA en el dispositivo VMware Live Site Recovery"]
 . En la página de la interfaz de usuario de VMware Live Site Recovery, realice las operaciones de *Discover Arrays* y *Discover Devices* y verifique que los dispositivos se muestran como estaban antes de la migración.
 
 
