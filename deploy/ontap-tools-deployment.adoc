@@ -27,7 +27,7 @@ Si aún no tiene una biblioteca de contenido adecuada, cree una mediante los sig
 
 * Crear biblioteca de contenido * Si solo tiene la intención de utilizar una implementación de un solo nodo pequeño, no es necesario crear una biblioteca de contenido.
 
-. Descargue el `.zip` archivo que contiene archivos binarios (_.ova_) y certificados firmados para herramientas de ONTAP para VMware vSphere desde el https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["Sitio de soporte de NetApp"^].
+. Descargue el `.zip` archivo que contiene archivos binarios (_.ova_) y certificados firmados para herramientas de ONTAP para VMware vSphere desde el https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Sitio de soporte de NetApp"^].
 . Inicie sesión en el cliente de vSphere mediante `\https://<vcenterip>/<ui>`
 . Seleccione las elipses horizontales junto al cliente vSphere y seleccione *Biblioteca de contenido*.
 . Selecciona *Crear* a la derecha de la página.
@@ -45,7 +45,7 @@ Asegúrese de haber importado el OVA a la biblioteca de contenido.
 NOTE: Antes de continuar con el despliegue, establezca el planificador de recursos distribuidos (DRS) del cluster en el inventario en 'Conservador' durante la instalación de las herramientas de ONTAP. Esto garantiza que los equipos virtuales no se migren durante la instalación.
 
 .Pasos
-. Descargue el `.zip` archivo que contiene archivos binarios (_.ova_) y certificados firmados para herramientas de ONTAP para VMware vSphere desde el https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["Sitio de soporte de NetApp"^]. Si ha importado el OVA a la biblioteca de contenido, puede omitir este paso y continuar con el siguiente paso, ya que puede implementar directamente desde la biblioteca de contenido.
+. Descargue el `.zip` archivo que contiene archivos binarios (_.ova_) y certificados firmados para herramientas de ONTAP para VMware vSphere desde el https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Sitio de soporte de NetApp"^]. Si ha importado el OVA a la biblioteca de contenido, puede omitir este paso y continuar con el siguiente paso, ya que puede implementar directamente desde la biblioteca de contenido.
 . Inicie sesión en vSphere Server.
 . Desplácese hasta el pool de recursos que haya creado o hasta el clúster o hasta el host donde desea implementar el OVA.
 . Haga clic con el botón derecho en la ubicación requerida y seleccione *Implementar plantilla OVF...*.
