@@ -49,9 +49,6 @@ El campo *Rol* se rellena automáticamente según la capacidad del producto sele
 Se agregan el nuevo rol y usuario, y puede ver los privilegios detallados bajo el rol que ha configurado.
 
 
-NOTE: La operación de desinstalación no elimina las funciones de ONTAP Tools, sino que elimina los nombres localizados de la Privileges específica de ONTAP Tools y les agrega el prefijo `XXX missing privilege`. Al volver a instalar ONTAP tools para VMware vSphere o actualizar a una versión más nueva, se restauran todos los roles de ONTAP tools estándar para VMware vSphere y privilegios específicos de ONTAP tools.
-
-
 
 == Requisitos de asignación de agregados de SVM
 
