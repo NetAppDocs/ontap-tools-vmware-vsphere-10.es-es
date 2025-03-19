@@ -88,9 +88,9 @@ entries:
   url: "/manage/disable-autosupport.html"
 - title: Actualice la URL del proxy de AutoSupport
   url: "/manage/update-proxyurl.html"
-- title: RPO casi cero
+- title: Crear copia de seguridad y recuperar la configuración
   url: "/manage/enable-backup.html"
-- title: Desinstale la puesta en marcha de herramientas de ONTAP
+- title: Desinstale las herramientas de ONTAP para VMware vSphere
   url: "/manage/uninstall-deployment.html"
-- title: Limpie los volúmenes
+- title: Quite volúmenes FlexVol
   url: "/manage/delete-deployment.html"

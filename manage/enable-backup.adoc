@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Dado que las herramientas de ONTAP para VMware vSphere 10,3 utilizan un aprovisionador de almacenamiento dinámico, no puede lograr un objetivo de punto de recuperación cero. Sin embargo, puede lograr casi un objetivo de punto de recuperación cero. 
 ---
-= RPO casi cero
+= Crear copia de seguridad y recuperar la configuración
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -40,7 +40,7 @@ En la sección de archivos, puede ver el directorio. El nombre del directorio se
 
 == Recuperación
 
-Para recuperar la configuración, apague la máquina virtual existente e implemente una máquina virtual nueva mediante el OVA utilizado en la implementación inicial.
+Para recuperar la configuración, apague la máquina virtual existente e implemente una máquina virtual nueva usando el OVA utilizado en la implementación inicial.
 
 Debe utilizar la misma dirección IP de herramientas de ONTAP (IP de equilibrador de carga) para la máquina virtual nueva y la configuración del sistema, como los servicios habilitados, el tamaño de nodo y el modo de alta disponibilidad, debe ser la misma que la puesta en marcha inicial.
 

@@ -4,30 +4,28 @@ sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter 
 summary: Después de eliminar las herramientas de ONTAP para la implementación de VMware vSphere, debe limpiar los volúmenes flexibles que se crearon durante la implementación. Si ha utilizado un clúster de ONTAP dedicado para las puestas en marcha, debe limpiar los volúmenes flexibles a medida que la puesta en marcha crea una gran cantidad de volúmenes flexibles que no se utilizan, lo que reduce el rendimiento. 
 ---
-= Limpie los volúmenes
+= Quite volúmenes FlexVol
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Después de eliminar las herramientas de ONTAP para la implementación de VMware vSphere, debe limpiar los volúmenes flexibles que se crearon durante la implementación. Si ha utilizado un clúster de ONTAP dedicado para las puestas en marcha, debe limpiar los volúmenes flexibles a medida que la puesta en marcha crea una gran cantidad de volúmenes flexibles que no se utilizan, lo que reduce el rendimiento.
-
-Utilice las siguientes directrices para limpiar los volúmenes después de la eliminación de las herramientas de ONTAP para la puesta en marcha de VMware vSphere.
+Cuando se utiliza un clúster dedicado de herramientas de ONTAP para ONTAP para la implementación de VMware, se crean muchos volúmenes de FlexVol sin utilizar. Después de eliminar las herramientas de ONTAP para VMware vSphere, debe eliminar los volúmenes de FlexVol para evitar que se vean posibles impactos en el rendimiento.
 
 .Pasos
-. Desde la máquina virtual del nodo principal de herramientas de ONTAP para VMware vSphere, ejecute el siguiente comando para identificar el tipo de puesta en marcha.
+. Determine el tipo de puesta en marcha de las herramientas de ONTAP para VMware vSphere desde la máquina virtual del nodo principal.
 +
 _cat /opt/netapp/meta/ansible_vars.yaml | grep -protocolo_
 
 +
-Si se trata de una implementación de iSCSI, también deberá eliminar iGroups.
+Si se trata de una implementación de iSCSI, también debe eliminar iGroups.
 
-. Recupere la lista de volúmenes flexibles creados en ONTAP durante la implementación con el siguiente comando.
+. Obtenga la lista de volúmenes FlexVol.
 +
 _Kubectl describe persistentvolumes | grep InternalName | awk -F'=' '{print $2}'_
 
-. Elimine máquinas virtuales desde vCenter Server, consulte https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-virtual-machine-administration-guide-8-0/managing-virtual-machinesvsphere-vm-admin/adding-and-removing-virtual-machinesvsphere-vm-admin.html#GUID-376174FE-F936-4BE4-B8C2-48EED42F110B-en["Eliminar y volver a registrar máquinas virtuales y plantillas de máquinas virtuales"] .
-. Elimine volúmenes del administrador del sistema ONTAP, consulte https://docs.netapp.com/us-en/ontap/volumes/delete-flexvol-task.html["Eliminar un volumen de FlexVol"] . Dé el nombre exacto del FlexVolume en el comando de la cli para eliminar el volumen.
-. En caso de implementación iSCSI, elimine los iGroups SAN de ONTAP, consulte https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html["Consulte y gestione iniciadores E iGroups SAN"] .
+. Quite las máquinas virtuales de vCenter Server. Consulte https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-virtual-machine-administration-guide-8-0/managing-virtual-machinesvsphere-vm-admin/adding-and-removing-virtual-machinesvsphere-vm-admin.html#GUID-376174FE-F936-4BE4-B8C2-48EED42F110B-en["Elimine y vuelva a registrar máquinas virtuales y plantillas de máquinas virtuales"].
+. Elimine volúmenes FlexVol desde ONTAP System Manager. Consulte https://docs.netapp.com/us-en/ontap/volumes/delete-flexvol-task.html["Eliminar un volumen de FlexVol"]. En el comando de la CLI para eliminar un volumen, proporcione el nombre exacto de los volúmenes de FlexVol.
+. Elimine iGroups de SAN del sistema de almacenamiento ONTAP en caso de implementación de iSCSI. Consulte https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html["Consulte y gestione iniciadores E iGroups SAN"].
 
