@@ -22,7 +22,7 @@ El Gestor de herramientas de ONTAP ayuda en:
 * Gestión de contraseñas: Restablece la contraseña de la aplicación OVA del usuario.
 
 
-Para acceder al Administrador de herramientas de ONTAP, `\https://loadBalancerIP:8443/virtualization/ui/` inicie sesión desde el explorador e inicie sesión con las herramientas de ONTAP para las credenciales de administrador de VMware vSphere que proporcionó durante la implementación.
+Para acceder al Administrador de herramientas de ONTAP, `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` inicie sesión desde el explorador e inicie sesión con las herramientas de ONTAP para las credenciales de administrador de VMware vSphere que proporcionó durante la implementación.
 
 La sección de descripción general del Administrador de herramientas de ONTAP ayuda a gestionar la configuración del dispositivo, como la gestión de servicios, el aumento del tamaño de nodos y la habilitación de alta disponibilidad (HA). También puede supervisar información general de las herramientas de ONTAP relacionadas con los nodos, como el estado, los detalles de la red y las alertas.
 

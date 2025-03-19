@@ -18,7 +18,7 @@ Añada instancias de vCenter Server a herramientas de ONTAP para VMware vSphere 
 Al integrarse con vCenter, las herramientas de ONTAP permiten realizar tareas de almacenamiento como el aprovisionamiento, los snapshots y la protección de datos directamente desde el cliente vSphere, lo que elimina la necesidad de cambiar a consolas de gestión de almacenamiento separadas.
 
 .Pasos
-. Abra un explorador web y vaya a la dirección URL: `\https://loadBalancerIP:8443/virtualization/ui/`
+. Abra un explorador web y vaya a la dirección URL: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Inicie sesión con las herramientas de ONTAP para las credenciales de administrador de VMware vSphere que proporcionó durante la implementación.
 . Seleccione *vCenters* > *Add* para incorporar las instancias de vCenter Server. Proporcione la dirección IP o el nombre de host, el nombre de usuario, la contraseña y los detalles de puerto de vCenter.
 

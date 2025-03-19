@@ -18,7 +18,7 @@ Con el Gestor de herramientas de ONTAP, escale verticalmente la configuración d
 Asegúrese de que la plantilla OVA que proporcione tenga la misma versión de OVA que el nodo 1. El nodo 1 es el nodo predeterminado donde se pone en marcha inicialmente las herramientas de ONTAP para VMware vSphere OVA.
 
 .Pasos
-. Inicie ONTAP TOOLS Manager desde un explorador web: `\https://loadBalancerIP:8443/virtualization/ui/`
+. Inicie ONTAP TOOLS Manager desde un explorador web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Inicie sesión con las herramientas de ONTAP para las credenciales de administrador de VMware vSphere que proporcionó durante la implementación.
 . Seleccione la opción *Editar configuración del aparato* en la sección de descripción general.
 . En la sección *Configuración*, puede escalar hacia arriba para aumentar el tamaño del nodo y habilitar la configuración HA según sus necesidades. Se necesitan las credenciales de vCenter Server para realizar cambios.
