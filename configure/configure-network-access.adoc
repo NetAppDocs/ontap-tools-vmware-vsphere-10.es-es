@@ -1,3 +1,9 @@
+---
+permalink: configure/configure-network-access.html 
+sidebar: sidebar 
+keywords: network access configuration, export policy, mount operation, ESXi hosts 
+summary: Si no se configuró el acceso a la red, de forma predeterminada todas las direcciones IP detectadas desde el host ESXi se añaden a la política de exportación. 
+---
 = Configure el acceso a la red
 :allow-uri-read: 
 :icons: font

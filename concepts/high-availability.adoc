@@ -29,3 +29,5 @@ No se requiere una configuración adicional para que las herramientas de ONTAP p
 
 
 NOTE: Las herramientas de ONTAP para VMware vSphere no son compatibles con la alta disponibilidad de vCenter.
+
+Para habilitar la función de alta disponibilidad, el hot add de CPU y la conexión en caliente de memoria deben habilitarse durante la implementación o posteriormente en la configuración de máquinas virtuales de ONTAP tools para VMware vSphere.

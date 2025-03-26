@@ -29,7 +29,7 @@ Si no tiene una biblioteca de contenido, siga estos pasos para crear una:
 
 . Descargue el `.zip` archivo que contiene archivos binarios (_.ova_) y certificados firmados para herramientas de ONTAP para VMware vSphere desde el https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Sitio de soporte de NetApp"^].
 . Inicie sesión en el cliente de vSphere mediante `\https://<vcenterip>/<ui>`
-. Seleccione las elipses horizontales junto al cliente vSphere y seleccione *Biblioteca de contenido*.
+. Seleccione el menú del cliente vSphere y seleccione *Bibliotecas de contenido*.
 . Selecciona *Crear* a la derecha de la página.
 . Proporcione un nombre para la biblioteca y cree la biblioteca de contenido.
 . Navegue a la biblioteca de contenido que ha creado.
@@ -42,27 +42,31 @@ NOTE: Para obtener más información, consulte https://blogs.vmware.com/vsphere/
 
 NOTE: Antes de continuar con el despliegue, defina el planificador de recursos distribuidos (DRS) del cluster en el inventario en 'Conservador'. De este modo se garantiza que los equipos virtuales no se migren durante la instalación.
 
+Las herramientas de ONTAP para VMware vSphere se ponen en marcha inicialmente como configuración sin alta disponibilidad. Para escalar a la implementación de alta disponibilidad, necesitará habilitar el conector en caliente de la CPU y el plugin de memoria en caliente. Puede realizar este paso como parte del proceso de puesta en marcha o editar la configuración de la máquina virtual después de la puesta en marcha.
+
 .Pasos
 . Descargue el `.zip` archivo que contiene archivos binarios (_.ova_) y certificados firmados para herramientas de ONTAP para VMware vSphere desde el https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Sitio de soporte de NetApp"^]. Si ha importado el OVA a la biblioteca de contenido, puede omitir este paso y continuar con el siguiente paso.
 . Inicie sesión en vSphere Server.
 . Desplácese hasta el pool de recursos, el clúster o el host donde planea implementar el OVA.
-. Haga clic con el botón derecho en la ubicación requerida y seleccione *Implementar plantilla OVF...*.
 +
 
 NOTE: Nunca almacene las herramientas de ONTAP para máquinas virtuales de VMware vSphere en almacenes de datos vVols que gestiona.
 
-. Elija el archivo OVA de la URL o vaya a su ubicación, luego seleccione *Siguiente*.
-. Para implementar herramientas de ONTAP para VMware vSphere desde la biblioteca de contenido:
+. Puede implementar el OVA desde la biblioteca de contenido o desde el sistema local.
 +
-.. Vaya a la biblioteca de contenido y seleccione el elemento de biblioteca que desea desplegar.
-.. Selecciona *Acciones* > *Nueva VM de esta plantilla*
+|===
 
 
-. En el campo *Seleccione un nombre y carpeta*, introduzca el nombre de la máquina virtual y elija su ubicación. Si selecciona la casilla de verificación etiquetada *Personalizar el hardware de esta máquina virtual*, se habilitará un paso adicional llamado *Personalizar hardware* antes de llegar a la ventana *Listo para completar*.
+| Del sistema local | De la biblioteca de contenido 
+
+
+| a. Haga clic con el botón derecho del ratón y seleccione *Implementar plantilla OVF...*. b. Elija el archivo OVA de la URL o vaya a su ubicación y, a continuación, seleccione *Siguiente*. | a. Vaya a la biblioteca de contenidos y seleccione el elemento de biblioteca que desea implementar. b. Seleccione *Acciones* > *Nueva VM desde esta plantilla* 
+|===
+. En el campo *Seleccione un nombre y carpeta*, introduzca el nombre de la máquina virtual y elija su ubicación. Para habilitar la posibilidad de usar la función HA, seleccione la opción *Personalizar el hardware de esta máquina virtual*, que activará un paso adicional llamado *Personalizar hardware* antes de continuar con la ventana *Listo para completar*.
 . Seleccione un recurso informático y seleccione *Siguiente*. Opcionalmente, marque la casilla para *encender automáticamente la VM implementada*.
 . Revisa los detalles de la plantilla y selecciona *Siguiente*.
 . Lea y acepte el contrato de licencia y seleccione *Siguiente*.
-. Seleccione el almacenamiento para la configuración y los archivos de disco y seleccione *Siguiente*.
+. Seleccione el almacenamiento para la configuración y el formato de disco y seleccione *Siguiente*.
 . Seleccione la red de destino para cada red de origen y seleccione *Siguiente*.
 . En la ventana *Personalizar plantilla*, rellena los campos requeridos y selecciona *Siguiente*.
 +
@@ -74,11 +78,11 @@ NOTE: No se admite Pure IPv6. El modo mixto es compatible con VLAN que contiene 
 
 
 
+. En la ventana *Personalizar hardware*, habilite las opciones *CPU hot add* y *Memory hot plug* para permitir la funcionalidad HA.
 . Revise los detalles en la ventana *Listo para completar*, seleccione *Finalizar*.
 +
 A medida que se crea la tarea de implementación, el progreso se muestra en la barra de tareas de vSphere.
 
-. En la ventana *Personalizar hardware*, habilite la adición de CPU y el plugin de memoria caliente.
 . Encienda la máquina virtual después de completar la tarea.
 
 
