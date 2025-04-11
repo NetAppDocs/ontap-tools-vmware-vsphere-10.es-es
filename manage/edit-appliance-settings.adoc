@@ -16,13 +16,7 @@ Con el Gestor de herramientas de ONTAP, escale verticalmente la configuración d
 *Antes de empezar*
 
 * Asegúrese de que la plantilla OVA tiene la misma versión de OVA que el nodo 1. El nodo 1 es el nodo predeterminado donde se pone en marcha inicialmente las herramientas de ONTAP para VMware vSphere OVA.
-* Asegúrese de que la conexión en caliente de la CPU y la conexión en caliente de la memoria están activadas durante el despliegue. Puede habilitarlos en el menú del cliente de vCenter si no se habilitaron durante la implementación. Siga estas instrucciones para habilitarlos desde el cliente vCenter:
-+
-** Vaya a Herramientas de ONTAP para la máquina virtual VMware vSphere en *Inventories* y seleccione *Editar configuración*.
-** En las opciones de *CPU*, marca la casilla de verificación *Enable CPU hot add*
-** En las opciones de *Memoria*, marque la casilla de verificación *Habilitar* contra *Memory hot plug*.
-
-
+* Asegúrese de que la conexión en caliente de la CPU y la conexión en caliente de la memoria están activadas.
 
 
 .Pasos

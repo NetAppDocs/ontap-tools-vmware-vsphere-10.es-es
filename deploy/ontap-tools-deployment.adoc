@@ -62,7 +62,12 @@ NOTE: Nunca almacene las herramientas de ONTAP para máquinas virtuales de VMwar
 
 | a. Haga clic con el botón derecho del ratón y seleccione *Implementar plantilla OVF...*. b. Elija el archivo OVA de la URL o vaya a su ubicación y, a continuación, seleccione *Siguiente*. | a. Vaya a la biblioteca de contenidos y seleccione el elemento de biblioteca que desea implementar. b. Seleccione *Acciones* > *Nueva VM desde esta plantilla* 
 |===
-. En el campo *Seleccione un nombre y carpeta*, introduzca el nombre de la máquina virtual y elija su ubicación. Para habilitar la posibilidad de usar la función HA, seleccione la opción *Personalizar el hardware de esta máquina virtual*, que activará un paso adicional llamado *Personalizar hardware* antes de continuar con la ventana *Listo para completar*.
+. En el campo *Seleccione un nombre y carpeta*, introduzca el nombre de la máquina virtual y elija su ubicación.
++
+** Si está utilizando la versión de vCenter Server 8.0.3, seleccione la opción *Personalizar el hardware de esta máquina virtual*, que activará un paso adicional llamado *Personalizar hardware* antes de continuar con la ventana *Listo para completar*.
+** Si utiliza la versión vCenter Server 7.0.3, siga los pasos de la sección *what's next?* al final de la implementación.
+
+
 . Seleccione un recurso informático y seleccione *Siguiente*. Opcionalmente, marque la casilla para *encender automáticamente la VM implementada*.
 . Revisa los detalles de la plantilla y selecciona *Siguiente*.
 . Lea y acepte el contrato de licencia y seleccione *Siguiente*.
@@ -78,7 +83,7 @@ NOTE: No se admite Pure IPv6. El modo mixto es compatible con VLAN que contiene 
 
 
 
-. En la ventana *Personalizar hardware*, habilite las opciones *CPU hot add* y *Memory hot plug* para permitir la funcionalidad HA.
+. Cuando utilice la versión de vCenter Server 8.0.3, en la ventana *Personalizar hardware*, active las opciones *CPU hot add* y *Memory hot plug* para permitir la funcionalidad HA.
 . Revise los detalles en la ventana *Listo para completar*, seleccione *Finalizar*.
 +
 A medida que se crea la tarea de implementación, el progreso se muestra en la barra de tareas de vSphere.
@@ -89,3 +94,12 @@ A medida que se crea la tarea de implementación, el progreso se muestra en la b
 Puede realizar un seguimiento del progreso de la instalación dentro de la consola web de la máquina virtual.
 
 Si hay discrepancias en el formulario OVF, un cuadro de diálogo solicitará una acción correctiva. Utilice el botón Tab para navegar, realizar los cambios necesarios y seleccione OK. Tiene tres intentos para resolver cualquier problema. Si los problemas continúan después de tres intentos, el proceso de instalación se detendrá y se recomienda volver a intentar la instalación en una nueva máquina virtual.
+
+.¿Cuál es el siguiente?
+Si tiene herramientas de ONTAP de puesta en marcha para VMware vSphere con vCenter Server 7,0.3, siga estos pasos después de la implementación.
+
+. Inicie sesión en el cliente de vCenter
+. Vaya a las herramientas de ONTAP para la máquina virtual VMware vSphere en *Inventories* y seleccione la opción *Editar configuración*.
+. En las opciones de *CPU*, marca la casilla de verificación *Enable CPU hot add*
+. En las opciones de *Memoria*, marque la casilla de verificación *Habilitar* contra *Memory hot plug*.
+
