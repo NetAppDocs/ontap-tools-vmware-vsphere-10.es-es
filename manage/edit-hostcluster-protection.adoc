@@ -26,7 +26,7 @@ Es posible ejecutar las siguientes tareas como parte de la protección de modifi
 Use este procedimiento para supervisar el estado de la protección del clúster de hosts. Es posible supervisar cada clúster de hosts protegido junto con su estado de protección, las relaciones SnapMirror, los almacenes de datos y el estado de SnapMirror correspondiente.
 
 .Pasos
-. Inicie sesión en el cliente de vSphere mediante `\https://<vcenterip>/<ui>`
+. Inicie sesión en el cliente de vSphere.
 . Vaya a *NetApp ONTAP tools* > *Protección* > *Host cluster relations*.
 +
 El icono debajo de la columna Protección muestra el estado de la protección
@@ -41,7 +41,7 @@ El icono debajo de la columna Protección muestra el estado de la protección
 Use este procedimiento para proteger los almacenes de datos o los hosts recién agregados. Es posible añadir hosts nuevos al clúster protegido o crear almacenes de datos nuevos en el clúster de hosts mediante la interfaz de usuario nativa de vCenter.
 
 .Pasos
-. Inicie sesión en el cliente de vSphere mediante `\https://<vcenterip>/<ui>`
+. Inicie sesión en el cliente de vSphere.
 . Para editar las propiedades de un clúster protegido, puede hacer lo siguiente
 +
 .. Navegue hasta *Herramientas de NetApp ONTAP* > *Protección* > *Relaciones de clúster de host*, seleccione el menú de puntos suspensivos en el clúster y seleccione *Editar* o.
@@ -65,7 +65,7 @@ Se crea una tarea de vCenter y puede realizar un seguimiento del progreso en el 
 == Añada una nueva relación de SnapMirror
 
 .Pasos
-. Inicie sesión en el cliente de vSphere mediante `\https://<vcenterip>/<ui>`
+. Inicie sesión en el cliente de vSphere.
 . Para editar las propiedades de un clúster protegido, puede hacer lo siguiente
 +
 .. Navegue hasta *Herramientas de NetApp ONTAP* > *Protección* > *Relaciones de clúster de host*, seleccione el menú de puntos suspensivos en el clúster y seleccione *Editar* o.
@@ -91,7 +91,7 @@ Para eliminar una relación de SnapMirror asíncrona, se debe añadir la SVM del
 Eliminar la relación activa una nueva detección en un sitio secundario para quitar el LUN sin asignar como una ruta activa de los hosts.
 
 .Pasos
-. Inicie sesión en el cliente de vSphere mediante `\https://<vcenterip>/<ui>`
+. Inicie sesión en el cliente de vSphere.
 . Para editar las propiedades de un clúster protegido, puede hacer lo siguiente
 +
 .. Navegue hasta *Herramientas de NetApp ONTAP* > *Protección* > *Relaciones de clúster de host*, seleccione el menú de puntos suspensivos en el clúster y seleccione *Editar* o.
@@ -113,7 +113,7 @@ Para modificar una relación de SnapMirror asíncrona, se debe añadir la SVM de
 NOTE: No se puede editar una relación de SnapMirror asíncrona existente.
 
 .Pasos
-. Inicie sesión en el cliente de vSphere mediante `\https://<vcenterip>/<ui>`
+. Inicie sesión en el cliente de vSphere.
 . Para editar las propiedades de un clúster protegido, puede hacer lo siguiente
 +
 .. Navegue hasta *Herramientas de NetApp ONTAP* > *Protección* > *Relaciones de clúster de host*, seleccione el menú de puntos suspensivos en el clúster y seleccione *Editar* o.

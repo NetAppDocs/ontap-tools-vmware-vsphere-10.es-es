@@ -50,7 +50,7 @@ VMware no admite actualmente máquinas virtuales clonadas en una plantilla de eq
 
 Se admite el clonado de clon de una máquina virtual protegida.
 
-Consulte https://docs.vmware.com/en/VMware-Horizon/2103/virtual-desktops/GUID-B5020738-8649-4308-A8B0-70AF80527DF6.html["Crear una máquina virtual para clonación"] si desea obtener más información.
+Consulte https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-virtual-machine-administration-guide-7-0/deploying-virtual-machinesvm-admin/clone-an-existing-virtual-machine-h5vm-admin.html["Crear una máquina virtual para clonación"] si desea obtener más información.
 
 
 

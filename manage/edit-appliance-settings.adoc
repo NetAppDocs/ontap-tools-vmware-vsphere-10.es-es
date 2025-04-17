@@ -13,8 +13,10 @@ summary: Puede cambiar la contraseña del administrador mediante el Administrado
 [role="lead"]
 Con el Gestor de herramientas de ONTAP, escale verticalmente la configuración de las herramientas de ONTAP para VMware vSphere para aumentar el número de nodos en la implementación o cambiar la configuración a configuración de alta disponibilidad. Las herramientas ONTAP para el dispositivo VMware vSphere se ponen en marcha inicialmente en una configuración de nodo único que no es de alta disponibilidad.
 
-*Antes de empezar*
 
+NOTE: Para migrar a HA cuando se habilita un backup no de HA, deshabilite primero el backup y vuelva a habilitarlo después de la migración.
+
+.Antes de empezar
 * Asegúrese de que la plantilla OVA tiene la misma versión de OVA que el nodo 1. El nodo 1 es el nodo predeterminado donde se pone en marcha inicialmente las herramientas de ONTAP para VMware vSphere OVA.
 * Asegúrese de que la conexión en caliente de la CPU y la conexión en caliente de la memoria están activadas.
 

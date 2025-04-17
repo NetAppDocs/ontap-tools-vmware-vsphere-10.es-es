@@ -25,10 +25,10 @@ Las herramientas de ONTAP para VMware vSphere muestran la vista lateral del alma
 | *Tipo de almacén de datos* | *Información disponible* 
 
 
-| Almacén de datos NFS | La página *Detalles de almacenamiento* contiene backends de almacenamiento, datos agregados e información de volumen. La página de detalles de NFS contiene datos relacionados con el almacén de datos NFS. 
+| Almacén de datos NFS | La página *Detalles de almacenamiento* contiene backends de almacenamiento, datos agregados e información de volumen. La página *NFS details* contiene datos relacionados con el almacén de datos NFS. 
 
 
-| Almacenes de datos de VMFS | La página *Detalles de almacenamiento* contiene información de backend de almacenamiento, agregado e información de volumen. La página *LUN details* contiene datos relacionados con el LUN. La página *Detalles del espacio de nombres* contiene datos relacionados con el espacio de nombres cuando el almacén de datos VMFS utiliza el protocolo NVMe/TCP o NVMe/FC. No se muestran los detalles de volumen y agregados para los almacenes de datos basados en el sistema de almacenamiento ASA R2. 
+| Almacenes de datos de VMFS | La página *Detalles de almacenamiento* contiene detalles de backend de almacenamiento, agregado, volumen y zona de disponibilidad de almacenamiento (SAZ). La página *Detalles de la unidad de almacenamiento* contiene detalles de la unidad de almacenamiento. 
 
 
 | Almacenes de datos de vVols | Enumera todos los volúmenes. Puede ampliar o quitar el almacenamiento desde el panel de almacenamiento de ONTAP. Esta vista no es compatible con el almacén de datos vVols basado en el sistema ASA R2. 

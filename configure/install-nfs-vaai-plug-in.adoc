@@ -24,7 +24,7 @@ El complemento NFS vStorage API for Array Integration (NFS VAAI) es un component
 
 
 .Pasos
-. Inicie sesión en el cliente de vSphere mediante `\https://<vcenterip>/<ui>`
+. Inicie sesión en el cliente de vSphere.
 . Selecciona *Atajos* > *Herramientas NetApp ONTAP* en la sección de plug-ins.
 . Selecciona *Configuración* > *Herramientas de VAAI NFS*.
 . Cuando el complemento VAAI se cargue en vCenter Server, seleccione *Cambiar* en la sección *Versión existente*. Si no se carga un complemento VAAI en vCenter Server, seleccione el botón *Cargar*.

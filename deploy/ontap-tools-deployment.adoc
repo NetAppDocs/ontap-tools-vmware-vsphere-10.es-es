@@ -11,10 +11,9 @@ summary: Las herramientas ONTAP para el dispositivo VMware vSphere se ponen en m
 
 
 [role="lead"]
-Las herramientas ONTAP para el dispositivo VMware vSphere se ponen en marcha como nodo único de pequeño tamaño con servicios centrales para admitir almacenes de datos NFS y VMFS.
+Las herramientas ONTAP para el dispositivo VMware vSphere se ponen en marcha como nodo único de pequeño tamaño con servicios centrales para admitir almacenes de datos NFS y VMFS. El proceso de puesta en marcha de herramientas de ONTAP puede demorar hasta 45 minutos.
 
-*Antes de empezar*
-
+.Antes de empezar
 Una biblioteca de contenido en VMware es un objeto contenedor que almacena plantillas de máquinas virtuales, plantillas de vApp y otros tipos de archivos. La implementación con biblioteca de contenido le proporciona una experiencia perfecta, ya que no depende de la conectividad de red.
 
 
@@ -28,7 +27,7 @@ Si no tiene una biblioteca de contenido, siga estos pasos para crear una:
 *Crear biblioteca de contenido* En el plan de usar solo una implementación de un solo nodo pequeño, no es necesario crear una biblioteca de contenido.
 
 . Descargue el `.zip` archivo que contiene archivos binarios (_.ova_) y certificados firmados para herramientas de ONTAP para VMware vSphere desde el https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Sitio de soporte de NetApp"^].
-. Inicie sesión en el cliente de vSphere mediante `\https://<vcenterip>/<ui>`
+. Inicie sesión en el cliente de vSphere
 . Seleccione el menú del cliente vSphere y seleccione *Bibliotecas de contenido*.
 . Selecciona *Crear* a la derecha de la página.
 . Proporcione un nombre para la biblioteca y cree la biblioteca de contenido.
@@ -88,7 +87,7 @@ NOTE: No se admite Pure IPv6. El modo mixto es compatible con VLAN que contiene 
 +
 A medida que se crea la tarea de implementación, el progreso se muestra en la barra de tareas de vSphere.
 
-. Encienda la máquina virtual después de completar la tarea.
+. Encienda el equipo virtual después de completar la tarea si no se ha seleccionado la opción de encender automáticamente el equipo virtual.
 
 
 Puede realizar un seguimiento del progreso de la instalación dentro de la consola web de la máquina virtual.
@@ -99,6 +98,7 @@ Si hay discrepancias en el formulario OVF, un cuadro de diálogo solicitará una
 Si tiene herramientas de ONTAP de puesta en marcha para VMware vSphere con vCenter Server 7,0.3, siga estos pasos después de la implementación.
 
 . Inicie sesión en el cliente de vCenter
+. Apague el nodo de herramientas ONTAP.
 . Vaya a las herramientas de ONTAP para la máquina virtual VMware vSphere en *Inventories* y seleccione la opción *Editar configuración*.
 . En las opciones de *CPU*, marca la casilla de verificación *Enable CPU hot add*
 . En las opciones de *Memoria*, marque la casilla de verificación *Habilitar* contra *Memory hot plug*.

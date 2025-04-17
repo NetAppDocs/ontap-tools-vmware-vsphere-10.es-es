@@ -1,0 +1,45 @@
+---
+permalink: protect/fan-out-protection.html 
+sidebar: sidebar 
+keywords:  
+summary: En una protección ramificada, el grupo de consistencia está doble protegido con una relación síncrona en el primer clúster de ONTAP de destino y con una relación asíncrona en el segundo clúster de ONTAP de destino. 
+---
+= Protección frente a la salida del ventilador
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En una protección ramificada, el grupo de consistencia está doble protegido con una relación síncrona en el primer clúster de ONTAP de destino y con una relación asíncrona en el segundo clúster de ONTAP de destino. Los flujos de trabajo de creación, edición y eliminación de la protección de sincronización activa de SnapMirror mantienen la protección síncrona. Los flujos de trabajo de recuperación tras fallos y reprotección de SRM mantienen la protección asíncrona.
+
+Para establecer una protección ramificada, debe tener tres pares de clústeres de sitios y SVM.
+
+Ejemplo:
+
+|===
+
+
+| Si | a continuación 
+
+
+ a| 
+* El grupo de consistencia de origen está en el clúster C1 y SVM svm1
+* El primer grupo de consistencia de destino está en el clúster C2 y SVM svm2 y.
+* El segundo grupo de consistencia de destino está en el clúster C3 y SVM svm3
+
+ a| 
+* La relación de clústeres entre iguales en el clúster ONTAP de origen será (C1, C2) y (C1, C3).
+* La relación de clústeres entre iguales en el primer clúster ONTAP de destino será (C2, C1) y (C2, C3) y.
+* La relación de clústeres entre iguales en el segundo clúster ONTAP de destino será (C3, C1) y (C3, C2).
+* La relación entre iguales SVM en la SVM de origen será (svm1, svm2) y (svm1, svm3).
+* La paridad SVM en el primer SVM de destino será (svm2, svm1) y (svm2, svm3) y.
+* La agrupación de SVM en el segundo svm de destino será (svm3, svm1) y (svm3, svm2).
+
+
+|===
+* Pasos*
+
+. Cree un nuevo almacén de datos de marcador de posición. Consulte https://docs.vmware.com/en/Site-Recovery-Manager/8.7/com.vmware.srm.admin.doc/GUID-5D4C9F38-37CA-47D1-B43A-A1FED48A05A3.html["Seleccione un almacén de datos de marcador de posición"]
+. Añadir un almacén de datos a la protección del clúster de hosts link:../manage/edit-hostcluster-protection.html["Modifique el clúster de hosts protegido"]. Debe añadir tipos de políticas asíncronas y síncronas.
+

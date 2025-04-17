@@ -31,8 +31,6 @@ Configuración de la aplicación
  a| 
 . Mostrar resumen de estado del servidor
 . Cambie el nivel DE REGISTRO DE VASA Provider Services y SRA Services
-. Deshabilite AutoSupport
-. Actualice la URL del proxy de AutoSupport
 
 
 
@@ -44,7 +42,6 @@ Configuración del sistema
 . Apagar la máquina virtual
 . Cambiar la contraseña de usuario "mant"
 . Cambiar zona horaria
-. Añada el nuevo servidor NTP
 . Aumentar el tamaño de los discos de cárcel (/prisión)
 . Renovar
 . Instalación de VMware Tools

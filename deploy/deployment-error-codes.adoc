@@ -64,6 +64,9 @@ Los últimos tres dígitos del código de error indican el error de flujo de tra
 | *Código de error de implementación* | *Flujo de trabajo* | *Resolución* 
 
 
+| 049 | Para la red y el script de perl de validación también los asignará en breve | - 
+
+
 | 050 | Fallo al generar la clave SSH | Reiniciar la máquina virtual primaria (VM). 
 
 
@@ -78,7 +81,7 @@ Sudo rke2-uninstall.sh (todas las máquinas virtuales).
 | 055 | Fallo al desplegar el registro | Si el pod del registro está presente, espere a que el pod esté listo y, a continuación, reinicie la VM principal o vuelva a implementarla. 
 
 
-| 059 | El despliegue de KubeVip ha fallado | Asegúrese de que la dirección IP virtual para el plano de control de Kubernetes y la dirección IP del balanceador de carga proporcionada durante la implementación pertenezcan a la misma VLAN y sean direcciones IP libres. Reinicie si todos los puntos anteriores son correctos. De lo contrario, vuelva a desplegar. 
+| 059 | El despliegue de KubeVip ha fallado | Asegúrese de que la dirección IP virtual para el plano de control de Kubernetes y la dirección IP de las herramientas de ONTAP proporcionada durante la implementación pertenezcan a la misma VLAN y sean direcciones IP libres. Reinicie si todos los puntos anteriores son correctos. De lo contrario, vuelva a desplegar. 
 
 
 | 060 | Fallo en el despliegue del operador | Reinicie 

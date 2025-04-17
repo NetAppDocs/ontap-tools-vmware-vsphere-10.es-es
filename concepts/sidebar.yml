@@ -24,7 +24,5 @@ entries:
       url: "/concepts/rbac-ontap-use.html"
 - title: Alta disponibilidad para herramientas de ONTAP para VMware vSphere
   url: "/concepts/high-availability.html"
-- title: AutoSupport
-  url: "/concepts/autosupport.html"
 - title: Interfaz de usuario del gestor de herramientas de ONTAP
   url: "/configure/manager-user-interface.html"

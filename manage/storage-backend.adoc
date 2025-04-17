@@ -22,7 +22,7 @@ Puede ejecutar la detección de un back-end de almacenamiento bajo demanda sin e
 Siga estos pasos para detectar los back-ends de almacenamiento.
 
 .Pasos
-. Inicie sesión en el cliente de vSphere mediante `\https://<vcenterip>/<ui>`
+. Inicie sesión en el cliente de vSphere.
 . En la página de accesos directos, seleccione *Herramientas de NetApp ONTAP* en la sección de plugins.
 . En el panel izquierdo de las herramientas de ONTAP, navegue hasta *Backends de almacenamiento* y seleccione un backend de almacenamiento.
 . Seleccione el menú de elipses verticales y seleccione *Descubrir almacenamiento*
@@ -36,7 +36,7 @@ Puede realizar un seguimiento del progreso en el panel de tareas recientes.
 
 Siga los pasos de esta sección para modificar un back-end de almacenamiento.
 
-. Inicie sesión en el cliente de vSphere mediante `\https://<vcenterip>/<ui>`
+. Inicie sesión en el cliente de vSphere.
 . En la página de accesos directos, seleccione *Herramientas de NetApp ONTAP* en la sección de plugins.
 . En el panel izquierdo de las herramientas de ONTAP, navegue hasta *Backends de almacenamiento* y seleccione un backend de almacenamiento.
 . Seleccione el menú de elipses verticales y seleccione *Modificar* para modificar las credenciales o el nombre del puerto. Puede realizar un seguimiento del progreso en el panel de tareas recientes.
@@ -58,7 +58,7 @@ Puede realizar la operación Modificar para clústeres de ONTAP globales mediant
 
 Debe eliminar todos los almacenes de datos conectados al back-end de almacenamiento antes de quitar el back-end de almacenamiento. Siga los pasos que se indican a continuación para quitar un back-end de almacenamiento.
 
-. Inicie sesión en el cliente de vSphere mediante `\https://<vcenterip>/<ui>`
+. Inicie sesión en el cliente de vSphere.
 . En la página de accesos directos, seleccione *Herramientas de NetApp ONTAP* en la sección de plugins.
 . En el panel izquierdo de las herramientas de ONTAP, navegue hasta *Backends de almacenamiento* y seleccione un backend de almacenamiento.
 . Seleccione el menú de elipses verticales y seleccione *Eliminar*. Asegúrese de que el back-end de almacenamiento no contenga ningún almacén de datos. Puede realizar un seguimiento del progreso en el panel de tareas recientes.
@@ -88,7 +88,7 @@ La página de resumen proporciona los siguientes detalles:
 * Información básica acerca de la máquina virtual
 * Información de red como la dirección IP y el puerto de la red. Para la SVM secundaria, la información será la misma que el back-end del almacenamiento primario.
 * Privilegios permitidos y restringidos para el back-end de almacenamiento. Para la SVM secundaria, la información será la misma que el back-end del almacenamiento primario. Los privilegios solo se muestran en los back-ends de almacenamiento basado en clúster. Si añade la SVM como back-end de almacenamiento, no se mostrará la información de privilegios.
-* La vista de desglose de clústeres de ASA R2 no incluye el separador de niveles locales cuando la propiedad desagregada se establece como «true» para la SVM o el clúster.
+* La vista de desglose de clústeres del sistema R2 de ASA no incluye la pestaña de niveles locales cuando la propiedad desagregada se establece como «verdadera» para la SVM o el clúster.
 * Para los sistemas de SVM R2 de ASA, no se muestra el portlet de capacidad. El portal de capacidad solo es necesario cuando la propiedad desagregada se establece como «true» para la SVM o el clúster.
 * Para los sistemas ASA R2 SVM, la sección de información básica muestra el tipo de plataforma.
 

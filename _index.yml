@@ -7,7 +7,7 @@ indexpage:
   - title: Manos a la obra
     links:
     - title: Notas de la versión
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3334864
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3343864
     - title: Obtenga información sobre las herramientas de ONTAP para VMware vSphere
       url: "/concepts/ontap-tools-overview.html"
     - title: Ponga en marcha herramientas de ONTAP para VMware vSphere
@@ -32,7 +32,7 @@ indexpage:
         VMware vSphere 9
       url: https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=63792
     - title: Base de conocimientos de NetApp - Herramientas de ONTAP para VMware vSphere
-      url: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/VSC_and_VASA_Provider
+      url: https://kb.netapp.com/data-mgmt/OTV
     - title: 'Comunidad NetApp: Herramientas de ONTAP para VMware vSphere'
       url: https://community.netapp.com/t5/VMware-Solutions-Discussions/bd-p/vmware-solutions-discussions
     - title: Obtenga más información sobre VMware vSphere con ONTAP

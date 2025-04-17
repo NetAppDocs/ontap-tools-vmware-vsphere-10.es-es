@@ -26,7 +26,7 @@ La tarea de eliminación del almacén de datos desde las herramientas de ONTAP p
 Siga los pasos a continuación para eliminar un almacén de datos NFS, VMFS o VVol desde las herramientas de ONTAP en vCenter Server:
 
 .Pasos
-. Inicie sesión en el cliente de vSphere mediante `\https://<vcenterip>/<ui>`
+. Inicie sesión en el cliente de vSphere.
 . Haga clic con el botón derecho en un sistema host, un clúster host o un centro de datos y seleccione *Herramientas de NetApp ONTAP* > *Eliminar almacén de datos*.
 +
 

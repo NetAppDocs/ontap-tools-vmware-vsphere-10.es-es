@@ -59,9 +59,10 @@ En la siguiente tabla se enumeran los códigos de error y los nombres de archivo
 Los últimos tres dígitos del código de error indican el error de flujo de trabajo específico dentro del script:
 
 |===
-
-
 | *Código de error de actualización* | *Flujo de trabajo* | *Resolución* 
+
+
+| 052 | La ISO puede ser la misma que la versión actual o dos versiones por encima de la versión actual. | Utilice una versión ISO compatible para actualizar desde su versión actual. 
 
 
 | 068 | Error al revertir los paquetes Debian | Utilice la recuperación basada en RPO o Snapshot cero y vuelva a intentar la actualización. 
@@ -118,12 +119,6 @@ Los últimos tres dígitos del código de error indican el error de flujo de tra
 | 089 | Fallo al cambiar la propiedad del archivo de configuración de rotación de registro de resumen | Vuelva a intentar la actualización. 
 
 
-| 093 | Se produjo un error en la actualización del aprovisionador de almacenamiento dinámico | Vuelva a intentar la actualización. 
-
-
-| 094 | Se ha producido un error en la reversión del aprovisionador de almacenamiento dinámico | Vuelva a intentar la actualización. 
-
-
 | 095 | Error en la actualización del SO | Sin recuperación para la actualización del sistema operativo. Los servicios de herramientas de ONTAP se han renovado y se ejecutarán nuevos pods. 
 
 
@@ -155,8 +150,20 @@ Los últimos tres dígitos del código de error indican el error de flujo de tra
 
 
 | 113 | Error al actualizar los recursos en los nodos secundarios | Compruebe los registros de actualización y vuelva a intentar la actualización. 
+
+
+| 104 | Se produjo un error en el reinicio del nodo secundario | Reinicie los nodos manualmente uno por uno 
+
+
+| 100 | error al revertir el kernel | - 
+
+
+| 051 | se produjo un error en la actualización del aprovisionador de almacenamiento dinámico | Compruebe los registros de actualización y vuelva a intentar la actualización. 
+
+
+| 056 | fallo al suprimir la copia de seguridad de migración | NA 
 |===
 
-NOTE: Las herramientas de ONTAP para VMware vSphere 10,3 admiten un objetivo de punto de recuperación cero.
+NOTE: A partir de las herramientas de ONTAP no se admite el objetivo de punto de recuperación cero de VMware vSphere 10,3.
 
 Más información acerca de https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/How_to_restore_ONTAP_tools_for_VMware_vSphere_if_upgrade_fails_from_version_10.0_to_10.1["Cómo restaurar las herramientas de ONTAP para VMware vSphere si la actualización falla de la versión 10,0 a 10,1"]

@@ -1,0 +1,49 @@
+---
+permalink: manage/attach-detach-disk.html 
+sidebar: sidebar 
+keywords:  
+summary: - 
+---
+= Asociar o desconectar un disco de datos de una máquina virtual
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+
+
+== Conectar un disco de datos a una máquina virtual
+
+Conectar un disco de datos a una máquina virtual para expandir la capacidad de almacenamiento.
+
+.Pasos
+. Inicie sesión en el cliente de vSphere.
+. Haga clic con el botón derecho en una máquina virtual en el inventario y seleccione *Editar configuración*.
+. En la pestaña *Virtual Hardware*, seleccione *Disco duro existente*.
+. Seleccione la máquina virtual donde existe el disco.
+. Seleccione el disco que desea adjuntar y seleccione *OK*
+
+
+.Resultado
+El disco duro aparece en la lista Dispositivos de hardware virtual.
+
+
+
+== Desconectar un disco de datos de la máquina virtual
+
+Es posible desconectar un disco de datos conectado a una máquina virtual cuando ya no lo necesita. Cuando se desconecta el disco de la máquina virtual, no se elimina automáticamente; permanece en el sistema de almacenamiento de ONTAP.
+
+.Pasos
+. Inicie sesión en el cliente de vSphere.
+. Haga clic con el botón derecho en una máquina virtual en el inventario y seleccione *Editar configuración*.
+. Mueva el puntero sobre el disco y seleccione * Eliminar *.
++
+
+NOTE: El disco se elimina de la máquina virtual. Si otras máquinas virtuales comparten el disco, los archivos de disco no se eliminan.
+
+
+
+.Información relacionada
+https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-virtual-machine-administration-guide-7-0/configuring-virtual-machine-hardwarevm-admin/virtual-disk-configurationvm-admin/add-a-hard-disk-to-a-virtual-machinevm-admin/add-a-new-hard-disk-to-a-virtual-machinevm-admin.html["Agregar un nuevo disco duro a una máquina virtual"]
+
+https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-virtual-machine-administration-guide-7-0/configuring-virtual-machine-hardwarevm-admin/virtual-disk-configurationvm-admin/add-a-hard-disk-to-a-virtual-machinevm-admin/add-an-existing-hard-disk-to-a-virtual-machinevm-admin.html["Agregar un disco duro existente a una máquina virtual"]

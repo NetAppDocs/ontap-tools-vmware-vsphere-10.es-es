@@ -49,27 +49,39 @@ Puede usar herramientas de ONTAP para VMware vSphere con VMware vCenter Server V
 | ALTA DISPONIBILIDAD grande (acumulación de tres nodos) | 51 | 102 | 1050 
 |===
 
+NOTE: Cuando se habilita el backup, cada clúster de herramientas de ONTAP necesita otros 50GB TB de espacio en el almacén de datos donde se implementan las máquinas virtuales. Por tanto, la no alta disponibilidad requiere 400 GB y alta disponibilidad requiere 1100 GB de espacio en total.
+
+
 
 == Requisitos mínimos de almacenamiento y aplicaciones
 
 |===
-| Almacenamiento, host y aplicaciones | Requisitos mínimos de versión 
+| Almacenamiento, host y aplicaciones | Requisitos de versión 
 
 
 | ONTAP | 9.14.1, 9.15.1 y 9.16.0. FAS, ASA A-Series, ASA C-Series, AFF A-Series, AFF C-Series y ASA R2. 
 
 
-| Hosts ESXi | ESXi 7.0.3 
+| Las herramientas de ONTAP admiten hosts ESXi | a partir de 7.0.3 
 
 
-| El servidor de vCenter | VCenter 7.0U3 
+| Las herramientas de ONTAP eran compatibles con vCenter Server | 7.0U3 en adelante 
 
 
 | Proveedor de VASA | 3,0 
 
 
-| Aplicación ova | 10,3 
+| Aplicación ova | 10,4 
+
+
+| Host ESXi para implementar máquinas virtuales de herramientas de ONTAP | 7,0, 7.0U1, 7.0U2, 7.0U3, 8,0, 8.0U1 Y 8.0U3 
+
+
+| VCenter Server para poner en marcha máquinas virtuales de herramientas de ONTAP | 7,0 y 8,0 
 |===
+
+NOTE: A partir de las herramientas de ONTAP para VMware vSphere 10,4, el hardware de las máquinas virtuales cambia de la versión 10 a la 17.
+
 La herramienta de matriz de interoperabilidad (IMT) contiene la información más reciente sobre las versiones compatibles de ONTAP, vCenter Server, hosts ESXi y aplicaciones de plugins.
 
 https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT["Herramienta de matriz de interoperabilidad"^]
@@ -151,50 +163,86 @@ En la siguiente tabla se describen los puertos de red que NetApp utiliza y sus p
 |===
 
 
-| *Puerto* | *Descripción* 
+| *Puerto* | *Protocolo* | *Descripción* 
 
 
-| 22 (TCP) | Ansible usa este puerto SSH para la comunicación durante el aprovisionamiento del clúster. Este puerto es necesario para funcionalidades como cambiar la contraseña de usuario de mantenimiento, los mensajes de estado y para actualizar los valores en los tres nodos en caso de configuración de alta disponibilidad. 
+| 8143 | TCP | Conexiones HTTP/HTTPS para herramientas ONTAP. 
 
 
-| 443 (TCP) | Este es el puerto de transferencia para la comunicación entrante para el servicio de proveedor VASA. El certificado autofirmado de proveedor de VASA y el certificado de CA personalizado se alojan en este puerto. 
+| 8043 | TCP | Conexiones HTTP/HTTPS para herramientas ONTAP. 
 
 
-| 8443 (TCP) | Este puerto hospeda la documentación de la API a través de Swagger y la aplicación de interfaz de usuario Administrador. 
+| 9060 | TCP | Conexiones HTTP/HTTPS para herramientas ONTAP. 
 
 
-| 2379 (TCP) | Este es el puerto predeterminado para las solicitudes de cliente, como obtener, poner, eliminar o vigilar las claves en el almacén de valores de clave ETCD. 
+| 22 | TCP | Ansible usa este puerto SSH para la comunicación durante el aprovisionamiento del clúster. Este puerto es necesario para funcionalidades como cambiar la contraseña de usuario de mantenimiento, los mensajes de estado y para actualizar los valores en los tres nodos en caso de configuración de alta disponibilidad. 
 
 
-| 2380 (TCP) | Este es el puerto predeterminado para la comunicación servidor a servidor para el clúster ETCD utilizado para el algoritmo de consenso de RAFT en el que se basa ETCD para la replicación y consistencia de datos. 
+| 443 | TCP | Este es el puerto de transferencia para la comunicación entrante para el servicio de proveedor VASA. El certificado autofirmado de proveedor de VASA y el certificado de CA personalizado se alojan en este puerto. 
 
 
-| 7472 (TCP+UDP) | Este es el puerto del servicio de métricas de prometheus. 
+| 8443 | TCP | Este puerto hospeda la documentación de la API a través de Swagger y la aplicación de interfaz de usuario Administrador. 
 
 
-| 7946 (TCP+UDP) | Este puerto se utiliza para la detección de la red del contenedor de docker. 
+| 2379 | TCP | Este es el puerto predeterminado para las solicitudes de cliente, como obtener, poner, eliminar o vigilar las claves en el almacén de valores de clave ETCD. 
 
 
-| 9083 (TCP) | Este puerto es un puerto de servicio utilizado internamente para el servicio de proveedor VASA. 
+| 2380 | TCP | Este es el puerto predeterminado para la comunicación servidor a servidor para el clúster ETCD utilizado para el algoritmo de consenso de RAFT en el que se basa ETCD para la replicación y consistencia de datos. 
 
 
-| 1162 (UDP) | Este es el puerto de paquetes de captura SNMP. 
+| 7472 | TCP/UDP | Este es el puerto del servicio de métricas de prometheus. 
 
 
-| 6443 (TCP) | Fuente: RKE2 nodos de agentes. Destino: REK2 nodos de servidor. Descripción: Kubernetes API 
+| 7946 | TCP/UDP | Este puerto se utiliza para la detección de la red del contenedor de docker. 
 
 
-| 9345 (TCP) | Fuente: RKE2 nodos de agentes. Destino: REK2 nodos de servidor. Descripción: REK2 supervisor API 
+| 9083 | TCP | Este puerto es un puerto de servicio utilizado internamente para el servicio de proveedor VASA. 
 
 
-| 8472 (TCP+UDP) | Todos los nodos deben poder llegar a otros nodos a través del puerto UDP 8472 cuando se utiliza VXLAN de franela. Fuente: Los RKE2 nodos. Destination: Los REK2 nodos. Descripción: Canal CNI con VXLAN 
+| 1162 | UDP | Este es el puerto de paquetes de captura SNMP. 
 
 
-| 10250 (TCP) | Fuente: Los RKE2 nodos. Destination: Los REK2 nodos. Descripción: Kubelet metrics 
+| 6443 | TCP | Fuente: RKE2 nodos de agentes. Destino: REK2 nodos de servidor. Descripción: Kubernetes API 
 
 
-| 30000-32767 (TCP) | Fuente: Los RKE2 nodos. Destination: Los REK2 nodos. Descripción: Rango de puertos NodePort 
+| 9345 | TCP | Fuente: RKE2 nodos de agentes. Destino: REK2 nodos de servidor. Descripción: REK2 supervisor API 
 
 
-| 123 (TCP) | Ntpd utiliza este puerto para realizar la validación del servidor ntp. 
+| 8472 | TCP+UDP | Todos los nodos deben poder llegar a otros nodos a través del puerto UDP 8472 cuando se utiliza VXLAN de franela. Fuente: Los RKE2 nodos. Destination: Los REK2 nodos. Descripción: Canal CNI con VXLAN 
+
+
+| 10250 | TCP | Fuente: Los RKE2 nodos. Destination: Los REK2 nodos. Descripción: Kubelet metrics 
+
+
+| 30000-32767 | TCP | Fuente: Los RKE2 nodos. Destination: Los REK2 nodos. Descripción: Rango de puertos NodePort 
+
+
+| 123 | TCP | Ntpd utiliza este puerto para realizar la validación del servidor NTP. 
+
+
+| 137-139 | TCP/UDP | Paquetes compartidos de SMB/Windows. 
+
+
+| 6789 | TCP | Monitor Ceph (LUN) 
+
+
+| 3300 | TCP | Monitor Ceph (LUN) 
+
+
+| 6800-7300 | TCP | Ceph Managers, OSD y Sistema de Archivos (MDS). 
+
+
+| 80 | TCP | Puerta de enlace Ceph RADOS (RGW) 
+
+
+| 9080 | TCP | Conexiones HTTP/HTTPS VP (solo desde 127,0.0.0/8 para IPv4 o ::1/128 para IPv6). 
 |===
+
+
+== Configuración de almacenamiento de ONTAP
+
+Para garantizar una integración perfecta del almacenamiento de ONTAP con las herramientas de ONTAP para VMware vSphere, tenga en cuenta los siguientes ajustes:
+
+* Si utiliza Fibre Channel (FC) para la conectividad de almacenamiento, configure la división en zonas en los switches FC para conectar los hosts ESXi con los LIF FC de la SVM. https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["Obtenga información sobre la división en zonas de FC y FCoE con los sistemas ONTAP"]
+* Para utilizar la replicación de SnapMirror gestionada por herramientas de ONTAP, el administrador de almacenamiento de ONTAP debe crear https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["Relaciones de paridad entre clústeres de ONTAP"] y https://docs.netapp.com/us-en/ontap/peering/create-intercluster-svm-peer-relationship-93-later-task.html["Relaciones entre iguales de SVM de interconexión de clústeres de ONTAP"] en ONTAP antes de utilizar SnapMirror.
+

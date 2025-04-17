@@ -14,7 +14,7 @@ summary: Cuando hace clic con el botón derecho en el objeto del almacén de dat
 Cuando hace clic con el botón derecho en el objeto del almacén de datos en la vista de objetos de vCenter, las acciones admitidas de las herramientas de ONTAP para VMware vSphere se muestran en la sección sobre plugins. Se habilitan acciones específicas según el tipo de almacén de datos y los privilegios de usuario actuales.
 
 
-NOTE: La operación de expandir el almacén de datos vVols no es aplicable para el almacén de datos vVols basado en ASA R2.
+NOTE: La operación de expandir el almacén de datos vVols no es aplicable para el almacén de datos vVols basado en el sistema ASA R2.
 
 .Pasos
 . En la página inicial de vSphere Client, seleccione *Hosts and Clusters*.

@@ -25,7 +25,7 @@ Asegúrese de que se cumplen los siguientes requisitos previos:
 
 
 .Pasos
-. Inicie sesión en el cliente de vSphere mediante `\https://<vcenterip>/<ui>`
+. Inicie sesión en el cliente de vSphere.
 . Haga clic con el botón derecho en un clúster de host y seleccione *Herramientas de NetApp ONTAP* > *Proteger clúster*.
 . En la ventana Protect cluster, el tipo de almacén de datos y los detalles de la máquina virtual de almacenamiento de origen se completan automáticamente. Seleccione el enlace de los almacenes de datos para ver los almacenes de datos protegidos.
 . Introduzca el *nombre del grupo de consistencia*.

@@ -38,5 +38,11 @@ image:../media/ontap-tools-manager-overview.png["Información general de la cons
 | Tarjeta de alertas | La tarjeta de Alertas enumera las alertas de las herramientas ONTAP por tipo, incluidas las alertas de nivel de nodo de alta disponibilidad. Puede ver la lista de alertas seleccionando en el texto de recuento (hipervínculo). El enlace le dirige a la página de vista de alertas filtrada por el tipo seleccionado. 
 
 
+| VCenter | La tarjeta vCenter muestra el estado de las instancias de vCenter en el sistema. 
+
+
+| Back-ends de almacenamiento | La tarjeta Back-ends de almacenamiento muestra el estado de los Back-ends de almacenamiento en el sistema. 
+
+
 | Tarjeta de nodos de herramientas de ONTAP | La tarjeta de nodos de herramientas ONTAP muestra la lista de nodos con nombre de nodo, nombre de máquina virtual de nodo, estado y todos los datos relacionados con la red. Puede seleccionar en *Ver detalles* para ver los detalles adicionales relacionados con el nodo seleccionado. [NOTA] En una configuración sin alta disponibilidad, solo se muestra un nodo. En la configuración de alta disponibilidad, se muestran tres nodos. 
 |===

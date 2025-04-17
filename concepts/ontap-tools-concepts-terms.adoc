@@ -27,9 +27,9 @@ CA es una entidad de confianza que emite certificados SSL (Secure Sockets Layer)
 
 
 
-=== Grupo de consistencia
+=== Grupo de consistencia (CG)
 
-Un grupo de coherencia es una recogida de volúmenes que se gestionan como una sola unidad. En ONTAP, los grupos de coherencia proporcionan una gestión fácil y una garantía de protección para una carga de trabajo de la aplicación que abarca varios volúmenes. Más información sobre https://docs.netapp.com/us-en/ontap/consistency-groups/index.html["grupo de consistencia"].
+Un grupo de consistencia es una recogida de volúmenes gestionados como una sola unidad. Los CG se sincronizan para mantener la coherencia de los datos en unidades de almacenamiento y volúmenes. En ONTAP, proporcionan una gestión sencilla y una garantía de protección para la carga de trabajo de la aplicación que abarca varios volúmenes. Más información sobre https://docs.netapp.com/us-en/ontap/consistency-groups/index.html["grupos de consistencia"].
 
 
 
@@ -53,13 +53,13 @@ Una LUN es un número utilizado para identificar una unidad lógica dentro de un
 
 === Subsistema y espacio de nombres NVMe
 
-Un espacio de nombres NVMe es una cantidad de memoria no volátil que se puede formatear en bloques lógicos. Los espacios de nombres son el equivalente de LUN para los protocolos FC e iSCSI, y un subsistema NVMe es análogo a un igroup. Los iniciadores asociados pueden acceder a un subsistema NVMe con iniciadores para que los espacios de nombres dentro del subsistema puedan acceder a ellos.
+Un espacio de nombres NVMe es una cantidad de memoria no volátil que se puede formatear en bloques lógicos. Los espacios de nombres son el equivalente de LUN para los protocolos FC e iSCSI, y un subsistema NVMe es análogo a un igroup. Un subsistema NVMe se puede asociar con iniciadores para que los iniciadores asociados puedan acceder a espacios de nombres dentro del subsistema.
 
 
 
 === Gestor de herramientas de ONTAP
 
-El administrador de herramientas de ONTAP proporciona un mayor control a las herramientas de ONTAP para el administrador de VMware vSphere a través de las instancias gestionadas de vCenter Server y los back-ends de almacenamiento incorporados. El Administrador de herramientas de ONTAP ayuda en la gestión de instancias de vCenter Server, back-ends de almacenamiento, certificados, contraseñas y descargas de paquetes de registros.
+El administrador de herramientas de ONTAP proporciona un mayor control a las herramientas de ONTAP para los administradores de VMware vSphere a través de las instancias gestionadas de vCenter Server y los back-ends de almacenamiento incorporados. Ayuda a gestionar las instancias de vCenter Server, los back-ends de almacenamiento, los certificados, las contraseñas y las descargas de paquetes de registros.
 
 
 
@@ -75,37 +75,43 @@ El objetivo de punto de recuperación mide la frecuencia con la que se realizan 
 
 
 
-=== Sincronización activa de SnapMirror (SMAS)
+=== SnapMirror síncrono activo
 
-La sincronización activa de SnapMirror permite que los servicios empresariales continúen funcionando incluso si se produce un fallo completo del sitio, lo que permite a las aplicaciones conmutar por error de forma transparente mediante una copia secundaria. Se requiere intervención manual ni secuencias de comandos personalizadas para activar una recuperación tras fallos con SnapMirror: Sincronización activa. Lea más sobre https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html["SnapMirror síncrono activo"].
+La sincronización activa de SnapMirror permite que los servicios empresariales continúen funcionando incluso con un fallo completo del sitio, ya que permite a las aplicaciones conmutar por error de forma transparente mediante una copia secundaria. No se requiere intervención manual o secuencias de comandos personalizadas para activar una conmutación por error con la sincronización activa de SnapMirror. Más información sobre https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html["SnapMirror síncrono activo"].
 
 
 
 === Back-ends de almacenamiento
 
-Los back-ends de almacenamiento son la infraestructura de almacenamiento subyacente que el host ESXi utiliza para almacenar archivos de máquinas virtuales, datos y otros recursos. El back-end del almacenamiento permite al host ESXi acceder a los datos persistentes y gestionarlos, lo que proporciona la capacidad de almacenamiento y el rendimiento necesarios para un entorno virtualizado.
+Los back-ends de almacenamiento son la infraestructura de almacenamiento subyacente que el host ESXi utiliza para almacenar archivos de máquinas virtuales, datos y otros recursos. Permiten que el host ESXi acceda a datos persistentes y los gestione, lo que proporciona la funcionalidad de almacenamiento y el rendimiento necesarios para un entorno virtualizado.
+
+.Clúster global (back-end de almacenamiento)
+Los back-ends de almacenamiento global, disponibles solo con las credenciales del clúster de ONTAP, se incorporan a través de la interfaz del Gestor de herramientas de ONTAP. Se pueden agregar con una cantidad mínima de Privileges para permitir la detección de los recursos de clúster esenciales necesarios para la gestión de vVols. Los clústeres globales son ideales para escenarios de multi-tenancy en los que se añade un usuario de SVM localmente para la gestión de vVols.
+
+.Back-end de almacenamiento local
+Los back-ends de almacenamiento local con credenciales de clúster o SVM se añaden mediante la interfaz de usuario de herramientas de ONTAP y se limitan a un para vCenter. Cuando se usan las credenciales del clúster localmente, las SVM asociadas se asignan automáticamente con el para gestionar vVols o VMFS. Para la gestión de VMFS, incluido el SRA, las herramientas de ONTAP admiten credenciales de SVM sin necesidad de un clúster global.
 
 
 
 === Adaptador de replicación de almacenamiento (SRA)
 
-SRA es el software específico del proveedor de almacenamiento que se instala en el dispositivo de recuperación Live Site de VMware. El adaptador habilita la comunicación entre Site Recovery Manager y una controladora de almacenamiento en el nivel de Storage Virtual Machine (SVM) y la configuración a nivel del clúster.
+SRA es el software específico de proveedor de almacenamiento que se instala en el dispositivo Live Site Recovery de VMware. El adaptador habilita la comunicación entre el Site Recovery Manager y una controladora de almacenamiento en el nivel de Storage Virtual Machine (SVM) y la configuración a nivel del clúster.
 
 
 
 === Máquina virtual de almacenamiento (SVM)
 
-Al igual que una máquina virtual que se ejecuta en un hipervisor, la SVM es una entidad lógica que abstrae los recursos físicos. SVM contiene volúmenes de datos y una o varias LIF a través de los cuales proporcionan datos a los clientes.
+SVM es la unidad de multi-tenancy en ONTAP. Al igual que una máquina virtual que se ejecuta en un hipervisor, la SVM es una entidad lógica que abstrae los recursos físicos. SVM contiene volúmenes de datos y una o varias LIF a través de los cuales proporcionan datos a los clientes.
 
 
 
 === Configuración uniforme y no uniforme
 
-* * El acceso uniforme a host* significa que los hosts de ambos sitios están conectados a todas las rutas a los clústeres de almacenamiento en ambos sitios. Los caminos de cruce se extienden a lo largo de la distancia.
+* * El acceso uniforme a host* significa que los hosts de dos sitios están conectados a todas las rutas a los clústeres de almacenamiento en ambos sitios. Las rutas entre sitios se extienden a distancias.
 * * El acceso no uniforme del host* significa que los hosts en cada sitio están conectados solo al clúster en el mismo sitio. Las rutas entre sitios y las rutas extendidas no están conectadas.
 +
 
-NOTE: Se admite el acceso uniforme de hosts en cualquier implementación de sincronización activa de SnapMirror; el acceso no uniforme de host solo se admite para implementaciones activo-activo simétricas.
+NOTE: Se admite el acceso uniforme de hosts en cualquier implementación de sincronización activa de SnapMirror; el acceso no uniforme de host solo se admite para implementaciones activo-activo simétricas. Más información sobre https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html["Información general sobre la sincronización activa de SnapMirror en ONTAP"].
 
 
 
@@ -113,7 +119,7 @@ NOTE: Se admite el acceso uniforme de hosts en cualquier implementación de sinc
 
 === Sistema de archivos de máquina virtual (VMFS)
 
-VMFS es un sistema de archivos en clúster diseñado específicamente para almacenar archivos de máquinas virtuales en entornos de VMware vSphere.
+VMFS es un sistema de archivos en clúster diseñado para almacenar archivos de equipos virtuales en entornos de VMware vSphere.
 
 
 
@@ -131,13 +137,13 @@ Las políticas de almacenamiento de máquinas virtuales se crean en vCenter Serv
 
 === Recuperación de sitio en vivo de VMware
 
-Live Site Recovery de VMware proporciona continuidad de negocio, recuperación de desastres, migración de sitios y funcionalidades de pruebas sin interrupciones para entornos virtuales VMware.
+Live Site Recovery de VMware, anteriormente conocido como Site Recovery Manager (SRM), proporciona continuidad de negocio, recuperación ante desastres, migración de sitios y capacidades de pruebas sin interrupciones para entornos virtuales de VMware.
 
 
 
 === API de VMware vSphere para detección de almacenamiento (VASA)
 
-VASA es un conjunto de API que integran cabinas de almacenamiento con vCenter Server para su gestión y administración. La arquitectura se basa en varios componentes, incluido el proveedor VASA, que gestiona la comunicación entre VMware vSphere y los sistemas de almacenamiento.
+VASA es un conjunto de API que integran cabinas de almacenamiento con vCenter Server para su gestión y administración. La arquitectura se basa en varios componentes, incluido el proveedor VASA, que controla la comunicación entre VMware vSphere y los sistemas de almacenamiento.
 
 
 
@@ -149,16 +155,16 @@ VAAI es un conjunto de API que permite la comunicación entre hosts ESXi de VMwa
 
 === Clúster de almacenamiento Metro de vSphere
 
-VSphere Metro Storage Cluster (VMSC) es una tecnología que habilita y admite vSphere en una puesta en marcha de clúster ampliada. Las soluciones VMSC son compatibles con NetApp MetroCluster y SnapMirror Active Sync (anteriormente SMBC). Estas soluciones proporcionan una mayor continuidad del negocio en caso de fallo de dominio. El modelo de flexibilidad se basa en sus opciones de configuración específicas. Más información sobre https://core.vmware.com/resource/vmware-vsphere-metro-storage-cluster-vmsc["VMware vSphere Metro Storage Cluster"].
+VSphere Metro Storage Cluster (VMSC) es una arquitectura que habilita y admite vSphere en una puesta en marcha de clúster ampliada. Las soluciones VMSC son compatibles con NetApp MetroCluster y SnapMirror Active Sync (anteriormente SMBC). Estas soluciones proporcionan una mayor continuidad del negocio en caso de fallo de dominio. El modelo de flexibilidad se basa en sus opciones de configuración específicas. Más información sobre https://core.vmware.com/resource/vmware-vsphere-metro-storage-cluster-vmsc["VMware vSphere Metro Storage Cluster"].
 
 
 
 === Almacén de datos vVols
 
-El almacén de datos de vVols es una representación lógica de un contenedor de vVols que crea y mantiene un proveedor de VASA.
+El almacén de datos de vVols es una representación lógica del almacén de datos de un contenedor de vVols que ha creado y mantenido un proveedor de VASA.
 
 
 
 === RPO cero
 
-RPO es la sigla en inglés para el objetivo de punto de recuperación, que es la cantidad de pérdida de datos que se considera aceptable durante un tiempo dado. El RPO de cero significa que no es aceptable ninguna pérdida de datos.
+RPO es la sigla en inglés para el objetivo de punto de recuperación, la cantidad de pérdida de datos que se considera aceptable durante un tiempo dado. El RPO de cero significa que no es aceptable ninguna pérdida de datos.

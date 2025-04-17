@@ -22,7 +22,7 @@ La API de REST incluye varias categorías de recursos, como vCenter y agregados.
 
 == Cómo acceder a la API de REST
 
-Puede acceder a las herramientas de ONTAP para la API de REST DE VMware vSphere 10 a través de la dirección IP del balanceador de carga de las herramientas de ONTAP junto con el puerto. Hay varias partes en la URL completa, incluyendo:
+Puede acceder a las herramientas de ONTAP para la API de REST DE VMware vSphere 10 a través de la dirección IP de las herramientas de ONTAP junto con el puerto. Hay varias partes en la URL completa, incluyendo:
 
 * Dirección IP y puerto de ONTAP Tools
 * Versión de API

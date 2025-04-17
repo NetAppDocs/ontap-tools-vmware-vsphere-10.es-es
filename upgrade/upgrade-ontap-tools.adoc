@@ -4,53 +4,30 @@ sidebar: sidebar
 keywords: upgrade 
 summary: La actualización es compatible con puestas en marcha tanto de alta disponibilidad como con otras de alta disponibilidad. 
 ---
-= Actualice desde ONTAP tools para VMware vSphere 10.x a 10,3
+= Actualice desde ONTAP tools para VMware vSphere 10.x a 10,4
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-La actualización es compatible con puestas en marcha tanto de alta disponibilidad como en otras de alta disponibilidad. Las rutas de actualización admitidas son:
+Puede actualizar desde las herramientas de ONTAP para VMware vSphere 10,2 o de 10,3 a 10,4. Sin embargo, no se admite la actualización directa desde las herramientas de ONTAP 10,0 o 10,1 a 10,4.
 
-|===
+NOTA:
 
-
-| Desde las herramientas de ONTAP para VMware vSphere 10,1 y 10,2 | A la configuración de las herramientas ONTAP para VMware vSphere 10,3 
-
-
-| No alta disponibilidad pequeña | No de alta disponibilidad y pequeño avanzado 
+* En los sistemas ASA R2, debe actualizar a las herramientas de ONTAP para VMware vSphere 10,4 con ONTAP 9.16.1 antes de añadir más zonas de disponibilidad de almacenamiento (SAZ).
+* Si se produce un error en la actualización desde las herramientas de ONTAP para VMware vSphere 10,2 o 10,3 a la versión 10,4, no se admite la reversión. Para recuperar la configuración, utilice las herramientas RPO de ONTAP para VMware vSphere 10,2 y RPO casi nulo o recuperación de snapshots para herramientas de ONTAP para VMware vSphere 10,3.
 
 
-| Medio sin alta disponibilidad | No HA y medio avanzado 
-
-
-| Avanzado pequeño | No de alta disponibilidad y pequeño avanzado 
-
-
-| Medio avanzado | No HA y medio avanzado 
-
-
-| HA pequeña | HA pequeña 
-
-
-| MEDIO HA | MEDIO HA 
-
-
-| ALTA disponibilidad | ALTA disponibilidad 
-|===
-
-NOTE: Se admiten las actualizaciones desde las herramientas de ONTAP para VMware vSphere 10,1 y 10,2 a 10,3. No se admiten las actualizaciones directas desde las herramientas de ONTAP 10,0 a 10,3.
-
-*Antes de empezar*
-
+.Antes de empezar
 Para realizar una actualización sin alta disponibilidad, apague la máquina virtual de ONTAP Tools y, para obtener una actualización de alta disponibilidad, apague el primer nodo antes de realizar los siguientes cambios en la configuración de la máquina virtual.
 
-* Añada un disco duro adicional de 100 GB a cada nodo, ya que los datos de servicio se almacenan de forma local en la máquina virtual.
-* Cambie la CPU y la memoria de la máquina virtual apagada de acuerdo con el sabor de la puesta en marcha. Active el plugin activo para CPU y RAM.
+Si está actualizando desde las herramientas de ONTAP para VMware vSphere 10,2 o 10,3, debe realizar los siguientes pasos antes de continuar con la tarea de actualización: * Añada un disco duro adicional de 100 GB a cada nodo, ya que los datos de servicio se almacenan localmente en la máquina virtual. * Cambie la CPU y la memoria para la VM apagada de acuerdo con el sabor de su implementación. Active el plugin activo para CPU y RAM.
+
 +
+
 |===
-| 10,3 Tipo de puesta en marcha | CPU (Core) por nodo | Memoria (GB) por nodo | Espacio en disco (GB) por nodo | Total de CPU (núcleo) | Memoria (GB) | Espacio Total en Disco (GB) 
+| Tipo de puesta en marcha | CPU (Core) por nodo | Memoria (GB) por nodo | Espacio en disco (GB) por nodo | Total de CPU (núcleo) | Memoria (GB) | Espacio Total en Disco (GB) 
 
 
 | No alta disponibilidad pequeña | 9 | 18 | 350 | 9 | 18 | 350 
@@ -69,12 +46,10 @@ Para realizar una actualización sin alta disponibilidad, apague la máquina vir
 |===
 * Encienda la máquina virtual una vez realizados los cambios y espere a que los servicios lleguen a un estado en ejecución.
 * En caso de implementación de HA, realice los cambios de recursos, habilite el plugin hot para CPU y RAM, y agregue discos duros de 100 GB para el segundo y el tercer nodo también. No es necesario reiniciar estos nodos.
-* Si el dispositivo se puso en marcha como ruta local (puesta en marcha sencilla) con herramientas de ONTAP 10,1 o 10,2, debe realizar una copia Snapshot en modo inactivo antes de la actualización.
+* Si el dispositivo se puso en marcha como ruta local (puesta en marcha sencilla) con herramientas de ONTAP 10,2, deberá realizar una instantánea en modo inactivo antes de la actualización.
 
 
-Si va a actualizar desde las herramientas de ONTAP para VMware vSphere 10,0 a 10,1, debe completar los siguientes pasos antes de continuar con la tarea de actualización:
-
-*Habilitar diagnósticos*
+Si está actualizando desde las herramientas de ONTAP para VMware vSphere 10,0 a 10,1, debe completar los siguientes pasos antes de continuar con la tarea de actualización: *Habilitar diagnóstico*
 
 . Desde vCenter Server, abra una consola a las herramientas de ONTAP.
 . Inicie sesión como el usuario de mantenimiento.
@@ -143,7 +118,7 @@ Se creará un nuevo disco duro. el aprovisionador de almacenamiento dinámico ut
 
 
 
-Después de actualizar a las herramientas de ONTAP para VMware vSphere 10,3, podrá:
+Después de actualizar a las herramientas de ONTAP para VMware vSphere 10,4, podrá:
 
 * Desactive los servicios desde la interfaz de usuario del administrador
 * Pase de una configuración no de alta disponibilidad a una configuración de alta disponibilidad
@@ -151,9 +126,8 @@ Después de actualizar a las herramientas de ONTAP para VMware vSphere 10,3, pod
 * En caso de actualización sin alta disponibilidad, reinicie el equipo virtual de ONTAP Tools para reflejar los cambios. En caso de actualización de alta disponibilidad, reinicie el primer nodo para reflejar los cambios en el nodo.
 
 
-*Después de terminar*
-
-Después de actualizar desde versiones anteriores de herramientas de ONTAP para VMware vSphere a la versión 10,3, vuelva a analizar los adaptadores del SRA para verificar que los detalles estén actualizados en la página Adaptadores de replicación del almacenamiento de recuperación del sitio activo de VMware.
+.El futuro
+Después de actualizar desde versiones anteriores de herramientas de ONTAP para VMware vSphere a la versión 10,4, vuelva a analizar los adaptadores del SRA para verificar que los detalles estén actualizados en la página Adaptadores de replicación del almacenamiento de recuperación del sitio activo de VMware.
 
 Después de la actualización correcta, elimine los volúmenes de Trident de ONTAP manualmente mediante el siguiente procedimiento:
 
@@ -175,6 +149,5 @@ sudo python3 /home/maint/scripts/ontap_cleanup.py
 
 Esto elimina todos los volúmenes de Trident en ONTAP utilizados en las herramientas de ONTAP para VMware vSphere 10,1/10,2.
 
-*Información relacionada*
-
-link:../migrate/migrate-to-latest-ontaptools.html["Migre desde ONTAP Tools para VMware vSphere 9.x a 10,3"]
+.Información relacionada
+link:../migrate/migrate-to-latest-ontaptools.html["Migre desde ONTAP Tools para VMware vSphere 9.x a 10,4"]

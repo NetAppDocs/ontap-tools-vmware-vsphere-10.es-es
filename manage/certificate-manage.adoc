@@ -16,11 +16,11 @@ Se genera un certificado autofirmado para las herramientas ONTAP y el proveedor 
 .Antes de empezar
 * El nombre de dominio en el que se emite el certificado debe asignarse a la dirección IP virtual.
 * Ejecute la comprobación nslookup en el nombre de dominio para comprobar si el dominio se está resolviendo a la dirección IP deseada.
-* Los certificados deben crearse con el nombre de dominio y la dirección IP del equilibrador de carga.
+* Los certificados deben crearse con el nombre de dominio y la dirección IP de las herramientas de ONTAP.
 
 
 
-NOTE: Una dirección IP del equilibrador de carga debe asignarse a un nombre de dominio completo (FQDN). Los certificados deben contener el mismo FQDN asignado a la dirección IP del equilibrador de carga en nombres alternativos de asunto o asunto.
+NOTE: Una dirección IP de ONTAP Tools debe asignarse a un nombre de dominio completamente cualificado (FQDN). Los certificados deben contener el mismo FQDN asignado a la dirección IP de las herramientas de ONTAP en nombres alternativos de asunto o asunto.
 
 
 NOTE: No se puede pasar de un certificado firmado por CA a un certificado autofirmado.
