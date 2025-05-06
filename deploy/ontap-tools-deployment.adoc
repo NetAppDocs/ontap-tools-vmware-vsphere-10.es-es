@@ -80,7 +80,7 @@ NOTE: Nunca almacene las herramientas de ONTAP para máquinas virtuales de VMwar
 
 NOTE: No se admite Pure IPv6. El modo mixto es compatible con VLAN que contiene direcciones IPv6 e IPv4.
 
-** La dirección IP de ONTAP Tools es la interfaz principal para la comunicación con las herramientas de ONTAP
+** La dirección IP de ONTAP Tools es la interfaz principal para la comunicación con las herramientas de ONTAP.
 ** IPv4 es el componente de dirección IP de la configuración del nodo, que se puede utilizar para habilitar el shell de diagnóstico y el acceso SSH en el nodo con fines de depuración y mantenimiento.
 
 

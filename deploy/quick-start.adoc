@@ -13,7 +13,7 @@ summary: La introducción a las herramientas de ONTAP para VMware vSphere incluy
 [role="lead"]
 La introducción a las herramientas de ONTAP para VMware vSphere incluye unos pocos pasos. Este inicio rápido lo llevará a través de la configuración inicial de las herramientas de ONTAP para VMware vSphere.
 
-Inicialmente, implementarás herramientas de ONTAP para VMware vSphere como una configuración de nodo individual de tamaño pequeño que proporciona servicios principales para admitir almacenes de datos NFS y VMFS. Si necesita ampliar su configuración para usar vVols datastore y high availability (HA), lo hará después de terminar este flujo de trabajo. Para obtener más información, consulte la link:../deploy/ha-workflow.html["Flujo de trabajo de implementación DE ALTA disponibilidad"].
+Inicialmente, implementarás herramientas de ONTAP para VMware vSphere como una configuración de nodo individual de tamaño pequeño que proporciona servicios principales para admitir almacenes de datos NFS y VMFS. Si necesita ampliar su configuración para usar almacenes de datos vVols y alta disponibilidad (HA), lo hará después de finalizar este flujo de trabajo. Para obtener más información, consulte la link:../deploy/ha-workflow.html["Flujo de trabajo de implementación DE ALTA disponibilidad"].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Una"] Planifique su implementación
 [role="quick-margin-para"]
