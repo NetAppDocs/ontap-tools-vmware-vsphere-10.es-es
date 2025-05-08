@@ -25,28 +25,22 @@ Puede usar herramientas de ONTAP para VMware vSphere con VMware vCenter Server V
 ** 348 GB para instalaciones con aprovisionamiento pesado
 
 
-* * Requisitos de tamaño del sistema host * La memoria recomendada según el tamaño de la implementación es como se muestra en la tabla a continuación:
+* * Requisitos de tamaño del sistema host * La memoria recomendada según el tamaño de la implementación es como se muestra en la tabla a continuación. Para implementar alta disponibilidad (HA), necesitará tres veces el tamaño del dispositivo especificado en la tabla.
 
 
 |===
 
 
-| *Tipo de despliegue* | *CPU* | *Memoria (GB)* | *Espacio en disco (GB) Thick Provisioned* 
+| *Tipo de despliegue* | *CPU por nodo* | *Memoria (GB) por nodo* | *Espacio en disco (GB) de espesor aprovisionado por nodo* 
 
 
-| No alta disponibilidad pequeña | 9 | 18 | 350 
+| Pequeño | 9 | 18 | 350 
 
 
-| Medio sin alta disponibilidad | 13 | 26 | 350 
+| Mediano | 13 | 26 | 350 
 
 
-| ALTA DISPONIBILIDAD pequeño (acumulación de tres nodos) | 27 | 54 | 1050 
-
-
-| MEDIO DE ALTA DISPONIBILIDAD (acumulativo de tres nodos) | 39 | 78 | 1050 
-
-
-| ALTA DISPONIBILIDAD grande (acumulación de tres nodos) | 51 | 102 | 1050 
+| NOTA grande: La puesta en marcha de gran envergadura solo es para configuración de alta disponibilidad. | 17 | 34 | 350 
 |===
 
 NOTE: Cuando se habilita el backup, cada clúster de herramientas de ONTAP necesita otros 50GB TB de espacio en el almacén de datos donde se implementan las máquinas virtuales. Por tanto, la no alta disponibilidad requiere 400 GB y alta disponibilidad requiere 1100 GB de espacio en total.
