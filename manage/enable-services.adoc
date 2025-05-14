@@ -19,7 +19,7 @@ Puede cambiar la contraseña de administrador usando el Administrador de herrami
 . Seleccione la opción *Editar configuración del aparato* en la sección de descripción general.
 . En la sección *Servicios*, puede habilitar servicios opcionales como VASA Provider, importación de la configuración vVols y recuperación ante desastres (SRA) según sus necesidades.
 +
-Cuando se habilitan los servicios por primera vez, debe crear las credenciales del proveedor VASA y del SRA. Estos se usan para registrar o habilitar el proveedor VASA y los servicios de SRA en vCenter Server.
+Cuando se habilitan los servicios por primera vez, debe crear las credenciales del proveedor VASA y del SRA. Estos se usan para registrar o habilitar el proveedor VASA y los servicios de SRA en vCenter Server. El nombre de usuario sólo puede contener letras, números y guiones bajos. La longitud de la contraseña debe tener entre 8 y 256 caracteres.
 
 +
 

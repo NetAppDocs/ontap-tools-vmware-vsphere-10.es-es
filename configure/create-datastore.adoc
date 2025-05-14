@@ -35,7 +35,7 @@ A partir de las herramientas de ONTAP para VMware vSphere 10,3, puede crear un a
 NOTE: El sistema R2 de ASA es compatible con los protocolos iSCSI y FC para vVols.
 
 . Seleccione la máquina virtual de almacenamiento donde desea crear el almacén de datos.
-. Seleccione una política de exportación personalizada para el protocolo NFS o un nombre de iGroup personalizado para los protocolos iSCSI y FC en las opciones *Advanced*.
+. En Opciones avanzadas, puede seleccionar *Política de exportación personalizada* para el protocolo NFS o un nombre de iGroup personalizado para los protocolos iSCSI y FC, pero no se recomienda. Si utiliza esta opción, asegúrese de ejecutar la detección en vCenter para todos los objetos.
 +
 
 NOTE: En la SVM de tipo de sistema de almacenamiento ASA R2, las unidades de almacenamiento (LUN/espacio de nombres) no se crean, ya que el almacén de datos solo es un contenedor lógico.
@@ -62,7 +62,7 @@ Un almacén de datos de sistema de archivos de red (NFS) de VMware utiliza el pr
 NOTE: La autenticación Kerberos solo está disponible cuando se selecciona el protocolo NFS 4,1.
 
 . Seleccione *Plataforma* y *Storage VM* en el panel *Almacenamiento*.
-. Elija *Política de exportación personalizada* en Opciones avanzadas si es necesario, pero no se recomienda. Si se utiliza, se debe ejecutar la detección en vCenter para todos los objetos.
+. Se puede seleccionar una política de exportación personalizada en opciones avanzadas, pero no se recomienda. Si se utiliza, se debe ejecutar la detección en vCenter para todos los objetos.
 +
 
 NOTE: No se puede crear un almacén de datos de NFS usando la política de volumen raíz/predeterminada de la SVM.
