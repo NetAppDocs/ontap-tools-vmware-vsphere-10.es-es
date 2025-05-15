@@ -17,7 +17,6 @@ El complemento NFS vStorage API for Array Integration (NFS VAAI) es un component
 * Descargue https://mysupport.netapp.com/site/products/all/details/nfsplugin-vmware-vaai/downloads-tab["Plugin NFS de NetApp para VAAI de VMware"] el paquete de instalación.
 * Asegúrese de que tiene el host ESXi y la revisión más reciente de vSphere 7.0U3 o versiones posteriores, y de ONTAP 9.14.1 o versiones posteriores.
 * Montar un almacén de datos NFS.
-* VSphere 8.x es compatible con el plugin VAAI NFS de NetApp 2,0.1(compilación 16).
 
 
 .Pasos
