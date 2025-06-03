@@ -64,9 +64,9 @@ Añada los back-ends de almacenamiento local con credenciales del clúster o de 
 * link:../configure/associate-storage-backend.html["Asocie el back-end de almacenamiento a una instancia de vCenter Server"]
 
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Seis"] Actualice los certificados si trabaja con varias instancias de vCenter Server
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Seis"] Actualice los certificados si está trabajando con varias instancias de vCenter Server
 [role="quick-margin-para"]
-Al trabajar con varias instancias de vCenter Server, actualice el certificado autofirmado a un certificado firmado de una entidad de certificación (CA).
+Al trabajar con varias instancias de vCenter Server, actualice el certificado autofirmado a un certificado firmado por una autoridad de certificación (CA).
 
 [role="quick-margin-list"]
 * link:../manage/certificate-manage.html["Gestionar certificados"]
@@ -82,7 +82,7 @@ Habilite la funcionalidad de SRA para configurar la recuperación ante desastres
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-8.png["ocho"] (Opcional) Habilitar la protección de sincronización activa de SnapMirror
 [role="quick-margin-para"]
-Configure herramientas de ONTAP para VMware vSphere para gestionar la protección del clúster de host para la sincronización activa de SnapMirror. Empareje los clústeres de origen y destino y la SVM para la sincronización activa de SnapMirror. Esto se aplica solo a los almacenes de datos VMFS.
+Configure herramientas de ONTAP para VMware vSphere para gestionar la protección del clúster de host para la sincronización activa de SnapMirror. Realice el peering de clúster ONTAP y SVM en sistemas ONTAP para usar la sincronización activa de SnapMirror. Esto se aplica solo a los almacenes de datos VMFS.
 
 [role="quick-margin-list"]
 * link:../configure/protect-cluster.html["Proteja mediante la protección del clúster de hosts"]

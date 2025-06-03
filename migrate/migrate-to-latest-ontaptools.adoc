@@ -156,7 +156,7 @@ No elimine el proveedor de VASA.
 +
 Una vez que se detuvo el antiguo VASA Provider, vCenter Server conmuta al nodo de respaldo a las herramientas de ONTAP para VMware vSphere. Todos los almacenes de datos y máquinas virtuales son accesibles y se proporcionan desde las herramientas de ONTAP para VMware vSphere.
 
-. Los almacenes de datos de NFS y VMFS migrados desde las herramientas de ONTAP para VMware vSphere 9.xx solo se pueden ver en las herramientas de ONTAP para VMware vSphere 10,4 una vez activado el trabajo de detección del almacén de datos, que puede tardar hasta 30 minutos en completarse. Compruebe si los almacenes de datos están visibles en la página Overview de las herramientas de ONTAP para la página de la interfaz de usuario del complemento de VMware vSphere.
+. Los almacenes de datos de NFS y VMFS migrados desde las herramientas de ONTAP para VMware vSphere 9.xx solo se pueden ver en las herramientas de ONTAP para VMware vSphere 10,4 una vez activado el trabajo de detección del almacén de datos, que puede tardar hasta 30 minutos en completarse. Verifique que los almacenes de datos estén visibles en la página de descripción general de la página de interfaz de usuario de las herramientas de ONTAP para el complemento VMware vSphere.
 . Realice la migración de parches mediante la siguiente API en Swagger o en Postman:
 +
 []

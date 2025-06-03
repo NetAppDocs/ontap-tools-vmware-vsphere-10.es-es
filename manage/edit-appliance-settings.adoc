@@ -19,6 +19,8 @@ NOTE: Para migrar a HA cuando se habilita un backup no de HA, deshabilite primer
 .Antes de empezar
 * Asegúrese de que la plantilla OVA tiene la misma versión de OVA que el nodo 1. El nodo 1 es el nodo predeterminado donde se pone en marcha inicialmente las herramientas de ONTAP para VMware vSphere OVA.
 * Asegúrese de que la conexión en caliente de la CPU y la conexión en caliente de la memoria están activadas.
+* En vCenter Server, configure el nivel de automatización del Servicio de Recuperación ante Desastres (DRS) como parcialmente automatizado. Tras implementar la alta disponibilidad, revíselo a completamente automatizado.
+* Los nombres de host de los nodos en la configuración de HA deben estar en minúsculas.
 
 
 .Pasos
