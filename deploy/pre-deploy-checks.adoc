@@ -2,7 +2,7 @@
 permalink: deploy/pre-deploy-checks.html 
 sidebar: sidebar 
 keywords: ONTAP tools,Storage Replication Adapter 
-summary: Antes de implementar herramientas ONTAP para VMware vSphere, debería estar familiarizado con los requisitos de espacio para el paquete de puesta en marcha y algunos requisitos básicos del sistema host. 
+summary: Antes de implementar las herramientas de ONTAP para VMware vSphere, debería estar familiarizado con los requisitos de espacio para el paquete de implementación y algunos requisitos básicos del sistema host. 
 ---
 = Antes de empezar…​
 :allow-uri-read: 

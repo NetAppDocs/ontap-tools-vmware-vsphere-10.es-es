@@ -26,7 +26,7 @@ Si no tiene una biblioteca de contenido, siga estos pasos para crear una:
 
 *Crear biblioteca de contenido* En el plan de usar solo una implementación de un solo nodo pequeño, no es necesario crear una biblioteca de contenido.
 
-. Descargue el `.zip` archivo que contiene archivos binarios (_.ova_) y certificados firmados para herramientas de ONTAP para VMware vSphere desde el https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Sitio de soporte de NetApp"^].
+. Descargar el  `.zip` archivo que contiene los binarios (_.ova_) y los certificados firmados para las herramientas ONTAP para VMware vSphere desde el  https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Sitio de soporte de NetApp"^] .
 . Inicie sesión en el cliente de vSphere
 . Seleccione el menú del cliente vSphere y seleccione *Bibliotecas de contenido*.
 . Selecciona *Crear* a la derecha de la página.
@@ -41,10 +41,10 @@ NOTE: Para obtener más información, consulte https://blogs.vmware.com/vsphere/
 
 NOTE: Antes de continuar con el despliegue, defina el planificador de recursos distribuidos (DRS) del cluster en el inventario en 'Conservador'. De este modo se garantiza que los equipos virtuales no se migren durante la instalación.
 
-Las herramientas de ONTAP para VMware vSphere se ponen en marcha inicialmente como configuración sin alta disponibilidad. Para escalar a la implementación de alta disponibilidad, necesitará habilitar el conector en caliente de la CPU y el plugin de memoria en caliente. Puede realizar este paso como parte del proceso de puesta en marcha o editar la configuración de la máquina virtual después de la puesta en marcha.
+Las herramientas ONTAP para VMware vSphere se implementan inicialmente como una configuración sin alta disponibilidad. Para escalar a la implementación de alta disponibilidad, necesitará habilitar el conector en caliente de la CPU y el plugin de memoria en caliente. Puede realizar este paso como parte del proceso de puesta en marcha o editar la configuración de la máquina virtual después de la puesta en marcha.
 
 .Pasos
-. Descargue el `.zip` archivo que contiene archivos binarios (_.ova_) y certificados firmados para herramientas de ONTAP para VMware vSphere desde el https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Sitio de soporte de NetApp"^]. Si ha importado el OVA a la biblioteca de contenido, puede omitir este paso y continuar con el siguiente paso.
+. Descargar el  `.zip` archivo que contiene los binarios (_.ova_) y los certificados firmados para las herramientas ONTAP para VMware vSphere desde el  https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Sitio de soporte de NetApp"^] . Si ha importado el OVA a la biblioteca de contenido, puede omitir este paso y continuar con el siguiente paso.
 . Inicie sesión en vSphere Server.
 . Desplácese hasta el pool de recursos, el clúster o el host donde planea implementar el OVA.
 +
