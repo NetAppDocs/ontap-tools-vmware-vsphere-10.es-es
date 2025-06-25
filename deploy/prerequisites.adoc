@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter 
 summary: Antes de implementar las herramientas de ONTAP para VMware vSphere, debería estar familiarizado con los requisitos de espacio para el paquete de implementación y algunos requisitos básicos del sistema host. 
 ---
-= Requisitos previos para la implementación de las herramientas de ONTAP para VMware vSphere
+= Requisitos y límites de configuración de las herramientas ONTAP para VMware vSphere
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -79,74 +79,6 @@ NOTE: A partir de las herramientas de ONTAP para VMware vSphere 10,4, el hardwar
 La herramienta de matriz de interoperabilidad (IMT) contiene la información más reciente sobre las versiones compatibles de ONTAP, vCenter Server, hosts ESXi y aplicaciones de plugins.
 
 https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT["Herramienta de matriz de interoperabilidad"^]
-
-
-
-== Límites de configuración para poner en marcha herramientas de ONTAP para VMware vSphere
-
-Puede utilizar la siguiente tabla como guía para configurar herramientas de ONTAP para VMware vSphere.
-
-|===
-
-
-| *Despliegue* | *Tipo* | *Número de vVols* | *Número de hosts* 
-
-
-| No alta disponibilidad | Pequeño (S) | ~12K | 32 
-
-
-| No alta disponibilidad | Medio (M) | ~24K | 64 
-
-
-| Alta disponibilidad | Pequeño (S) | ~24K | 64 
-
-
-| Alta disponibilidad | Medio (M) | ~50k | 128 
-
-
-| Alta disponibilidad | Grande (L) | ~100k | 256 [NOTA] El número de hosts de la tabla muestra el número total de hosts de varios vCenter. 
-|===
-
-
-== Herramientas de ONTAP para VMware vSphere: Storage Replication Adapter (SRA)
-
-La siguiente tabla muestra los números admitidos por instancia de VMware Live Site Recovery con las herramientas de ONTAP para VMware vSphere.
-
-|===
-| *Tamaño de implementación de vCenter* | *Pequeño* | *Media* 
-
-
-| Cantidad total de máquinas virtuales configuradas para la protección mediante la replicación basada en cabinas | 2000 | 5000 
-
-
-| Número total de grupos de protección de replicación basados en cabinas | 250 | 250 
-
-
-| Número total de grupos de protección por plan de recuperación | 50 | 50 
-
-
-| Número de almacenes de datos replicados | 255 | 255 
-
-
-| Número de máquinas virtuales | 4000 | 7000 
-|===
-La siguiente tabla muestra el número de Live Site Recovery de VMware y el tamaño de la puesta en marcha de VMware vSphere con las herramientas de ONTAP correspondientes.
-
-|===
-
-
-| *Número de instancias de VMware Live Site Recovery* | *ONTAP herramientas de implementación Tamaño* 
-
-
-| Hasta 4 | Pequeño 
-
-
-| 4 a 8 | Mediano 
-
-
-| Más de 8 | Grande 
-|===
-Para obtener más información, consulte https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/overview/site-recovery-manager-system-requirements/operational-limits-of-site-recovery-manager.html["Límites operativos de Live Site Recovery de VMware"].
 
 
 
@@ -233,10 +165,68 @@ En la siguiente tabla se describen los puertos de red que NetApp utiliza y sus p
 |===
 
 
-== Configuración de almacenamiento de ONTAP
+== Límites de configuración para poner en marcha herramientas de ONTAP para VMware vSphere
 
-Para garantizar una integración perfecta del almacenamiento de ONTAP con las herramientas de ONTAP para VMware vSphere, tenga en cuenta los siguientes ajustes:
+Puede utilizar la siguiente tabla como guía para configurar herramientas de ONTAP para VMware vSphere.
 
-* Si utiliza Fibre Channel (FC) para la conectividad de almacenamiento, configure la división en zonas en los switches FC para conectar los hosts ESXi con los LIF FC de la SVM. https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["Obtenga información sobre la división en zonas de FC y FCoE con los sistemas ONTAP"]
-* Para utilizar la replicación de SnapMirror gestionada por herramientas de ONTAP, el administrador de almacenamiento de ONTAP debe crear https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["Relaciones de paridad entre clústeres de ONTAP"] y https://docs.netapp.com/us-en/ontap/peering/create-intercluster-svm-peer-relationship-93-later-task.html["Relaciones entre iguales de SVM de interconexión de clústeres de ONTAP"] en ONTAP antes de utilizar SnapMirror.
+|===
 
+
+| *Despliegue* | *Tipo* | *Número de vVols* | *Número de hosts* 
+
+
+| No alta disponibilidad | Pequeño (S) | ~12K | 32 
+
+
+| No alta disponibilidad | Medio (M) | ~24K | 64 
+
+
+| Alta disponibilidad | Pequeño (S) | ~24K | 64 
+
+
+| Alta disponibilidad | Medio (M) | ~50k | 128 
+
+
+| Alta disponibilidad | Grande (L) | ~100k | 256 [NOTA] El número de hosts de la tabla muestra el número total de hosts de varios vCenter. 
+|===
+
+
+== Herramientas de ONTAP para VMware vSphere: Storage Replication Adapter (SRA)
+
+La siguiente tabla muestra los números admitidos por instancia de VMware Live Site Recovery con las herramientas de ONTAP para VMware vSphere.
+
+|===
+| *Tamaño de implementación de vCenter* | *Pequeño* | *Media* 
+
+
+| Cantidad total de máquinas virtuales configuradas para la protección mediante la replicación basada en cabinas | 2000 | 5000 
+
+
+| Número total de grupos de protección de replicación basados en cabinas | 250 | 250 
+
+
+| Número total de grupos de protección por plan de recuperación | 50 | 50 
+
+
+| Número de almacenes de datos replicados | 255 | 255 
+
+
+| Número de máquinas virtuales | 4000 | 7000 
+|===
+La siguiente tabla muestra el número de Live Site Recovery de VMware y el tamaño de la puesta en marcha de VMware vSphere con las herramientas de ONTAP correspondientes.
+
+|===
+
+
+| *Número de instancias de VMware Live Site Recovery* | *ONTAP herramientas de implementación Tamaño* 
+
+
+| Hasta 4 | Pequeño 
+
+
+| 4 a 8 | Mediano 
+
+
+| Más de 8 | Grande 
+|===
+Para obtener más información, consulte https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/overview/site-recovery-manager-system-requirements/operational-limits-of-site-recovery-manager.html["Límites operativos de Live Site Recovery de VMware"].

@@ -71,7 +71,7 @@ OVA es un estándar abierto para empaquetar y distribuir dispositivos virtuales 
 
 === Objetivo de punto de recuperación (RPO)
 
-El objetivo de punto de recuperación mide la frecuencia con la que se realizan backups o réplicas de los datos. Representa el punto en el tiempo en el que se deben recuperar los datos tras una interrupción del servicio para reanudar las operaciones empresariales. Por ejemplo, si una organización tiene un objetivo de punto de recuperación de 4 horas, puede tolerar que se pierda hasta 4 horas de datos en caso de desastre.
+El RPO mide la frecuencia con la que se realizan copias de seguridad o replican los datos. Especifica el momento exacto en el que se deben restaurar los datos tras una interrupción para reanudar las operaciones comerciales. Por ejemplo, si una organización tiene un objetivo de punto de recuperación de 4 horas, puede tolerar que se pierda hasta 4 horas de datos en caso de desastre.
 
 
 

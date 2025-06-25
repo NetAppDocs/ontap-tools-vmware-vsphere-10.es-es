@@ -54,7 +54,7 @@ Asegúrese de cumplir los siguientes requisitos antes de continuar con la implem
 
 === Para la puesta en marcha de un nodo único
 
-Utilice la siguiente hoja de datos para recopilar la información requerida para las herramientas de ONTAP para la puesta en marcha inicial de VMware vSphere: Para las herramientas de ONTAP para la implementación inicial de VMware vSphere:
+Utilice la siguiente hoja de trabajo para recopilar la información necesaria para las herramientas ONTAP para la implementación inicial de VMware vSphere:
 
 |===
 | Requisito | Su valor 
@@ -133,4 +133,14 @@ Además de los requisitos de puesta en marcha de nodo único, necesitará la sig
 
 == Configuración del firewall de red
 
-Abra los puertos necesarios para las direcciones IP en el firewall de red. Las herramientas de ONTAP deben ser capaces de llegar a este LIF a través del puerto 443. Consulte link:../deploy/prerequisites.html["Requisitos de puertos"]para obtener información sobre las últimas actualizaciones.
+Abra los puertos necesarios para las direcciones IP en el firewall de red. Las herramientas ONTAP deben poder acceder a este LIF a través del puerto 443. Consulte link:../deploy/prerequisites.html["Requisitos de puertos"]para obtener información sobre las últimas actualizaciones.
+
+
+
+== Configuración de almacenamiento de ONTAP
+
+Para garantizar una integración perfecta del almacenamiento de ONTAP con las herramientas de ONTAP para VMware vSphere, tenga en cuenta los siguientes ajustes:
+
+* Si utiliza Fibre Channel (FC) para la conectividad de almacenamiento, configure la división en zonas en los switches FC para conectar los hosts ESXi con los LIF FC de la SVM. https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["Obtenga información sobre la división en zonas de FC y FCoE con los sistemas ONTAP"]
+* Para utilizar la replicación de SnapMirror gestionada por herramientas de ONTAP, el administrador de almacenamiento de ONTAP debe crear https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["Relaciones de paridad entre clústeres de ONTAP"] y https://docs.netapp.com/us-en/ontap/peering/create-intercluster-svm-peer-relationship-93-later-task.html["Relaciones entre iguales de SVM de interconexión de clústeres de ONTAP"] en ONTAP antes de utilizar SnapMirror.
+

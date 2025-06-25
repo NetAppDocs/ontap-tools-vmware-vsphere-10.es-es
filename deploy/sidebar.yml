@@ -6,7 +6,7 @@ entries:
   url: "/deploy/quick-start.html"
 - title: Flujo de trabajo de puesta en marcha de alta disponibilidad
   url: "/deploy/ha-workflow.html"
-- title: Requisitos previos
+- title: Requisitos y límites de configuración de las herramientas ONTAP
   url: "/deploy/prerequisites.html"
 - title: Antes de empezar
   url: "/deploy/pre-deploy-checks.html"
