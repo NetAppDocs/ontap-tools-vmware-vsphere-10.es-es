@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: migrate 
 summary: Cuando se migran datos de almacenamiento, los back-ends de almacenamiento se incorporan manualmente mediante las API DE REST. Cuando se migran datos del proveedor VASA, los datos se exportan desde la base de datos de Derby existente e se importan a la base de datos MongoDB. 
 ---
-= Migrar el proveedor VASA y el adaptador de replicación de almacenamiento (SRA)
+= Migrar el proveedor VASA y actualizar el SRA
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -158,7 +158,7 @@ El estado de cumplimiento en *VM storage policy compliance* ahora se muestra com
 
 
 
-== Pasos para migrar el SRA
+== Pasos para actualizar el adaptador de replicación de almacenamiento (SRA)
 
 .Antes de empezar
 En el plan de recuperación, el sitio protegido se refiere a la ubicación donde se ejecutan las máquinas virtuales, mientras que el sitio de recuperación es donde se recuperarán. La interfaz de SRM muestra el estado del plan de recuperación con detalles sobre los sitios protegidos y de recuperación. En el plan de recuperación, los botones LIMPIAR y REPROTEGER están deshabilitados, mientras que los botones PROBAR y EJECUTAR permanecen habilitados. Esto indica que el sitio está preparado para la recuperación de datos. Antes de migrar el SRA, verifique que un sitio esté en estado protegido y el otro en estado de recuperación.
