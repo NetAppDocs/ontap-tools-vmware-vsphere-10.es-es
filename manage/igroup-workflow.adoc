@@ -94,7 +94,11 @@ Desmontar un almacén de datos de un host
 
 
 
-El host1Igroup se elimina de la jerarquía. Los igroups secundarios no se eliminan explícitamente. La eliminación se produce en estas dos circunstancias: • Si no hay LUN asignados, el sistema ONTAP elimina el igroup secundario. • Una limpieza programada elimina los igroups secundarios pendientes sin asignaciones de LUN. Estos escenarios solo se aplican a los igroups administrados por las herramientas de ONTAP, no a los personalizados.
+El host1Igroup se elimina de la jerarquía. Los igroups secundarios no se eliminan explícitamente. La eliminación se produce en estas dos condiciones:
+
+* Si no se asigna ningún LUN, el sistema ONTAP elimina el igroup secundario.
+* Un trabajo de limpieza programado elimina los igroups secundarios colgantes sin asignaciones de LUN. Estos escenarios solo se aplican a los igroups administrados por las herramientas de ONTAP, no a los personalizados.
+
 
 .Ejemplo 4:
 Eliminar almacén de datos
