@@ -2,7 +2,7 @@
 permalink: deploy/quick-start.html 
 sidebar: sidebar 
 keywords: ONTAP tools,Storage Replication Adapter 
-summary: La introducción a las herramientas de ONTAP para VMware vSphere incluye unos pocos pasos. 
+summary: Configure las ONTAP tools for VMware vSphere con esta sección de inicio rápido. 
 ---
 = Inicio rápido de herramientas de ONTAP para VMware vSphere
 :allow-uri-read: 
@@ -11,13 +11,13 @@ summary: La introducción a las herramientas de ONTAP para VMware vSphere incluy
 
 
 [role="lead"]
-La introducción a las herramientas de ONTAP para VMware vSphere incluye unos pocos pasos. Este inicio rápido lo llevará a través de la configuración inicial de las herramientas de ONTAP para VMware vSphere.
+Configure las ONTAP tools for VMware vSphere con esta sección de inicio rápido.
 
 Inicialmente, implementarás herramientas de ONTAP para VMware vSphere como una configuración de nodo individual de tamaño pequeño que proporciona servicios principales para admitir almacenes de datos NFS y VMFS. Si necesita ampliar su configuración para usar almacenes de datos vVols y alta disponibilidad (HA), lo hará después de finalizar este flujo de trabajo. Para obtener más información, consulte la link:../deploy/ha-workflow.html["Flujo de trabajo de implementación DE ALTA disponibilidad"].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Una"] Planifique su implementación
 [role="quick-margin-para"]
-Comprobar que las versiones de hosts vSphere, ONTAP y ESXi son compatibles con la versión de las herramientas de ONTAP. Asigne suficiente CPU, memoria y espacio en disco. Dependiendo de sus políticas de seguridad, es posible que necesite configurar firewalls u otros dispositivos de seguridad para permitir el tráfico de red.
+Verifique que las versiones de sus hosts vSphere, ONTAP y ESXi sean compatibles con la versión de las herramientas de ONTAP . Asigne suficiente CPU, memoria y espacio en disco. Según sus reglas de seguridad, podría necesitar configurar firewalls u otras herramientas de seguridad para permitir el tráfico de red.
 
 [role="quick-margin-para"]
 Compruebe que se pueda acceder a vCenter Server instalado y accesible.
@@ -30,7 +30,7 @@ Compruebe que se pueda acceder a vCenter Server instalado y accesible.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dos"] Ponga en marcha herramientas de ONTAP para VMware vSphere
 [role="quick-margin-para"]
-Inicialmente, implementarás herramientas de ONTAP para VMware vSphere como una configuración de nodo único de tamaño pequeño que proporciona servicios principales para admitir almacenes de datos NFS y VMFS. Si planeas ampliar tu configuración para usar almacenes de datos vVols y alta disponibilidad (HA), lo harás después de terminar este flujo de trabajo. Para expandirse correctamente a una configuración de alta disponibilidad, debe asegurarse de que las opciones de adición en caliente de la CPU y de conexión en caliente de la memoria estén habilitadas.
+Inicialmente, implementará las ONTAP tools for VMware vSphere como una configuración pequeña de un solo nodo que proporciona servicios básicos para almacenes de datos NFS y VMFS. Si planea ampliar su configuración para usar almacenes de datos vVols y alta disponibilidad (HA), lo hará después de finalizar este flujo de trabajo. Para ampliar a una configuración de alta disponibilidad, asegúrese de que la adición de CPU y la conexión de memoria en caliente estén habilitadas.
 
 [role="quick-margin-list"]
 * link:../deploy/ontap-tools-deployment.html["Ponga en marcha herramientas de ONTAP para VMware vSphere"]
@@ -38,7 +38,7 @@ Inicialmente, implementarás herramientas de ONTAP para VMware vSphere como una 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tres"] Añada instancias de vCenter Server
 [role="quick-margin-para"]
-Añada una o varias instancias de vCenter Server a las herramientas de ONTAP para VMware vSphere para configurar, gestionar y proteger sus almacenes de datos virtuales en su entorno vCenter Server.
+Agregue instancias de vCenter Server a las ONTAP tools for VMware vSphere para configurar, administrar y proteger almacenes de datos virtuales en el entorno de vCenter Server.
 
 [role="quick-margin-list"]
 * link:../configure/add-vcenter.html["Añada instancias de vCenter Server"]
@@ -72,11 +72,12 @@ Al trabajar con varias instancias de vCenter Server, actualice el certificado au
 * link:../manage/certificate-manage.html["Gestionar certificados"]
 
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png["Siete"] (Opcional) Habilite la protección SRA
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png["Siete"] (Opcional) Configurar la protección SRA
 [role="quick-margin-para"]
 Habilite la funcionalidad de SRA para configurar la recuperación ante desastres y proteger almacenes de datos NFS o VMFS.
 
 [role="quick-margin-list"]
+* link:../manage/enable-services.html["Habilite herramientas de ONTAP para los servicios de VMware vSphere"]
 * link:../protect/configure-on-srm-appliance.html["Configure el SRA en el dispositivo VMware Live Site Recovery"]
 
 
@@ -93,5 +94,5 @@ Configure herramientas de ONTAP para VMware vSphere para gestionar la protecció
 Programe los backups de sus herramientas de ONTAP para la configuración de VMware vSphere que pueda utilizar para recuperar la configuración en caso de fallo.
 
 [role="quick-margin-list"]
-* link:../manage/enable-backup.html["Crear backups y recuperar la configuración de las herramientas de ONTAP"]
+* link:../manage/manage/enable-backup.html["Crear backups y recuperar la configuración de las herramientas de ONTAP"]
 

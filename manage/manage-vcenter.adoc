@@ -52,7 +52,7 @@ Debe quitar todos los back-ends de almacenamiento conectados a vCenter Server an
 . Seleccione los tres puntos verticales en la instancia de vCenter Server que desea quitar y seleccione *Quitar*.
 +
 
-NOTE: Una vez que se eliminan las instancias de vCenter Server, la aplicación ya no las mantendrá.
+NOTE: Después de eliminar instancias de vCenter Server, la aplicación ya no las mantendrá.
 
 
 

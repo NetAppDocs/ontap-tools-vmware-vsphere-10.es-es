@@ -30,7 +30,7 @@ Si el almacén de datos forma parte de un clúster de hosts protegido, se muestr
 
 
 
-NOTE: Si se desmonta el almacén de datos protegido, la configuración de protección existente puede generar una protección parcial. Consulte link:../manage/edit-hostcluster-protection.html["Modifique el clúster de hosts protegido"]para habilitar la protección completa.
+NOTE: Si se desmonta el almacén de datos protegido, la configuración de protección existente podría resultar en una protección parcial. Consulte link:../manage/edit-hostcluster-protection.html["Modifique el clúster de hosts protegido"] para permitir una protección completa.
 
 .El futuro
 Puede realizar un seguimiento del progreso en el panel de tareas recientes.

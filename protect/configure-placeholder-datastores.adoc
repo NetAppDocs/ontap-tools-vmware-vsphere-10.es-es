@@ -2,7 +2,7 @@
 permalink: protect/configure-placeholder-datastores.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Debe configurar un almacén de datos de marcador de posición para que conserve un lugar en el inventario de vCenter en el sitio de recuperación de la máquina virtual protegida \(VM\). El almacén de datos de marcador de posición no tiene por qué ser grande, ya que los marcadores de posición son pequeños y utilizan solo unos pocos cientos o menos kilobytes.' 
+summary: 'Debe configurar un almacén de datos de marcador de posición para reservar un lugar en el inventario de vCenter, en el sitio de recuperación, para la máquina virtual protegida (VM). El almacén de datos de marcador de posición no necesita ser grande, ya que las VM de marcador de posición son pequeñas y ocupan solo unos pocos cientos de kilobytes o menos.' 
 ---
 = Configure almacenes de datos de marcadores de posición
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Debe configurar un almacén de datos de marcador de posición para que
 
 
 [role="lead"]
-Debe configurar un almacén de datos de marcador de posición para que contenga un lugar en el inventario de vCenter en el sitio de recuperación de la máquina virtual protegida. El almacén de datos de marcador de posición no tiene por qué ser grande, ya que los marcadores de posición son pequeños y utilizan solo unos pocos cientos o menos kilobytes.
+Debe configurar un almacén de datos de marcador de posición para reservar un lugar en el inventario de vCenter, en el sitio de recuperación, para la máquina virtual (VM) protegida. No es necesario que el almacén de datos de marcador de posición sea grande, ya que las VM de marcador de posición son pequeñas y ocupan solo unos pocos cientos de kilobytes o menos.
 
 .Antes de empezar
 * Debe haber conectado los sitios protegidos y de recuperación.

@@ -38,10 +38,7 @@ NOTE: Al configurar el administrador de cabinas, debe utilizar la misma conexió
 
 
 
-.. Si se conecta a un clúster, introduzca el nombre de la SVM en el campo *SVM name*.
-+
-También puede dejar este campo en blanco.
-
+.. Si se conecta a un clúster, especifique el nombre de SVM en el campo *nombre de SVM* o déjelo en blanco para administrar todos los SVM en el clúster.
 .. Introduzca los volúmenes que se van a detectar en el campo *Lista de inclusión de volumen*.
 +
 Se puede introducir el volumen de origen en el sitio protegido y el volumen de destino replicado en el centro de recuperación.

@@ -66,6 +66,6 @@ El adaptador está instalado en VMware Live Site Recovery y en el servidor SRA.
 .Pasos
 . Compruebe que los almacenes de datos del sitio protegido contienen máquinas virtuales registradas en vCenter Server.
 . Compruebe que los hosts ESXi del sitio protegido hayan montado los volúmenes NFS exporta de la máquina virtual de almacenamiento (SVM).
-. Verifique que las direcciones válidas, como la dirección IP, el nombre de host o el FQDN en el que están presentes las exportaciones NFS, se especifiquen en el campo *Direcciones NFS* al utilizar el asistente del Administrador de matrices para agregar matrices a la recuperación de sitios activos de VMware.
+. Verifique que se especifiquen direcciones válidas, como la dirección IP o el FQDN donde se encuentran las exportaciones NFS, en el campo *Direcciones NFS* al usar el asistente del Administrador de matrices para agregar matrices a VMware Live Site Recovery. No utilice el nombre de host NFS en el campo *Direcciones NFS*.
 . Utilice la `ping` Comando en cada host ESXi del sitio de recuperación para verificar que el host tiene un puerto de VMkernel que pueda acceder a las direcciones IP que se utilizan para servir exportaciones de NFS desde la SVM.
 

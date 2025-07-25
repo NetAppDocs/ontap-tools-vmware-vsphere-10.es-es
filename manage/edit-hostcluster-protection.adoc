@@ -52,7 +52,7 @@ Use este procedimiento para proteger los almacenes de datos o los hosts recién 
 . Si añadió un nuevo host ESXi, el estado de la protección muestra como parcialmente protegida. Seleccione el menú de puntos suspensivos en la configuración de SnapMirror y seleccione *Editar* para establecer la proximidad del host ESXi recién agregado.
 +
 
-NOTE: En caso de relación de tipo asíncrono, la acción de edición no se admite, ya que no se puede agregar la SVM de destino para el sitio terciario a la misma instancia de herramientas de ONTAP. Sin embargo, puede usar System Manager o la interfaz de línea de comandos de la SVM de destino para cambiar la configuración de relaciones.
+NOTE: En el caso de una relación asíncrona, no se admite la acción de edición porque no se puede agregar el SVM de destino del sitio terciario a la misma instancia de herramientas de ONTAP . Sin embargo, se puede usar el administrador del sistema o la CLI del SVM de destino para cambiar la configuración de la relación.
 
 . Seleccione *Guardar* después de realizar los cambios necesarios.
 . Puedes ver los cambios en la ventana *Protect Cluster*.

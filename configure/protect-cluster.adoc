@@ -18,7 +18,7 @@ Asegúrese de que se cumplen los siguientes requisitos previos:
 
 * El clúster de hosts tiene almacenes de datos solo de una SVM.
 * El almacén de datos montado en el clúster de hosts no debe montarse en ningún host fuera del clúster.
-* Todos los almacenes de datos montados en el clúster de hosts deben ser almacenes de datos VMFS con protocolo iSCSI/FC. No se admiten almacenes de datos vVols, NFS o VMFS con protocolos NVMe/FC y NVMe/TCP.
+* Todos los almacenes de datos montados en el clúster de host deben ser almacenes de datos VMFS con protocolo iSCSI/FC. No se admiten almacenes de datos vVols, NFS o VMFS con protocolos NVMe/FC y NVMe/TCP.
 * Los almacenes de datos que forman FlexVol/LUN montados en el clúster de hosts no deben formar parte de ningún grupo de consistencia (CG) existente.
 * Los almacenes de datos que forman FlexVol/LUN montados en el clúster de hosts no deben formar parte de ninguna relación de SnapMirror existente.
 * El clúster de hosts debe tener al menos un almacén de datos.

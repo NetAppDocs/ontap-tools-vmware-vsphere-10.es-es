@@ -62,7 +62,7 @@ Los últimos tres dígitos del código de error indican el error de flujo de tra
 | *Código de error de actualización* | *Flujo de trabajo* | *Resolución* 
 
 
-| 052 | La ISO puede ser la misma que la versión actual o dos versiones por encima de la versión actual. | Utilice una versión ISO compatible para actualizar desde su versión actual. 
+| 052 | La ISO podría ser la misma que la versión actual o dos versiones superiores a la versión actual. | Utilice una versión ISO compatible para actualizar desde su versión actual. 
 
 
 | 068 | Error al revertir los paquetes Debian | Utilice la recuperación basada en RPO o Snapshot cero y vuelva a intentar la actualización. 

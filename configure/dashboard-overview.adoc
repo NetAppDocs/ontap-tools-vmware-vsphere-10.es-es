@@ -22,7 +22,7 @@ Desde la página de descripción general, puede ejecutar la acción *Discovery*.
 
 NOTE: El botón de acción sólo se activará si tiene el privilegio para realizar la acción de detección.
 
-Una vez enviada la solicitud de detección, puede realizar un seguimiento del progreso de la acción en el panel de tareas recientes.
+Una vez enviada la solicitud de descubrimiento, puede seguir el progreso de la acción en el panel de tareas recientes.
 
 La consola tiene varias tarjetas que muestran diferentes elementos del sistema. La siguiente tabla muestra las diferentes cartas y lo que representan.
 
@@ -35,7 +35,7 @@ La consola tiene varias tarjetas que muestran diferentes elementos del sistema. 
 | Estado | La tarjeta de estado muestra el número de back-ends de almacenamiento y el estado general de los back-ends de almacenamiento y el proveedor VASA. El estado de los backends de almacenamiento muestra *Healthy* cuando todos los backends de almacenamiento son normales y muestra *Unhealthy* si alguno de los backends de almacenamiento tiene un problema (estado Desconocido/Inaccesible/Degradado). Seleccione la sugerencia de herramienta para abrir los detalles de estado de los back-ends de almacenamiento. Puede seleccionar cualquier back-end de almacenamiento para obtener más detalles. *El enlace Otros estados de proveedor de VASA* muestra el estado actual del proveedor de VASA que está registrado en vCenter Server. 
 
 
-| Back-ends de almacenamiento: Capacidad | Esta tarjeta muestra la capacidad agregada utilizada y disponible de todos los back-ends de almacenamiento para la instancia de vCenter Server seleccionada. En el caso de los sistemas de almacenamiento R2 de ASA, los datos de capacidad no se muestran, ya que son un sistema desagregado. 
+| Back-ends de almacenamiento: Capacidad | Esta tarjeta muestra la capacidad agregada, utilizada y disponible, de todos los backends de almacenamiento para la instancia de vCenter Server seleccionada. En el caso de los sistemas de almacenamiento ASA r2, los datos de capacidad no se muestran porque se trata de un sistema desagregado. 
 
 
 | Equipos virtuales | Esta tarjeta muestra las 10 máquinas virtuales principales ordenadas por métrica de rendimiento. Puede seleccionar el encabezado para obtener las 10 máquinas virtuales principales de la métrica seleccionada ordenadas por orden ascendente o descendente. Los cambios de clasificación y filtrado realizados en la tarjeta persisten hasta que cambie o borre la caché del navegador. 

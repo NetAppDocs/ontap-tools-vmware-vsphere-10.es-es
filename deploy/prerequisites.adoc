@@ -84,7 +84,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 
 == Requisitos de puertos
 
-En la siguiente tabla se describen los puertos de red que NetApp utiliza y sus propósitos. Asegúrese de que estos puertos están abiertos y accesibles para facilitar el funcionamiento y la comunicación correctos dentro del sistema. Asegúrese de que las configuraciones de red necesarias están en su lugar para permitir que el tráfico en estos puertos funcione correctamente. Dependiendo de sus políticas de seguridad, es posible que necesite configurar firewalls u otros dispositivos de seguridad para permitir este tráfico dentro de su red.
+La siguiente tabla describe los puertos de red que utiliza NetApp y sus funciones. Asegúrese de que estos puertos estén abiertos y accesibles para facilitar el correcto funcionamiento y la comunicación dentro del sistema. Asegúrese de que las configuraciones de red necesarias permitan el tráfico en estos puertos para que los servicios asociados funcionen correctamente. Según sus políticas de seguridad, podría necesitar configurar firewalls u otros dispositivos de seguridad para permitir este tráfico dentro de su red.
 
 |===
 

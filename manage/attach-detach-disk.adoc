@@ -39,7 +39,7 @@ Es posible desconectar un disco de datos conectado a una máquina virtual cuando
 . Mueva el puntero sobre el disco y seleccione * Eliminar *.
 +
 
-NOTE: El disco se elimina de la máquina virtual. Si otras máquinas virtuales comparten el disco, los archivos de disco no se eliminan.
+NOTE: El disco se elimina de la máquina virtual. Si otras máquinas virtuales comparten el disco, los archivos del disco no se eliminan.
 
 
 

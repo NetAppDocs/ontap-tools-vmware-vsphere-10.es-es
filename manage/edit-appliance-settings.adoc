@@ -41,7 +41,7 @@ NOTE: En las herramientas de ONTAP para VMware vSphere, solo se permite aumentar
 ** La máquina virtual que aloja las herramientas de ONTAP no se implementa directamente en un host ESXi. La máquina virtual debe ponerse en marcha en un clúster o un pool de recursos.
 +
 
-NOTE: Una vez que la configuración de alta disponibilidad esté habilitada, no se puede revertir a una configuración de nodo solo sin alta disponibilidad.
+NOTE: Una vez habilitada la configuración de HA, no es posible volver a una configuración de nodo único que no sea de HA.
 
 
 

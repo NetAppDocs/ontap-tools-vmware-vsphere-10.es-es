@@ -11,10 +11,10 @@ summary: Las herramientas ONTAP para el dispositivo VMware vSphere se ponen en m
 
 
 [role="lead"]
-Las herramientas ONTAP para el dispositivo VMware vSphere se ponen en marcha como nodo único de pequeño tamaño con servicios centrales para admitir almacenes de datos NFS y VMFS. El proceso de puesta en marcha de herramientas de ONTAP puede demorar hasta 45 minutos.
+Las ONTAP tools for VMware vSphere se implementan como un único nodo pequeño con servicios básicos para soportar almacenes de datos NFS y VMFS. El proceso de implementación de las herramientas ONTAP puede tardar hasta 45 minutos.
 
 .Antes de empezar
-Una biblioteca de contenido en VMware es un objeto contenedor que almacena plantillas de máquinas virtuales, plantillas de vApp y otros tipos de archivos. La implementación con biblioteca de contenido le proporciona una experiencia perfecta, ya que no depende de la conectividad de red.
+Una biblioteca de contenido en VMware es un contenedor que almacena plantillas de máquinas virtuales, plantillas de vApp y otros tipos de archivos. La implementación con biblioteca de contenido proporciona una experiencia fluida, ya que no depende de la conectividad de red.
 
 
 NOTE: Debe almacenar la biblioteca de contenido en un almacén de datos compartido para que todos los hosts de un clúster puedan acceder a él. Cree una biblioteca de contenido para almacenar el OVA antes de configurar el dispositivo en la configuración HA. No suprima la plantilla de biblioteca de contenido después del despliegue.

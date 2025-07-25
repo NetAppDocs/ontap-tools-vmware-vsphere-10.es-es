@@ -84,7 +84,7 @@ Después de completar el trabajo, revise el informe de migración. Este informe 
 No elimine el proveedor de VASA.
 
 +
-Una vez que se detuvo el antiguo VASA Provider, vCenter Server conmuta al nodo de respaldo a las herramientas de ONTAP para VMware vSphere. Todos los almacenes de datos y máquinas virtuales son accesibles y se proporcionan desde las herramientas de ONTAP para VMware vSphere.
+Tras detener el antiguo proveedor VASA, vCenter Server conmuta por error a las ONTAP tools for VMware vSphere. Todos los almacenes de datos y máquinas virtuales se vuelven accesibles y se sirven desde las ONTAP tools for VMware vSphere.
 
 . Los almacenes de datos de NFS y VMFS migrados desde las herramientas de ONTAP para VMware vSphere 9.xxx solo se pueden ver en las herramientas de ONTAP para VMware vSphere 10,4 una vez activado el trabajo de detección del almacén de datos, que puede tardar hasta 30 minutos en completarse. Verifique que los almacenes de datos estén visibles en la página de descripción general de la página de interfaz de usuario de las herramientas de ONTAP para el complemento VMware vSphere.
 . Realice la migración de parches mediante la siguiente API en Swagger o en Postman:
@@ -135,7 +135,7 @@ Después de ejecutar la API de migración de revisiones, todas las máquinas vir
 Después de completar la migración y registrar las herramientas de ONTAP 10,4 en vCenter Server, siga estos pasos:
 
 * Espere a que se complete *Discovery*, los certificados se actualizarán automáticamente en todos los hosts.
-* Permita suficiente tiempo antes de iniciar operaciones del almacén de datos y de la máquina virtual. El periodo de espera requerido varía en función del número de hosts, almacenes de datos y máquinas virtuales de la configuración. Si no se espera, se pueden producir fallos de funcionamiento intermitentes.
+* Espere suficiente tiempo antes de iniciar las operaciones del almacén de datos y la máquina virtual. El tiempo de espera requerido varía según la cantidad de hosts, almacenes de datos y máquinas virtuales en la configuración. Si no se espera, podrían producirse fallos operativos intermitentes.
 
 
 Después de la actualización, si el estado de cumplimiento de la máquina virtual es obsoleto, vuelva a aplicar la política de almacenamiento siguiendo los pasos siguientes:
@@ -161,7 +161,7 @@ El estado de cumplimiento en *VM storage policy compliance* ahora se muestra com
 == Pasos para actualizar el adaptador de replicación de almacenamiento (SRA)
 
 .Antes de empezar
-En el plan de recuperación, el sitio protegido se refiere a la ubicación donde se ejecutan las máquinas virtuales, mientras que el sitio de recuperación es donde se recuperarán. La interfaz de SRM muestra el estado del plan de recuperación con detalles sobre los sitios protegidos y de recuperación. En el plan de recuperación, los botones LIMPIAR y REPROTEGER están deshabilitados, mientras que los botones PROBAR y EJECUTAR permanecen habilitados. Esto indica que el sitio está preparado para la recuperación de datos. Antes de migrar el SRA, verifique que un sitio esté en estado protegido y el otro en estado de recuperación.
+En el plan de recuperación, el sitio protegido se refiere a la ubicación donde se ejecutan las máquinas virtuales, mientras que el sitio de recuperación es donde se recuperarán. La interfaz de SRM muestra el estado del plan de recuperación con detalles sobre los sitios protegidos y de recuperación. En el plan de recuperación, los botones *CleanupP* y *Reprotect* están deshabilitados, mientras que los botones TEST y RUN permanecen habilitados. Esto indica que el sitio está preparado para la recuperación de datos. Antes de migrar el SRA, verifique que un sitio esté en estado protegido y el otro en estado de recuperación.
 
 
 NOTE: No inicie la migración si se ha completado la conmutación por error pero la nueva protección está pendiente. Asegúrese de que el proceso de reprotección se ha completado antes de continuar con la migración. Si hay una conmutación por error de prueba en curso, limpie la conmutación por error de prueba e inicie la migración.
@@ -176,6 +176,7 @@ NOTE: No inicie la migración si se ha completado la conmutación por error pero
 
 . Lleve a cabo estos pasos en sitios de protección y recuperación.
 +
+.. link:../manage/enable-services.adoc["Habilite herramientas de ONTAP para los servicios de VMware vSphere"]
 .. Instale las herramientas de ONTAP para el adaptador SRA de VMware vSphere 10,4 siguiendo los pasos indicados en link:../protect/configure-on-srm-appliance.html["Configure el SRA en el dispositivo VMware Live Site Recovery"].
 .. En la página de la interfaz de usuario de VMware Live Site Recovery, realice las operaciones *Discover Arrays* y *Discover Devices* y confirme que los dispositivos se muestran como antes de la migración.
 

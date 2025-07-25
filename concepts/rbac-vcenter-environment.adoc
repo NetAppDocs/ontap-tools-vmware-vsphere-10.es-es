@@ -56,4 +56,4 @@ Se trata de herramientas Privileges personalizadas únicas de ONTAP para VMware 
 
 === Usuarios y grupos
 
-Se pueden definir usuarios y grupos mediante Active Directory o la instancia local de vCenter Server. En combinación con un rol, puede crear un permiso para un objeto en la jerarquía de objetos de vSphere. El permiso otorga acceso basado en el Privileges en el rol asociado. Tenga en cuenta que los roles no se asignan directamente a los usuarios de forma aislada. En su lugar, los usuarios y los grupos obtienen acceso a un objeto a través del rol Privileges como parte del permiso más grande de vCenter Server.
+Puede definir usuarios y grupos mediante Active Directory o la instancia local de vCenter Server. En combinación con un rol, puede crear un permiso para un objeto en la jerarquía de objetos de vSphere. El permiso otorga acceso según los privilegios del rol asociado. cuenta que los roles no se asignan directamente a los usuarios de forma aislada. En su lugar, los usuarios y grupos obtienen acceso a un objeto mediante privilegios de rol como parte del permiso general de vCenter Server.
