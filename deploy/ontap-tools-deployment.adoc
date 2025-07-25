@@ -44,7 +44,7 @@ NOTE: Antes de continuar con el despliegue, defina el planificador de recursos d
 Las herramientas ONTAP para VMware vSphere se implementan inicialmente como una configuración sin alta disponibilidad. Para escalar a la implementación de alta disponibilidad, necesitará habilitar el conector en caliente de la CPU y el plugin de memoria en caliente. Puede realizar este paso como parte del proceso de puesta en marcha o editar la configuración de la máquina virtual después de la puesta en marcha.
 
 .Pasos
-. Descargar el  `.zip` archivo que contiene los binarios (_.ova_) y los certificados firmados para las herramientas ONTAP para VMware vSphere desde el  https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Sitio de soporte de NetApp"^] . Si ha importado el OVA a la biblioteca de contenido, puede omitir este paso y continuar con el siguiente paso.
+. Descargue el archivo que contiene los binarios (_.ova_) y los certificados firmados para las ONTAP tools for VMware vSphere desde  https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Sitio de soporte de NetApp"^] Si ha importado el OVA a la biblioteca de contenido, puede omitir este paso y continuar con el siguiente.
 . Inicie sesión en vSphere Server.
 . Desplácese hasta el pool de recursos, el clúster o el host donde planea implementar el OVA.
 +
