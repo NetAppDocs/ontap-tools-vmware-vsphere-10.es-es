@@ -26,7 +26,7 @@ Si no tiene una biblioteca de contenido, siga estos pasos para crear una:
 
 *Crear biblioteca de contenido* En el plan de usar solo una implementación de un solo nodo pequeño, no es necesario crear una biblioteca de contenido.
 
-. Descargar el  `.zip` archivo que contiene los binarios (_.ova_) y los certificados firmados para las herramientas ONTAP para VMware vSphere desde el  https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Sitio de soporte de NetApp"^] .
+. Descargue el archivo que contiene los binarios (_.ova_) y los certificados firmados para las ONTAP tools for VMware vSphere desde  https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Sitio de soporte de NetApp"^] .
 . Inicie sesión en el cliente de vSphere
 . Seleccione el menú del cliente vSphere y seleccione *Bibliotecas de contenido*.
 . Selecciona *Crear* a la derecha de la página.
