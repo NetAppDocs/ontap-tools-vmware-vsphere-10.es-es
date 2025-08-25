@@ -95,7 +95,8 @@ Utilice la siguiente hoja de trabajo para recopilar la información necesaria pa
 
 | Puerta de enlace de la dirección IPv6 (opcional) |  
 |===
-Cree registros DNS para todas las direcciones IP anteriores. Antes de asignar nombres de host, asígnelos a las direcciones IP libres en el DNS. Todas las direcciones IP deben estar en la misma VLAN seleccionada para la implementación.
+
+NOTE: Cree registros DNS para todas las direcciones IP anteriores. Antes de asignar nombres de host, asígnelos a las direcciones IP libres en el DNS. Todas las direcciones IP deben estar en la misma VLAN seleccionada para la implementación.
 
 
 
