@@ -94,7 +94,7 @@ A medida que se crea la tarea de implementación, el progreso se muestra en la b
 
 Puede realizar un seguimiento del progreso de la instalación dentro de la consola web de la máquina virtual.
 
-Si hay discrepancias en el formulario OVF, un cuadro de diálogo solicitará una acción correctiva. Utilice el botón Tab para navegar, realizar los cambios necesarios y seleccione OK. Tiene tres intentos para resolver cualquier problema. Si los problemas continúan después de tres intentos, el proceso de instalación se detendrá y se recomienda volver a intentar la instalación en una nueva máquina virtual.
+Si hay discrepancias en el formulario OVF, un cuadro de diálogo solicitará una acción correctiva.  Utilice el botón de tabulación para navegar, realizar los cambios necesarios y seleccionar *Aceptar*.  Tiene tres intentos para resolver cualquier problema.  Si los problemas continúan después de tres intentos, el proceso de instalación se detendrá y se recomienda volver a intentar la instalación en una nueva máquina virtual.
 
 .¿Cuál es el siguiente?
 Si tiene herramientas de ONTAP de puesta en marcha para VMware vSphere con vCenter Server 7,0.3, siga estos pasos después de la implementación.

@@ -1465,7 +1465,6 @@ Los códigos de error tienen una longitud de cinco dígitos, donde los dos prime
   <block id="fdbd4c13a762f69f21a098a7dd8e55ad" category="list-text">Seleccione *Restablecer* para implementar los cambios.</block>
   <block id="39a4d1dfe549518e18a4188e13768079" category="list-text">Seleccione *Restablecer* para implementar los cambios. Cuando se restablezca correctamente la contraseña, puede usar la nueva contraseña para iniciar sesión.</block>
   <block id="3ac063bd7a8e9b85e1a6cc3c07a304c3" category="list-text">Seleccione la pestaña *Configure* en el panel derecho.</block>
-  <block id="41e0fa10828ee2d85cfd4c0ff833ac64" category="inline-link">VMotion de almacenamiento</block>
   <block id="6981bfa872a319e4f266c3733ce4e5c3" category="list-text">Seleccione la pestaña *Monitor* en el panel derecho.</block>
   <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">Seleccione *Siguiente*.</block>
   <block id="03c100e80bdd94d3eb4d85dffe4eaecb" category="list-text">Seleccione *Placeholder datastores* &gt; *New* en la pestaña Administrar para crear un nuevo almacén de datos de marcador de posición.</block>
@@ -1707,7 +1706,6 @@ Los códigos de error tienen una longitud de cinco dígitos, donde los dos prime
   <block id="4c91382e492707f0779f372fcc750396" category="list-text">La información se valida durante la instalación. Si hay alguna discrepancia, aparecerá un mensaje de error en la consola web y se le pedirá que lo corrija.</block>
   <block id="2760ddae8a52ae77e6711ac97cdeff45" category="list-text">Los nombres de host deben incluir letras (A-Z, a-z), dígitos (0-9) y guiones (-). Para configurar la pila dual, especifique el nombre de host asignado a la dirección IPv6.</block>
   <block id="a1f2c5d218a3501d9d0831dccea5dbc3" category="admonition">No se admite Pure IPv6. El modo mixto es compatible con VLAN que contiene direcciones IPv6 e IPv4.</block>
-  <block id="1651a6277f4f59f0128c7be036557e5d" category="paragraph">Si hay discrepancias en el formulario OVF, un cuadro de diálogo solicitará una acción correctiva. Utilice el botón Tab para navegar, realizar los cambios necesarios y seleccione OK. Tiene tres intentos para resolver cualquier problema. Si los problemas continúan después de tres intentos, el proceso de instalación se detendrá y se recomienda volver a intentar la instalación en una nueva máquina virtual.</block>
   <block id="fc670824c9b9087edaedbd8931be914a" category="doc">Quite volúmenes FlexVol</block>
   <block id="94ba231101263cc02a5bbd35865c2569" category="paragraph">Cuando se utiliza un clúster dedicado de herramientas de ONTAP para ONTAP para la implementación de VMware, se crean muchos volúmenes de FlexVol sin utilizar. Después de eliminar las herramientas de ONTAP para VMware vSphere, debe eliminar los volúmenes de FlexVol para evitar que se vean posibles impactos en el rendimiento.</block>
   <block id="3fcb4ec0988a47a419299691b19d04fa" category="paragraph">Si se trata de una implementación de iSCSI, también debe eliminar iGroups.</block>
@@ -1720,7 +1718,6 @@ Los códigos de error tienen una longitud de cinco dígitos, donde los dos prime
   <block id="23829b8d6575f7cd3e20a5e92b475a9e" category="doc">Desinstale las herramientas de ONTAP para VMware vSphere</block>
   <block id="82a00fc1c0ae6d437f6d942c64bee898" category="list-text">Quita o mueve todas las máquinas virtuales desde las herramientas de ONTAP para almacenes de datos gestionados de VMware vSphere.</block>
   <block id="4ad237c48098cfd8973e73475bded403" category="list-text">Para eliminar las máquinas virtuales, consulte<block ref="c16fb322315174fa2c9720c74541cf45" category="inline-link-rx"></block></block>
-  <block id="937380d419246adf3fdb369397226f82" category="list-text">Para moverlos a un almacén de datos no gestionado, consulte<block ref="5c1e2b1dd1aaa388da4191e5a966b959" category="inline-link-rx"></block></block>
   <block id="1d920979688b28c7b10ef84d14436f95" category="list-text">Si ha habilitado el proveedor VASA, seleccione *Configuración* &gt; *Configuración del proveedor VASA* &gt; *Anular registro* en las herramientas de ONTAP para anular el registro de los proveedores VASA de todos los servidores vCenter.</block>
   <block id="cdb9fe2a322209ab095ba01e8388697d" category="list-text">Quite el adaptador de SRA de VMware Live Site Recovery:</block>
   <block id="1435a5cf1efdb19e83d0f140a2ca4f4f" category="list-text">Inicie sesión como administrador en la interfaz de gestión del dispositivo VMware Live Site Recovery mediante el puerto 5480.</block>
@@ -2388,4 +2385,7 @@ Los códigos de error tienen una longitud de cinco dígitos, donde los dos prime
   <block id="63629b02d982d9e4fe0f19501143ce17" category="inline-image-macro">Personalizar el hardware</block>
   <block id="2a2d465455150512141b1402a600df32" category="list-text">Al utilizar la versión vCenter Server 8.0.3, en la ventana *Personalizar hardware*, habilite las opciones *Adición activa de CPU* y *Conexión activa de memoria* para permitir la funcionalidad de alta disponibilidad.<block ref="93c02f5316fc65f2262959de5552f7c0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="936fb178b14835844700bc06aa5ab952" category="list-text">Si está utilizando Fibre Channel (FC) para la conectividad de almacenamiento, configure la zonificación en sus conmutadores FC para conectar los hosts ESXi con los LIF FC de la SVM.<block ref="56d435991bafd2bcca9f59739e2992e7" category="inline-link-rx"></block></block>
+  <block id="396603bc11e32e1c8be473d2a79f1d2a" category="paragraph">Si hay discrepancias en el formulario OVF, un cuadro de diálogo solicitará una acción correctiva.  Utilice el botón de tabulación para navegar, realizar los cambios necesarios y seleccionar *Aceptar*.  Tiene tres intentos para resolver cualquier problema.  Si los problemas continúan después de tres intentos, el proceso de instalación se detendrá y se recomienda volver a intentar la instalación en una nueva máquina virtual.</block>
+  <block id="59dd8a5d1e9605907341901d2760c087" category="inline-link">Cómo migrar su máquina virtual con Storage vMotion</block>
+  <block id="0166be8b4848389c414e9e383efe9111" category="list-text">Para moverlos a un almacén de datos no administrado, consulte<block ref="920cfb03e9def61d5164fb56cf050dd9" category="inline-link-rx"></block></block>
 </blocks>
