@@ -142,6 +142,6 @@ Abra los puertos necesarios para las direcciones IP en el firewall de red. Las h
 
 Para garantizar una integración perfecta del almacenamiento de ONTAP con las herramientas de ONTAP para VMware vSphere, tenga en cuenta los siguientes ajustes:
 
-* Si utiliza Fibre Channel (FC) para la conectividad de almacenamiento, configure la división en zonas en los switches FC para conectar los hosts ESXi con los LIF FC de la SVM. https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["Obtenga información sobre la división en zonas de FC y FCoE con los sistemas ONTAP"]
+* Si está utilizando Fibre Channel (FC) para la conectividad de almacenamiento, configure la zonificación en sus conmutadores FC para conectar los hosts ESXi con los LIF FC de la SVM. https://docs.netapp.com/us-en/ontap/san-config/fibre-channel-fcoe-zoning-concept.html["Obtenga información sobre la división en zonas de FC y FCoE con los sistemas ONTAP"]
 * Para utilizar la replicación de SnapMirror gestionada por herramientas de ONTAP, el administrador de almacenamiento de ONTAP debe crear https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["Relaciones de paridad entre clústeres de ONTAP"] y https://docs.netapp.com/us-en/ontap/peering/create-intercluster-svm-peer-relationship-93-later-task.html["Relaciones entre iguales de SVM de interconexión de clústeres de ONTAP"] en ONTAP antes de utilizar SnapMirror.
 
