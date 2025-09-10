@@ -42,6 +42,6 @@ En el siguiente diagrama, se muestra la configuración de la protección contra 
 
 * Pasos*
 
-. Cree un nuevo almacén de datos de marcador de posición. Consulte https://docs.vmware.com/en/Site-Recovery-Manager/8.7/com.vmware.srm.admin.doc/GUID-5D4C9F38-37CA-47D1-B43A-A1FED48A05A3.html["Seleccione un almacén de datos de marcador de posición"]
+. Crear un nuevo almacén de datos de marcador de posición. Referirse https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/about-placeholder-virtual-machines/configure-a-placeholder-datastore.html["Seleccione un almacén de datos de marcador de posición"]
 . Añadir un almacén de datos a la protección del clúster de hosts link:../manage/edit-hostcluster-protection.html["Modifique el clúster de hosts protegido"]. Debe añadir tipos de políticas asíncronas y síncronas.
 
