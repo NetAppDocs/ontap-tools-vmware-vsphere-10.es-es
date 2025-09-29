@@ -1,0 +1,23 @@
+---
+permalink: manage/backup-settings.html 
+sidebar: sidebar 
+keywords:  
+summary: Introduzca los detalles del servidor NTP para sincronizar los relojes de hora del dispositivo de herramientas ONTAP. 
+---
+= Editar la configuración de la copia de seguridad
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A partir de las ONTAP tools for VMware vSphere 10.5, la función de copia de seguridad está habilitada de forma predeterminada y se crea una copia de seguridad cada 10 minutos.  Puede desactivar la copia de seguridad o editar la frecuencia de la misma.
+
+No deshabilite la copia de seguridad porque impide que las herramientas ONTAP mantengan un RPO bajo.  Deshabilitar la copia de seguridad no elimina los archivos de copia de seguridad existentes.  Puede cambiar la frecuencia de la copia de seguridad a un valor entre 10 y 60 minutos.
+
+.Pasos
+. Inicie ONTAP TOOLS Manager desde un explorador web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. Inicie sesión con las herramientas de ONTAP para las credenciales de administrador de VMware vSphere que proporcionó durante la implementación.
+. Seleccione la opción *Configuración* > *Copia de seguridad* > *Editar*.
+. En la ventana de edición, puede deshabilitar la copia de seguridad o editar la frecuencia de la copia de seguridad.
+

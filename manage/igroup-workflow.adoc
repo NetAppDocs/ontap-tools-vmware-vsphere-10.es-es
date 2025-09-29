@@ -13,10 +13,10 @@ summary:
 [role="lead"]
 Los grupos de iniciadores (igroups) son tablas de nombres de puertos mundiales (WWPN) de host de protocolo FC o nombres de nodos calificados de host iSCSI. Puede definir iGroups y asignarlas a LUN para controlar qué iniciadores tienen acceso a las LUN.
 
-En las herramientas de ONTAP para VMware vSphere 9.x, los igroups se creaban y administraban con una estructura plana, donde cada almacén de datos de vCenter se asociaba a un único igroup. Este modelo limitaba la flexibilidad y la reutilización de los igroups en varios almacenes de datos. Las herramientas de ONTAP para VMware vSphere 10.x introducen igroups anidados, donde cada almacén de datos de vCenter se asocia a un igroup principal, mientras que cada host se vincula a un igroup secundario bajo ese principal. Puede definir igroups principales personalizados con nombres definidos por el usuario para reutilizarlos en varios almacenes de datos, lo que permite una gestión más flexible e interconectada de los igroups. Comprender el flujo de trabajo de los igroups es esencial para administrar LUN y almacenes de datos eficazmente en las herramientas de ONTAP para VMware vSphere. Los diferentes flujos de trabajo generan distintas configuraciones de igroups, como se muestra en los siguientes ejemplos:
+En las ONTAP tools for VMware vSphere 9.x, los igroups se creaban y administraban en una estructura plana, donde cada almacén de datos en vCenter estaba asociado con un solo igroup.  Este modelo limitó la flexibilidad y la reutilización de igroups en múltiples almacenes de datos.  Las ONTAP tools for VMware vSphere introducen igroups anidados, donde cada almacén de datos en vCenter está asociado con un igroup principal, mientras que cada host está vinculado a un igroup secundario bajo ese principal.  Puede definir igroups principales personalizados con nombres definidos por el usuario para reutilizarlos en múltiples almacenes de datos, lo que permite una administración más flexible e interconectada de los igroups.  Comprender el flujo de trabajo de igroup es esencial para administrar LUN y almacenes de datos de manera eficaz en las ONTAP tools for VMware vSphere.  Los diferentes flujos de trabajo generan distintas configuraciones de igroup, como se muestra en los siguientes ejemplos:
 
 
-NOTE: Los nombres mencionados son solo ilustrativos y no se refieren a nombres de igroups reales. Los igroups administrados por las herramientas de ONTAP usan el prefijo "otv_". Los igroups personalizados pueden tener cualquier nombre.
+NOTE: Los nombres mencionados son sólo para fines ilustrativos y no se refieren a nombres de igroups reales.  Los igroups administrados por herramientas ONTAP usan el prefijo “otv_”.  A los igroups personalizados se les puede dar cualquier nombre.
 
 |===
 
@@ -94,7 +94,7 @@ Desmontar un almacén de datos de un host
 
 
 
-El host1Igroup se elimina de la jerarquía. Los igroups secundarios no se eliminan explícitamente. La eliminación se produce en estas dos condiciones:
+El host1Igroup se elimina de la jerarquía.  Los igroups infantiles no se eliminan explícitamente.  La eliminación se produce en estas dos condiciones:
 
 * Si no se asigna ningún LUN, el sistema ONTAP elimina el igroup secundario.
 * Un trabajo de limpieza programado elimina los igroups secundarios colgantes sin asignaciones de LUN. Estos escenarios solo se aplican a los igroups administrados por las herramientas de ONTAP, no a los personalizados.
@@ -114,7 +114,7 @@ Eliminar almacén de datos
 
 
 
-Los igroups padre e hijo se eliminan si otro almacén de datos no reutiliza el igroup padre. Los igroups hijo nunca se eliminan explícitamente.
+Los igroups padre e hijo se eliminan si otro almacén de datos no reutiliza el igroup padre.  Los igroups infantiles nunca se eliminan explícitamente
 
 .Ejemplo 5:
 Crear múltiples almacenes de datos bajo un igroup principal personalizado
@@ -203,7 +203,7 @@ Migración de las herramientas ONTAP 9 a 10 (normalización de igroups)
 
 *Flujo de trabajo*
 
-Las herramientas de ONTAP para VMware vSPhere 9.x no admiten igroups jerárquicos. Durante la migración a la versión 10.3 o posterior, los igroups deben normalizarse en la estructura jerárquica.
+Las herramientas ONTAP para las versiones VMware vSPhere 9.x no admiten igroups jerárquicos.  Durante la migración a versiones 10.3 o superiores, los igroups deben normalizarse en la estructura jerárquica.
 
 Antes de la migración:
 

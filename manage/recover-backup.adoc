@@ -1,0 +1,55 @@
+---
+permalink: manage/recover-backup.html 
+sidebar: sidebar 
+keywords:  
+summary: A partir de las herramientas de ONTAP para VMware vSphere 10,3, el dispositivo usa un aprovisionador de almacenamiento dinámico, no puede lograr un objetivo de punto de recuperación cero. Sin embargo, puede lograr casi un objetivo de punto de recuperación cero. 
+---
+= Recuperar la configuración de las herramientas ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A partir de las ONTAP tools for VMware vSphere 10.5, la función de copia de seguridad está habilitada de forma predeterminada.
+
+El almacén de datos donde se implementan las ONTAP tools for VMware vSphere almacena los archivos de respaldo.  Una carpeta que lleva el nombre de la dirección IP de las herramientas ONTAP (puntos reemplazados por guiones bajos y con el sufijo _OTV_backup_) guarda los dos archivos de respaldo más recientes (_OTV_backup_1.tar.enc_ y _OTV_backup_2.tar.enc_) y un archivo de información (_OTV_backup_info.txt_) que contiene el nombre de la última copia de seguridad.
+
+Asegúrese de que la nueva máquina virtual utilice la misma dirección IP de las herramientas ONTAP y coincida con la configuración inicial del sistema, incluidos los servicios habilitados, el tamaño del nodo y el modo HA.
+
+.Pasos
+. Descargue los archivos de respaldo del almacén de datos de la máquina virtual original a su sistema local.
++
+.. Vaya a la sección de almacenamiento y elija el almacén de datos que contiene los archivos de respaldo de la máquina virtual.
+.. Seleccione la sección *Archivos*.
+.. Descargue el directorio de respaldo requerido.
+
+
+. Apague la máquina virtual existente.  Luego, implemente una nueva máquina virtual utilizando el mismo archivo OVA que la implementación original.
+. Desde vCenter Server, abra la consola de mantenimiento.
+. Inicie sesión como el usuario de mantenimiento.
+. Ingrese `4` para seleccionar *Soporte y Diagnóstico*.
+. Ingrese `2` para seleccionar la opción *Activar acceso a diagnóstico remoto* y crear una nueva contraseña para el acceso de diagnóstico.
+. Elija un archivo de respaldo del directorio descargado.  Consulte el archivo _OTV_backup_info.txt_ para identificar la última copia de seguridad.
+. Utilice el siguiente comando para transferir el archivo de respaldo a la nueva máquina virtual.  Cuando se le solicite, ingrese la contraseña de diagnóstico.
++
+[listing]
+----
+scp <OTV_backup_X.tar.enc> diag@<node_ip>:/home/diag/system_recovery.tar.enc
+----
++
+
+NOTE: No altere la ruta de destino ni el nombre del archivo (/home/diag/system_recovery.tar.enc) mencionados en el comando.
+
+. Después de transferir el archivo de respaldo, inicie sesión en el shell de diagnóstico y ejecute el siguiente comando:
++
+[listing]
+----
+sudo perl /home/maint/scripts/post-deploy-upgrade.pl -recovery
+----
++
+Los registros se registran en el archivo _/var/log/post-deploy-upgrade.log_.
+
+
+
+Una vez completada la recuperación, las herramientas de ONTAP restauran los servicios y los objetos de vCenter.

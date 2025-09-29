@@ -4,17 +4,57 @@ sidebar: sidebar
 keywords: upgrade 
 summary: En esta página se describen los códigos de error para las operaciones de implementación, reinicio y recuperación de las herramientas de ONTAP para el sistema VMware vSphere. 
 ---
-= Códigos de error de despliegue
+= Solucionar errores de implementación
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Si experimenta problemas de implementación, revise los registros y los códigos de error para diagnosticar y resolver los problemas.  A partir de las ONTAP tools for VMware vSphere 10.5, los paquetes de registros recopilados de los pods incluyen registros de MongoDB, RabbitMQ y Vault, junto con el estado y las descripciones de todos los pods.  Estos se proporcionan además de los registros de servicio de las herramientas ONTAP existentes, lo que mejora la capacidad de soporte y la resolución de problemas.
+
+
+
+== Recoja los archivos de registro
+
+Puede recoger archivos de registro para las herramientas de ONTAP para VMware vSphere desde las opciones disponibles en la interfaz de usuario del gestor de herramientas de ONTAP. Es posible que el soporte técnico le solicite recoger los archivos de registro que sirven como ayuda para la solución de un problema.
+
+
+NOTE: La generación de registros desde el Administrador de herramientas de ONTAP incluye todos los registros para todas las instancias de vCenter Server. Los registros de generación desde la interfaz de usuario del cliente de vCenter se incluyen en la instancia de vCenter Server seleccionada.
+
+.Pasos
+. Inicie ONTAP TOOLS Manager desde un explorador web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. Inicie sesión con las herramientas de ONTAP para las credenciales de administrador de VMware vSphere que proporcionó durante la implementación.
+. Seleccione *Log Bundles* en la barra lateral.
++
+Esta operación puede llevar varios minutos.
+
+. Seleccione *Generar* para generar los archivos de registro.
+. Ingrese la etiqueta para el paquete de registro y seleccione *Generar*.
++
+Descargue el archivo tar.gz y envíelo al soporte técnico.
+
+
+
+Siga los pasos a continuación para generar paquete de registros con la interfaz de usuario del cliente de vCenter:
+
+.Pasos
+. Inicie sesión en el cliente de vSphere.
+. En la página de inicio de vSphere Client, vaya a *Support* > *Log bundle* > *Generar*.
+. Proporcione la etiqueta del paquete de registro y genere el paquete. Podrá ver la opción de descarga cuando se generen los archivos. La descarga puede tardar un poco.
+
+
+
+NOTE: El paquete de logs generado sustituye el paquete de logs generado en los últimos 3 días o 72 horas.
+
+
+
+== Códigos de error de despliegue
+
 Es posible que aparezcan códigos de error durante las herramientas de ONTAP para operaciones de implementación, reinicio y recuperación de VMware vSphere.
 Los códigos de error tienen una longitud de cinco dígitos, donde los dos primeros dígitos representan el script que encontró el problema, y los tres últimos dígitos representan el flujo de trabajo específico dentro de ese script.
 
-Todos los registros de errores se registran en el archivo ansible-perl-errors.log para facilitar el seguimiento y la resolución de los problemas. Este archivo de registro contiene el código de error y la tarea de Ansible con errores.
+Todos los registros de errores se graban en el archivo ansible-perl-errors.log en el directorio /var/log para facilitar el seguimiento y la resolución de problemas.  Este archivo de registro contiene el código de error y la tarea de Ansible fallida.
 
 
 NOTE: Los códigos de error proporcionados en esta página son sólo de referencia. Póngase en contacto con el equipo de soporte si el error persiste o si no se menciona ninguna solución.

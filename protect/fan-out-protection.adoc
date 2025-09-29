@@ -2,18 +2,21 @@
 permalink: protect/fan-out-protection.html 
 sidebar: sidebar 
 keywords:  
-summary: En una protección ramificada, el grupo de consistencia está doble protegido con una relación síncrona en el primer clúster de ONTAP de destino y con una relación asíncrona en el segundo clúster de ONTAP de destino. 
+summary: En un escenario de protección en abanico, el grupo de consistencia está doblemente protegido con una relación sincrónica en el primer clúster ONTAP de destino y con una relación asincrónica en el segundo clúster ONTAP de destino. 
 ---
-= Protección frente a la salida del ventilador
+= Protección de abanico
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-En una protección ramificada, el grupo de consistencia está doble protegido con una relación síncrona en el primer clúster de ONTAP de destino y con una relación asíncrona en el segundo clúster de ONTAP de destino. Los flujos de trabajo de creación, edición y eliminación de la protección de sincronización activa de SnapMirror mantienen la protección síncrona. Los flujos de trabajo de recuperación tras fallos y reprotección de SRM mantienen la protección asíncrona.
+En un escenario de protección en abanico, el grupo de consistencia está doblemente protegido con una relación sincrónica en el primer clúster ONTAP de destino y con una relación asincrónica en el segundo clúster ONTAP de destino.  Los flujos de trabajo de creación, edición y eliminación de protección de sincronización activa de SnapMirror mantienen la protección sincrónica.  Los flujos de trabajo de conmutación por error y reprotección del dispositivo VMware Live Site Recovery mantienen la protección asincrónica.
 
-Para establecer una protección ramificada, debe tener tres pares de clústeres de sitios y SVM.
+
+NOTE: La distribución en abanico no es compatible con el usuario SVM.
+
+Para configurar la protección en abanico, conecte los tres clústeres de sitios y las SVM.
 
 Ejemplo:
 
@@ -38,10 +41,17 @@ Ejemplo:
 
 
 |===
-En el siguiente diagrama, se muestra la configuración de la protección contra ventiladores externos: image:../media/fan-out-protection.png["Configuración de la protección de salida ramificada"] image:../media/fan-out-protection-relationship.png["Relación de protección ramificada"]
+El siguiente diagrama muestra la configuración de protección de abanico:image:../media/fan-out-protection.png["Configuración de protección de abanico de salida"] image:../media/fan-out-protection-relationship.png["Relación de protección en abanico"]
 
-* Pasos*
+.Pasos
+. Seleccione un nuevo almacén de datos de marcador de posición.  Los criterios de selección del almacén de datos de marcador de posición para la protección por fases son:
++
+** No coloque el almacén de datos de marcador de posición en el clúster de host que está protegiendo.
+** Si necesita incluir el almacén de datos de marcador de posición en el clúster de host, agréguelo al dispositivo VMware Live Site Recovery antes de configurar la protección de sincronización activa de SnapMirror .  Con esta configuración, puede dejar el almacén de datos de marcador de posición fuera de protección.
++
+Para obtener más información, consulte https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/about-placeholder-virtual-machines/configure-a-placeholder-datastore.html["Seleccione un almacén de datos de marcador de posición"]
 
-. Crear un nuevo almacén de datos de marcador de posición. Referirse https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/about-placeholder-virtual-machines/configure-a-placeholder-datastore.html["Seleccione un almacén de datos de marcador de posición"]
-. Añadir un almacén de datos a la protección del clúster de hosts link:../manage/edit-hostcluster-protection.html["Modifique el clúster de hosts protegido"]. Debe añadir tipos de políticas asíncronas y síncronas.
+
+
+. Agregue el almacén de datos a la protección del clúster del host siguiendo estos pasoslink:../manage/edit-hostcluster-protection.html["Modifique el clúster de hosts protegido"] .  Agregue tipos de políticas asincrónicas y sincrónicas.
 

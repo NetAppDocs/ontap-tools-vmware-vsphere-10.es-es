@@ -4,27 +4,27 @@ sidebar: sidebar
 keywords: upgrade 
 summary: La actualización es compatible con puestas en marcha tanto de alta disponibilidad como con otras de alta disponibilidad. 
 ---
-= Actualice desde ONTAP tools para VMware vSphere 10.x a 10,4
+= Actualización de las ONTAP tools for VMware vSphere 10.x a 10.5
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Puede actualizar desde las herramientas de ONTAP para VMware vSphere 10,2 o de 10,3 a 10,4. Sin embargo, no se admite la actualización directa desde las herramientas de ONTAP 10,0 o 10,1 a 10,4.
+Puede actualizar las ONTAP tools for VMware vSphere 10.3 o 10.4 a 10.5.  Sin embargo, para actualizar de las herramientas ONTAP 10.0, 10.1 o 10.2 a 10.5, primero debe actualizar a 10.3 o 10.4 antes de continuar a 10.5.
 
 NOTA:
 
-* En los sistemas ASA R2, debe actualizar a las herramientas de ONTAP para VMware vSphere 10,4 con ONTAP 9.16.1 antes de añadir más zonas de disponibilidad de almacenamiento (SAZ).
-* Si se produce un error en la actualización desde las herramientas de ONTAP para VMware vSphere 10,2 o 10,3 a la versión 10,4, no se admite la reversión. Para recuperar la configuración, utilice las herramientas RPO de ONTAP para VMware vSphere 10,2 y RPO casi nulo o recuperación de snapshots para herramientas de ONTAP para VMware vSphere 10,3.
+* Para los sistemas ASA r2, asegúrese de actualizar las ONTAP tools for VMware vSphere a 10.5 y ONTAP a 9.16.1, antes de configurar más zonas de disponibilidad de almacenamiento (SAZ).
+* Si falla la actualización de las ONTAP tools for VMware vSphere 10.3 o 10.4 a 10.5, no podrá revertirla.  Utilice un RPO bajo o una recuperación de instantánea para restaurar la configuración.  Para las ONTAP tools for VMware vSphere 10.2 y versiones anteriores, utilice RPO cero para restaurar la configuración.
 
 
 .Antes de empezar
-Para realizar una actualización sin alta disponibilidad, apague la máquina virtual de ONTAP Tools y, para obtener una actualización de alta disponibilidad, apague el primer nodo antes de realizar los siguientes cambios en la configuración de la máquina virtual.
+* Asegúrese de que el certificado del sistema ONTAP y los certificados vCenter incorporados sean válidos durante al menos 5 días.  Si caduca antes, la actualización falla.
+* Para garantizar una actualización segura, verifique que sus certificados incluyan entradas de Nombre alternativo del sujeto (SAN).  Si sus certificados carecen de entradas SAN y necesita continuar con la actualización, puede establecer el indicador de validación del certificado en falso para omitir las verificaciones de SAN en el mensaje durante la actualización.
+* Asegúrese de tener un quinto disco con una capacidad de 100 GB en todos los nodos.
+* Verifique que la configuración del nodo coincida con las especificaciones de la tabla siguiente.
 
-Si actualiza desde las ONTAP tools for VMware vSphere 10.2 o 10.3, debe completar los siguientes pasos antes de continuar con la actualización: * Agregue 100 GB de disco duro adicionales a cada nodo, ya que los datos de servicio se almacenan localmente en la máquina virtual. * Cambie la CPU y la memoria de la máquina virtual apagada según la versión de su implementación. Habilite el complemento activo para CPU y RAM.
-
-+
 
 |===
 | Tipo de puesta en marcha | CPU (Core) por nodo | Memoria (GB) por nodo | Espacio en disco (GB) por nodo | Total de CPU (núcleo) | Memoria (GB) | Espacio Total en Disco (GB) 
@@ -44,110 +44,46 @@ Si actualiza desde las ONTAP tools for VMware vSphere 10.2 o 10.3, debe completa
 
 | ALTA disponibilidad | 17 | 34 | 350 | 51 | 102 | 1050 
 |===
-* Encienda la máquina virtual una vez realizados los cambios y espere a que los servicios lleguen a un estado en ejecución.
-* En caso de implementación de HA, realice los cambios de recursos, habilite el plugin hot para CPU y RAM, y agregue discos duros de 100 GB para el segundo y el tercer nodo también. No es necesario reiniciar estos nodos.
-* Si el dispositivo se puso en marcha como ruta local (puesta en marcha sencilla) con herramientas de ONTAP 10,2, deberá realizar una instantánea en modo inactivo antes de la actualización.
+* Asegúrese de que la conexión en caliente para CPU y RAM esté habilitada.
+* Para las ONTAP tools for VMware vSphere 10.3 o 10.4, tome una instantánea inactiva en la máquina virtual de las herramientas ONTAP antes de actualizar.
+* Habilite la copia de seguridad con RPO bajo y asegúrese de que haya una copia de seguridad visible en la interfaz del cliente vCenter.
 
-
-Si está actualizando desde las herramientas de ONTAP para VMware vSphere 10,0 a 10,1, debe completar los siguientes pasos antes de continuar con la tarea de actualización: *Habilitar diagnóstico*
-
-. Desde vCenter Server, abra una consola a las herramientas de ONTAP.
-. Inicie sesión como el usuario de mantenimiento.
-. Ingrese *4* para seleccionar *Soporte y Diagnóstico*.
-. Ingrese *2* para seleccionar *Habilitar acceso a diagnóstico remoto*.
-. Introduce *y* para establecer la contraseña de tu elección.
-. Inicie sesión en la dirección IP de la máquina virtual desde el terminal/putty con el usuario como 'diag' y la contraseña que se estableció en el paso anterior.
-
-
-*Toma una copia de seguridad de MongoDB*
-
-Ejecute los siguientes comandos para realizar un backup de MongoDB:
-
-* kn exec -it ntv-mongodb-0 sh - kn es un alias de kubectl -n ntv-system.
-* Ejecute el comando _env | grep MONGODB_ROOT_PASSWORD_ dentro del pod.
-* Ejecute el comando _exit_ para salir del pod.
-* Ejecute _kn exec ntv-mongodb-0 --mongodump -u root -p MONGODB_ROOT_PASSWORD --archive=/tmp/mongodb-backup.gz --gzip_ comando para reemplazar el conjunto MONGO_ROOT_PASSWORD DEL comando anterior.
-* Ejecute el comando _kn cp ntv-mongodb-0:/tmp/mongodb-backup.gz ./mongodb-backup.gz_ para copiar el backup de mongodb creado con el comando anterior del pod al host.
-
-
-*Tome la instantánea de quaise de todos los volúmenes*
-
-* Ejecute el comando 'kn get pvc' y guarde la salida del comando.
-* Tome Snapshot de todos los volúmenes una a una mediante uno de los siguientes métodos:
-+
-** En la interfaz de línea de comandos, ejecute el comando _volume snapshot create -vserver <vserver_name> -volume <volume_name> -snapshot <snapshot_name>_
-** En la interfaz de usuario de ONTAP System Manager, busque el volumen por su nombre en la barra de búsqueda y, a continuación, abra ese volumen seleccionando en el nombre. Vaya a snapshot y añada la snapshot de ese volumen.
-
-
-
-
-* Tome la instantánea de las herramientas de ONTAP para las máquinas virtuales VMware vSphere en vCenter (3VMs en caso de implementación de alta disponibilidad, 1 VM en caso de implementación no de alta disponibilidad)*
-
-* En la interfaz de usuario del cliente de vSphere, seleccione la máquina virtual.
-* Vaya a la pestaña Instantáneas y seleccione el botón *Tomar Instantánea*. Tomar una instantánea en modo inactivo de la máquina virtual. Consulte https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/take-snapshots-of-a-virtual-machine.html["Tome una instantánea de una máquina virtual"^] para obtener más información.
-
-
-Antes de realizar la actualización, elimine los pods completados del paquete de registro con el prefijo “generate-support-bundle-job”. Si la generación de paquetes de soporte está en curso, espere a que finalice y elimine el pod.
-
-Para cualquier tipo de actualización, debe agregar una unidad de disco duro (HDD) adicional de 100 GB. Para agregar un disco duro, realice la siguiente tarea.
-
-. Seleccione la máquina virtual en la configuración de nodo único o las tres máquinas virtuales en la configuración de alta disponibilidad.
-. Haga clic con el botón derecho del ratón en las máquinas virtuales y seleccione *Añadir nuevo dispositivo* > *Disco duro*
-. Agregue un disco duro de 100 GB en el campo * Nuevo disco duro *.
-. Seleccione *Aplicar*
-
-
-Después de agregar el disco duro, actualice los recursos del equipo virtual para las configuraciones respectivas y reinicie el equipo virtual principal.
-
-Se creará un nuevo disco duro. el aprovisionador de almacenamiento dinámico utiliza este HDD para generar o replicar los volúmenes.
 
 .Pasos
 . Cargue ISO de las herramientas de ONTAP para la actualización de VMware vSphere a la biblioteca de contenido.
 . En la página principal de VM, seleccione *Acciones* > *Editar configuración*
-. Seleccione el archivo ISO de la biblioteca de contenido en la ventana de configuración de edición bajo el campo *Unidad de CD/DVD*.
-. Seleccione el archivo ISO y seleccione *OK*. Seleccione la casilla de verificación Conectado en el campo *Unidad de CD/DVD*. image:../media/primaryvm-edit-settings.png["Editar configuración"]
+. Seleccione el *archivo ISO de la biblioteca de contenido* en la ventana de edición de configuraciones, debajo del campo *Unidad de CD/DVD*.
+. Seleccione el archivo ISO, marque la casilla *Conectado* para el campo *Unidad de CD/DVD* y haga clic en *Aceptar*.
 . Desde vCenter Server, abra una consola a las herramientas de ONTAP.
 . Inicie sesión como el usuario de mantenimiento.
-. Ingrese *3* para seleccionar el menú Configuración del sistema.
-. Ingrese *7* para seleccionar la opción de actualización.
+. Introduzca *3* para seleccionar el menú *Configuración del sistema*.
+. Introduzca *7* para seleccionar la opción *Actualizar*.
++
+Durante la actualización, si alguno de los certificados de backend de almacenamiento incorporados no tiene entradas de Nombre alternativo del sujeto (SAN), recibirá un mensaje indicando el SAN faltante.  Si decide continuar sin validar la SAN, la actualización continuará, pero esto no se recomienda debido a posibles riesgos de seguridad.
+
 . Al actualizar, las siguientes acciones se realizan automáticamente:
 +
-.. Actualización de certificados
-.. Actualización remota de plugin
+.. El certificado de puerta de enlace se renueva con un periodo de validez de 1 año.  Cuando elimina el adaptador SRA anterior y carga el nuevo adaptador 10.5, la validez del certificado SRA cambia de 10 años a 1 año.
+.. El complemento remoto se ha actualizado
+.. Los certificados de ONTAP y vCenter Server se validan y se agregan a las herramientas de ONTAP
+.. La copia de seguridad está habilitada
 
 
-
-
-Después de actualizar a las herramientas de ONTAP para VMware vSphere 10,4, podrá:
-
-* Desactive los servicios desde la interfaz de usuario del administrador
-* Pase de una configuración no de alta disponibilidad a una configuración de alta disponibilidad
-* Escale verticalmente una configuración pequeña sin alta disponibilidad mediante configuraciones no medianas o grandes de alta disponibilidad.
-* En caso de actualización sin alta disponibilidad, reinicie el equipo virtual de ONTAP Tools para reflejar los cambios. En caso de actualización de alta disponibilidad, reinicie el primer nodo para reflejar los cambios en el nodo.
 
 
 .El futuro
-Después de actualizar desde versiones anteriores de herramientas de ONTAP para VMware vSphere a la versión 10,4, vuelva a analizar los adaptadores del SRA para verificar que los detalles estén actualizados en la página Adaptadores de replicación del almacenamiento de recuperación del sitio activo de VMware.
+Después de actualizar a las ONTAP tools for VMware vSphere 10.5:
 
-Después de la actualización correcta, elimine los volúmenes de Trident de ONTAP manualmente mediante el siguiente procedimiento:
-
-
-NOTE: Estos pasos no son necesarios si las herramientas de ONTAP para VMware vSphere 10,1 o 10,2 se encontraban en configuraciones de alta disponibilidad pequeñas o medianas (ruta local).
-
-. Desde vCenter Server, abra una consola a las herramientas de ONTAP.
-. Inicie sesión como el usuario de mantenimiento.
-. Ingrese *4* para seleccionar el menú *Soporte y Diagnóstico*.
-. Ingrese *1* para seleccionar la opción *Access Diagnostics shell*.
-. Ejecute el siguiente comando
-+
-[listing]
-----
-sudo python3 /home/maint/scripts/ontap_cleanup.py
-----
-. Introduzca el nombre de usuario y la contraseña de ONTAP
+* Supervise las alertas del sistema y planifique la renovación del certificado de puerta de enlace antes de que caduque en un año.
+* Elimine el adaptador SRA de las herramientas ONTAP 10.4 o 10.3 y cargue el archivo tar del adaptador SRA 10.5.  Luego, vuelva a escanear los adaptadores SRA para actualizar la página Adaptadores de replicación de almacenamiento de VMware Site Recovery.
 
 
-Esto elimina todos los volúmenes de Trident en ONTAP utilizados en las herramientas de ONTAP para VMware vSphere 10,1/10,2.
+Después de actualizar podrás:
+
+* Desactive los servicios desde la interfaz de usuario del administrador
+* Pase de una configuración no de alta disponibilidad a una configuración de alta disponibilidad
+* Amplíe una configuración pequeña sin alta disponibilidad a una configuración mediana sin alta disponibilidad, o a una configuración mediana o grande con alta disponibilidad.
+
 
 .Información relacionada
-link:../migrate/migrate-to-latest-ontaptools.html["Migre desde ONTAP Tools para VMware vSphere 9.xx a 10,4"]
+link:../migrate/migrate-to-latest-ontaptools.html["Migrar de las ONTAP tools for VMware vSphere 9.xx a 10.5"]

@@ -11,7 +11,7 @@ summary: Las herramientas de ONTAP para VMware vSphere comprueba y establece los
 
 
 [role="lead"]
-La configuración de los ajustes de tiempo de espera y multivía del servidor ESXi garantiza una alta disponibilidad e integridad de los datos, ya que permite cambiar sin problemas a una ruta de almacenamiento de backup en caso de que falle una ruta primaria.
+La configuración de rutas múltiples y tiempos de espera del servidor ESXi ayuda a mantener la disponibilidad e integridad de los datos.  Permite la conmutación por error automática a una ruta de almacenamiento de respaldo si la ruta principal deja de estar disponible.
 
 
 
@@ -19,17 +19,15 @@ La configuración de los ajustes de tiempo de espera y multivía del servidor ES
 
 Las herramientas de ONTAP para VMware vSphere comprueban y establecen la configuración de multivía del host ESXi y el tiempo de espera de HBA que funcionan mejor con los sistemas de almacenamiento de NetApp.
 
-*Acerca de esta tarea*
-
-Dependiendo de la configuración y la carga del sistema, este proceso puede tardar mucho tiempo. El progreso de la tarea se muestra en el panel Recent Tasks.
+.Acerca de esta tarea
+Este proceso puede llevar tiempo, dependiendo de la configuración y la carga del sistema.  Puede ver el progreso en el panel Tareas recientes.
 
 .Pasos
 . En la página de inicio de VMware vSphere Web Client, seleccione *Hosts and Clusters*.
-. Haga clic con el botón derecho en un host y seleccione *Herramientas de NetApp ONTAP* > *Actualizar datos de host*.
 . En la página de accesos directos del cliente web de VMware vSphere, seleccione *NetApp ONTAP tools* en la sección de plugins.
 . Vaya a la tarjeta *Conformidad de host ESXi* en la descripción general (consola) de las herramientas de ONTAP para el complemento de VMware vSphere.
 . Selecciona *Aplicar ajustes recomendados* link.
-. En la ventana *Aplicar configuración de host recomendada*, selecciona los hosts que deseas actualizar para cumplir con la configuración recomendada de NetApp y selecciona *Siguiente*.
+. En la ventana *Aplicar configuración de host recomendada*, seleccione los hosts que desea actualizar para usar la configuración recomendada de NetApp y seleccione *Siguiente*.
 +
 
 NOTE: Puede expandir el host ESXi para ver los valores actuales.
@@ -42,7 +40,7 @@ NOTE: Puede expandir el host ESXi para ver los valores actuales.
 
 == Configure los valores de host ESXi
 
-Con las herramientas de ONTAP para VMware vSphere, puede establecer tiempos de espera y otros valores en los hosts ESXi para garantizar el mejor rendimiento y una conmutación al respaldo correcta. Los valores que las herramientas ONTAP para conjuntos de VMware vSphere se basan en las pruebas internas de NetApp.
+Utilice las ONTAP tools for VMware vSphere para establecer tiempos de espera y otros valores en los hosts ESXi para lograr un rendimiento y una conmutación por error óptimos.  Establece estos valores en función de las pruebas de NetApp .
 
 Puede configurar los siguientes valores en un host ESXi:
 
@@ -62,9 +60,9 @@ Establece los siguientes parámetros en los valores predeterminados:
 
 === Configuración de MPIO
 
-La configuración de MPIO define las rutas preferidas para los sistemas de almacenamiento de NetApp. Determinan cuáles de las rutas disponibles están optimizadas (en contraposición a las rutas no optimizadas que atraviesan el cable de interconexión) y establecen la ruta preferida en una de esas rutas.
+La configuración de MPIO elige las mejores rutas para los sistemas de almacenamiento de NetApp .  La configuración de MPIO selecciona la mejor ruta y la utiliza.
 
-En entornos de alto rendimiento, o cuando esté probando el rendimiento con un único almacén de datos LUN, considere la posibilidad de cambiar la configuración del equilibrio de carga de la política de selección de ruta (PSP) round-robin (VMW_PSP_RR) de la configuración de IOPS predeterminada de 1000 a un valor de 1.
+Para entornos de alto rendimiento o al realizar pruebas con un único almacén de datos LUN, ajuste la configuración de equilibrio de carga de la política de selección de ruta (PSP) round-robin (VMW_PSP_RR) para mejorar el rendimiento.  Establezca el valor de IOPS predeterminado de 1000 a 1.
 
 
 NOTE: La configuración de MPIO no se aplica a los protocolos NVMe, NVMe/FC y NVMe/TCP.

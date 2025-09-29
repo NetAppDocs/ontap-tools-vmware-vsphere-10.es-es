@@ -18,7 +18,7 @@ Conectar un disco de datos a una máquina virtual para expandir la capacidad de 
 
 .Pasos
 . Inicie sesión en el cliente de vSphere.
-. Haga clic con el botón derecho en una máquina virtual en el inventario y seleccione *Editar configuración*.
+. Haga clic derecho en una máquina virtual en el inventario y seleccione *Editar configuración*.
 . En la pestaña *Virtual Hardware*, seleccione *Disco duro existente*.
 . Seleccione la máquina virtual donde existe el disco.
 . Seleccione el disco que desea adjuntar y seleccione *OK*
@@ -35,7 +35,7 @@ Es posible desconectar un disco de datos conectado a una máquina virtual cuando
 
 .Pasos
 . Inicie sesión en el cliente de vSphere.
-. Haga clic con el botón derecho en una máquina virtual en el inventario y seleccione *Editar configuración*.
+. Haga clic derecho en una máquina virtual en el inventario y seleccione *Editar configuración*.
 . Mueva el puntero sobre el disco y seleccione * Eliminar *.
 +
 

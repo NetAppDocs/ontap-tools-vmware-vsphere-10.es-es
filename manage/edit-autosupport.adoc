@@ -1,0 +1,47 @@
+---
+permalink: manage/edit-autosupport.html 
+sidebar: sidebar 
+keywords:  
+summary: Al configurar las ONTAP tools for VMware vSphere por primera vez, AutoSupport está habilitado de forma predeterminada.  Envía mensajes al soporte técnico 24 horas después de su habilitación. 
+---
+= Editar la configuración de AutoSupport
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Al configurar las ONTAP tools for VMware vSphere por primera vez, AutoSupport está habilitado de forma predeterminada.  Envía mensajes al soporte técnico 24 horas después de su habilitación.
+
+
+
+== Deshabilite AutoSupport
+
+Cuando deshabilita AutoSupport, ya no recibirá soporte ni supervisión proactiva.
+
+
+NOTE: Se recomienda mantener AutoSupport habilitado, ya que ayuda a acelerar la detección y resolución de problemas.  Incluso cuando AutoSupport está deshabilitado, el sistema continúa recopilando y almacenando información localmente, pero no envía informes a través de la red.
+
+.Pasos
+. Inicie ONTAP TOOLS Manager desde un explorador web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. Inicie sesión con las herramientas de ONTAP para las credenciales de administrador de VMware vSphere que proporcionó durante la implementación.
+. Seleccione la opción *Ajustes* > *Telemetría* > *Editar*.
+. Deseleccione la opción *AutoSupport* y guarde los cambios.
+
+
+
+
+== Actualice la URL del proxy de AutoSupport
+
+Actualice la URL del proxy de AutoSupport para que la función AutoSupport enrute los datos a través del servidor proxy para una transmisión segura.
+
+.Pasos
+. Inicie ONTAP TOOLS Manager desde un explorador web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. Inicie sesión con las herramientas de ONTAP para las credenciales de administrador de VMware vSphere que proporcionó durante la implementación.
+. Selecciona *Ajustes* en la barra lateral.
+. Seleccione la opción *Ajustes* > *Telemetría* > *Editar*.
+. Introduzca una *URL de proxy* válida y guarde los cambios.
++
+Si deshabilita AutoSupport, la URL del proxy también se deshabilita.
+
+

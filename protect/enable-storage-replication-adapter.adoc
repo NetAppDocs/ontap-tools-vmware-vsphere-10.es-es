@@ -17,7 +17,7 @@ Las herramientas de ONTAP para VMware vSphere ofrecen la opción de habilitar la
 * Debe haber configurado la instancia de vCenter Server y el host ESXi.
 * Debe haber puesto en marcha herramientas de ONTAP para VMware vSphere.
 * Debería haber descargado `.tar.gz` el archivo SRA Adapter de la https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Sitio de soporte de NetApp"^].
-* Los clústeres de ONTAP de origen y de destino deben tener las mismas programaciones de SnapMirror personalizadas creadas antes de ejecutar los flujos de trabajo de SRA.
+* Debe tener las mismas programaciones SnapMirror personalizadas en los clústeres ONTAP de origen y destino antes de ejecutar los flujos de trabajo de SRA.
 * link:../manage/enable-services.html["Habilite herramientas de ONTAP para los servicios de VMware vSphere"] para habilitar la capacidad SRA.
 
 
@@ -27,3 +27,16 @@ Las herramientas de ONTAP para VMware vSphere ofrecen la opción de habilitar la
 . Cargue el instalador _.tar.gz_ para el plugin de SRA en Live Site Recovery de VMware.
 . Vuelva a analizar los adaptadores para verificar que los detalles se hayan actualizado en la página Adaptadores de replicación de almacenamiento de recuperación de sitio activo de VMware.
 
+
+
+NOTE: Después de una conmutación por error, es posible que acciones como expandir, montar y eliminar no estén disponibles para los almacenes de datos.  Realice el descubrimiento del almacén de datos para actualizar y mostrar las acciones del menú contextual adecuadas.
+
+
+NOTE: Después de cada operación de reprotección, debe realizar la detección de almacenamiento en ambos sitios.
+
+En una nueva configuración con protección SRA, ejecute siempre una conmutación por error de prueba.  Omitir la conmutación por error de prueba podría provocar que la operación de reprotección falle.
+
+En una configuración de abanico de distribución, después de una conmutación por error de SnapMirror Active Sync donde la fuente de SnapMirror cambia al sitio B para conmutación por error automatizada dúplex y SnapMirror asincrónico, ejecute una conmutación por error de prueba entre los sitios B y C. Omitir este paso puede provocar una operación de reprotección fallida.
+
+.Información relacionada
+https://docs.netapp.com/us-en/netapp-solutions-virtualization/vmware/vmw-nfs-vlsr.html#scenario-overview["Configurar la recuperación ante desastres para almacenes de datos NFS mediante VMware Site Recovery Manager"]

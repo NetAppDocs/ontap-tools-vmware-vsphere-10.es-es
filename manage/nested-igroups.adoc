@@ -13,9 +13,9 @@ summary:
 [role="lead"]
 Al administrar máquinas virtuales de herramientas ONTAP y sistemas de almacenamiento ONTAP , es fundamental comprender el comportamiento de igroup, especialmente cuando se migran almacenes de datos desde entornos que no son de herramientas ONTAP a la administración de herramientas ONTAP .  Esta sección describe cómo se actualizan los igroups durante esta transición.
 
-Las ONTAP tools for VMware vSphere 10.4 simplifican la administración de almacenes de datos al automatizar la creación y el mantenimiento de objetos ONTAP y vCenter dentro de entornos de centros de datos de VMware.
+A partir de las ONTAP tools for VMware vSphere 10.4, la administración del almacén de datos se simplifica mediante la creación y el mantenimiento automáticos de objetos ONTAP y vCenter en entornos de centros de datos de VMware.
 
-Las ONTAP tools for VMware vSphere 10.4 interpretan los igroups en dos contextos diferentes:
+Las ONTAP tools for VMware vSphere interpretan los igroups en dos contextos diferentes:
 
 .igroups administrados por herramientas que no son de ONTAP
 Como administrador de almacenamiento, puede crear igroups en el sistema ONTAP como estructuras planas o anidadas.  La ilustración muestra un igroup plano creado en el sistema ONTAP .
@@ -23,7 +23,7 @@ Como administrador de almacenamiento, puede crear igroups en el sistema ONTAP co
 image:../media/non-otv-managed.png["igroup administrado por herramientas que no son de ONTAP"]
 
 .igroups administrados por herramientas ONTAP
-Cuando crea almacenes de datos, las ONTAP tools for VMware vSphere 10.4 crean automáticamente igroups utilizando una estructura anidada para facilitar la asignación de LUN.
+Cuando crea almacenes de datos, las ONTAP tools for VMware vSphere crean automáticamente igroups utilizando una estructura anidada para facilitar la asignación de LUN.
 
 Por ejemplo, cuando se crea y monta el almacén de datos1 en los hosts 1, 2 y 3, y se crea y monta un nuevo almacén de datos (almacén de datos2) en los hosts 3, 4 y 5, las herramientas de ONTAP reutilizan el igroup a nivel de host para una gestión eficiente.
 

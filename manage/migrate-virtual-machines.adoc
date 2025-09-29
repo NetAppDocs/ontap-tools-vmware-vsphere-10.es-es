@@ -46,7 +46,7 @@ Volumen FlexVol donde se coloca la máquina virtual clonada, el archivo de metad
 
 
 
-VMware no admite actualmente máquinas virtuales clonadas en una plantilla de equipo virtual.
+Actualmente, VMware no admite máquinas virtuales clonadas en una plantilla de VM.
 
 Se admite el clonado de clon de una máquina virtual protegida.
 
@@ -58,6 +58,6 @@ Consulte https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsph
 
 Actualmente solo se admiten instantáneas de máquina virtual sin memoria. Si la máquina virtual tiene una snapshot con memoria, no se considera que la máquina virtual tenga protección.
 
-Tampoco puede proteger máquinas virtuales sin proteger que tengan snapshot de memoria. Para esta versión, se espera que elimine la instantánea de memoria antes de habilitar la protección para la máquina virtual.
+Tampoco puedes proteger máquinas virtuales desprotegidas que tengan instantáneas de memoria.  Para esta versión, se espera que elimine la instantánea de memoria antes de habilitar la protección para la máquina virtual.
 
 Para equipos virtuales Windows con tipo de almacenamiento ASA R2, al tomar una instantánea de la máquina virtual, será una instantánea de solo lectura. Cuando hay una llamada de encendido de la máquina virtual, el proveedor VASA crea un LUN con la Snapshot de solo lectura y, a continuación, la habilita para las IOPS. Durante la solicitud de apagado, el proveedor de VASA elimina el LUN que se creó y, a continuación, deshabilita las IOPS.

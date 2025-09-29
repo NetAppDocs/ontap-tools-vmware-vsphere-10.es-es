@@ -63,6 +63,6 @@ Consulte https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-
 Cuando alcance un tiempo de espera, aumente los valores de `storage.commandTimeout` y.. `storage.maxConcurrentCommandCnt` a un valor superior.
 
 
-NOTE: El intervalo de tiempo de espera especificado es el valor máximo. No es necesario esperar hasta que se llegue al tiempo de espera máximo. La mayoría de comandos terminan dentro del intervalo máximo de tiempo de espera establecido.
+NOTE: El intervalo de tiempo de espera especificado es el valor máximo.  No es necesario esperar a que se alcance el tiempo de espera máximo.  La mayoría de los comandos finalizan dentro del intervalo de tiempo de espera máximo establecido.
 
 Consulte https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/how-do-i-protect-my-environment/advanced-srm-configuration/reconfigure-srm-settings/change-storage-settings.html["Cambie la configuración de almacenamiento"] para modificar la configuración del proveedor de SAN.

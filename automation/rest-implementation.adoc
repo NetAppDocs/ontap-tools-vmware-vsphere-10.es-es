@@ -106,7 +106,7 @@ Los códigos de estado HTTP utilizados por la API de REST se describen a continu
 | Codificación | Significado | Descripción 
 
 
-| 200 | DE ACUERDO | Indica que las llamadas que no crean una nueva instancia de recurso tienen éxito. 
+| 200 | DE ACUERDO | Indica el éxito de las llamadas que no crean una nueva instancia de recurso. 
 
 
 | 201 | Creado | Se ha creado correctamente un objeto con un identificador único para la instancia de recurso. 

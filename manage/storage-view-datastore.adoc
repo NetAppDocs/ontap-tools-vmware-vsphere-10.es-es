@@ -14,7 +14,7 @@ summary: La vista de almacenamiento de ONTAP en la pestaña de configuración de
 Las herramientas de ONTAP para VMware vSphere muestran la vista lateral del almacenamiento ONTAP de los almacenes de datos y sus volúmenes en la pestaña Configure.
 
 .Pasos
-. En el cliente de vSphere, desplácese hasta el almacén de datos.
+. Desde el cliente vSphere, vaya al almacén de datos.
 . Seleccione la pestaña *Configure* en el panel derecho.
 . Selecciona *Herramientas de NetApp ONTAP* > *Almacenamiento de ONTAP*. Según el tipo de almacén de datos, la vista cambia. Consulte la siguiente tabla para obtener más información:
 

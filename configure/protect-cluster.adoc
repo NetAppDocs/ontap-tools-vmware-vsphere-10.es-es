@@ -14,21 +14,20 @@ summary: Las herramientas de ONTAP para VMware vSphere gestionan la protección 
 Las herramientas de ONTAP para VMware vSphere gestionan la protección de los clústeres de hosts. Todos los almacenes de datos que pertenecen a la SVM seleccionada y montados en uno o varios hosts del clúster están protegidos en un clúster de hosts.
 
 .Antes de empezar
-Asegúrese de que se cumplen los siguientes requisitos previos:
+Asegúrese de cumplir estos requisitos antes de proteger un clúster de host:
 
-* El clúster de hosts tiene almacenes de datos solo de una SVM.
-* El almacén de datos montado en el clúster de hosts no debe montarse en ningún host fuera del clúster.
-* Todos los almacenes de datos montados en el clúster de host deben ser almacenes de datos VMFS con protocolo iSCSI/FC. No se admiten almacenes de datos vVols, NFS o VMFS con protocolos NVMe/FC y NVMe/TCP.
-* Los almacenes de datos que forman FlexVol/LUN montados en el clúster de hosts no deben formar parte de ningún grupo de consistencia (CG) existente.
-* Los almacenes de datos que forman FlexVol/LUN montados en el clúster de hosts no deben formar parte de ninguna relación de SnapMirror existente.
-* El clúster de hosts debe tener al menos un almacén de datos.
+* El clúster de host contiene almacenes de datos de una única SVM únicamente.
+* Los almacenes de datos en el clúster de host no se montan en hosts fuera del clúster.
+* Los almacenes de datos montados en el clúster de host son almacenes de datos VMFS con protocolo iSCSI o FC.  No se pueden utilizar almacenes de datos vVols, NFS o VMFS con los protocolos NVMe/FC y NVMe/TCP.
+* Los almacenes de datos basados ​​en volúmenes FlexVol/LUN montados en un host no son parte de ningún grupo de consistencia.
+* Los almacenes de datos basados ​​en volúmenes FlexVol/LUN montados en un host no son parte de ninguna relación de SnapMirror .
+* El clúster de host contiene al menos un almacén de datos.
 
 
 .Pasos
 . Inicie sesión en el cliente de vSphere.
-. Haga clic con el botón derecho en un clúster de host y seleccione *Herramientas de NetApp ONTAP* > *Proteger clúster*.
-. En la ventana Protect cluster, el tipo de almacén de datos y los detalles de la máquina virtual de almacenamiento de origen se completan automáticamente. Seleccione el enlace de los almacenes de datos para ver los almacenes de datos protegidos.
-. Introduzca el *nombre del grupo de consistencia*.
+. Haga clic con el botón derecho en un clúster de host y seleccione * Herramientas de NetApp ONTAP * > * Proteger clúster *.
+. En la ventana de protección del clúster, el sistema completa automáticamente el tipo de almacén de datos y los detalles de la máquina virtual (VM) de almacenamiento de origen.  Seleccione el enlace de almacenes de datos para ver los almacenes de datos protegidos.
 . Seleccione *Añadir relación*.
 . En la ventana *Add SnapMirror Relationship*, seleccione la *Target storage VM* y el tipo *Policy*.
 +
@@ -38,14 +37,22 @@ El tipo de política puede ser Asynchronous o AutomatedFailOverDuplex.
 Al agregar la relación de SnapMirror como una política de tipo AutomatedFailOverDuplex, debe agregar la máquina virtual de almacenamiento de destino como back-end de almacenamiento a la misma instancia de vCenter donde se ponen en marcha las herramientas de ONTAP para VMware vSphere.
 
 +
-En el tipo de política AutomatedFailOverDuplex, hay configuraciones de host uniformes y no uniformes. Cuando selecciona el botón de alternar *UNIFORME HOST CONFIGURACIÓN*, la configuración del grupo de iniciadores de host se replica implícitamente en el sitio de destino. Para obtener más información, consulte link:../concepts/ontap-tools-concepts-terms.html["Conceptos y términos clave"].
+En el tipo de política AutomatedFailOverDuplex, hay configuraciones de host uniformes y no uniformes.  Cuando selecciona el botón de alternancia *configuración de host uniforme*, la configuración del grupo de iniciador de host se replica implícitamente en el sitio de destino. Para obtener más información, consulte link:../concepts/ontap-tools-concepts-terms.html["Conceptos y términos clave"] .
 
 . Si elige tener una configuración de host no uniforme, seleccione el acceso de host (origen/destino) para cada host dentro de ese clúster.
 . Seleccione *Agregar*.
-. En la ventana *Protect cluster*, no puede editar el cluster protegido durante la operación de creación. Puede eliminar y volver a agregar protección. Durante la operación de protección Modificar clúster de hosts, la opción de edición queda disponible. Puede editar o eliminar las relaciones mediante las opciones del menú de puntos suspensivos.
+. Puede editar la protección del clúster de host mediante la operación *Modificar protección del clúster de host*.  Puede editar o eliminar las relaciones utilizando las opciones del menú de puntos suspensivos.
 . Seleccione el botón *Proteger*.
 +
-Una tarea de vCenter se crea con detalles de ID de trabajo y su progreso se muestra en el panel de tareas recientes. Esta es una tarea asíncrona; la interfaz de usuario muestra sólo el estado de envío de la solicitud y no espera a que se complete la tarea.
+El sistema crea una tarea de vCenter con detalles de ID de trabajo y muestra su progreso en el panel de tareas recientes.  Esta es una tarea asincrónica; la interfaz de usuario solo muestra el estado de envío de la solicitud y no espera a que se complete la tarea.
 
-. Para ver los clústeres de hosts protegidos, navegue hasta *Herramientas de NetApp ONTAP* > *Protección* > *Relaciones de clúster de host*.
+. Para ver los clústeres de host protegidos, vaya a * Herramientas de NetApp ONTAP * > * Protección * > * Relaciones de clúster de host *.  Seleccione un grupo de consistencia para ver su capacidad, almacenes de datos asociados y grupos de consistencia secundarios.
 
+
+[NOTE]
+====
+Si necesita eliminar la protección dentro de una hora desde la creación, ejecute primero el descubrimiento de almacenamiento.
+
+====
+.Información relacionada
+https://www.vmware.com/docs/vmware-vsphere-metro-storage-cluster-vmsc["Clúster de almacenamiento VMware vSphere Metro (vMSC)"^]

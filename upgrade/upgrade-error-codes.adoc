@@ -134,9 +134,6 @@ Los últimos tres dígitos del código de error indican el error de flujo de tra
 | 099 | No se pudo validar la adición del nuevo HDD | Añada el nuevo HDD a todos los nodos en caso de alta disponibilidad y a un nodo en caso de puesta en marcha distinta de alta disponibilidad. 
 
 
-| 108 | Fallo al iniciar el script | - 
-
-
 | 109 | no se pudo realizar el backup de los datos de volumen persistente | Compruebe los registros de actualización y vuelva a intentar la actualización. 
 
 
@@ -162,6 +159,9 @@ Los últimos tres dígitos del código de error indican el error de flujo de tra
 
 
 | 056 | fallo al suprimir la copia de seguridad de migración | NA 
+
+
+| 090 | La validación del certificado para los backends de almacenamiento y vCenter falló | Verifique los registros de actualización y el archivo de registro en /var/log/cert_validation_error.log y vuelva a intentar la actualización. 
 |===
 
 NOTE: A partir de las herramientas de ONTAP no se admite el objetivo de punto de recuperación cero de VMware vSphere 10,3.

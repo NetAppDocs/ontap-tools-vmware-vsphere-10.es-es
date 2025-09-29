@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Añada instancias de vCenter Server a herramientas de ONTAP para VMware vSphere para configurar, gestionar y proteger sus almacenes de datos virtuales en el entorno de vCenter Server. 
 ---
-= Añada instancias de vCenter Server
+= Agregar instancias de vCenter Server a las herramientas de ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,14 +13,14 @@ summary: Añada instancias de vCenter Server a herramientas de ONTAP para VMware
 [role="lead"]
 Añada instancias de vCenter Server a herramientas de ONTAP para VMware vSphere para configurar, gestionar y proteger sus almacenes de datos virtuales en el entorno de vCenter Server. Cuando agrega varias instancias de vCenter Server, se requieren certificados de CA personalizados para una comunicación segura entre las herramientas de ONTAP y cada vCenter Server.
 
-*Acerca de esta tarea*
-
-Al integrarse con vCenter, las herramientas de ONTAP permiten realizar tareas de almacenamiento como el aprovisionamiento, los snapshots y la protección de datos directamente desde el cliente vSphere, lo que elimina la necesidad de cambiar a consolas de gestión de almacenamiento separadas.
+.Acerca de esta tarea
+Las herramientas de ONTAP se integran con vCenter Server para realizar tareas de almacenamiento como aprovisionamiento, instantáneas y protección de datos directamente desde el cliente vSphere.
 
 .Pasos
-. Abra un explorador web y vaya a la dirección URL: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. Abra un navegador web y vaya a la URL: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Inicie sesión con las herramientas de ONTAP para las credenciales de administrador de VMware vSphere que proporcionó durante la implementación.
 . Seleccione *vCenters* > *Add* para incorporar las instancias de vCenter Server. Proporcione la dirección IP o el nombre de host, el nombre de usuario, la contraseña y los detalles de puerto de vCenter.
+. En las opciones avanzadas, obtenga el certificado de vCenter Server automáticamente (autorícelo) o cárguelo manualmente.
 +
 
 NOTE: No es necesario tener una cuenta de administrador para añadir instancias de vCenter a las herramientas de ONTAP. Se puede crear un rol personalizado sin la cuenta de administrador con permisos limitados. Consulte link:../concepts/rbac-vcenter-use.html["Utilice el control de acceso basado en roles de vCenter Server con herramientas de ONTAP para VMware vSphere 10"] para obtener más información.
@@ -29,7 +29,7 @@ NOTE: No es necesario tener una cuenta de administrador para añadir instancias 
 
 Al agregar una instancia de vCenter Server a herramientas de ONTAP se activan automáticamente las siguientes acciones:
 
-* El complemento del cliente de vCenter está registrado como plugin remoto.
+* Las herramientas ONTAP registran el complemento del cliente vCenter como un complemento remoto.
 * Las Privileges personalizadas para los plugins y las API se aplican a la instancia de vCenter Server.
 * Se crean roles personalizados para gestionar los usuarios.
 * El plugin aparece como un acceso directo en la interfaz de usuario de vSphere.

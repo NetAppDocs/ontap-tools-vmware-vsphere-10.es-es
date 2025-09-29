@@ -1,6 +1,6 @@
 ---
 section: migrate
-title: Migre las herramientas de ONTAP para VMware vSphere 9.xx a 10,4
+title: Migrar ONTAP tools for VMware vSphere 9.xx a 10.5
 entries:
 - title: Migre a las últimas herramientas ONTAP para VMware vSphere
   url: "/migrate/migrate-to-latest-ontaptools.html"

@@ -17,14 +17,14 @@ Los back-ends de almacenamiento son los sistemas que los hosts ESXi utilizan par
 
 == Descubra el almacenamiento
 
-Puede ejecutar la detección de un back-end de almacenamiento bajo demanda sin esperar a que una detección programada actualice los detalles del almacenamiento.
+Puede ejecutar el descubrimiento de un backend de almacenamiento a pedido sin esperar a que un descubrimiento programado actualice los detalles de almacenamiento de inmediato.  Para las configuraciones de MetroCluster , ejecute la detección de herramientas ONTAP manualmente después de un cambio.
 
 Siga estos pasos para detectar los back-ends de almacenamiento.
 
 .Pasos
 . Inicie sesión en el cliente de vSphere.
 . En la página de accesos directos, seleccione *Herramientas de NetApp ONTAP* en la sección de plugins.
-. En el panel izquierdo de las herramientas de ONTAP, navegue hasta *Backends de almacenamiento* y seleccione un backend de almacenamiento.
+. En el panel izquierdo de las herramientas de ONTAP , vaya a *Backends de almacenamiento* y seleccione un backend de almacenamiento.
 . Seleccione el menú de elipses verticales y seleccione *Descubrir almacenamiento*
 
 
@@ -34,15 +34,19 @@ Puede realizar un seguimiento del progreso en el panel de tareas recientes.
 
 == Modificar los back-ends de almacenamiento
 
+Puede modificar las credenciales del backend de almacenamiento o el nombre del puerto.  También puede modificar el backend de almacenamiento para clústeres ONTAP globales mediante el Administrador de herramientas ONTAP .  Si el certificado caducará en 30 días o menos, las herramientas ONTAP muestran una advertencia.  Modifique el backend de almacenamiento y cargue el nuevo certificado desde el administrador de ONTAP .
+
+Cuando modifica el back-end de almacenamiento, las ONTAP tools for VMware vSphere realizan una detección del back-end de almacenamiento para actualizar los detalles de almacenamiento.
+
 Siga los pasos de esta sección para modificar un back-end de almacenamiento.
 
 . Inicie sesión en el cliente de vSphere.
 . En la página de accesos directos, seleccione *Herramientas de NetApp ONTAP* en la sección de plugins.
-. En el panel izquierdo de las herramientas de ONTAP, navegue hasta *Backends de almacenamiento* y seleccione un backend de almacenamiento.
+. En el panel izquierdo de las herramientas de ONTAP , vaya a *Backends de almacenamiento* y seleccione un backend de almacenamiento.
 . Seleccione el menú de elipses verticales y seleccione *Modificar* para modificar las credenciales o el nombre del puerto. Puede realizar un seguimiento del progreso en el panel de tareas recientes.
 
 
-Puede realizar la operación Modificar para clústeres de ONTAP globales mediante el Administrador de herramientas de ONTAP mediante los siguientes pasos.
+Modifique los clústeres globales de ONTAP con el Administrador de herramientas de ONTAP de la siguiente manera.
 
 . Inicie ONTAP TOOLS Manager desde un explorador web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Inicie sesión con las herramientas de ONTAP para las credenciales de administrador de VMware vSphere que proporcionó durante la implementación.
@@ -56,12 +60,12 @@ Puede realizar la operación Modificar para clústeres de ONTAP globales mediant
 
 == Retire los back-ends de almacenamiento
 
-Debe eliminar todos los almacenes de datos conectados al back-end de almacenamiento antes de quitar el back-end de almacenamiento. Siga los pasos que se indican a continuación para quitar un back-end de almacenamiento.
+Debes eliminar todos los almacenes de datos adjuntos al backend de almacenamiento antes de eliminarlo.  Siga los pasos a continuación para eliminar un backend de almacenamiento.
 
 . Inicie sesión en el cliente de vSphere.
 . En la página de accesos directos, seleccione *Herramientas de NetApp ONTAP* en la sección de plugins.
-. En el panel izquierdo de las herramientas de ONTAP, navegue hasta *Backends de almacenamiento* y seleccione un backend de almacenamiento.
-. Seleccione el menú de elipses verticales y seleccione *Eliminar*. Asegúrese de que el back-end de almacenamiento no contenga ningún almacén de datos. Puede realizar un seguimiento del progreso en el panel de tareas recientes.
+. En el panel izquierdo de las herramientas de ONTAP , vaya a *Backends de almacenamiento* y seleccione un backend de almacenamiento.
+. Seleccione el menú de puntos suspensivos verticales y seleccione *Eliminar*.  Asegúrese de que el backend de almacenamiento no contenga ningún almacén de datos.  Puede seguir el progreso en el panel de tareas recientes.
 
 
 Puede realizar la operación de eliminación para clústeres de ONTAP globales mediante el Administrador de herramientas de ONTAP.
@@ -77,18 +81,19 @@ Puede realizar la operación de eliminación para clústeres de ONTAP globales m
 
 == Vista detallada del back-end de almacenamiento
 
-La página del back-end de almacenamiento incluye todos los back-ends de almacenamiento. Puede realizar operaciones de detección de almacenamiento, modificación y eliminación en los back-ends de almacenamiento añadido y no en la SVM secundaria individual en el clúster.
+La página del backend de almacenamiento enumera todos los backends de almacenamiento.  Puede realizar operaciones de descubrimiento de almacenamiento, modificación y eliminación en los backends de almacenamiento que agregó, pero no en la SVM secundaria individual del clúster.
 
-Cuando selecciona el clúster primario o el secundario bajo el back-end de almacenamiento, puede ver el resumen general del componente. Cuando selecciona el clúster principal, tiene la lista desplegable de acciones desde la que puede realizar las operaciones de detección, modificación y eliminación de almacenamiento.
+Seleccione el clúster principal o secundario para ver el resumen del componente.  Para el clúster principal, use el menú desplegable de acciones para descubrir almacenamiento, modificar o eliminar el backend de almacenamiento.
 
 La página de resumen proporciona los siguientes detalles:
 
 * Estado del back-end de almacenamiento
 * Información de capacidad
 * Información básica acerca de la máquina virtual
-* Información de red como la dirección IP y el puerto de la red. Para la SVM secundaria, la información será la misma que el back-end del almacenamiento primario.
-* Privilegios permitidos y restringidos para el back-end de almacenamiento. Para la SVM secundaria, la información será la misma que el back-end del almacenamiento primario. Los privilegios solo se muestran en los back-ends de almacenamiento basado en clúster. Si añade la SVM como back-end de almacenamiento, no se mostrará la información de privilegios.
-* La vista de desglose de clústeres del sistema R2 de ASA no incluye la pestaña de niveles locales cuando la propiedad desagregada se establece como «verdadera» para la SVM o el clúster.
+* Detalles del certificado, como el estado del certificado y la fecha de vencimiento.
+* Información de red como la dirección IP y el puerto de la red.  Para el SVM secundario, la información es la misma que la del backend de almacenamiento principal.
+* Privileges permitidos y restringidos para el backend de almacenamiento.  Para el SVM secundario, la información es la misma que la del backend de almacenamiento principal.  Las herramientas ONTAP muestran privilegios solo en los backends de almacenamiento basados ​​en clúster.  Si agrega SVM como back-end de almacenamiento, no se muestra la información de privilegios.
+* La vista detallada del clúster del sistema ASA r2 no incluye la pestaña de niveles locales cuando la propiedad desagregada está configurada como "verdadera" para la SVM o el clúster.
 * Para los sistemas de SVM R2 de ASA, no se muestra el portlet de capacidad. El portal de capacidad solo es necesario cuando la propiedad desagregada se establece como «true» para la SVM o el clúster.
 * Para los sistemas ASA R2 SVM, la sección de información básica muestra el tipo de plataforma.
 

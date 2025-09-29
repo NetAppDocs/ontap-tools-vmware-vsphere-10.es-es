@@ -11,12 +11,12 @@ summary: Asocie un back-end de almacenamiento con vCenter Server para crear una 
 
 
 [role="lead"]
-Asocie un back-end de almacenamiento con vCenter Server para crear una asignación entre el back-end de almacenamiento y la instancia incorporada de vCenter Server a nivel global.
+Asocie un backend de almacenamiento con una instancia de vCenter Server para habilitar el acceso a todas las instancias de vCenter Server.  Para la configuración de MetroCluster , cuando asocie un clúster de back-end de almacenamiento, asegúrese de asociar también su clúster par con vCenter Server.
 
 .Pasos
 . Inicie ONTAP TOOLS Manager desde un explorador web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Inicie sesión con las herramientas de ONTAP para las credenciales de administrador de VMware vSphere que proporcionó durante la implementación.
 . Seleccione vCenter en la barra lateral.
-. Seleccione los tres puntos verticales en la instancia de vCenter Server que desea asociar con los back-ends de almacenamiento.
-. Seleccione el back-end de almacenamiento del menú desplegable para asociar la instancia de vCenter Server con el back-end de almacenamiento requerido.
+. Seleccione los puntos suspensivos verticales junto a la instancia de vCenter Server que desea conectar a los backends de almacenamiento.
+. En el menú desplegable, seleccione el backend de almacenamiento que desea asociar con la instancia de vCenter Server seleccionada.
 

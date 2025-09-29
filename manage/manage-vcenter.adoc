@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Las instancias de vCenter son plataformas de gestión central que le permiten controlar hosts, equipos virtuales y back-ends de almacenamiento. 
 ---
-= Gestione instancias de vCenter Server
+= Administrar instancias de vCenter Server en las herramientas de ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -37,19 +37,20 @@ Siga los pasos a continuación para modificar las instancias de vCenter Server.
 . Inicie sesión con las herramientas de ONTAP para las credenciales de administrador de VMware vSphere que proporcionó durante la implementación.
 . Seleccione la instancia de vCenter Server aplicable en la barra lateral
 . Seleccione los tres puntos verticales en la instancia de vCenter Server que desea modificar y seleccione *Modify*.
-. Modifique los detalles de la instancia de vCenter Server y seleccione *Modify*.
+. En la ventana *Modificar vCenter*, ingrese el nombre de usuario, la contraseña y los detalles del puerto.
+. Sube el certificado y selecciona *Modificar*.
 
 
 
 
 == Quite una instancia de vCenter Server
 
-Debe quitar todos los back-ends de almacenamiento conectados a vCenter Server antes de quitarlos.
+Elimine todos los backends de almacenamiento del vCenter Server antes de eliminarlo.
 
 . Inicie ONTAP TOOLS Manager desde un explorador web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Inicie sesión con las herramientas de ONTAP para las credenciales de administrador de VMware vSphere que proporcionó durante la implementación.
 . Seleccione las instancias de vCenter Server aplicables en la barra lateral
-. Seleccione los tres puntos verticales en la instancia de vCenter Server que desea quitar y seleccione *Quitar*.
+. Seleccione los puntos suspensivos verticales contra el vCenter Server que desea eliminar y seleccione *Eliminar*.
 +
 
 NOTE: Después de eliminar instancias de vCenter Server, la aplicación ya no las mantendrá.

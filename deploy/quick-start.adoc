@@ -13,7 +13,7 @@ summary: Configure las ONTAP tools for VMware vSphere con esta sección de inici
 [role="lead"]
 Configure las ONTAP tools for VMware vSphere con esta sección de inicio rápido.
 
-Inicialmente, implementarás herramientas de ONTAP para VMware vSphere como una configuración de nodo individual de tamaño pequeño que proporciona servicios principales para admitir almacenes de datos NFS y VMFS. Si necesita ampliar su configuración para usar almacenes de datos vVols y alta disponibilidad (HA), lo hará después de finalizar este flujo de trabajo. Para obtener más información, consulte la link:../deploy/ha-workflow.html["Flujo de trabajo de implementación DE ALTA disponibilidad"].
+Inicialmente, implementará ONTAP tools for VMware vSphere como una configuración de nodo único de tamaño pequeño que proporciona servicios básicos para soportar almacenes de datos NFS y VMFS.  Para ampliar su configuración para contenedores adicionales por servicio, mayor resiliencia o para usar almacenes de datos vVols y alta disponibilidad (HA), primero complete este flujo de trabajo y luego continúe con los pasos de expansión. Para obtener más información, consulte la link:../deploy/ha-workflow.html["Flujo de trabajo de implementación DE ALTA disponibilidad"] .
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Una"] Planifique su implementación
 [role="quick-margin-para"]
@@ -91,8 +91,9 @@ Configure herramientas de ONTAP para VMware vSphere para gestionar la protecció
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-9.png["Nueve"] Configure el backup y la recuperación de datos para la puesta en marcha de sus herramientas de ONTAP para VMware vSphere
 [role="quick-margin-para"]
-Programe los backups de sus herramientas de ONTAP para la configuración de VMware vSphere que pueda utilizar para recuperar la configuración en caso de fallo.
+La copia de seguridad está habilitada de forma predeterminada en las ONTAP tools for VMware vSphere 10.5 y se realiza cada 10 minutos.  Programe copias de seguridad de sus ONTAP tools for VMware vSphere que pueda usar para recuperar la configuración en caso de una falla.
 
 [role="quick-margin-list"]
-* link:../manage/enable-backup.html["Crear backups y recuperar la configuración de las herramientas de ONTAP"]
+* link:../manage/backup-settings.html["Editar la configuración de la copia de seguridad"]
+* link:../manage/recover-backup.html["Recuperar la configuración de las herramientas ONTAP"]
 

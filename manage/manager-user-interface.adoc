@@ -1,0 +1,51 @@
+---
+permalink: manage/manager-user-interface.html 
+sidebar: sidebar 
+keywords: ontap tools manager, managerui 
+summary: El administrador de herramientas de ONTAP proporciona un mayor control y potencia a las herramientas de ONTAP para administrador de VMware vSphere, lo que ayuda en la gestión general de los dispositivos, los inquilinos y los back-ends de almacenamiento. 
+---
+= Interfaz de usuario del gestor de herramientas de ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Las ONTAP tools for VMware vSphere admiten múltiples inquilinos, lo que permite la administración de múltiples instancias de vCenter Server.
+
+ONTAP Tools Manager es una consola basada en web para administrar ONTAP tools for VMware vSphere, instancias de vCenter Server, backends de almacenamiento y configuración de dispositivos como alta disponibilidad (HA) y escalamiento de nodos.
+
+El administrador de herramientas de ONTAP ofrece las siguientes capacidades:
+
+* Administrar alertas: vea y filtre las alertas generadas por las ONTAP tools for VMware vSphere.
+* Administrar backends de almacenamiento: agregue y administre clústeres de almacenamiento de ONTAP y asígnelos a instancias de vCenter Server a nivel global.
+* Administrar instancias de vCenter Server: agregue y administre instancias de vCenter Server dentro de las herramientas de ONTAP .
+* Supervisar trabajos: supervise y depure trabajos asincrónicos iniciados desde la interfaz del complemento de herramientas ONTAP y la interfaz del Administrador de herramientas ONTAP .  Puede filtrar trabajos por período de tiempo, ajustar el tamaño de la página y ver los detalles del trabajo, incluidos los errores y las subtareas.  Haga clic en un estado fallido para ver los detalles del error.  Para trabajos con subtareas, expanda la fila para ver descripciones y estados.  Para los subtrabajos, utilice el desglose del trabajo para ver los detalles.
+* Descargar paquetes de registros: recopile archivos de registro para solucionar problemas de las ONTAP tools for VMware vSphere.
+* Administrar certificados: reemplace el certificado autofirmado con un certificado CA personalizado y renueve o actualice los certificados para VASA Provider y las herramientas ONTAP .
+* Restablecer contraseñas: cambie la contraseña del proveedor VASA y SRA.
+* Administrar la configuración del dispositivo: configure el dispositivo de herramientas ONTAP , lo que incluye habilitar HA y ampliar el tamaño de los nodos.
+
+
+Para acceder al Administrador de herramientas de ONTAP, `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` inicie sesión desde el explorador e inicie sesión con las herramientas de ONTAP para las credenciales de administrador de VMware vSphere que proporcionó durante la implementación.
+
+image:../media/ontap-tools-manager-overview.png["Información general de la consola del Administrador de herramientas de ONTAP"]
+
+|===
+| *Tarjeta* | *Descripción* 
+
+
+| Tarjeta del aparato | La tarjeta del dispositivo muestra el estado general del dispositivo de herramientas ONTAP , los detalles de configuración y el estado de los servicios habilitados.  Para ver más información, seleccione el enlace *Ver detalles*.  Si cambia la configuración de un dispositivo, la tarjeta muestra el estado del trabajo y los detalles hasta que se complete el cambio. 
+
+
+| Tarjeta de alertas | La tarjeta Alertas muestra alertas de herramientas ONTAP categorizadas por tipo, incluidas las alertas a nivel de nodo de HA.  Puede ver alertas detalladas haciendo clic en el hipervínculo de recuento, que lo llevará a la página de alertas filtrada por el tipo de alerta seleccionado. 
+
+
+| Tarjeta vCenters | La tarjeta vCenters muestra el estado de salud de todas las instancias de vCenter Server administradas por herramientas ONTAP .  Puede ver los detalles de cada vCenter seleccionando el enlace correspondiente, que lo llevará a una página con más información sobre la instancia seleccionada. 
+
+
+| Tarjeta de almacenamiento backend | La tarjeta de backends de almacenamiento muestra el estado de salud y conectividad de todos los clústeres de almacenamiento de ONTAP configurados en las herramientas de ONTAP .  Puede ver los detalles de cada backend de almacenamiento seleccionando el enlace correspondiente, que lo llevará a una página con más información sobre el clúster seleccionado. 
+
+
+| Tarjeta de nodos de herramientas de ONTAP | La tarjeta de nodos de herramientas de ONTAP muestra todos los nodos del dispositivo, incluido el nombre del nodo, el nombre de la máquina virtual, el estado y la información de la red.  Seleccione *Ver detalles* para ver más detalles de un nodo específico.  [NOTA] En una configuración que no es HA, solo aparece un único nodo.  En una configuración de alta disponibilidad, se muestran tres nodos. 
+|===

@@ -11,16 +11,14 @@ summary: Cuando se selecciona el icono del plugin de las herramientas de ONTAP p
 
 
 [role="lead"]
-Cuando se selecciona el icono del plugin de las herramientas de ONTAP para VMware vSphere en la sección de accesos directos del cliente de vCenter, la interfaz de usuario navega a la página de información general. Esta página actúa como la consola que ofrece el resumen de las herramientas de ONTAP para el plugin de VMware vSphere.
+Al seleccionar el ícono del complemento de ONTAP tools for VMware vSphere en la sección de accesos directos en el cliente vCenter, se abre la página de descripción general.  Este panel proporciona un resumen de las ONTAP tools for VMware vSphere .
 
-En el caso de la configuración de modo vinculado mejorado (ELM), aparece el menú desplegable SELECT de vCenter Server y puede seleccionar la instancia de vCenter Server que desee para ver los datos relevantes para él. Esta lista desplegable está disponible para todas las otras vistas de listado del plugin.
-La selección de vCenter Server realizada en una página persiste en las pestañas del plugin.
-image:../media/remote-plugin-dashboard.png["Información general del panel de control"]
+En el caso de la configuración del modo vinculado mejorado (ELM), aparece el menú desplegable de selección de vCenter Server y puede seleccionar el vCenter Server que desee para ver los datos relevantes para él.  Este menú desplegable está disponible para todas las demás vistas de listado del complemento. La selección de vCenter Server realizada en una página persiste en las pestañas del complemento.image:../media/remote-plugin-dashboard.png["Información general del panel de control"]
 
 Desde la página de descripción general, puede ejecutar la acción *Discovery*. La acción de detección ejecuta la detección en el nivel de vCenter para detectar todos los back-ends de almacenamiento, hosts, almacenes de datos y estados/relaciones de protección recientemente añadidos o actualizados. Puede ejecutar una detección bajo demanda de entidades sin tener que esperar a la detección programada.
 
 
-NOTE: El botón de acción sólo se activará si tiene el privilegio para realizar la acción de detección.
+NOTE: El botón de acción *Descubrimiento* está habilitado solo si tiene el privilegio necesario para realizar la acción de descubrimiento.
 
 Una vez enviada la solicitud de descubrimiento, puede seguir el progreso de la acción en el panel de tareas recientes.
 

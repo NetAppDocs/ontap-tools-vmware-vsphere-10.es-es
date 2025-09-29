@@ -60,13 +60,13 @@ Utilice la siguiente hoja de trabajo para recopilar la información necesaria pa
 | Requisito | Su valor 
 
 
-| Dirección IP de la aplicación ONTAP Tools. Esta es la dirección IP para acceder a la interfaz web de ONTAP Tools. |  
+| Dirección IP para la aplicación de herramientas ONTAP .  Esta es la dirección IP para acceder a la interfaz web de las herramientas ONTAP (balanceador de carga) |  
 
 
-| Dirección IP virtual de las herramientas ONTAP para comunicación interna. Esta dirección IP se utiliza para la comunicación interna en una configuración con varias instancias de las herramientas ONTAP. Esta dirección IP no debe coincidir con la dirección IP de la aplicación de las herramientas ONTAP. |  
+| Dirección IP virtual de herramientas ONTAP para comunicación interna.  Esta dirección IP se utiliza para la comunicación interna en una configuración con múltiples instancias de herramientas ONTAP .  Esta dirección IP no debe ser la misma que la dirección IP de la aplicación de herramientas ONTAP (el plano de control de Kubernetes). |  
 
 
-| Nombre de host DNS para el primer nodo |  
+| Nombre de host DNS para el nodo de administración de herramientas ONTAP |  
 
 
 | Servidor DNS primario |  
@@ -78,7 +78,7 @@ Utilice la siguiente hoja de trabajo para recopilar la información necesaria pa
 | Dominio de búsqueda DNS |  
 
 
-| Dirección IPv4 del primer nodo. Es una dirección IPv4 única para la interfaz de administración de nodos en la red de administración. |  
+| Dirección IPv4 para el nodo de administración de herramientas ONTAP .  Es una dirección IPv4 única para la interfaz de administración de nodos en la red de administración. |  
 
 
 | Máscara de subred para la dirección IPv4 |  
@@ -134,7 +134,7 @@ Además de los requisitos de puesta en marcha de nodo único, necesitará la sig
 
 == Configuración del firewall de red
 
-Abra los puertos necesarios para las direcciones IP en el firewall de red. Las herramientas ONTAP deben poder acceder a este LIF a través del puerto 443. Consulte link:../deploy/prerequisites.html["Requisitos de puertos"]para obtener información sobre las últimas actualizaciones.
+Asegúrese de que los puertos de firewall necesarios estén abiertos para todas las direcciones IP relevantes.  Las herramientas ONTAP requieren acceso al LIF a través del puerto 443.  Para obtener una lista completa de los puertos necesarios, consulte la sección de requisitos de puerto enlink:../deploy/prerequisites.html["Requisitos y límites de configuración de las herramientas ONTAP para VMware vSphere"] .
 
 
 
@@ -142,6 +142,6 @@ Abra los puertos necesarios para las direcciones IP en el firewall de red. Las h
 
 Para garantizar una integración perfecta del almacenamiento de ONTAP con las herramientas de ONTAP para VMware vSphere, tenga en cuenta los siguientes ajustes:
 
-* Si está utilizando Fibre Channel (FC) para la conectividad de almacenamiento, configure la zonificación en sus conmutadores FC para conectar los hosts ESXi con los LIF FC de la SVM. https://docs.netapp.com/us-en/ontap/san-config/fibre-channel-fcoe-zoning-concept.html["Obtenga información sobre la división en zonas de FC y FCoE con los sistemas ONTAP"]
+* Si utiliza Fibre Channel (FC) para la conectividad de almacenamiento, configure la zonificación en sus conmutadores FC para conectar los hosts ESXi con los LIF FC de la SVM. https://docs.netapp.com/us-en/ontap/san-config/fibre-channel-fcoe-zoning-concept.html["Obtenga información sobre la división en zonas de FC y FCoE con los sistemas ONTAP"]
 * Para utilizar la replicación de SnapMirror gestionada por herramientas de ONTAP, el administrador de almacenamiento de ONTAP debe crear https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["Relaciones de paridad entre clústeres de ONTAP"] y https://docs.netapp.com/us-en/ontap/peering/create-intercluster-svm-peer-relationship-93-later-task.html["Relaciones entre iguales de SVM de interconexión de clústeres de ONTAP"] en ONTAP antes de utilizar SnapMirror.
 

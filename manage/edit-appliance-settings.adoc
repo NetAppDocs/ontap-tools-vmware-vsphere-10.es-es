@@ -11,10 +11,7 @@ summary: Puede cambiar la contraseña del administrador mediante el Administrado
 
 
 [role="lead"]
-Con el Gestor de herramientas de ONTAP, escale verticalmente la configuración de las herramientas de ONTAP para VMware vSphere para aumentar el número de nodos en la implementación o cambiar la configuración a configuración de alta disponibilidad. Las herramientas ONTAP para el dispositivo VMware vSphere se ponen en marcha inicialmente en una configuración de nodo único que no es de alta disponibilidad.
-
-
-NOTE: Para migrar a HA cuando se habilita un backup no de HA, deshabilite primero el backup y vuelva a habilitarlo después de la migración.
+Utilice el Administrador de herramientas de ONTAP para ampliar la configuración de las ONTAP tools for VMware vSphere , ya sea aumentando la cantidad de nodos o habilitando la alta disponibilidad (HA).  De forma predeterminada, las ONTAP tools for VMware vSphere se implementan como una configuración de nodo único y sin alta disponibilidad.
 
 .Antes de empezar
 * Asegúrese de que la plantilla OVA tiene la misma versión de OVA que el nodo 1. El nodo 1 es el nodo predeterminado donde se pone en marcha inicialmente las herramientas de ONTAP para VMware vSphere OVA.
@@ -33,7 +30,7 @@ Cuando las herramientas de ONTAP están en una configuración de alta disponibil
 
 +
 
-NOTE: En las herramientas de ONTAP para VMware vSphere, solo se permite aumentar el tamaño del nodo, ya que no se puede reducir su tamaño. En una configuración no de alta disponibilidad, solo se admite una configuración de tamaño mediano. En una configuración de alta disponibilidad se admiten las configuraciones medianas y grandes.
+NOTE: En las ONTAP tools for VMware vSphere, solo se permite aumentar el tamaño del nodo; no se puede reducir el tamaño del nodo.  En una configuración que no es HA, solo se admite una configuración de tamaño mediano.  En una configuración de alta disponibilidad, se admiten configuraciones medianas y grandes.
 
 . Utilice el botón de alternar HA para habilitar la configuración de alta disponibilidad. En la página *HA settings*, asegúrese de que:
 +
@@ -48,7 +45,7 @@ NOTE: Una vez habilitada la configuración de HA, no es posible volver a una con
 . En la sección *Configuración HA* de la ventana *Editar configuración de dispositivo*, puede introducir los detalles de los nodos 2 y 3. Las herramientas de ONTAP para VMware vSphere admiten tres nodos en una configuración de alta disponibilidad.
 +
 
-NOTE: La mayoría de las opciones de entrada se rellenan previamente con detalles de red del nodo 1 para facilitar el flujo de trabajo. Sin embargo, puede editar los datos de entrada antes de navegar a la página final del asistente. Solo es posible introducir detalles de la dirección IPv6 para los otros dos nodos cuando la dirección IPv6 está habilitada en el primer nodo.
+NOTE: La mayoría de las opciones de entrada están rellenas previamente con detalles de la red del Nodo 1 para facilitar el flujo de trabajo.  Sin embargo, puede editar los datos de entrada antes de navegar a la página final del asistente.  Puede ingresar detalles de la dirección IPv6 para los otros dos nodos solo cuando la dirección IPv6 esté habilitada en el nodo de administración de herramientas ONTAP .
 
 +
 Compruebe que un host ESXi contenga solo una máquina virtual de ONTAP Tools. Las entradas se validan cada vez que se mueve a la siguiente ventana.

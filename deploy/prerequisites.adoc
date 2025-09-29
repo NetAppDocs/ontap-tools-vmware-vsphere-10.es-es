@@ -25,7 +25,7 @@ Puede usar herramientas de ONTAP para VMware vSphere con VMware vCenter Server V
 ** 348 GB para instalaciones con aprovisionamiento pesado
 
 
-* * Requisitos de tamaño del sistema host * La memoria recomendada según el tamaño de la implementación es como se muestra en la tabla a continuación. Para implementar alta disponibilidad (HA), necesitará tres veces el tamaño del dispositivo especificado en la tabla.
+* *Requisitos de tamaño del sistema host* La memoria recomendada para cada tamaño de implementación se muestra en la siguiente tabla.  Para implementaciones de alta disponibilidad (HA), necesita tres veces el tamaño del dispositivo indicado.
 
 
 |===
@@ -53,7 +53,7 @@ NOTE: Cuando se habilita el backup, cada clúster de herramientas de ONTAP neces
 | Almacenamiento, host y aplicaciones | Requisitos de versión 
 
 
-| ONTAP | 9.14.1, 9.15.1, 9.16.0, 9.16.1 y 9.16.1P3 FAS, ASA Serie A, ASA Serie C, AFF Serie A, AFF Serie C y ASA r2. 
+| ONTAP | 9.15.1, 9.16.0, 9.16.1, 9.17.0 y 9.17.1 
 
 
 | Las herramientas de ONTAP admiten hosts ESXi | a partir de 7.0.3 
@@ -65,7 +65,7 @@ NOTE: Cuando se habilita el backup, cada clúster de herramientas de ONTAP neces
 | Proveedor de VASA | 3,0 
 
 
-| Aplicación ova | 10,4 
+| Aplicación ova | 10,5 
 
 
 | Host ESXi para implementar máquinas virtuales de herramientas de ONTAP | 7.0U3 y 8.0U3 
@@ -85,6 +85,9 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 == Requisitos de puertos
 
 La siguiente tabla describe los puertos de red que utiliza NetApp y sus funciones. Asegúrese de que estos puertos estén abiertos y accesibles para facilitar el correcto funcionamiento y la comunicación dentro del sistema. Asegúrese de que las configuraciones de red necesarias permitan el tráfico en estos puertos para que los servicios asociados funcionen correctamente. Según sus políticas de seguridad, podría necesitar configurar firewalls u otros dispositivos de seguridad para permitir este tráfico dentro de su red.
+
+
+NOTE: Asegúrese de que todos los nodos de herramientas ONTAP residan en la misma subred para mantener una comunicación ininterrumpida entre sí.
 
 |===
 
@@ -116,16 +119,10 @@ La siguiente tabla describe los puertos de red que utiliza NetApp y sus funcione
 | 2380 | TCP | Este es el puerto predeterminado para la comunicación servidor a servidor para el clúster ETCD utilizado para el algoritmo de consenso de RAFT en el que se basa ETCD para la replicación y consistencia de datos. 
 
 
-| 7472 | TCP/UDP | Este es el puerto del servicio de métricas de prometheus. 
-
-
-| 7946 | TCP/UDP | Este puerto se utiliza para la detección de la red del contenedor de docker. 
+| 7946 | TCP/UDP | Este puerto se utiliza para el descubrimiento de la red de contenedores de Docker. 
 
 
 | 9083 | TCP | Este puerto es un puerto de servicio utilizado internamente para el servicio de proveedor VASA. 
-
-
-| 1162 | UDP | Este es el puerto de paquetes de captura SNMP. 
 
 
 | 6443 | TCP | Fuente: RKE2 nodos de agentes. Destino: REK2 nodos de servidor. Descripción: Kubernetes API 
@@ -146,19 +143,7 @@ La siguiente tabla describe los puertos de red que utiliza NetApp y sus funcione
 | 123 | TCP | Ntpd utiliza este puerto para realizar la validación del servidor NTP. 
 
 
-| 137-139 | TCP/UDP | Paquetes compartidos de SMB/Windows. 
-
-
-| 6789 | TCP | Monitor Ceph (LUN) 
-
-
-| 3300 | TCP | Monitor Ceph (LUN) 
-
-
-| 6800-7300 | TCP | Ceph Managers, OSD y Sistema de Archivos (MDS). 
-
-
-| 80 | TCP | Puerta de enlace Ceph RADOS (RGW) 
+| 3300 y 6789-7300 | TCP | Plano de datos entre nodos 
 
 
 | 9080 | TCP | Conexiones HTTP/HTTPS VP (solo desde 127,0.0.0/8 para IPv4 o ::1/128 para IPv6). 
@@ -187,7 +172,7 @@ Puede utilizar la siguiente tabla como guía para configurar herramientas de ONT
 | Alta disponibilidad | Medio (M) | ~50k | 128 
 
 
-| Alta disponibilidad | Grande (L) | ~100k | 256 [NOTA] El número de hosts de la tabla muestra el número total de hosts de varios vCenter. 
+| Alta disponibilidad | Grande (L) | ~100k | 256 [NOTA] Los recuentos de host en la tabla representan el total combinado de todos los vCenters conectados. 
 |===
 
 

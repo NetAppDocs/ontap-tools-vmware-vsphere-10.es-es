@@ -23,7 +23,7 @@ ONTAP proporciona un entorno de control de acceso basado en roles sólido y ampl
 Hay varias opciones disponibles cuando se utiliza el control de acceso basado en roles de ONTAP en función de su entorno y sus objetivos. A continuación se presenta una visión general de las principales decisiones administrativas. Consulte también https://docs.netapp.com/us-en/ontap-automation/rest/rbac_overview.html["Automatización ONTAP: Información general sobre la seguridad de control de acceso basado en roles"^] para obtener más información.
 
 
-NOTE: El control de acceso basado en roles de ONTAP se adapta a los entornos de almacenamiento y es más sencillo que la implementación de control de acceso basado en roles que se ofrece con vCenter Server. Con ONTAP, puede asignar un rol directamente al usuario. No es necesario configurar permisos explícitos, como los que se usan con vCenter Server, con RBAC de ONTAP.
+NOTE: ONTAP RBAC está diseñado para un entorno de almacenamiento y es más simple que la implementación de RBAC proporcionada con vCenter Server.  Con ONTAP, asignas un rol directamente al usuario.  No es necesario configurar permisos explícitos, como los que se usan con vCenter Server, con ONTAP RBAC.
 
 .Tipos de roles y Privileges
 Al definir un usuario ONTAP, se requiere un rol ONTAP. Existen dos tipos de roles de ONTAP:

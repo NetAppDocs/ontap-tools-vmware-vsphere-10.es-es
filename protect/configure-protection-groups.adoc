@@ -30,7 +30,7 @@ NOTE: El adaptador de replicación de almacenamiento (SRA) admite la distribuci�
 
 
 .Pasos
-. Haga doble clic en *Site Recovery* en la página de inicio de vSphere Client y seleccione *Sites*.
+. En la página de inicio de vSphere Client, haga doble clic en el ícono *Site Recovery* y luego seleccione *Sitios*.
 . Selecciona *Objetos* > *Acciones* > *Emparejar sitios*.
 . En el cuadro de diálogo *Emparejar servidores de Site Recovery Manager*, introduzca la dirección del controlador de servicios de plataforma del sitio protegido y, a continuación, seleccione *Siguiente*.
 . En la sección Select vCenter Server, realice lo siguiente:
@@ -43,7 +43,7 @@ NOTE: El adaptador de replicación de almacenamiento (SRA) admite la distribuci�
 
 
 .Resultado
-Tanto los sitios protegidos como los de recuperación aparecerán en el cuadro de diálogo objetos.
+El cuadro de diálogo *Objetos* muestra los sitios protegidos y de recuperación.
 
 
 

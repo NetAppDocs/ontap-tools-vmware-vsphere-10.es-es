@@ -30,7 +30,8 @@ Debe utilizar la pestaña *Resumen* de las herramientas de ONTAP implementadas p
 Configuración de la aplicación
  a| 
 . Mostrar resumen de estado del servidor
-. Cambie el nivel DE REGISTRO DE VASA Provider Services y SRA Services
+. Cambiar el nivel de REGISTRO para los servicios de herramientas ONTAP
+. Cambiar la bandera de validación del certificado
 
 
 

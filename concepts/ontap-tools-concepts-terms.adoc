@@ -15,21 +15,15 @@ En la siguiente sección se describen los conceptos y términos clave utilizados
 
 
 
-=== Sistemas ASA r2
-
-Los nuevos sistemas R2 de NetApp ASA ofrecen una solución unificada de hardware y software que crea una experiencia simplificada específica para las necesidades de los clientes exclusivos de SAN. https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["Obtenga información sobre los sistemas de almacenamiento R2 de ASA"].
-
-
-
 === Entidad de certificación (CA)
 
 CA es una entidad de confianza que emite certificados SSL (Secure Sockets Layer).
 
 
 
-=== Grupo de consistencia (CG)
+=== Grupo de consistencia
 
-Un grupo de consistencia es una recogida de volúmenes gestionados como una sola unidad. Los CG se sincronizan para mantener la coherencia de los datos en unidades de almacenamiento y volúmenes. En ONTAP, proporcionan una gestión sencilla y una garantía de protección para la carga de trabajo de la aplicación que abarca varios volúmenes. Más información sobre https://docs.netapp.com/us-en/ontap/consistency-groups/index.html["grupos de consistencia"].
+Un grupo de consistencia es una colección de volúmenes administrados como una sola unidad. Los grupos de consistencia se sincronizan para garantizar la consistencia de los datos en todas las unidades de almacenamiento y volúmenes. En ONTAP, proporcionan una gestión sencilla y una garantía de protección para una carga de trabajo de aplicaciones que abarca múltiples volúmenes.  Obtenga más información sobre https://docs.netapp.com/us-en/ontap/consistency-groups/index.html["grupos de consistencia"] .
 
 
 
@@ -125,7 +119,7 @@ VMFS es un sistema de archivos en clúster diseñado para almacenar archivos de 
 
 === Volúmenes virtuales (vVols)
 
-VVols proporciona una abstracción en el nivel de volumen para el almacenamiento utilizado por una máquina virtual. Incluye varios beneficios y ofrece una alternativa al uso de una LUN tradicional. Un almacén de datos VVOL suele estar asociado con una única LUN que actúa como contenedor para los vVols.
+vVols proporciona una abstracción a nivel de volumen para el almacenamiento utilizado por una máquina virtual.  Incluye varios beneficios y proporciona una alternativa al uso de un LUN tradicional.  Un almacén de datos vVol generalmente está asociado con un único LUN que actúa como contenedor para vVols.
 
 
 

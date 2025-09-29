@@ -14,9 +14,15 @@ summary: Cuando se quita la protección del clúster de hosts, los almacenes de 
 Cuando se quita la protección del clúster de hosts, los almacenes de datos se vuelven desprotegidos.
 
 .Pasos
-. Para ver los clústeres de hosts protegidos, navegue hasta *Herramientas de NetApp ONTAP* > *Protección* > *Relaciones de clúster de host*.
+. Para ver la lista de clústeres de host protegidos, vaya a * Herramientas de NetApp ONTAP * > * Protección * > * Relaciones de clúster de host *.
 +
-En esta página, se pueden supervisar los clústeres de hosts protegidos junto con su estado de protección, la relación de SnapMirror y el estado SnapMirror correspondiente.
+En esta página, supervise los clústeres de host protegidos, el estado de protección, la relación de SnapMirror y el estado.  Seleccione grupos de consistencia para ver la capacidad, los almacenes de datos asociados y los grupos secundarios.
 
-. En la ventana *Protección del clúster de host*, seleccione el menú de puntos suspensivos contra el clúster y, a continuación, seleccione *Eliminar protección*.
+. En la ventana *Protección del clúster de host*, seleccione el menú de puntos suspensivos junto al clúster y seleccione *Eliminar protección*.
++
+** Si elimina la protección de un clúster de host con solo una relación asincrónica de SnapMirror , debe eliminar manualmente los elementos de almacenamiento.  Los elementos de almacenamiento incluyen grupos de consistencia, volúmenes (para el sistema ONTAP ), unidades de almacenamiento (LUN) e instantáneas.
+** Si elimina la protección de un clúster de host con solo una relación de política SnapMirror basada en dúplex de conmutación por error automatizada y un grupo de consistencia no jerárquico, puede eliminar los elementos de almacenamiento asociados en el almacenamiento secundario directamente desde la misma pantalla.
+** Si elimina la protección de un clúster de host con políticas SnapMirror y un grupo de consistencia jerárquico para copias de seguridad, aparece una advertencia sobre los impactos en las copias de seguridad.  Confirme para continuar.  Después de la confirmación, elimine los elementos de almacenamiento asociados en el almacenamiento secundario.  Si no se limpia, los elementos de almacenamiento permanecen en el sitio secundario.
+
+
 

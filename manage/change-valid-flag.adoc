@@ -1,0 +1,30 @@
+---
+permalink: manage/change-valid-flag.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede cambiar el indicador de validación del certificado mediante la consola de mantenimiento. 
+---
+= Cambiar la bandera de validación del certificado
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+De forma predeterminada, el indicador de validación del certificado está habilitado (establecido como verdadero).  Puede establecer el indicador de validación del certificado de backend de almacenamiento ONTAP en falso si necesita omitir las verificaciones del certificado SAN.  Esta configuración no se aplica a los certificados de vCenter Server.
+
+.Antes de empezar
+Debe tener credenciales de inicio de sesión de usuario de mantenimiento.
+
+.Pasos
+. Desde vCenter Server, abra una consola a las herramientas de ONTAP.
+. Inicie sesión como el usuario de mantenimiento.
+. Ingresar `1` para seleccionar el Menú de Configuración de la Aplicación.
+. Ingresar `3` para cambiar el indicador de validación del certificado.
++
+La consola de mantenimiento muestra el estado del indicador de validación del certificado y le solicita que lo cambie.
+
+. Introduzca 'y' para alternar la bandera o 'n' para cancelar.
+
+
+Si cambia el indicador de validación del certificado a verdadero, el sistema realiza una verificación previa.  Si algún backend de almacenamiento agregado usa un certificado sin una SAN, no podrá habilitar la validación del certificado.  Asegúrese de que todos los backends de almacenamiento utilicen certificados basados en SAN antes de habilitar esta bandera.  Si establece el indicador de validación del certificado como falso, el sistema omite la validación del certificado para todos los backends de almacenamiento agregados.
