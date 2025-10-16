@@ -44,3 +44,5 @@ NOTE: No se puede eliminar un almacén de datos utilizado por máquinas virtuale
 NOTE: En el caso de los almacenes de datos VMFS en el almacenamiento ONTAP unificado que forman parte de un clúster de host protegido, no se puede eliminar el volumen del clúster ONTAP .
 
 
+
+Cuando elimina un almacén de datos NFS, VMFS o vVols , los igroups principales permanecen en el sistema ONTAP .  Los igroups secundarios que no están asignados a ningún LUN se eliminan automáticamente.  Las herramientas de ONTAP realizan una limpieza diaria para eliminar los igroups primarios predeterminados no asignados.  Los igroups padres personalizados deben eliminarse manualmente en ONTAP.  Cualquier igroup padre restante queda obsoleto y las herramientas ONTAP no pueden reutilizarlo.

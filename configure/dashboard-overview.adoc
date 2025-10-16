@@ -13,9 +13,9 @@ summary: Cuando se selecciona el icono del plugin de las herramientas de ONTAP p
 [role="lead"]
 Al seleccionar el ícono del complemento de ONTAP tools for VMware vSphere en la sección de accesos directos en el cliente vCenter, se abre la página de descripción general.  Este panel proporciona un resumen de las ONTAP tools for VMware vSphere .
 
-En el caso de la configuración del modo vinculado mejorado (ELM), aparece el menú desplegable de selección de vCenter Server y puede seleccionar el vCenter Server que desee para ver los datos relevantes para él.  Este menú desplegable está disponible para todas las demás vistas de listado del complemento. La selección de vCenter Server realizada en una página persiste en las pestañas del complemento.image:../media/remote-plugin-dashboard.png["Información general del panel de control"]
+En el modo vinculado mejorado (ELM), aparece el menú desplegable de vCenter Server.  Seleccione un servidor vCenter para ver sus datos.  El menú desplegable está disponible en todas las vistas de lista del complemento. Al seleccionar un vCenter Server en una página, permanece igual al cambiar de pestaña en el complemento.image:../media/remote-plugin-dashboard.png["Información general del panel de control"]
 
-Desde la página de descripción general, puede ejecutar la acción *Discovery*. La acción de detección ejecuta la detección en el nivel de vCenter para detectar todos los back-ends de almacenamiento, hosts, almacenes de datos y estados/relaciones de protección recientemente añadidos o actualizados. Puede ejecutar una detección bajo demanda de entidades sin tener que esperar a la detección programada.
+Desde la página de descripción general, puede ejecutar la acción *Descubrimiento*. La acción de descubrimiento detecta backends de almacenamiento, hosts, almacenes de datos y estados de protección o relaciones recientemente agregados o actualizados en el nivel de vCenter.  Ejecute el descubrimiento a pedido sin esperar el descubrimiento programado.
 
 
 NOTE: El botón de acción *Descubrimiento* está habilitado solo si tiene el privilegio necesario para realizar la acción de descubrimiento.
@@ -42,5 +42,5 @@ La consola tiene varias tarjetas que muestran diferentes elementos del sistema. 
 | Almacenes de datos | Esta tarjeta muestra los 10 almacenes de datos principales ordenados por métrica de rendimiento. Puede seleccionar el encabezado para obtener los 10 almacenes de datos principales para la métrica seleccionada ordenados por orden ascendente o descendente. Los cambios de clasificación y filtrado realizados en la tarjeta persisten hasta que cambie o borre la caché del navegador. Hay una lista desplegable de tipo de almacén de datos para seleccionar el tipo de almacenes de datos: NFS, VMFS o vVols. 
 
 
-| Tarjeta de cumplimiento de normativas del host ESXi | Esta tarjeta muestra el estado de cumplimiento general de todos los hosts ESXi (para la configuración de vCenter seleccionada) con respecto a la configuración de host NetApp recomendada por grupo de ajustes/categoría. Puede seleccionar el enlace *Apply Recommended Settings* para aplicar la configuración recomendada. Puede seleccionar el estado compatible de los hosts para ver la lista de hosts. 
+| Tarjeta de cumplimiento de normativas del host ESXi | Esta tarjeta muestra si todos los hosts ESXi (para el vCenter seleccionado) siguen la configuración de host de NetApp recomendada por grupo o categoría. Puede seleccionar el enlace *Aplicar configuración recomendada* para aplicar la configuración recomendada. Puede seleccionar el estado compatible de los hosts para ver la lista de hosts. 
 |===
