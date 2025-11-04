@@ -11,13 +11,13 @@ summary: La acción del almacén de datos desmonta un almacén de datos NFS o VM
 
 
 [role="lead"]
-La acción del almacén de datos desmonta un almacén de datos NFS o VMFS de los hosts ESXi. La acción de desmontaje del almacén de datos se habilita para los almacenes de datos NFS y VMFS que las herramientas de ONTAP para VMware vSphere detectan o gestionan.
+La acción Desmontar almacén de datos elimina un almacén de datos NFS o VMFS de los hosts ESXi.  Está disponible para almacenes de datos descubiertos o administrados por las ONTAP tools for VMware vSphere.
 
 .Pasos
 . Inicie sesión en el cliente de vSphere.
 . Haga clic con el botón derecho en un objeto de almacén de datos NFS o VMFS y seleccione *Desmontar almacén de datos*.
 +
-Se abre un cuadro de diálogo que enumera los hosts ESXi en los que está montado el almacén de datos. Cuando se realiza la operación en un almacén de datos protegido, se muestra un mensaje de advertencia en la pantalla.
+El cliente vSphere abre un cuadro de diálogo y muestra una lista de los hosts ESXi que montan el almacén de datos. Cuando la operación se realiza en un almacén de datos protegido, se muestra un mensaje de advertencia en la pantalla.
 
 . Seleccione uno o varios hosts ESXi para desmontar el almacén de datos.
 +

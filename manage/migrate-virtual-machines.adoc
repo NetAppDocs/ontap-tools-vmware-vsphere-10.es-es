@@ -24,7 +24,7 @@ Puede migrar las máquinas virtuales protegidas a:
 * Distinto almacén de datos vVols compatible en un host ESXi diferente
 
 
-Si la máquina virtual se migra a un volumen FlexVol diferente, el archivo de metadatos correspondiente también se actualiza con la información de las máquinas virtuales. Si se migra una máquina virtual a un host ESXi diferente pero el mismo almacenamiento, el archivo de metadatos del volumen de FlexVol subyacente no se modificará.
+Si migra la máquina virtual a un FlexVol volume diferente, el sistema actualiza el archivo de metadatos de ese volumen con la información de la máquina virtual. Si se migra una máquina virtual a un host ESXi diferente pero al mismo almacenamiento, el archivo de metadatos del FlexVol volume subyacente no se modificará.
 
 
 
@@ -60,4 +60,4 @@ Actualmente solo se admiten instantáneas de máquina virtual sin memoria. Si la
 
 Tampoco puedes proteger máquinas virtuales desprotegidas que tengan instantáneas de memoria.  Para esta versión, se espera que elimine la instantánea de memoria antes de habilitar la protección para la máquina virtual.
 
-Para equipos virtuales Windows con tipo de almacenamiento ASA R2, al tomar una instantánea de la máquina virtual, será una instantánea de solo lectura. Cuando hay una llamada de encendido de la máquina virtual, el proveedor VASA crea un LUN con la Snapshot de solo lectura y, a continuación, la habilita para las IOPS. Durante la solicitud de apagado, el proveedor de VASA elimina el LUN que se creó y, a continuación, deshabilita las IOPS.
+Para una máquina virtual Windows con almacenamiento ASA r2, una instantánea de la máquina virtual es de solo lectura.  Al encender la máquina virtual, el proveedor VASA crea una LUN a partir de la instantánea de solo lectura y habilita las IOPS.  Cuando se apaga la máquina virtual, el proveedor VASA elimina el LUN y deshabilita las IOPS.

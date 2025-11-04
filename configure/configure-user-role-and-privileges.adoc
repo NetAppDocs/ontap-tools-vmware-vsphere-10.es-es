@@ -104,7 +104,7 @@ Agregue la *Ruta de API REST* y elija el acceso de la lista desplegable.
 
 === Lista de privilegios mínimos necesarios para el usuario de cluster de ámbito global no administrativo
 
-En esta sección se enumeran los privilegios mínimos necesarios para un usuario de clúster de ámbito global que no sea administrador y que no tenga un archivo JSON.  Si un clúster está en el ámbito local, use el archivo JSON para crear usuarios porque las ONTAP tools for VMware vSphere necesitan más que solo privilegios de lectura para el aprovisionamiento en ONTAP.
+Esta página enumera los privilegios mínimos requeridos para un usuario de clúster con ámbito global que no sea administrador y que no tenga un archivo JSON. Si un clúster está en el ámbito local, use el archivo JSON para crear usuarios porque las ONTAP tools for VMware vSphere necesitan más que solo privilegios de lectura para el aprovisionamiento en ONTAP.
 
 Puede acceder a la funcionalidad mediante API:
 

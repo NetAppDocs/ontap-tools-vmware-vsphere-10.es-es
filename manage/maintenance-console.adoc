@@ -11,9 +11,9 @@ summary: Puede gestionar las configuraciones de aplicaciones, sistemas y redes m
 
 
 [role="lead"]
-Puede gestionar las configuraciones de aplicaciones, sistemas y redes mediante la consola de mantenimiento de las herramientas de ONTAP. Puede cambiar la contraseña de administrador y la contraseña de mantenimiento. También puede generar paquetes de soporte, establecer diferentes niveles de registro, ver y gestionar configuraciones de TLS e iniciar diagnósticos remotos.
+La consola de mantenimiento de las ONTAP tools for VMware vSphere le permite gestionar la configuración de aplicaciones, sistemas y redes.  Puede actualizar las contraseñas de administrador y mantenimiento, generar paquetes de soporte, configurar los niveles de registro, administrar la configuración TLS y habilitar diagnósticos remotos.
 
-Debe tener las herramientas de VMware instaladas después de implementar las herramientas de ONTAP para VMware vSphere para acceder a la consola de mantenimiento. Debe usar  `maint` como el nombre de usuario y la contraseña que configuró durante la implementación para iniciar sesión en la consola de mantenimiento de las herramientas ONTAP. Debe usar *nano* para editar los archivos en la consola de mantenimiento o inicio de sesión raíz.
+Después de implementar las ONTAP tools for VMware vSphere, si la consola de mantenimiento no está accesible, instale las herramientas de VMware desde el servidor vCenter.  Inicia sesión usando el `maint` Nombre de usuario y contraseña establecidos durante la implementación.  Utilice *nano* para editar archivos en la consola de mantenimiento o de inicio de sesión de root.
 
 
 NOTE: Debe establecer una contraseña para el `diag` usuario al activar el diagnóstico remoto.

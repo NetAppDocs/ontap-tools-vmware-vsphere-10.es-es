@@ -11,7 +11,7 @@ summary: Use los pasos de esta sección para realizar la limpieza de VASA.
 
 
 [role="lead"]
-Use los pasos de esta sección para realizar la limpieza de VASA.
+Siga estas instrucciones para completar el proceso de limpieza de VASA.
 
 
 NOTE: Se recomienda quitar todos los almacenes de datos de vVols antes de ejecutar el borrado de VASA.

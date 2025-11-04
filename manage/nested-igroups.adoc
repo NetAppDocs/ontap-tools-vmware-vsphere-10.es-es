@@ -11,7 +11,7 @@ summary:
 
 
 [role="lead"]
-Si administra máquinas virtuales de herramientas ONTAP y sistemas de almacenamiento ONTAP , es importante comprender cómo se comportan los igroups, especialmente al mover almacenes de datos desde entornos no administrados por herramientas ONTAP a aquellos que sí lo están.  Esta sección explica cómo se actualizan los igroups durante este proceso.
+Si administra máquinas virtuales de herramientas ONTAP y sistemas de almacenamiento ONTAP , es importante comprender cómo se comportan los igroups, especialmente al mover almacenes de datos desde entornos no administrados por herramientas ONTAP a aquellos que sí lo están. Esta página explica cómo se actualizan los igroups durante este proceso.
 
 Las ONTAP tools for VMware vSphere 10.4 y versiones posteriores crean y mantienen automáticamente objetos ONTAP y vCenter para simplificar la administración del almacén de datos en entornos de centros de datos de VMware.
 

@@ -11,7 +11,7 @@ summary: La acción Eliminar el almacén de datos elimina el almacén de datos. 
 
 
 [role="lead"]
-Esta sección describe cómo eliminar almacenes de datos NFS, VMFS o vVols mediante herramientas ONTAP en vCenter Server.
+Esta página describe cómo eliminar almacenes de datos NFS, VMFS o vVols utilizando las herramientas ONTAP en vCenter Server.
 
 Al eliminar un almacén de datos, se realizan las siguientes acciones según el tipo de almacén de datos:
 
@@ -33,7 +33,7 @@ NOTE: No se puede eliminar un almacén de datos utilizado por máquinas virtuale
 +
 .. En el caso de un almacén de datos NFS o VMFS, aparece un cuadro de diálogo con la lista de máquinas virtuales que utilizan el almacén de datos.
 .. Si no hay máquinas virtuales asociadas a un almacén de datos VMFS, verá un cuadro de diálogo de confirmación.  Si la protección del clúster de host está habilitada y existe una relación AFD, puede limpiar elementos de almacenamiento secundario.
-.. Para los almacenes de datos VMFS protegidos en sistemas ASA r2, asegúrese de que la protección se elimine antes de la eliminación.  A partir de ONTAP 9.17.1 y las ONTAP tools for VMware vSphere 10.5, puede eliminar un almacén de datos protegido.  Si es el único almacén de datos en el grupo de protección, la protección del clúster de host se elimina automáticamente.
+.. Para los almacenes de datos VMFS protegidos en sistemas ASA r2, elimine la protección antes de borrar. A partir de ONTAP 9.17.1 y las ONTAP tools for VMware vSphere 10.5, puede eliminar un almacén de datos protegido.  Si es el único almacén de datos en el grupo de protección, la protección del clúster de hosts se elimina automáticamente.
 .. Para los almacenes de datos vVols , puede eliminar el almacén de datos solo si no hay vVols presentes.  El cuadro de diálogo *Eliminar almacén de datos* incluye una opción para eliminar volúmenes del clúster ONTAP .
 .. Para los almacenes de datos vVols en sistemas ASA r2, no es posible eliminar los volúmenes de respaldo de ONTAP mediante la opción *Eliminar almacén de datos*.
 
@@ -45,4 +45,4 @@ NOTE: En el caso de los almacenes de datos VMFS en el almacenamiento ONTAP unifi
 
 
 
-Cuando elimina un almacén de datos NFS, VMFS o vVols , los igroups principales permanecen en el sistema ONTAP .  Los igroups secundarios que no están asignados a ningún LUN se eliminan automáticamente.  Las herramientas de ONTAP realizan una limpieza diaria para eliminar los igroups primarios predeterminados no asignados.  Los igroups padres personalizados deben eliminarse manualmente en ONTAP.  Cualquier igroup padre restante queda obsoleto y las herramientas ONTAP no pueden reutilizarlo.
+Cuando elimina un almacén de datos NFS, VMFS o vVols , los igroups principales permanecen en el sistema ONTAP . Los igroups secundarios que no están asignados a ningún LUN se eliminan automáticamente. Las herramientas de ONTAP realizan una limpieza diaria para eliminar los igroups primarios predeterminados no asignados. Elimine manualmente los igroups principales personalizados en ONTAP.  Las herramientas ONTAP no pueden reutilizar igroups principales obsoletos.

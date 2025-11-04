@@ -24,9 +24,9 @@ Utilice el Administrador de herramientas de ONTAP para ampliar la configuración
 . Inicie ONTAP TOOLS Manager desde un explorador web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Inicie sesión con las herramientas de ONTAP para las credenciales de administrador de VMware vSphere que proporcionó durante la implementación.
 . Seleccione la opción *Editar configuración del aparato* en la sección de descripción general.
-. En la sección *Configuración*, puede escalar hacia arriba para aumentar el tamaño del nodo y habilitar la configuración HA según sus necesidades. Se necesitan las credenciales de vCenter Server para realizar cambios.
+. En la sección *Configuración*, aumente el tamaño del nodo y habilite la configuración de alta disponibilidad (HA).  Utilice las credenciales de vCenter Server para realizar cambios.
 +
-Cuando las herramientas de ONTAP están en una configuración de alta disponibilidad, puede cambiar los detalles de la biblioteca de contenido. Debe volver a proporcionar la contraseña para la nueva presentación de edición.
+En la configuración de HA, puede cambiar los detalles de la biblioteca de contenido.  Proporcione la contraseña para cada edición.
 
 +
 
@@ -45,7 +45,7 @@ NOTE: Una vez habilitada la configuración de HA, no es posible volver a una con
 . En la sección *Configuración HA* de la ventana *Editar configuración de dispositivo*, puede introducir los detalles de los nodos 2 y 3. Las herramientas de ONTAP para VMware vSphere admiten tres nodos en una configuración de alta disponibilidad.
 +
 
-NOTE: La mayoría de las opciones de entrada están rellenas previamente con detalles de la red del Nodo 1 para facilitar el flujo de trabajo.  Sin embargo, puede editar los datos de entrada antes de navegar a la página final del asistente.  Puede ingresar detalles de la dirección IPv6 para los otros dos nodos solo cuando la dirección IPv6 esté habilitada en el nodo de administración de herramientas ONTAP .
+NOTE: Las herramientas ONTAP rellenan previamente la mayoría de las opciones de entrada con los detalles de la red del Nodo 1 para simplificar el flujo de trabajo.  Puedes editar los datos de entrada antes de ir a la última página del asistente. Puede ingresar detalles de la dirección IPv6 para los otros dos nodos solo cuando la dirección IPv6 esté habilitada en el nodo de administración de herramientas ONTAP .
 
 +
 Compruebe que un host ESXi contenga solo una máquina virtual de ONTAP Tools. Las entradas se validan cada vez que se mueve a la siguiente ventana.
@@ -54,8 +54,8 @@ Compruebe que un host ESXi contenga solo una máquina virtual de ONTAP Tools. La
 
 
 .El futuro
-La página *Overview* muestra el estado del despliegue. Con el ID de trabajo, también puede realizar un seguimiento del estado del trabajo de edición de la configuración del dispositivo desde la vista de trabajos.
+La página *Descripción general* muestra el estado de la implementación. También puede realizar un seguimiento del estado del trabajo de edición de la configuración del dispositivo desde la vista de trabajos utilizando el ID del trabajo.
 
-Si falla la puesta en marcha de alta disponibilidad y el estado del nuevo nodo aparece como «New» (Nuevo), elimine la nueva máquina virtual en vCenter antes de volver a intentar la operación de habilitación de alta disponibilidad.
+Si falla la implementación de HA y el estado del nuevo nodo es 'Nuevo', elimine la nueva máquina virtual en vCenter antes de intentar habilitar HA nuevamente.
 
 La pestaña *Alertas* en el panel izquierdo muestra las alertas de las herramientas de ONTAP para VMware vSphere.

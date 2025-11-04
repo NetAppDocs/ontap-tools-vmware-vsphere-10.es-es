@@ -13,6 +13,9 @@ summary: El montaje de un almacén de datos permite acceder al almacenamiento a 
 [role="lead"]
 El montaje de un almacén de datos permite acceder al almacenamiento a hosts adicionales. El almacén de datos se puede montar en los hosts adicionales después de añadir los hosts al entorno de VMware.
 
+
+NOTE: Cuando agregue un nuevo host ESXi utilizando el https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/use-quickstart-to-add---host-to-a-cluster.html["Agregar un host ESX al flujo de trabajo de su clúster vSphere"] , espere a que finalice la detección de host programada antes de que aparezca en las herramientas de ONTAP . Como alternativa, puede ejecutar el descubrimiento manualmente desde la pantalla de resumen de herramientas de NetApp ONTAP .
+
 .Acerca de esta tarea
 * Algunas acciones de clic con el botón derecho quedan deshabilitadas o no disponibles según la versión del cliente de vSphere y el tipo de almacén de datos seleccionado.
 +
@@ -20,15 +23,18 @@ El montaje de un almacén de datos permite acceder al almacenamiento a hosts adi
 ** Desde las versiones de vSphere 7.0U3 a vSphere 8,0, aunque aparezcan las opciones, la acción se desactivará.
 
 
-* La opción mount datastore está deshabilitada cuando el clúster de hosts está protegido con configuraciones uniformes.
+* vSphere deshabilita la opción de montaje de almacén de datos cuando el clúster host está protegido con configuraciones uniformes.
 
 
 .Pasos
 . En la página inicial de vSphere Client, seleccione *Hosts and Clusters*.
 . En el panel de navegación de la izquierda, seleccione los centros de datos que contienen los hosts.
-. Para montar almacenes de datos NFS/VMFS en host o clúster de hosts, haga clic con el botón derecho y seleccione *NetApp ONTAP tools* > *Mount datastores*.
+. Para montar almacenes de datos NFS/VMFS en un host o un clúster de hosts, haga clic con el botón derecho y seleccione *Herramientas de NetApp ONTAP * > *Montar almacenes de datos*.
 . Seleccione los almacenes de datos que desea montar y seleccione *Mount*.
 
 
 .El futuro
 Puede realizar un seguimiento del progreso en el panel de tareas recientes.
+
+.Tema relacionado
+link:../manage/add-vsphere-host.html["Agregar nuevos hosts de VMware vSphere"]

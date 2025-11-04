@@ -16,7 +16,7 @@ Las herramientas de ONTAP para VMware vSphere muestran la vista lateral del alma
 .Pasos
 . Desde el cliente vSphere, vaya al almacén de datos.
 . Seleccione la pestaña *Configure* en el panel derecho.
-. Selecciona *Herramientas de NetApp ONTAP* > *Almacenamiento de ONTAP*. Según el tipo de almacén de datos, la vista cambia. Consulte la siguiente tabla para obtener más información:
+. Seleccione * Herramientas NetApp ONTAP * > * Almacenamiento ONTAP *. La vista cambia según el tipo de almacén de datos.  Consulte la tabla a continuación:
 
 
 |===
@@ -31,5 +31,5 @@ Las herramientas de ONTAP para VMware vSphere muestran la vista lateral del alma
 | Almacenes de datos de VMFS | La página *Detalles de almacenamiento* contiene detalles de backend de almacenamiento, agregado, volumen y zona de disponibilidad de almacenamiento (SAZ). La página *Detalles de la unidad de almacenamiento* contiene detalles de la unidad de almacenamiento. 
 
 
-| Almacenes de datos de vVols | Enumera todos los volúmenes. Puede ampliar o quitar el almacenamiento desde el panel de almacenamiento de ONTAP. Esta vista no es compatible con el almacén de datos vVols basado en el sistema ASA R2. 
+| Almacenes de datos de vVols | Enumera todos los volúmenes. Puede expandir o eliminar almacenamiento desde el panel de almacenamiento de ONTAP . Las herramientas ONTAP no admiten esta vista para los almacenes de datos vVols basados ​​en el sistema ASA r2. 
 |===

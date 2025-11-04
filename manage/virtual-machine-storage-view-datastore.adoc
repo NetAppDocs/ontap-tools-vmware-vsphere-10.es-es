@@ -14,7 +14,7 @@ summary: La vista de almacenamiento muestra la lista de vVols que crea la máqui
 La vista de almacenamiento muestra la lista de vVols que crea la máquina virtual.
 
 
-NOTE: Esta vista es aplicable a la máquina virtual, que tiene al menos un ONTAP disco relacionado con el almacén de datos vVols gestionado de VMware vSphere y montado en ella.
+NOTE: Esta vista se aplica a las máquinas virtuales con al menos un disco de un almacén de datos vVols gestionado ONTAP tools for VMware vSphere .
 
 .Pasos
 . Desde vSphere Client, vaya a la máquina virtual.

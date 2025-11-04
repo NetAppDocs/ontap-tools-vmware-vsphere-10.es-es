@@ -16,8 +16,7 @@ Puede migrar máquinas virtuales de almacenes de datos de NFS y VMFS a almacenes
 .Antes de empezar
 Compruebe que el proveedor VASA no esté en ejecución en ninguna de las máquinas virtuales que planifique migrar. Si migra una máquina virtual que ejecuta VASA Provider a un almacén de datos vVols, no podrá realizar ninguna operación de gestión, incluida la activación de las máquinas virtuales que se encuentran en almacenes de datos vVols.
 
-*Acerca de esta tarea*
-
+.Acerca de esta tarea
 Cuando se migra de un almacén de datos NFS y VMFS a un almacén de datos vVols, la instancia de vCenter Server utiliza las API de vStorage para la integración de cabinas (VAAI) descarga las cargas al mover datos de almacenes de datos VMFS, pero no de un archivo VMDK NFS. Las descargas de VAAI suelen reducir la carga en el host.
 
 .Pasos

@@ -11,9 +11,9 @@ summary: La acción Delete datastore elimina el almacén de datos cuando no hay 
 
 
 [role="lead"]
-Esta sección explica cómo eliminar volúmenes de un almacén de datos vVols .
+Esta página explica cómo eliminar volúmenes de un almacén de datos vVols .
 
-Puede utilizar la acción Eliminar almacenamiento del almacén de datos en cualquier almacén de datos vVols descubierto o administrado por ONTAP tools for VMware vSphere en vCenter Server.
+Utilice la acción "Eliminar almacenamiento del almacén de datos" en cualquier almacén de datos vVols administrado por las herramientas ONTAP en vCenter Server.
 
 No es posible eliminar almacenamiento de un volumen si contiene vVols; la opción de eliminación estará deshabilitada para dichos volúmenes.  Al eliminar volúmenes del almacén de datos, también tiene la opción de eliminar los volúmenes seleccionados del almacenamiento ONTAP .
 
