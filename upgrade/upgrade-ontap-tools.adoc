@@ -48,11 +48,20 @@ Puede actualizar las ONTAP tools for VMware vSphere 10.3 o 10.4 a 10.5.  Sin emb
 * Asegúrese de que la conexión en caliente para CPU y RAM esté habilitada.
 * Para las ONTAP tools for VMware vSphere 10.3 o 10.4, tome una instantánea inactiva en la máquina virtual de las herramientas ONTAP antes de actualizar.
 * Habilite la copia de seguridad con RPO bajo y asegúrese de que haya una copia de seguridad visible en la interfaz del cliente vCenter.
++
+Referirse a link:../manage/backup-settings.html["Editar la configuración de la copia de seguridad"] y link:../manage/recover-backup.html["Recuperar la configuración de las herramientas ONTAP"] Para obtener más información sobre copias de seguridad y recuperación.
+
 
 
 .Pasos
 . Cargue ISO de las herramientas de ONTAP para la actualización de VMware vSphere a la biblioteca de contenido.
-. En la página principal de VM, seleccione *Acciones* > *Editar configuración*
+. En la página principal de la máquina virtual, seleccione *Acciones* > *Editar configuración*. Para identificar el nombre de la máquina virtual principal:
++
+.. Habilitar el shell de diagnóstico en cualquier nodo
+.. Ejecuta el siguiente comando:
+`grep sourceHost /opt/netapp/meta/ansible_vars.yaml`
+
+
 . Seleccione el *archivo ISO de la biblioteca de contenido* en la ventana de edición de configuraciones, debajo del campo *Unidad de CD/DVD*.
 . Seleccione el archivo ISO, marque la casilla *Conectado* para el campo *Unidad de CD/DVD* y haga clic en *Aceptar*.
 . Desde vCenter Server, abra una consola a las herramientas de ONTAP.

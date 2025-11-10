@@ -94,7 +94,10 @@ La siguiente tabla describe los puertos de red que utiliza NetApp y sus funcione
 
 NOTE: Asegúrese de que todos los nodos de herramientas ONTAP residan en la misma subred para mantener una comunicación ininterrumpida entre sí.
 
+Haga clic para expandir o contraer la tabla de requisitos del puerto.
 
+[%collapsible]
+====
 |===
 | *Nombre del servicio/componente* | *Puerto* | *Protocolo* | *Tipo de puerto* | *Descripción* 
 
@@ -152,6 +155,7 @@ NOTE: Asegúrese de que todos los nodos de herramientas ONTAP residan en la mism
 
 NOTE: Para implementaciones de alta disponibilidad, asegúrese de que el puerto UDP 8472 esté abierto entre todos los nodos. Este puerto permite la comunicación entre pods a través de nodos; bloquearlo interrumpirá la comunicación entre nodos.
 
+====
 
 
 == Límites de configuración para poner en marcha herramientas de ONTAP para VMware vSphere
