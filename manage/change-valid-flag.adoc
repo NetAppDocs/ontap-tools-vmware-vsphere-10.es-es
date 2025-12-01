@@ -19,7 +19,7 @@ Debe tener credenciales de inicio de sesión de usuario de mantenimiento.
 .Pasos
 . Desde vCenter Server, abra una consola a las herramientas de ONTAP.
 . Inicie sesión como el usuario de mantenimiento.
-. Ingresar `1` para seleccionar el Menú de Configuración de la Aplicación.
+. Ingresar `1` para seleccionar el menú *Configuración de la aplicación*.
 . Ingresar `3` para cambiar el indicador de validación del certificado.
 +
 La consola de mantenimiento muestra el estado del indicador de validación del certificado y le solicita que lo cambie.

@@ -11,16 +11,15 @@ summary: Cuando se ejecutan por primera vez herramientas de ONTAP para VMware vS
 
 
 [role="lead"]
-Cuando se ejecutan por primera vez herramientas de ONTAP para VMware vSphere en un cliente vSphere, las herramientas de ONTAP detectan los hosts ESXi, sus LUN y exportaciones NFS, y los sistemas de almacenamiento de NetApp propietarios de esos LUN y exportaciones.
+Cuando las ONTAP tools for VMware vSphere se inician en vSphere Client por primera vez, descubren automáticamente los hosts ESXi, sus LUN asociados y las exportaciones NFS, así como los sistemas de almacenamiento NetApp que poseen estos recursos.
 
 .Antes de empezar
-* Todos los hosts ESXi deben estar encendidos y conectados.
-* Debe estar en ejecución todas las máquinas virtuales de almacenamiento que se vayan a detectar y cada nodo del clúster debe tener al menos una LIF de datos configurada para el protocolo de almacenamiento en uso (NFS o iSCSI).
+* Asegúrese de que todos los hosts ESXi estén encendidos y conectados.
+* Asegúrese de que todas las máquinas virtuales de almacenamiento (SVM) que se van a descubrir estén en ejecución y que cada nodo del clúster tenga al menos un LIF de datos configurado para el protocolo de almacenamiento en uso (NFS o iSCSI).
 
 
-*Acerca de esta tarea*
-
-Puede detectar nuevos sistemas de almacenamiento o actualizar información sobre los sistemas de almacenamiento existentes para obtener la información más reciente sobre la configuración y la capacidad en cualquier momento. También puede modificar las credenciales que usan las herramientas de ONTAP para VMware vSphere para iniciar sesión en los sistemas de almacenamiento.
+.Acerca de esta tarea
+Puede descubrir nuevos sistemas de almacenamiento o actualizar los existentes para obtener los últimos detalles de capacidad y configuración.  También puede cambiar las ONTAP tools for VMware vSphere para el acceso al sistema de almacenamiento.
 
 Al detectar los sistemas de almacenamiento, las herramientas de ONTAP para VMware vSphere recopilan información de los hosts ESXi que gestiona la instancia de vCenter Server.
 

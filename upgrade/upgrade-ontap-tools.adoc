@@ -21,8 +21,8 @@ Puede actualizar las ONTAP tools for VMware vSphere 10.3 o 10.4 a 10.5.  Sin emb
 
 ====
 .Antes de empezar
+* Asegúrese de que todos los nodos estén activos.
 * Asegúrese de que el certificado del sistema ONTAP y los certificados vCenter incorporados sean válidos durante al menos 5 días. Si los certificados caducan antes, la actualización falla.
-* Para garantizar una actualización segura, verifique que sus certificados incluyan entradas de Nombre alternativo del sujeto (SAN). Si los certificados carecen de entradas SAN, configure el indicador de validación de certificado como falso para omitir las verificaciones de SAN durante la actualización.
 * Asegúrese de tener un quinto disco con una capacidad de 100 GB en todos los nodos.
 * Verifique que la configuración del nodo coincida con las especificaciones de la tabla siguiente.
 
@@ -46,8 +46,8 @@ Puede actualizar las ONTAP tools for VMware vSphere 10.3 o 10.4 a 10.5.  Sin emb
 | ALTA disponibilidad | 17 | 34 | 350 | 51 | 102 | 1050 
 |===
 * Asegúrese de que la conexión en caliente para CPU y RAM esté habilitada.
-* Para las ONTAP tools for VMware vSphere 10.3 o 10.4, tome una instantánea inactiva en la máquina virtual de las herramientas ONTAP antes de actualizar.
-* Habilite la copia de seguridad con RPO bajo y asegúrese de que haya una copia de seguridad visible en la interfaz del cliente vCenter.
+* Habilite la copia de seguridad con RPO bajo y asegúrese de que haya una copia de seguridad visible en la interfaz del cliente vCenter.  Descargue la carpeta de respaldo antes de actualizar.
+* Se recomienda una copia de seguridad con un RPO bajo.  Sin embargo, en una implementación que no sea de alta disponibilidad, puede tomar una instantánea inactiva de la máquina virtual de herramientas ONTAP antes de actualizar.
 +
 Referirse a link:../manage/backup-settings.html["Editar la configuración de la copia de seguridad"] y link:../manage/recover-backup.html["Recuperar la configuración de las herramientas ONTAP"] Para obtener más información sobre copias de seguridad y recuperación.
 
@@ -85,7 +85,8 @@ Durante la actualización, si alguno de los certificados de backend de almacenam
 Después de actualizar a las ONTAP tools for VMware vSphere 10.5:
 
 * Supervise las alertas del sistema y planifique la renovación del certificado de puerta de enlace antes de que caduque en un año.
-* Elimine el adaptador SRA de las herramientas ONTAP 10.4 o 10.3 y cargue el archivo tar del adaptador SRA 10.5.  Luego, vuelva a escanear los adaptadores SRA para actualizar la página Adaptadores de replicación de almacenamiento de VMware Site Recovery.
+* Elimine el adaptador SRA de las herramientas ONTAP 10.4 o 10.3 y cargue el archivo tar del adaptador SRA 10.5.
+* Ejecute el comando de instalación después de cargar el archivo tar del adaptador SRA. Luego, vuelva a escanear los adaptadores SRA para actualizar la página Adaptadores de replicación de almacenamiento de VMware Site Recovery.
 
 
 Después de actualizar podrás:

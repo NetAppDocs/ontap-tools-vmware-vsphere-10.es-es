@@ -11,7 +11,7 @@ summary: Configure los roles y privilegios de usuario para los backends de almac
 
 
 [role="lead"]
-Configure los roles y privilegios de usuario para los backends de almacenamiento con el archivo JSON de las ONTAP tools for VMware vSphere y ONTAP System Manager.
+Utilice esta sección para configurar los roles y privilegios de usuario de ONTAP para los backends de almacenamiento con ONTAP tools for VMware vSphere y ONTAP System Manager.  Puede asignar roles utilizando los archivos JSON proporcionados, crear usuarios y roles manualmente y aplicar los privilegios mínimos requeridos para cuentas que no sean de administrador.
 
 .Antes de empezar
 * Descargue el archivo de Privileges de ONTAP de las ONTAP tools for VMware vSphere usando _\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip_.  Después de descargar el archivo zip, encontrará dos archivos JSON.  Utilice el archivo JSON específico de ASA r2 al configurar un sistema ASA r2.

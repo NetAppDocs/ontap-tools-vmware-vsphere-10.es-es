@@ -10,18 +10,21 @@ summary: Conectar un disco de datos a una máquina virtual para expandir la capa
 :imagesdir: ../media/
 
 
+[role="lead"]
+Siga estos pasos para conectar o desconectar discos de datos de máquinas virtuales en vSphere y administrar sus recursos de almacenamiento.
+
 
 
 == Conectar un disco de datos a una máquina virtual
 
-Conectar un disco de datos a una máquina virtual para expandir la capacidad de almacenamiento.
+Conecte un disco de datos a una máquina virtual para agregar más almacenamiento.
 
 .Pasos
 . Inicie sesión en el cliente de vSphere.
 . Haga clic derecho en una máquina virtual en el inventario y seleccione *Editar configuración*.
 . En la pestaña *Virtual Hardware*, seleccione *Disco duro existente*.
 . Seleccione la máquina virtual donde existe el disco.
-. Seleccione el disco que desea adjuntar y seleccione *OK*
+. Seleccione el disco que desea adjuntar y seleccione el botón *Aceptar*.
 
 
 .Resultado
@@ -31,7 +34,7 @@ El disco duro aparece en la lista Dispositivos de hardware virtual.
 
 == Desconectar un disco de datos de la máquina virtual
 
-Es posible desconectar un disco de datos conectado a una máquina virtual cuando ya no lo necesita. Cuando se desconecta el disco de la máquina virtual, no se elimina automáticamente; permanece en el sistema de almacenamiento de ONTAP.
+Desconecte un disco de datos de una máquina virtual cuando ya no lo necesite.  El disco no se elimina; permanece en el sistema de almacenamiento ONTAP .
 
 .Pasos
 . Inicie sesión en el cliente de vSphere.

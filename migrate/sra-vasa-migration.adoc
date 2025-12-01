@@ -22,7 +22,20 @@ iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 ----
 . Implementar OVA para ONTAP tools for VMware vSphere 10.5.
 . Agregue la instancia de vCenter Server que desea migrar a las ONTAP tools for VMware vSphere 10.5. Consulte link:../configure/add-vcenter.html["Agregue una instancia de vCenter Server"] Para más información.
-. Integre el backend de almacenamiento localmente desde las API del servidor vCenter para el complemento de herramientas ONTAP.
+. Incorpore el backend de almacenamiento localmente desde las API de vCenter Server para el complemento de herramientas de ONTAP . Consultelink:../configure/add-storage-backend.html["Agregue un backend de almacenamiento mediante la interfaz del cliente vSphere"] Para más información.
+. Obtenga un token de acceso para autenticar solicitudes de API REST.  Utilice el siguiente ejemplo, reemplazando las variables con valores específicos de su entorno.
++
+[source, curl]
+----
+curl --request POST \
+--location "https://$FQDN_IP_PORT/virtualization/api/v1/auth/login” \
+--header "Content-Type: application/json" \
+--header "Accept: */*" \
+-d "{"username": "$MYUSER", "password": "$MYPASSWORD"}"
+----
++
+Copie y guarde el token de acceso devuelto en la respuesta.
+
 . Emita la siguiente API desde Swagger o en Postman para migrar.
 +
 [listing]
@@ -96,19 +109,27 @@ El sistema devuelve un objeto de trabajo.  Guarde el identificador de trabajo pa
 +
 [listing]
 ----
-curl `\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true`
+curl `\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<migration_id>?includeSubJobsAndTasks=true`
 ----
 +
 Una vez finalizado el trabajo, revise el informe de migración en la respuesta del trabajo.
 
-. Agregue las herramientas ONTAP para el proveedor de almacenamiento VMware vSphere al vCenter Server y link:../configure/registration-process.html["Registre el proveedor de VASA de"] con herramientas ONTAP para VMware vSphere.
+. Agregue las ONTAP tools for VMware vSphere al vCenter Server.
+. Registre el proveedor VASA con ONTAP tools for VMware vSphere. Para obtener instrucciones, consultelink:../configure/registration-process.html["Registre el proveedor de VASA de"] .
+. Después del registro, verifique el nombre del proveedor VASA y su estado en el cliente vSphere en *Proveedores de almacenamiento*.  El proveedor de VASA debería aparecer en línea, confirmando el registro exitoso.
 . link:../manage/enable-services.html["Habilite el proveedor de VASA"]Servicio en ONTAP tools for VMware vSphere 10.5.
-. Detenga el servicio de proveedor de almacenamiento VASA 9,10/9,11/9,12/9,13 de las herramientas de ONTAP para VMware vSphere desde la consola de mantenimiento.
+. Detenga el servicio del proveedor VASA de las ONTAP tools for VMware vSphere 9.10/9.11/9.12/9.13 mediante estos pasos:
 +
-No elimine el proveedor VASA.
-
+.. En las herramientas ONTAP 9.x, abra la consola web.
+.. Acceda a la consola de mantenimiento.
+.. Ingresar `1` para seleccionar el menú *Configuración de la aplicación*.
+.. Ingresar `5` para detener los servicios del Proveedor VASA y SRA.
+.. En vSphere Client, navegue a *Inventario* > *Proveedores de almacenamiento*.
+.. Seleccione el proveedor VASA de ONTAP tools 9.x desde el backend de almacenamiento y haga clic en *Eliminar*.
 +
 Tras detener el antiguo proveedor VASA, vCenter Server conmuta por error a las ONTAP tools for VMware vSphere. Todos los almacenes de datos y máquinas virtuales se vuelven accesibles y se sirven desde las ONTAP tools for VMware vSphere.
+
+
 
 . Los almacenes de datos NFS y VMFS migrados aparecen en las ONTAP tools for VMware vSphere 10.5 después del trabajo de descubrimiento del almacén de datos, que puede demorar hasta 30 minutos.  Compruebe su visibilidad en la página de descripción general.
 . Realice la migración de parches mediante la siguiente API en Swagger o en Postman:
@@ -131,11 +152,17 @@ Esta llamada a la API de REST utiliza el siguiente método y extremo.
 
 Asíncrona
 
+Utilice la siguiente URI en Swagger:
+
+[listing]
+----
+curl  -X PATCH  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/<vcenter_id>/migration-jobs/<migration_id>`
+----
 *Ejemplo de Curl*
 
 [listing]
 ----
-curl  -X PATCH  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/56d373bd-4163-44f9-a872-9adabb008ca9/migration-jobs/84dr73bd-9173-65r7-w345-8ufdbb887d43`
+curl  -X PATCH  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/56d373bd-4163-44f9-a872-9adabb008ca9/migration-jobs/d50073ce-35b4-4c51-9d2e-4ce66f802c35`
 ----
 *Ejemplo de salida JSON*
 
@@ -149,15 +176,16 @@ Se devuelve un objeto de trabajo. Debe guardar el identificador de trabajo para 
   "status": "running"
 }
 ----
+====
++
 El cuerpo de la solicitud está vacío para la operación de parche.
+
+
 
 
 NOTE: UUID es el UUID de migración devuelto en respuesta a la API posterior a la migración.
 
 Después de ejecutar la API de migración de revisiones, todas las máquinas virtuales cumplen con la normativa de almacenamiento.
-
-====
-
 
 .El futuro
 Después de completar la migración y registrar las herramientas ONTAP 10.5 en vCenter Server, siga estos pasos:

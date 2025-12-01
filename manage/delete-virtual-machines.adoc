@@ -11,10 +11,10 @@ summary: Use los pasos de esta sección para realizar la limpieza de VASA.
 
 
 [role="lead"]
-Siga estas instrucciones para completar el proceso de limpieza de VASA.
+Para completar el proceso de limpieza de VASA, siga estos pasos.
 
 
-NOTE: Se recomienda quitar todos los almacenes de datos de vVols antes de ejecutar el borrado de VASA.
+NOTE: Se recomienda eliminar cualquier almacén de datos vVols antes de iniciar la limpieza de VASA.
 
 .Pasos
 . Desde \https://OTV_IP:8143/Register.html para cancelar el registro del plugin

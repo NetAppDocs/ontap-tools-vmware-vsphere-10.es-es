@@ -11,13 +11,13 @@ summary: Los back-ends de almacenamiento son los sistemas que los hosts ESXi uti
 
 
 [role="lead"]
-Cuando agrega backends de almacenamiento a las herramientas de ONTAP , puede aprovisionar y administrar almacenes de datos directamente desde vCenter Server.
+Utilice las ONTAP tools for VMware vSphere para agregar y administrar backends de almacenamiento para sus hosts ESXi.  Puede incorporar clústeres o SVM, habilitar la compatibilidad con MetroCluster y validar certificados para una conectividad segura.  Puede configurar backends de almacenamiento mediante el Administrador de herramientas de ONTAP o el cliente vSphere, monitorear el estado del certificado y redescubrir recursos manualmente después de cambios en el clúster.
 
-Para agregar backends de almacenamiento localmente, use credenciales de clúster o SVM en la interfaz de herramientas de ONTAP .  Estos backends de almacenamiento solo están disponibles para el vCenter Server seleccionado.  Las herramientas de ONTAP asignan SVM al vCenter Server para la administración del almacén de datos vVols o VMFS.  Para los flujos de trabajo de SRA y de almacén de datos VMFS, puede usar credenciales SVM sin la necesidad de un clúster mapeado globalmente.
+Para agregar un backend de almacenamiento localmente, use las credenciales del clúster o SVM en la interfaz de herramientas de ONTAP .  Los backends de almacenamiento local solo están disponibles para el vCenter Server seleccionado. Las herramientas de ONTAP asignan SVM al vCenter Server para la administración del almacén de datos vVols o VMFS.  Para los almacenes de datos VMFS y los flujos de trabajo de SRA, puede usar credenciales de SVM sin asignar un clúster globalmente.
 
-Puede agregar backends de almacenamiento globales usando las credenciales del clúster ONTAP en el Administrador de herramientas ONTAP .  Los backends de almacenamiento global permiten flujos de trabajo de descubrimiento para identificar los recursos del clúster necesarios para la administración de vVol.  En configuraciones de múltiples inquilinos, puede agregar un usuario SVM localmente para administrar almacenes de datos vVols .
+Para agregar un backend de almacenamiento global, use las credenciales del clúster ONTAP en el Administrador de herramientas ONTAP .  Los backends de almacenamiento global permiten flujos de trabajo de descubrimiento para identificar los recursos del clúster necesarios para la administración de vVol.  En entornos multiinquilino, puede agregar un usuario SVM localmente para administrar almacenes de datos vVols .
 
-Cuando habilita la compatibilidad con MetroCluster en el sistema ONTAP , incorpore los clústeres de origen y destino como backends de almacenamiento locales o globales.
+Si la compatibilidad con MetroCluster está habilitada en ONTAP, incorpore los clústeres de origen y destino como backends de almacenamiento locales o globales.
 
 .Antes de empezar
 Verifique que el certificado incluya un campo de Nombre alternativo del sujeto (SAN) válido.  Los sistemas ONTAP utilizan el campo SAN para identificar LIF de administración de clústeres y SVM.
