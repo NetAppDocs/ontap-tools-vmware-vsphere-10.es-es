@@ -96,7 +96,6 @@ Si está implementando herramientas de ONTAP en una topología de dos vCenter Se
 +
 Para la instancia de vCenter que será administrada por las herramientas de ONTAP , asegúrese de que la cuenta de usuario de vCenter tenga privilegios de administrador.
 
-** La información se valida durante la instalación.  Si hay una discrepancia, aparece un mensaje de error en la consola web y se le solicita que lo corrija.
 ** Los nombres de host deben incluir letras (A-Z, a-z), dígitos (0-9) y guiones (-). Para configurar la pila dual, especifique el nombre de host asignado a la dirección IPv6.
 +
 
