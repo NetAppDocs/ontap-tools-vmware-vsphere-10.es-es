@@ -68,8 +68,9 @@ Referirse a link:../manage/backup-settings.html["Editar la configuración de la 
 . Inicie sesión como el usuario de mantenimiento.
 . Introduzca *2* para seleccionar el menú *Configuración del sistema*.
 . Introduzca *7* para seleccionar la opción *Actualizar*.
+. Proporcione las credenciales de vCenter cuando se le solicite.  Esta es la instancia de vCenter donde se alojan las herramientas ONTAP .
 +
-Si está implementando herramientas de ONTAP en una topología de dos vCenter Server (donde el dispositivo está alojado en una instancia de vCenter y administra otra), puede asignar una función restringida para la instancia de vCenter que aloja las herramientas de ONTAP .  Puede crear un usuario y un rol de vCenter dedicados solo con los permisos de almacén de datos enumerados a continuación, necesarios para la implementación de la plantilla OVF:
+Si utiliza herramientas ONTAP en una topología de dos vCenter Server (donde el dispositivo está alojado en una instancia de vCenter y administra otra), puede asignar una función restringida para la instancia de vCenter que aloja las herramientas ONTAP .  Puede crear un usuario y un rol de vCenter dedicados solo con los permisos de almacén de datos enumerados a continuación:
 
 +
 ** Asignar espacio

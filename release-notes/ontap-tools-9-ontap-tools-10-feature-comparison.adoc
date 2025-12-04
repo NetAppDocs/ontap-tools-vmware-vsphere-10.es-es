@@ -21,13 +21,13 @@ NOTE: Para obtener la información de compatibilidad más actualizada, consulte 
 | Característica | Herramientas ONTAP 9.13 | Herramientas ONTAP 10.2 en adelante 
 
 
-| Propuesta de valor clave | Optimice y simplifique las operaciones del día 0 al día 2 con capacidades mejoradas de seguridad, cumplimiento y automatización. | Soporte ampliado para incluir FC para VMFS y NVMe-oF/FC, NVMe-oF/TCP solo para VMFS. Facilidad de uso para NetApp SnapMirror, configuración sencilla para clústeres de almacenamiento metro vSphere y compatibilidad con VMware Live Site Recovery de tres sitios 
+| Propuesta de valor clave | Optimice y simplifique las operaciones del día 0 al día 2 con capacidades mejoradas de seguridad, cumplimiento y automatización. | Soporte ampliado para incluir FC para VMFS y NVMe-oF solo para VMFS. Facilidad de uso para NetApp SnapMirror, configuración sencilla para clústeres de almacenamiento metro vSphere y compatibilidad con VMware Live Site Recovery de tres sitios 
 
 
 | Calificación de liberación de ONTAP | ONTAP 9.9.1 a ONTAP 9.16.1 | ONTAP 9.12.1 a 9.15.1 para herramientas ONTAP 10.2. ONTAP 9.14.1, 9.15.1, 9.16.0 y 9.16.1 para herramientas ONTAP 10.3. ONTAP 9.14.1, 9.15.1, 9.16.0 y 9.16.1 para herramientas ONTAP 10.4. Se requiere ONTAP 9.16.1P3 y versiones posteriores para las herramientas ONTAP 10.4 cuando se utilizan sistemas ASA r2.  ONTAP 9.15.1, 9.16.0, 9.16.1, 9.17.0 y 9.17.1 para herramientas ONTAP 10.5 
 
 
-| Compatibilidad con versiones de VMware | vSphere 7.x-8.x VMware Site Recovery Manager (SRM) 8.5 a VMware Live Site Recovery 9.0 | vSphere 7.x-8.x VMware Site Recovery Manager (SRM) 8.7 a VMware Live Site Recovery 9.0 *NOTA:* En las herramientas ONTAP 10.x, SRM admite sitios compartidos, lo que permite una mejor escalabilidad y un mejor rendimiento. 
+| Compatibilidad con versiones de VMware | vSphere 7.x-8.x VMware Site Recovery Manager (SRM) 8.5 a VMware Live Site Recovery 9.0 | vSphere 7.x-8.x vSphere 9.0 desde ONTAP tools 10.5 en adelante VMware Site Recovery Manager (SRM) 8.7 a VMware Live Site Recovery 9.0 *NOTA:* En ONTAP tools 10.x, SRM admite sitios compartidos, lo que permite una mejor escalabilidad y un mejor rendimiento. 
 
 
 | Soporte de protocolo | Almacenes de datos NFS y VMFS: NFS (v3 y v4.1), VMFS (iSCSI y FCP) | Almacenes de datos NFS y VMFS: NFS (v3 y v4.1), VMFS (iSCSI/FCP/NVMe-oF) 
@@ -39,7 +39,7 @@ NOTE: Para obtener la información de compatibilidad más actualizada, consulte 
 | Observabilidad | Paneles de rendimiento, capacidad y cumplimiento del host Informes dinámicos de máquinas virtuales y almacenes de datos | Paneles de control actualizados sobre rendimiento, capacidad y cumplimiento del host Informes dinámicos de máquinas virtuales y almacenes de datos 
 
 
-| Protección de datos | Replicación de SRA para integración de VMFS y NFS SCV e interoperable para respaldo | Replicación SRA para almacenes de datos iSCSI VMFS y NFS v3 con protección de tres sitios que combina SMAS y VMware Live Site Recovery. 
+| Protección de datos | Replicación de SRA para VMFS y NFS.  Integración SCV e interoperable para backup. | Replicación SRA para almacenes de datos iSCSI VMFS y NFS v3 con protección de tres sitios que combina SMAS y VMware Live Site Recovery. Soporte de SRA para FCP con VMFS. 
 
 
 | Soporte del proveedor de VASA | VASA 4.0 | VASA 3.0 
