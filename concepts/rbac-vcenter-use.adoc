@@ -41,7 +41,180 @@ Para simplificar el uso del control de acceso basado en roles de vCenter Server,
 
 NOTE: Puede crear nuevos roles personalizados si es necesario. En este caso, debe clonar uno de los roles de herramientas de ONTAP existentes y editarlo según sea necesario. Después de realizar cambios en la configuración, los usuarios del cliente vSphere afectados deben cerrar la sesión y volver a iniciarla para activar los cambios.
 
-Para ver las herramientas de ONTAP para las funciones de VMware vSphere, seleccione *Menú* en la parte superior del cliente vSphere y haga clic en *Administración* y luego en *Roles* a la izquierda. Hay tres roles predefinidos como se describe a continuación.
+Para ver las ONTAP tools for VMware vSphere , seleccione *Menú* en la parte superior de vSphere Client y haga clic en *Administración* y luego en *Roles* a la izquierda. Los siguientes privilegios deben incluirse en el rol asignado al usuario de vCenter responsable de implementar o incorporar vCenter. Asegúrese de que estos privilegios estén configurados como un requisito previo para el proceso de implementación o incorporación.
+
+* Alarmas
++
+** Reconocer alarma
+
+
+* Biblioteca de contenido
++
+** Agregar elemento de biblioteca
+** Registrarse en una plantilla
+** Echa un vistazo a una plantilla
+** Descargar archivos
+** Almacenamiento de importación
+** Almacenamiento de lectura
+** Elemento de biblioteca de sincronización
+** Sincronizar biblioteca suscrita
+** Ver configuración
+
+
+* Almacén de datos
++
+** Asignar espacio
+** Explorar el almacén de datos
+** Operaciones de archivos de bajo nivel
+** Eliminar archivo
+** Actualizar archivos de la máquina virtual
+** Actualizar los metadatos de la máquina virtual
+
+
+* Administrador de agentes ESX
++
+** Vista
+
+
+* Carpeta
++
+** Crear carpeta
+
+
+* Host
++
+** Configuración
++
+*** Configuración avanzada
+*** Cambiar la configuración
+*** Configuración de red
+*** Recursos del sistema
+*** Configuración de inicio automático de la máquina virtual
+
+
+** Operaciones locales
++
+*** Crear una máquina virtual
+*** Eliminar máquina virtual
+*** Reconfigurar la máquina virtual
+
+
+
+
+* Red
++
+** Asignar red
+** Configurar
+
+
+* Administrador de Ovf
++
+** Acceso al consumidor de Ovf
+
+
+* Perfil del anfitrión
++
+** Vista
+
+
+* Recurso
++
+** Asignar máquina virtual a grupo de recursos
+
+
+* Tarea programada
++
+** Crear tareas
+** Modificar tarea
+** Ejecutar tarea
+
+
+* Tareas
++
+** Crear tarea
+** Tarea de actualización
+
+
+* vApp
++
+** Agregar máquina virtual
+** Asignar grupo de recursos
+** Asignar vApp
+** Cree
+** Importar
+** Mover
+** Apagado
+** Encender
+** Extraer de la URL
+** Ver el entorno OVF
+
+
+* Máquina virtual
++
+** Cambiar configuración
++
+*** Agregar disco existente
+*** Agregar nuevo disco
+*** Agregar o quitar dispositivo
+*** Configuración avanzada
+*** Cambiar el número de CPU
+*** Cambiar memoria
+*** Cambiar configuración
+*** Cambiar recurso
+*** Extender el disco virtual
+*** Modificar la configuración del dispositivo
+*** Quitar el disco
+*** Restablecer la información del huésped
+*** Actualizar la compatibilidad de las máquinas virtuales
+
+
+** Editar inventario
++
+*** Crear a partir de existente
+*** Crear nuevo
+*** Mover
+*** Registro
+*** Quitar
+*** Darse de baja
+
+
+** Interacción
++
+*** Operación de copia de seguridad en una máquina virtual
+*** Configurar medios de CD
+*** Configurar medios de disquete
+*** Conectar dispositivos
+*** Interacción con la consola
+*** Gestión del sistema operativo invitado mediante la API VIX
+*** Apagado
+*** Encender
+*** Reiniciar
+*** Suspender
+
+
+** Aprovisionamiento
++
+*** Permitir acceso al disco
+*** Plantilla de clonación
+*** Personalizar invitado
+*** Implementar plantilla
+*** Modificar la especificación de personalización
+*** Leer las especificaciones de personalización
+
+
+** Gestión de instantáneas
++
+*** Crear instantánea
+*** Eliminar instantánea
+*** Cambiar el nombre de la instantánea
+*** Volver a la instantánea
+
+
+
+
+
+
+Hay tres roles predefinidos como se describe a continuación.
 
 .Herramientas de NetApp ONTAP para administrador de VMware vSphere
 Ofrece todas las Privileges nativas de las herramientas de vCenter Server Privileges y ONTAP necesarias para realizar las herramientas principales de ONTAP para las tareas de administrador de VMware vSphere.

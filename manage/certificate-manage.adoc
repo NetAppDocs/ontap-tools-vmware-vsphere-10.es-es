@@ -11,7 +11,7 @@ summary: Una única instancia de herramientas de ONTAP para VMware vSphere puede
 
 
 [role="lead"]
-Se genera un certificado autofirmado para las herramientas ONTAP y el proveedor VASA de forma predeterminada durante la implementación. Utilizando la interfaz del Administrador de herramientas de ONTAP , puede renovar el certificado o actualizarlo a una CA personalizada. Debe utilizar certificados de CA personalizados en una implementación multi-vCenter.
+Se genera un certificado autofirmado para las herramientas ONTAP y el proveedor VASA de forma predeterminada durante la implementación. Puede utilizar la interfaz del Administrador de herramientas de ONTAP para renovar este certificado o reemplazarlo con un certificado CA personalizado. En implementaciones de varios vCenter, es necesario utilizar certificados CA personalizados.
 
 .Antes de empezar
 Deberías tener lo siguiente antes de empezar:
@@ -47,7 +47,7 @@ NOTE: El sistema estará fuera de línea hasta que se renueve el certificado y s
 . Para actualizar el certificado autofirmado a un certificado de CA personalizado, seleccione la opción *Certificados* > *Herramientas de ONTAP* > *Actualizar a CA*.
 +
 .. En la ventana emergente, cargue el certificado de servidor, la clave privada de certificado de servidor, el certificado de CA raíz y los archivos de certificado intermedio.
-.. Introduzca el nombre de dominio para el que ha generado este certificado y actualice el certificado.
+.. Ingrese el FQDN de la IP del balanceador de carga para el cual generó este certificado y actualice el certificado.
 +
 
 NOTE: El sistema estará fuera de línea hasta que se complete la actualización y se cerrará la sesión en la interfaz del Administrador de herramientas de ONTAP.
@@ -68,7 +68,7 @@ Las herramientas de ONTAP para VMware vSphere se ponen en marcha con un certific
 . Seleccione *Certificados* > *Proveedor VASA* o *Herramientas ONTAP* > *Actualizar a CA* para actualizar el certificado autofirmado a un certificado de CA personalizado.
 +
 .. En la ventana emergente, cargue el certificado de servidor, la clave privada de certificado de servidor, el certificado de CA raíz y los archivos de certificado intermedio.
-.. Introduzca el nombre de dominio para el que ha generado este certificado y actualice el certificado.
+.. Ingrese el FQDN de la IP del balanceador de carga para el cual generó este certificado y actualice el certificado.
 +
 
 NOTE: El sistema estará fuera de línea hasta que se complete la actualización y se cerrará la sesión en la interfaz del Administrador de herramientas de ONTAP.
