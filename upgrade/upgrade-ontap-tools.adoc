@@ -70,22 +70,13 @@ Referirse a link:../manage/backup-settings.html["Editar la configuración de la 
 . Introduzca *7* para seleccionar la opción *Actualizar*.
 . Proporcione las credenciales de vCenter cuando se le solicite.  Esta es la instancia de vCenter donde se alojan las herramientas ONTAP .
 +
-Si utiliza herramientas ONTAP en una topología de dos vCenter Server (donde el dispositivo está alojado en una instancia de vCenter y administra otra), puede asignar una función restringida para la instancia de vCenter que aloja las herramientas ONTAP .  Puede crear un usuario y un rol de vCenter dedicados solo con los permisos de almacén de datos enumerados a continuación:
+Si utiliza herramientas ONTAP en una topología de dos vCenter Server (donde el dispositivo está alojado en una instancia de vCenter y administra otra), puede asignar una función restringida para la instancia de vCenter que aloja las herramientas ONTAP . Puede crear un usuario y un rol de vCenter dedicados solo con los permisos necesarios para la implementación de la plantilla OVF. Para obtener más detalles, consulte los roles enumerados en https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv105-releasebranch/concepts/rbac-vcenter-use.html#vsphere-object-hierarchy["Roles incluidos con las herramientas de ONTAP para VMware vSphere 10"].
 
-+
-** Asignar espacio
-** Explorar el almacén de datos
-** Operaciones de archivos de bajo nivel
-** Eliminar archivo
-** Actualizar archivos de la máquina virtual
-** Actualizar los metadatos de la máquina virtual
 +
 Para la instancia de vCenter que será administrada por las herramientas de ONTAP , asegúrese de que la cuenta de usuario de vCenter tenga privilegios de administrador.
 
 +
 Durante la actualización, si alguno de los certificados de backend de almacenamiento incorporados no tiene entradas de Nombre alternativo del sujeto (SAN), recibirá un mensaje indicando el SAN faltante.  Si decide continuar sin validar la SAN, la actualización continuará, pero esto no se recomienda debido a posibles riesgos de seguridad.
-
-
 
 . Al actualizar, las siguientes acciones se realizan automáticamente:
 +

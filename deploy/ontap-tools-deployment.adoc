@@ -84,18 +84,12 @@ NOTE: Nunca almacene las herramientas de ONTAP para máquinas virtuales de VMwar
 NOTE: El nombre de host de vCenter es el nombre de la instancia de vCenter Server donde se implementa el dispositivo de herramientas ONTAP .
 
 +
-Si está implementando herramientas de ONTAP en una topología de dos vCenter Server (donde el dispositivo está alojado en una instancia de vCenter y administra otra), puede asignar una función restringida para la instancia de vCenter que aloja las herramientas de ONTAP .  Puede crear un usuario y un rol de vCenter dedicados solo con los permisos de almacén de datos enumerados a continuación, necesarios para la implementación de la plantilla OVF:
+Si está implementando herramientas de ONTAP en una topología de dos vCenter Server (donde el dispositivo está alojado en una instancia de vCenter y administra otra), puede asignar una función restringida para la instancia de vCenter que aloja las herramientas de ONTAP . Puede crear un usuario y un rol de vCenter dedicados solo con los permisos necesarios para la implementación de la plantilla OVF. Para obtener más detalles, consulte los roles enumerados en https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv105-releasebranch/concepts/rbac-vcenter-use.html#vsphere-object-hierarchy["Roles incluidos con las herramientas de ONTAP para VMware vSphere 10"].
 
-+
-** Asignar espacio
-** Explorar el almacén de datos
-** Operaciones de archivos de bajo nivel
-** Eliminar archivo
-** Actualizar archivos de la máquina virtual
-** Actualizar los metadatos de la máquina virtual
 +
 Para la instancia de vCenter que será administrada por las herramientas de ONTAP , asegúrese de que la cuenta de usuario de vCenter tenga privilegios de administrador.
 
++
 ** Los nombres de host deben incluir letras (A-Z, a-z), dígitos (0-9) y guiones (-). Para configurar la pila dual, especifique el nombre de host asignado a la dirección IPv6.
 +
 

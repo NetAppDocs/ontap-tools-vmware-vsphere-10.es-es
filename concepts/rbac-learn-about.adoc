@@ -43,7 +43,7 @@ Un _permission_ es una definición que enlaza un usuario o grupo junto con un ro
 
 == Dos entornos de RBAC
 
-Hay dos entornos distintos de control de acceso basado en roles que debes tener en cuenta al trabajar con herramientas de ONTAP para VMware vSphere 10.
+Hay dos entornos RBAC distintos que debe tener en cuenta al trabajar con ONTAP tools for VMware vSphere 10. Las ONTAP tools for VMware vSphere 10 requieren privilegios específicos tanto en vCenter como en ONTAP para realizar sus operaciones. Si bien las herramientas ONTAP automatizan las tareas de administración de almacenamiento, no crean cuentas de usuario ni en vCenter ni en ONTAP. Las cuentas de servicio deben ser creadas por un administrador de vSphere según sea necesario. Esta documentación proporciona orientación para que los administradores asignen los roles y permisos necesarios para la gestión eficaz de las herramientas ONTAP .
 
 .Servidor VMware vCenter
 La implementación de RBAC en VMware vCenter Server se utiliza para restringir el acceso a los objetos expuestos a través de la interfaz de usuario de vSphere Client. Como parte de la instalación de herramientas de ONTAP para VMware vSphere 10, el entorno de control de acceso basado en roles se amplía para incluir objetos adicionales que representen las funcionalidades de las herramientas de ONTAP. El acceso a estos objetos se proporciona a través del plug-in remoto. Consulte link:../concepts/rbac-vcenter-environment.html["Entorno de RBAC de vCenter Server"] para obtener más información.
