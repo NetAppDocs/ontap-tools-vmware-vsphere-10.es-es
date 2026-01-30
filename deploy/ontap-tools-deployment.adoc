@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Las ONTAP tools for VMware vSphere se implementan como un único nodo de tamaño pequeño con servicios centrales para admitir almacenes de datos NFS y VMFS. 
 ---
-= Ponga en marcha herramientas de ONTAP para VMware vSphere
+= Implementa las herramientas ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

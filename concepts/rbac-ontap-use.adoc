@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap rbac, use ontap rbac 
 summary: Existen varios aspectos de las herramientas de ONTAP para la implementación del control de acceso basado en roles de VMware vSphere 10 con ONTAP que debería tener en cuenta antes de utilizarlo en un entorno de producción. 
 ---
-= Utilice el control de acceso basado en roles de ONTAP con herramientas de ONTAP para VMware vSphere 10
+= Consideraciones de ONTAP RBAC para ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

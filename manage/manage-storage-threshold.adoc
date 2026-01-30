@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Es posible establecer el umbral para recibir notificaciones en vCenter Server cuando la capacidad del volumen y del agregado alcanzan ciertos niveles.  
 ---
-= Gestione los umbrales de almacenamiento
+= Administra los umbrales de almacenamiento en ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

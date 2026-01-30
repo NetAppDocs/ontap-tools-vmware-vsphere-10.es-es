@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Introduzca los detalles del servidor NTP para sincronizar los relojes de hora del dispositivo de herramientas ONTAP. 
 ---
-= Editar la configuración de la copia de seguridad
+= Editar la configuración de copia de seguridad de ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

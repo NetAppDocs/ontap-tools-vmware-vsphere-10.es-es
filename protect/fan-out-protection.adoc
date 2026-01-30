@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: En un escenario de protección en abanico, el grupo de consistencia está doblemente protegido con una relación sincrónica en el primer clúster ONTAP de destino y con una relación asincrónica en el segundo clúster ONTAP de destino. 
 ---
-= Protección de abanico
+= Protección fan-out en las herramientas ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

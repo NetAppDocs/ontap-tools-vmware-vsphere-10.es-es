@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Las herramientas de ONTAP para VMware vSphere ofrecen la opción de habilitar la funcionalidad del SRA de configurar la recuperación ante desastres. 
 ---
-= Configurar SRA para proteger los almacenes de datos
+= Configura SRA en ONTAP tools para proteger los datastores
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

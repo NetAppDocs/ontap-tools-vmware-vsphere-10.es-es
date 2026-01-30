@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Debe iniciar SSH en otros nodos antes de actualizar. 
 ---
-= Inicie SSH en otros nodos
+= Inicia SSH en otros nodos de ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

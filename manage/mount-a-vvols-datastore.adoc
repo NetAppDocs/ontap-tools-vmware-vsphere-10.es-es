@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Mount vVol 
 summary: 'Puede montar un almacén de datos VMware Virtual Volumes \(vVols\) en uno o varios hosts adicionales utilizando el cuadro de diálogo Mount vVols Datastore. El montaje del almacén de datos permite acceder al almacenamiento a hosts adicionales. El almacén de datos vVols solo se puede desmontar mediante las API de.' 
 ---
-= Monte un almacén de datos vVols
+= Monta un almacén de datos vVols en ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

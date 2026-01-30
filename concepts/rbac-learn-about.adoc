@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: role based access control, rbac, rbac components, learn about rbac 
 summary: 'El control de acceso basado en roles (RBAC) es un marco de seguridad para controlar el acceso a los recursos de una organización. RBAC simplifica la administración definiendo roles con niveles de autoridad específicos para realizar acciones, en lugar de asignar autorización a usuarios individuales. Los roles definidos se asignan a los usuarios, lo que contribuye a reducir el riesgo de error y simplifica la gestión del control de acceso en toda la organización.' 
 ---
-= Obtenga más información sobre las herramientas de ONTAP para el control de acceso basado en roles de VMware vSphere 10
+= Conoce las herramientas RBAC de ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

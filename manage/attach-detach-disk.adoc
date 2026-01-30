@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Conectar un disco de datos a una máquina virtual para expandir la capacidad de almacenamiento. 
 ---
-= Asociar o desconectar un disco de datos de una máquina virtual
+= Conectar o desconectar un disco de datos de una máquina virtual en ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

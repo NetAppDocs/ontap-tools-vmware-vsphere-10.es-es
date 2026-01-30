@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: El montaje de un almacén de datos permite acceder al almacenamiento a hosts adicionales. El almacén de datos se puede montar en los hosts adicionales después de añadir los hosts al entorno de VMware. 
 ---
-= Montar almacenes de datos de NFS y VMFS
+= Monta almacenes de datos NFS y VMFS en ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

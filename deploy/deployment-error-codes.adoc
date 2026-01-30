@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade 
 summary: En esta página se describen los códigos de error para las operaciones de implementación, reinicio y recuperación de las herramientas de ONTAP para el sistema VMware vSphere. 
 ---
-= Solucionar errores de implementación
+= Soluciona errores de despliegue de ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

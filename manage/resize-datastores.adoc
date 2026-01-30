@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: El cambio de tamaño de un almacén de datos permite aumentar el almacenamiento de los archivos de las máquinas virtuales. Es posible cambiar el tamaño de un almacén de datos a medida que cambian los requisitos de infraestructura. 
 ---
-= Cambie el tamaño de NFS y almacén de datos VMFS
+= Redimensiona los almacenes de datos NFS y VMFS en ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

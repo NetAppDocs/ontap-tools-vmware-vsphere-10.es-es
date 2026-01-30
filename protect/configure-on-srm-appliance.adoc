@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Después de implementar el dispositivo VMware Live Site Recovery, configure el Adaptador de replicación de almacenamiento (SRA) para habilitar la administración de recuperación ante desastres.' 
 ---
-= Configure el SRA en el dispositivo VMware Live Site Recovery
+= Configura SRA en el dispositivo VMware Live Site Recovery usando ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

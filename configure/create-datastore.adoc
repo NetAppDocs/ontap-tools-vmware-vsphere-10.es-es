@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Cuando crea un almacén de datos en el nivel del clúster de host, las herramientas de ONTAP lo montan en todos los hosts de destino y habilitan la acción solo si tiene los privilegios necesarios. 
 ---
-= Cree un almacén de datos
+= Crear un almacén de datos en ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

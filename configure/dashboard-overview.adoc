@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: user roles 
 summary: Cuando se selecciona el icono del plugin de las herramientas de ONTAP para VMware vSphere en la sección de accesos directos del cliente de vCenter, la interfaz de usuario navega a la página de información general. Esta página actúa como la consola que ofrece el resumen de las herramientas de ONTAP para el plugin de VMware vSphere. 
 ---
-= Información general de las herramientas de ONTAP para la consola de VMware vSphere
+= Conoce el panel de ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

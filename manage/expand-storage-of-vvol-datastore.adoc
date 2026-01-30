@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: virtual volume datastores 
 summary: Cuando hace clic con el botón derecho en el objeto del almacén de datos en la vista de objetos de vCenter, las acciones admitidas de las herramientas de ONTAP para VMware vSphere se muestran en la sección sobre plugins. 
 ---
-= Expanda los almacenes de datos de vVols
+= Amplía los datastores vVols en ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

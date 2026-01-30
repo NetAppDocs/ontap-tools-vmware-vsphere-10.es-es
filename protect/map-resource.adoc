@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Debe asignar los recursos en el sitio protegido y el sitio de recuperación de modo que las máquinas virtuales estén configuradas para conmutar al nodo de respaldo a un grupo de hosts o a otro. 
 ---
-= Configure las asignaciones de recursos
+= Configura las asignaciones de recursos en ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

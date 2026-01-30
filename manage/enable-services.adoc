@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Puede cambiar la contraseña de administrador usando el Administrador de herramientas de ONTAP para habilitar servicios como VASA Provider, importación de la configuración de vVols y recuperación ante desastres (SRA) con el Administrador de herramientas de ONTAP.' 
 ---
-= Habilite herramientas de ONTAP para los servicios de VMware vSphere
+= Habilitar los servicios de ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter 
 summary: La introducción a las herramientas de ONTAP para VMware vSphere incluye unos pocos pasos. 
 ---
-= Flujo de trabajo de puesta en marcha de alta disponibilidad
+= Flujo de trabajo de despliegue de alta disponibilidad para ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

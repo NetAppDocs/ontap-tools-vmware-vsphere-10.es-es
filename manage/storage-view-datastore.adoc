@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Remove vVol datastore 
 summary: La vista de almacenamiento de ONTAP en la pestaña de configuración de una herramienta de ONTAP para VMware vSphere proporciona datos relacionados con el almacén de datos y su volumen. 
 ---
-= Vistas de almacenamiento ONTAP para almacenes de datos
+= Vistas de almacenamiento ONTAP para datastores en ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

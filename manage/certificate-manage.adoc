@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Una única instancia de herramientas de ONTAP para VMware vSphere puede gestionar varias instancias de vCenter Server. Las herramientas de ONTAP para VMware vSphere se ponen en marcha con un certificado autofirmado para el proveedor VASA. Con esto, solo se puede gestionar una instancia de vCenter Server para almacenes de datos vVols. 
 ---
-= Gestionar certificados
+= Administra los certificados de ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Puede registrar el proveedor VASA con una instancia de vCenter Server mediante la interfaz del complemento remoto de ONTAP tools for VMware vSphere . 
 ---
-= Registre el proveedor VASA con una instancia de vCenter Server mediante herramientas ONTAP
+= Registra el proveedor VASA con una instancia de vCenter Server en ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

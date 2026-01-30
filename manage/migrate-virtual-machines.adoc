@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Debe tener en cuenta algunos de los aspectos que se deben tener en cuenta al migrar las máquinas virtuales existentes en el centro de datos. 
 ---
-= Consideraciones para migrar o clonar máquinas virtuales
+= Consideraciones sobre la migración y clonación de máquinas virtuales para ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: vVols datastore,delete vVol 
 summary: Cuando se quita la protección del clúster de hosts, los almacenes de datos se vuelven desprotegidos. 
 ---
-= Quite la protección del clúster de hosts
+= Eliminar la protección de clúster de host en ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

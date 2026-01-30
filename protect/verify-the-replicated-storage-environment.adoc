@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Debe verificar que el sitio protegido y el sitio de recuperación se hayan emparejado correctamente después de configurar el adaptador de replicación de almacenamiento \(SRA\). El sistema de almacenamiento replicado debe ser detectable tanto por el sitio protegido como por el sitio de recuperación.' 
 ---
-= Compruebe los sistemas de almacenamiento replicados
+= Verifica los sistemas de almacenamiento replicados en ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Debe asignar sus carpetas en el sitio protegido y el sitio de recuperación para permitir la comunicación entre ellos. 
 ---
-= Configure las asignaciones de carpetas
+= Configura las asignaciones de carpetas en ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

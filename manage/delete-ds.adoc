@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: vVols datastore,delete vVol 
 summary: La acción Eliminar el almacén de datos elimina el almacén de datos. En el caso de un almacén de datos NFS o VMFS, se muestra un cuadro de diálogo con la lista de máquinas virtuales que utilizan el almacén de datos. 
 ---
-= Eliminar almacenes de datos
+= Eliminar almacenes de datos en ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

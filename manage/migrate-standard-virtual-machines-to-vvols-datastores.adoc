@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Migrate NFS and VMFS virtual machines 
 summary: 'Puede migrar máquinas virtuales de almacenes de datos de NFS y VMFS a almacenes de datos de Virtual Volumes \(vVols\) para aprovechar la gestión de máquinas virtuales basada en políticas y otras funcionalidades de vVols. Los almacenes de datos vVols le permiten satisfacer requisitos de cargas de trabajo crecientes.' 
 ---
-= Migre máquinas virtuales con almacenes de datos NFS y VMFS a almacenes de datos vVols
+= Migra máquinas virtuales a almacenes de datos vVols en ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

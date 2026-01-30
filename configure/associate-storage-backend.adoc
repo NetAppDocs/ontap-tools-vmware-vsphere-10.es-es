@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Asocie un back-end de almacenamiento con vCenter Server para crear una asignación entre el back-end de almacenamiento y la instancia incorporada de vCenter Server a nivel global. 
 ---
-= Asocie un back-end de almacenamiento a una instancia de vCenter Server
+= Asocia un backend de almacenamiento con una instancia de vCenter Server en ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

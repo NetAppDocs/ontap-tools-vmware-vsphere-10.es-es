@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Debe asignar sus redes en el sitio protegido y el sitio de recuperación para permitir la comunicación entre ellas. 
 ---
-= Configure las asignaciones de red
+= Configura las asignaciones de red en ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

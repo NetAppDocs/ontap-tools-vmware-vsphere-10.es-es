@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Introduzca los detalles del servidor NTP para sincronizar los relojes de hora del dispositivo de herramientas ONTAP. 
 ---
-= Añada servidores NTP
+= Agrega servidores NTP a las herramientas ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

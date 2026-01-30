@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Debe configurar los intervalos de tiempo de espera de almacenamiento según los ajustes recomendados para que el adaptador de replicación de almacenamiento \(SRA\) funcione de forma óptima en entornos con gran escala.' 
 ---
-= Configure SRA para entornos con gran escala
+= Configura SRA en ONTAP tools para entornos altamente escalados
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

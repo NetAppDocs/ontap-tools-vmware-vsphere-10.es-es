@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Comprender los igroups administrados por las herramientas ONTAP
+= Cómo las herramientas de ONTAP gestionan los igroups
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

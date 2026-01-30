@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Configure un almacén de datos de marcador de posición para reservar espacio en el inventario de vCenter en el sitio de recuperación para máquinas virtuales (VM) protegidas.  Los almacenes de datos de marcador de posición requieren una capacidad mínima, porque las máquinas virtuales de marcador de posición son pequeñas y normalmente utilizan solo unos pocos cientos de kilobytes.' 
 ---
-= Configure almacenes de datos de marcadores de posición
+= Configura los almacenes de datos de marcadores de posición en ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

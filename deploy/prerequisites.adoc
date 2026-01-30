@@ -158,9 +158,9 @@ NOTE: Para implementaciones de alta disponibilidad, asegúrese de que el puerto 
 ====
 
 
-== Límites de configuración para poner en marcha herramientas de ONTAP para VMware vSphere
+== Límites de configuración para desplegar ONTAP tools for VMware vSphere para almacenes de datos vVols
 
-Puede utilizar la siguiente tabla como guía para configurar herramientas de ONTAP para VMware vSphere.
+Puedes usar la siguiente tabla como guía para configurar ONTAP tools for VMware vSphere.
 
 |===
 
@@ -168,19 +168,53 @@ Puede utilizar la siguiente tabla como guía para configurar herramientas de ONT
 | *Despliegue* | *Tipo* | *Número de vVols* | *Número de hosts* 
 
 
-| No alta disponibilidad | Pequeño (S) | ~12K | 32 
+| No alta disponibilidad | Pequeño (S) | hasta 12K | 32 
 
 
-| No alta disponibilidad | Medio (M) | ~24K | 64 
+| No alta disponibilidad | Medio (M) | hasta 24K | 64 
 
 
-| Alta disponibilidad | Pequeño (S) | ~24K | 64 
+| Alta disponibilidad | Pequeño (S) | hasta 24K | 64 
 
 
-| Alta disponibilidad | Medio (M) | ~50k | 128 
+| Alta disponibilidad | Medio (M) | hasta 50k | 128 
 
 
-| Alta disponibilidad | Grande (L) | ~100k | 256 [NOTA] Los recuentos de host en la tabla representan el total combinado de todos los vCenters conectados. 
+| Alta disponibilidad | Grande (L) | hasta 100k | 256 
+|===
+
+NOTE: Los recuentos de host en la tabla representan el total combinado de todos los vCenters conectados.
+
+
+
+== Límites de configuración para desplegar ONTAP tools for VMware vSphere para almacenes de datos VMFS y NFS
+
+Los límites de configuración enumerados en esta sección están validados y respaldados por NetApp. Los límites reales pueden variar según tu entorno y carga de trabajo. Superar estos límites puede afectar el rendimiento o la capacidad de soporte y no se recomienda. Ten en cuenta lo siguiente al revisar la tabla:
+
+* La recuperación ante desastres (DR) de la máquina virtual se configura usando políticas síncronas, asíncronas o de sincronización estricta. DR no es compatible con el protocolo NVMe.
+* La protección de clústeres de hosts ESXi usa SnapMirror Active Sync, que no admite implementaciones multi-vCenter.
+* ONTAP tools restringe únicamente el número de hosts ESXi y almacenes de datos según el tamaño del despliegue. No hay restricciones sobre la cantidad de servidores vCenter que se pueden conectar a ONTAP tools.
+* ONTAP tools realiza el descubrimiento en paralelo de todos los objetos de almacenamiento. Los límites de configuración para los objetos de almacenamiento ONTAP se aplican independientemente del número de objetos en uso activo.
+* ONTAP tools no impone un límite en el número de vCenter Servers que se pueden integrar. Los límites de configuración vienen determinados por el número de hosts y almacenes de datos compatibles, como se detalla en la siguiente tabla.
+
+
+|===
+| Despliegue | Número de almacenes de datos VMFS y NFS | Número de almacenes de datos VMFS con DR habilitado | Número de hosts 
+
+
+| No alta disponibilidad pequeña | 200 | 80 | 32 
+
+
+| No HA Medio | 250 | 100 | 32 
+
+
+| HA pequeña | 350 | 200 | 64 
+
+
+| ALTA disponibilidad media | 600 | 200 | 128 
+
+
+| ALTA disponibilidad | 1024 | 250 | 256 
 |===
 
 

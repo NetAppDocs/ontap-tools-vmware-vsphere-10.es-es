@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Puede cambiar la contraseña del administrador mediante el Administrador de herramientas de ONTAP. 
 ---
-= Cambie la configuración de las herramientas de ONTAP para VMware vSphere
+= Cambiar la configuración del dispositivo ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
