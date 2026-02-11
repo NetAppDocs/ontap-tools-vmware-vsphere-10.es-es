@@ -53,7 +53,7 @@ NOTE: Cuando se habilita el backup, cada clúster de herramientas de ONTAP neces
 | Almacenamiento, host y aplicaciones | Requisitos de versión 
 
 
-| ONTAP | 9.15.1, 9.16.0, 9.16.1, 9.17.0 y 9.17.1 
+| ONTAP | 9.15.1, 9.16.1 y 9.17.0 
 
 
 | Las herramientas de ONTAP admiten hosts ESXi | a partir de 7.0.3 

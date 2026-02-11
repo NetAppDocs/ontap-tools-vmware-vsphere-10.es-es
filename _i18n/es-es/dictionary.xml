@@ -1971,7 +1971,6 @@ Los códigos de error tienen una longitud de cinco dígitos, donde los dos prime
   <block id="a6db38ab6788244dd400202a4ac077c9" category="cell">Dirección IPv4 para el nodo de administración de herramientas ONTAP .  Es una dirección IPv4 única para la interfaz de administración de nodos en la red de administración.</block>
   <block id="57a162b82ea942d344ca18a6563ae0ad" category="paragraph">Asegúrese de que los puertos de firewall necesarios estén abiertos para todas las direcciones IP relevantes.  Las herramientas ONTAP requieren acceso al LIF a través del puerto 443.  Para obtener una lista completa de los puertos necesarios, consulte la sección de requisitos de puerto en<block ref="1a93487a9f020b7c05d37b4998f77757" category="inline-link-macro-rx"></block> .</block>
   <block id="842fbe95dfc795462ae01e0da46b578d" category="list-text">Si utiliza Fibre Channel (FC) para la conectividad de almacenamiento, configure la zonificación en sus conmutadores FC para conectar los hosts ESXi con los LIF FC de la SVM.<block ref="56d435991bafd2bcca9f59739e2992e7" category="inline-link-rx"></block></block>
-  <block id="3238b34a31c90c89668904ec5be46d4c" category="cell">9.15.1, 9.16.0, 9.16.1, 9.17.0 y 9.17.1</block>
   <block id="10b3adf4529649ecb009c579e7713c8e" category="cell">10,5</block>
   <block id="40be5cc49cd5c75f73a6fb947ad09668" category="admonition">Asegúrese de que todos los nodos de herramientas ONTAP residan en la misma subred para mantener una comunicación ininterrumpida entre sí.</block>
   <block id="43735eab3ba96d50a6b739b518e1e76c" category="paragraph">Inicialmente, implementará ONTAP tools for VMware vSphere como una configuración de nodo único de tamaño pequeño que proporciona servicios básicos para soportar almacenes de datos NFS y VMFS.  Para ampliar su configuración para contenedores adicionales por servicio, mayor resiliencia o para usar almacenes de datos vVols y alta disponibilidad (HA), primero complete este flujo de trabajo y luego continúe con los pasos de expansión. Para obtener más información, consulte la <block ref="9ef467ebb813ac9bfc1579e0ba7d9e65" category="inline-link-macro-rx"></block> .</block>
@@ -2451,7 +2450,6 @@ Los códigos de error tienen una longitud de cinco dígitos, donde los dos prime
   <block id="4273cb76acdc3e1de02819d037c77ad4" category="cell">Optimice y simplifique las operaciones del día 0 al día 2 con capacidades mejoradas de seguridad, cumplimiento y automatización.</block>
   <block id="92d3c85edd0fa69062ef2c7cca594814" category="cell">Calificación de liberación de ONTAP</block>
   <block id="f41628526d2ecef49849a9d54aec2d46" category="cell">ONTAP 9.9.1 a ONTAP 9.16.1</block>
-  <block id="53f67abe3ae260cacfac7adeeda90377" category="cell">ONTAP 9.12.1 a 9.15.1 para herramientas ONTAP 10.2. ONTAP 9.14.1, 9.15.1, 9.16.0 y 9.16.1 para herramientas ONTAP 10.3. ONTAP 9.14.1, 9.15.1, 9.16.0 y 9.16.1 para herramientas ONTAP 10.4. Se requiere ONTAP 9.16.1P3 y versiones posteriores para las herramientas ONTAP 10.4 cuando se utilizan sistemas ASA r2.  ONTAP 9.15.1, 9.16.0, 9.16.1, 9.17.0 y 9.17.1 para herramientas ONTAP 10.5</block>
   <block id="d67ece44624c7aa69b0f38715d1ac2fb" category="cell">Compatibilidad con versiones de VMware</block>
   <block id="af0223f5c63fe0b5a6e75d3087868abd" category="cell">vSphere 7.x-8.x VMware Site Recovery Manager (SRM) 8.5 a VMware Live Site Recovery 9.0</block>
   <block id="30388d1a3ab1a01f6930553a577eb80b" category="cell">Soporte de protocolo</block>
@@ -2598,8 +2596,6 @@ Los códigos de error tienen una longitud de cinco dígitos, donde los dos prime
   <block id="587025fcd9783b8dad6642bf4ea9050a" category="doc">Cómo funciona vCenter Server RBAC con ONTAP tools</block>
   <block id="b690b3fbfbdc8910bd0b4b68feb15af2" category="doc">vCenter consideraciones sobre RBAC de Server para ONTAP tools</block>
   <block id="eaeddcc9311544bd9a0756a835a12cea" category="doc">Agrega un backend de almacenamiento a ONTAP tools</block>
-  <block id="ff0b8d98acac2c2dec8cc8937cbbe057" category="paragraph">Al registrar una instancia de vCenter Server con ONTAP tools Manager, asegúrate de que el certificado de vCenter Server incluya una extensión válida de Subject Alternative Name (SAN). La extensión SAN debe contener tanto entradas de DNS como de dirección IP. Por ejemplo:</block>
-  <block id="b6a9b93d1e2b7bdb6d36311aa19ed1cf" category="paragraph">Si el certificado del servidor vCenter no incluye una extensión SAN, o si la extensión SAN no contiene los valores correctos de DNS o dirección IP, las operaciones de ONTAP tools pueden fallar debido a errores de validación del certificado.</block>
   <block id="152eb457072cc3f0d1daeb3318bbc7f4" category="doc">Asocia un backend de almacenamiento con una instancia de vCenter Server en ONTAP tools</block>
   <block id="eb92fe0cb6bfddb65b18107ce1bfc6df" category="doc">Configura los ajustes del host ESXi en ONTAP tools</block>
   <block id="362f310edd36afeeeec5d3c7f14cefac" category="doc">Configura el acceso a la red en ONTAP tools</block>
@@ -2687,4 +2683,22 @@ Los códigos de error tienen una longitud de cinco dígitos, donde los dos prime
   <block id="c928bb04121a183be07f4eafbb06b783" category="doc">Verifica los sistemas de almacenamiento replicados en ONTAP tools</block>
   <block id="9d2c893e6932222a6e9063b1f628bae1" category="doc">Notas de la versión de ONTAP tools</block>
   <block id="c219ac41703e11b6d5430626757ee4d1" category="doc">Códigos de error de actualización de ONTAP tools</block>
+  <block id="7387e2cfe8bac61aeada7d8df94fe9f7" category="list-text">Asegúrate de que el certificado del servidor vCenter incluya una extensión válida de nombre alternativo del sujeto (SAN) con entradas tanto de DNS como de dirección IP. Por ejemplo:</block>
+  <block id="077c9bea99c626318ae6e1c521fb7c41" category="paragraph">Si el certificado no incluye una extensión SAN, o si la extensión SAN no contiene los valores DNS o de dirección IP correctos, las operaciones de ONTAP tools pueden fallar debido a errores de validación del certificado.</block>
+  <block id="6f8b3b7e42dadd9b7806e6e98d7d0a77" category="list-text">El identificador de red primario (PNID) del vCenter Server debe incluirse en los detalles de la SAN. El PNID y el nombre DNS deben ser idénticos y resolubles en DNS.</block>
+  <block id="39e421f0221e3f55b7e77a0110fce9e0" category="list-text">Se recomienda desplegar vCenter Server usando su nombre de dominio completo (FQDN) y asegurarte de que el SAN en el certificado incluya DNS Name=machine_FQDN para una compatibilidad y soporte óptimos.</block>
+  <block id="dbabfcb48125f6c3a069313029fdada8" category="list-text">Para más información, consulta la documentación de VMware:</block>
+  <block id="381b5a0822c9882ced35624a3338ea81" category="inline-link">vSphere requisitos de certificados para diferentes vías de solución</block>
+  <block id="38e7ce10f91b93ef8eecb43d98853cb3" category="list-text"><block ref="38e7ce10f91b93ef8eecb43d98853cb3" category="inline-link-rx"></block></block>
+  <block id="bab39c0d7f700e0dbd68e4761a2c9ac4" category="inline-link">Sustituye el certificado SSL de máquina de vCenter por un certificado firmado por una autoridad de certificación personalizada</block>
+  <block id="81c3c30e39dc6db9cf179ead4dc53c00" category="list-text"><block ref="81c3c30e39dc6db9cf179ead4dc53c00" category="inline-link-rx"></block></block>
+  <block id="4ce004ede8d7c5a94bcc602e81d0dd46" category="inline-link">Error: el campo Subject Alternate Name (SAN) no contiene el PNID. Por favor, proporciona un certificado válido</block>
+  <block id="e124d9a97cf59877517198f1cf0f104c" category="list-text"><block ref="e124d9a97cf59877517198f1cf0f104c" category="inline-link-rx"></block></block>
+  <block id="b4a7fb91e417866bbf89b862eaf99003" category="paragraph">Si el FQDN no está disponible, puedes establecer el PNID en la dirección IP e incluir la dirección IP en la SAN. Sin embargo, esto no es recomendable por VMware.</block>
+  <block id="71593980c484b19aefec169af936ae1e" category="cell">9.15.1, 9.16.1 y 9.17.0</block>
+  <block id="16ad6f9ee375f3dcd68aa34d3ccd374c" category="cell">ONTAP 9.12.1 a 9.15.1 para ONTAP tools 10.2. ONTAP 9.14.1, 9.15.1, 9.16.0 y 9.16.1 para ONTAP tools 10.3. ONTAP 9.14.1, 9.15.1, 9.16.0 y 9.16.1 para ONTAP tools 10.4. ONTAP 9.16.1P3 y posteriores es necesario para ONTAP tools 10.4 cuando usas sistemas ASA r2. ONTAP 9.15.1, 9.16.1 y 9.17.0 para ONTAP tools 10.5</block>
+  <block id="c9ea6c5f05454d915a89126e34375938" category="paragraph">ONTAP tools for VMware vSphere 10.5 P1 admite configuraciones de alta disponibilidad (HA) de vCenter para los componentes SRA y SnapMirror active sync. vVols no es compatible en esta configuración. Durante una conmutación por error de HA, vCenter podría no estar disponible durante varios minutos. En entornos grandes o si ocurre un error, los tiempos de conmutación por error pueden superar los 15 minutos.</block>
+  <block id="a51a2d315454dc257743fd165c6ec1e1" category="inline-link">vCenter documentación sobre alta disponibilidad</block>
+  <block id="b2275014ec45c2e387f49db63d8ae0de" category="inline-link">Soporte de Broadcom</block>
+  <block id="7617b6be9a4dd36133ef22cea59d80e2" category="paragraph">Para más información, consulta el<block ref="debb52d5bcbe0ce63e3d926c803fdf23" category="inline-link-rx"></block>. Para preguntas sobre vCenter HA, contacta con<block ref="2ce3402d69457b08a3211a429ae43e9d" category="inline-link-rx"></block>.</block>
 </blocks>

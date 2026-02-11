@@ -24,7 +24,7 @@ NOTE: Para obtener la información de compatibilidad más actualizada, consulte 
 | Propuesta de valor clave | Optimice y simplifique las operaciones del día 0 al día 2 con capacidades mejoradas de seguridad, cumplimiento y automatización. | Soporte ampliado para incluir FC para VMFS y NVMe-oF solo para VMFS. Facilidad de uso para NetApp SnapMirror, configuración sencilla para clústeres de almacenamiento metro vSphere y compatibilidad con VMware Live Site Recovery de tres sitios 
 
 
-| Calificación de liberación de ONTAP | ONTAP 9.9.1 a ONTAP 9.16.1 | ONTAP 9.12.1 a 9.15.1 para herramientas ONTAP 10.2. ONTAP 9.14.1, 9.15.1, 9.16.0 y 9.16.1 para herramientas ONTAP 10.3. ONTAP 9.14.1, 9.15.1, 9.16.0 y 9.16.1 para herramientas ONTAP 10.4. Se requiere ONTAP 9.16.1P3 y versiones posteriores para las herramientas ONTAP 10.4 cuando se utilizan sistemas ASA r2.  ONTAP 9.15.1, 9.16.0, 9.16.1, 9.17.0 y 9.17.1 para herramientas ONTAP 10.5 
+| Calificación de liberación de ONTAP | ONTAP 9.9.1 a ONTAP 9.16.1 | ONTAP 9.12.1 a 9.15.1 para ONTAP tools 10.2. ONTAP 9.14.1, 9.15.1, 9.16.0 y 9.16.1 para ONTAP tools 10.3. ONTAP 9.14.1, 9.15.1, 9.16.0 y 9.16.1 para ONTAP tools 10.4. ONTAP 9.16.1P3 y posteriores es necesario para ONTAP tools 10.4 cuando usas sistemas ASA r2. ONTAP 9.15.1, 9.16.1 y 9.17.0 para ONTAP tools 10.5 
 
 
 | Compatibilidad con versiones de VMware | vSphere 7.x-8.x VMware Site Recovery Manager (SRM) 8.5 a VMware Live Site Recovery 9.0 | vSphere 7.x-8.x vSphere 9.0 desde ONTAP tools 10.5 en adelante VMware Site Recovery Manager (SRM) 8.7 a VMware Live Site Recovery 9.0 *NOTA:* En ONTAP tools 10.x, SRM admite sitios compartidos, lo que permite una mejor escalabilidad y un mejor rendimiento. 
