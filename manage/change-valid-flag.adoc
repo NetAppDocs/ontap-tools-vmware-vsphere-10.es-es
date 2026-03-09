@@ -28,3 +28,16 @@ La consola de mantenimiento muestra el estado del indicador de validación del c
 
 
 Cuando se habilita la opción de validación de certificados (establecida en verdadero), ONTAP tools verifica que todos los backends de almacenamiento utilicen certificados con un Nombre Alternativo del Sujeto (SAN).  Si algún backend utiliza un certificado sin SAN, no se puede habilitar la validación del certificado.  Antes de habilitar esta opción, verifique que todos los sistemas de almacenamiento utilicen certificados basados ​​en SAN.  Si deshabilita la bandera de validación de certificados (estableciéndola en falso), ONTAP tools omite la validación de certificados para todos los backends de almacenamiento configurados.
+
+
+
+== Verifica los certificados basados en SAN para backends de almacenamiento
+
+Para garantizar una comunicación segura y una validación adecuada, verifica que todos los backends de almacenamiento usen certificados basados en SAN:
+
+. Verifica que el certificado de gestión de ONTAP incluya una entrada Subject Alternative Name (SAN).
+. Confirma que las entradas SAN coinciden con la dirección IP de gestión de ONTAP, el nombre DNS o ambos.
+. Asegúrate de que los datos usados para incorporar ONTAP coincidan con la dirección IP o el nombre DNS en la entrada SAN del certificado.
+
+
+Seguir estos pasos ayuda a evitar problemas de validación de certificados y asegura que el sistema ONTAP esté integrado de forma segura.
