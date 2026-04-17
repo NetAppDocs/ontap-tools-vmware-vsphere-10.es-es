@@ -17,13 +17,13 @@ En la siguiente sección se describen los conceptos y términos clave utilizados
 
 === Entidad de certificación (CA)
 
-CA es una entidad de confianza que emite certificados SSL (Secure Sockets Layer).
+Una CA es una entidad de confianza que emite certificados Secure Sockets Layer (SSL).
 
 
 
 === Grupo de consistencia
 
-Un grupo de consistencia es una colección de volúmenes administrados como una sola unidad. Los grupos de consistencia se sincronizan para garantizar la consistencia de los datos en todas las unidades de almacenamiento y volúmenes. En ONTAP, proporcionan una gestión sencilla y una garantía de protección para una carga de trabajo de aplicaciones que abarca múltiples volúmenes.  Obtenga más información sobre https://docs.netapp.com/us-en/ontap/consistency-groups/index.html["grupos de consistencia"] .
+Un grupo de coherencia es una colección de volúmenes gestionados como una única unidad. Los grupos de coherencia se sincronizan para garantizar la coherencia de los datos entre las unidades de almacenamiento y los volúmenes. En ONTAP, proporcionan una gestión sencilla y garantías de protección para una carga de trabajo de aplicaciones que abarca varios volúmenes. Más información sobre https://docs.netapp.com/us-en/ontap/consistency-groups/index.html["grupos de consistencia"].
 
 
 
@@ -53,7 +53,7 @@ Un espacio de nombres NVMe es una cantidad de memoria no volátil que se puede f
 
 === Gestor de herramientas de ONTAP
 
-El administrador de herramientas de ONTAP proporciona un mayor control a las herramientas de ONTAP para los administradores de VMware vSphere a través de las instancias gestionadas de vCenter Server y los back-ends de almacenamiento incorporados. Ayuda a gestionar las instancias de vCenter Server, los back-ends de almacenamiento, los certificados, las contraseñas y las descargas de paquetes de registros.
+ONTAP tools Manager proporciona ONTAP tools para administradores de VMware vSphere con un mayor control sobre las instancias de vCenter Server gestionadas y los backends de almacenamiento incorporados. Ayuda a gestionar las instancias de vCenter Server, los backends de almacenamiento, los certificados, las contraseñas y los paquetes de registro.
 
 
 
@@ -95,7 +95,7 @@ SRA es el software específico de proveedor de almacenamiento que se instala en 
 
 === Máquina virtual de almacenamiento (SVM)
 
-SVM es la unidad de multi-tenancy en ONTAP. Al igual que una máquina virtual que se ejecuta en un hipervisor, la SVM es una entidad lógica que abstrae los recursos físicos. SVM contiene volúmenes de datos y una o varias LIF a través de los cuales proporcionan datos a los clientes.
+SVM es la unidad de multitenancy en ONTAP. Al igual que una máquina virtual que se ejecuta en un hipervisor, SVM es una entidad lógica que abstrae recursos físicos. SVM contiene volúmenes de datos y uno o más LIF a través de los cuales sirve datos a los clientes.
 
 
 
@@ -119,7 +119,7 @@ VMFS es un sistema de archivos en clúster diseñado para almacenar archivos de 
 
 === Volúmenes virtuales (vVols)
 
-vVols proporciona una abstracción a nivel de volumen para el almacenamiento utilizado por una máquina virtual.  Incluye varios beneficios y proporciona una alternativa al uso de un LUN tradicional.  Un almacén de datos vVol generalmente está asociado con un único LUN que actúa como contenedor para vVols.
+vVols proporcionan una abstracción a nivel de volumen para el almacenamiento utilizado por una máquina virtual. Incluye varios beneficios y proporciona una alternativa al uso de un LUN tradicional. Un datastore vVol se asocia típicamente con un único LUN que actúa como contenedor para vVols.
 
 
 
@@ -149,13 +149,13 @@ VAAI es un conjunto de API que permite la comunicación entre hosts ESXi de VMwa
 
 === Clúster de almacenamiento Metro de vSphere
 
-VSphere Metro Storage Cluster (VMSC) es una arquitectura que habilita y admite vSphere en una puesta en marcha de clúster ampliada. Las soluciones VMSC son compatibles con NetApp MetroCluster y SnapMirror Active Sync (anteriormente SMBC). Estas soluciones proporcionan una mayor continuidad del negocio en caso de fallo de dominio. El modelo de flexibilidad se basa en sus opciones de configuración específicas. Más información sobre https://core.vmware.com/resource/vmware-vsphere-metro-storage-cluster-vmsc["VMware vSphere Metro Storage Cluster"].
+vSphere Metro Storage Cluster (vMSC) es una arquitectura que permite y admite vSphere en un despliegue de clúster ampliado. Las soluciones vMSC son compatibles con NetApp MetroCluster y SnapMirror active sync (anteriormente SMBC). Estas soluciones proporcionan una continuidad de negocio mejorada en caso de fallo del dominio. El modelo de resistencia se basa en tus opciones de configuración específicas. Más información sobre https://core.vmware.com/resource/vmware-vsphere-metro-storage-cluster-vmsc["VMware vSphere Metro Storage Cluster"].
 
 
 
 === Almacén de datos vVols
 
-El almacén de datos de vVols es una representación lógica del almacén de datos de un contenedor de vVols que ha creado y mantenido un proveedor de VASA.
+El datastore vVols es una representación lógica de un contenedor vVols creado y mantenido por un VASA Provider.
 
 
 

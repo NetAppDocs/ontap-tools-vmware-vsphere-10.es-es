@@ -19,7 +19,7 @@ La referencia de la API de REST DE las herramientas de ONTAP para VMware vSphere
 Puede acceder a las herramientas de ONTAP para la documentación en línea de la API de REST DE VMware vSphere 10 a través de la interfaz de usuario de Swagger. Es necesario la dirección IP o el FQDN de las herramientas de ONTAP para el servicio de pasarela VMware vSphere 10, así como el puerto.
 
 .Pasos
-. Escriba la siguiente URL en su navegador sustituyendo la dirección IP apropiada y la combinación de puerto para la variable y presione *Intro*.
+. Escribe la siguiente URL en tu navegador, sustituyendo la variable por la dirección IP y la combinación de puerto adecuada, y pulsa *Intro*.
 +
 `\https://$FQDN_IP_PORT/`
 

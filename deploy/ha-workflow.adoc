@@ -23,7 +23,7 @@ Puede escalar verticalmente la configuración de las herramientas ONTAP para VMw
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dos"] Habilite los servicios
 [role="quick-margin-para"]
-Para configurar almacenes de datos vVols , debe habilitar el servicio del proveedor VASA.  Registre el proveedor VASA con vCenter y asegúrese de que sus políticas de almacenamiento cumplan con los requisitos de alta disponibilidad, incluidas las configuraciones de red y almacenamiento adecuadas.
+Para configurar los almacenes de datos de vVols, debes habilitar el servicio VASA Provider. Registra el VASA provider en vCenter y asegúrate de que tus políticas de almacenamiento cumplen los requisitos de HA, incluidas las configuraciones adecuadas de red y almacenamiento.
 
 [role="quick-margin-para"]
 Habilite los servicios de SRA para usar herramientas de ONTAP Storage Replication Adapter (SRA) para el administrador de recuperación de sitio (SRM) de VMware o Live Site Recovery (VLSR).

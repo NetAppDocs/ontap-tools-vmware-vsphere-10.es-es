@@ -49,6 +49,9 @@ Al crear un almacén de datos mediante la interfaz de usuario de las herramienta
 
 Esta operación también se puede realizar mediante la API.  Para reutilizar un igroup existente durante la creación del almacén de datos, especifique el UUID del igroup en la carga útil de la solicitud de API.
 
+
+NOTE: Sólo se pueden reutilizar los igroups personalizados. Los igroups creados durante la migración desde ONTAP tools 9.x (igroups migrados) no se pueden reutilizar y, a partir de ONTAP tools 10.5P2, se eliminan automáticamente cuando ya no se utilizan.
+
 *Cuando crea un almacén de datos y un igroup de forma nativa desde ONTAP y vCenter*
 
 Si crea el igroup y el almacén de datos directamente en sistemas ONTAP y entornos VMware, las herramientas de ONTAP no administran estos objetos al principio.  Esto crea una estructura de igroup plana.

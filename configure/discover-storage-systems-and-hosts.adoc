@@ -25,7 +25,7 @@ Al detectar los sistemas de almacenamiento, las herramientas de ONTAP para VMwar
 
 .Pasos
 . En la página inicial de vSphere Client, seleccione *Hosts and Clusters*.
-. Haga clic con el botón derecho en el centro de datos requerido y seleccione * Herramientas de NetApp ONTAP * > * Actualizar datos del host *.
+. Haz clic con el botón derecho en el centro de datos que necesites y selecciona *NetApp ONTAP tools* > *Update Host Data*.
 +
 En el cuadro de diálogo *Confirmar*, confirme su elección.
 

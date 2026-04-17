@@ -15,7 +15,7 @@ Puede actualizar las ONTAP tools for VMware vSphere 10.3 o 10.4 a 10.5.  Sin emb
 
 [NOTE]
 ====
-* Para los sistemas ASA r2, asegúrese de actualizar las ONTAP tools for VMware vSphere a 10.5 y ONTAP a 9.16.1, antes de configurar más zonas de disponibilidad de almacenamiento (SAZ).
+* En los sistemas ASA r2, asegúrate de actualizar ONTAP tools for VMware vSphere a la versión 10.5 y ONTAP a la 9.16.1 antes de configurar más zonas de disponibilidad de almacenamiento (SAZ).
 * Si falla la actualización de las ONTAP tools for VMware vSphere 10.3 o 10.4 a 10.5, no se puede revertir. Utilice un RPO bajo o una recuperación de instantánea para restaurar la configuración. Para las ONTAP tools for VMware vSphere 10.2 y versiones anteriores, utilice RPO cero para restaurar la configuración.
 
 
@@ -68,7 +68,7 @@ Referirse a link:../manage/backup-settings.html["Editar la configuración de la 
 . Inicie sesión como el usuario de mantenimiento.
 . Introduzca *2* para seleccionar el menú *Configuración del sistema*.
 . Introduzca *7* para seleccionar la opción *Actualizar*.
-. Proporcione las credenciales de vCenter cuando se le solicite.  Esta es la instancia de vCenter donde se alojan las herramientas ONTAP .
+. Proporciona las credenciales de vCenter cuando se te solicite. Esta es la instancia de vCenter donde se alojan las ONTAP tools.
 +
 Si utiliza herramientas ONTAP en una topología de dos vCenter Server (donde el dispositivo está alojado en una instancia de vCenter y administra otra), puede asignar una función restringida para la instancia de vCenter que aloja las herramientas ONTAP . Puede crear un usuario y un rol de vCenter dedicados solo con los permisos necesarios para la implementación de la plantilla OVF. Para obtener más detalles, consulte los roles enumerados en https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv105-releasebranch/concepts/rbac-vcenter-use.html#vsphere-object-hierarchy["Roles incluidos con las herramientas de ONTAP para VMware vSphere 10"].
 

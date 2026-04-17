@@ -70,7 +70,7 @@ curl --request POST \
 --header "Accept: */*" \
 -d "{"username": "$MYUSER", "password": "$MYPASSWORD"}"
 ----
-Copie y guarde el token de acceso proporcionado en la respuesta.
+Copia y guarda el token de acceso proporcionado en la respuesta.
 
 
 

@@ -31,4 +31,4 @@ Debe haber conectado los sitios protegidos y de recuperación.
 
 
 .Resultado
-La página asignaciones de carpetas muestra los recursos del sitio protegido y los recursos del sitio de recuperación. Puede seguir los mismos pasos para otras redes del entorno.
+La página Folder Mappings muestra los recursos del sitio protegido y los recursos del sitio de recuperación. Puedes seguir los mismos pasos para otras carpetas de tu entorno.

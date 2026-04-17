@@ -17,7 +17,7 @@ Los códigos de error tienen una longitud de cinco dígitos, donde los dos prime
 Todos los registros de errores se registran en el archivo ansible-perl-errors.log para facilitar el seguimiento y la resolución de los problemas. Este archivo de registro contiene el código de error y la tarea de Ansible con errores.
 
 
-NOTE: Los códigos de error proporcionados en esta página son sólo de referencia. Póngase en contacto con el equipo de soporte si el error persiste o si no se menciona ninguna solución.
+NOTE: Los códigos de error proporcionados en esta página son solo de referencia. Contacta al equipo de soporte si el error persiste o si no se menciona una resolución.
 
 En la siguiente tabla se enumeran los códigos de error y los nombres de archivo correspondientes.
 
@@ -107,13 +107,13 @@ Los últimos tres dígitos del código de error indican el error de flujo de tra
 | 083 | Fallo al suprimir la copia de seguridad | Utilice la recuperación basada en RPO o Snapshot cero y vuelva a intentar la actualización. 
 
 
-| 084 | Fallo al volver a cambiar JobManager a producción | Siga los pasos que se indican a continuación para recuperar/completar la actualización. 1. Active el shell de diagnóstico 2. Ejecute el comando: _Sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade_ 3. Consulte los registros en /var/log/post-deploy-upgrade.log 
+| 084 | Fallo al volver a cambiar JobManager a producción | Realiza los siguientes pasos para recuperar/completar la actualización. 1. Habilita Diagnostic Shell 2. Ejecuta el comando: _sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade_ 3. Revisa los registros en /var/log/post-deploy-upgrade.log 
 
 
 | 087 | Fallo en los pasos posteriores a la actualización. | Realice los siguientes pasos para recuperar/completar la actualización. 1. Active el shell de diagnóstico 2. Ejecute _sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade_ comando 3. Consulte los registros en /var/log/post-deploy-upgrade.log 
 
 
-| 088 | Fallo al configurar la rotación de log para el diario | Compruebe la configuración de red de la máquina virtual compatible con el host en el que se aloja la máquina virtual. Puede intentar migrar la máquina virtual a otro host y reiniciarla. 
+| 088 | Fallo al configurar la rotación de log para el diario | Verifica la configuración de red de la VM compatible con el host en el que está alojada la VM. Puedes intentar migrar la VM a otro host y reiniciarla. 
 
 
 | 089 | Fallo al cambiar la propiedad del archivo de configuración de rotación de registro de resumen | Vuelva a intentar la actualización. 
@@ -149,7 +149,7 @@ Los últimos tres dígitos del código de error indican el error de flujo de tra
 | 113 | Error al actualizar los recursos en los nodos secundarios | Compruebe los registros de actualización y vuelva a intentar la actualización. 
 
 
-| 104 | Se produjo un error en el reinicio del nodo secundario | Reinicie los nodos manualmente uno por uno 
+| 104 | Se produjo un error en el reinicio del nodo secundario | Reinicia los nodos manualmente, uno por uno. 
 
 
 | 100 | error al revertir el kernel | - 
@@ -162,6 +162,81 @@ Los últimos tres dígitos del código de error indican el error de flujo de tra
 
 
 | 090 | La validación del certificado para los backends de almacenamiento y vCenter falló | Verifique los registros de actualización y el archivo de registro en /var/log/cert_validation_error.log y vuelva a intentar la actualización. 
+
+
+| 114 | Falló la actualización interna del certificado en la colección MongoDB  a| 
+Si la actualización falla con el código de error 114, realiza los siguientes pasos:
+
+. Conéctate a la ISO de actualización en el nodo primario y activa el shell de diagnóstico.
+. Monta la ISO desde la sesión SSH al nodo primario:
++
+[listing]
+----
+sudo mount /dev/cdrom
+sudo mount -o loop,ro /dev/cdrom/APPLIANCE_UPGRADE.bin /upgrade
+----
+. Instala paquetes Debian:
++
+[listing]
+----
+sudo dpkg -iE /upgrade/dists/squeeze/main/binary-amd64/vplatform.deb
+sudo dpkg -iE /upgrade/dists/squeeze/main/binary-amd64/vpupgrader.deb
+sudo dpkg -iE /upgrade/dists/squeeze/main/binary-amd64/vmware-tools.deb
+----
+. Copia el archivo de información de construcción:
++
+[listing]
+----
+sudo cp /upgrade/APPLIANCE_BUILD /
+----
+. Agrega certificados a la colección habilitando el shell de diagnóstico y ejecutando:
++
+[listing]
+----
+sudo perl /home/maint/scripts/post-deploy-upgrade.pl --internal_cert_update_collection
+----
++
+Consulta los registros en `/var/log/otvng/post-deploy-upgrade.log`.
+
+. Reinicia los nodos:
++
+[listing]
+----
+sudo bash /home/maint/scripts/vault_decrypt.sh
+cd /home/maint/rke2-pb
+sudo ansible-playbook site.yaml --tags restart_nodes --skip-tags debian_upgrade,kernel_upgrade,rescan_scsi_bus,source_iso,eject_upgrade,mountIso,upgradeNodes,registryUpg,deleteOldImages,wait,checkReachability,delete_otv_cr,uninstall_trident,del_trident_images,refresh_resources,ntp_configure,ntpd_uninstall
+----
+. Realiza los pasos posteriores a la actualización:
++
+[listing]
+----
+sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade
+----
+. Verifica que se haya completado correctamente consultando los registros:
++
+[listing]
+----
+tail -f /var/log/post-deploy-upgrade.log
+----
++
+Busca el mensaje de éxito: `Completed post 10.5 upgrade steps.`
+
+. Expulsa la ISO:
++
+[listing]
+----
+sudo umount -l -f /upgrade
+sudo umount -l -f /dev/cdrom
+sudo eject /dev/cdrom
+----
+. Reinicia el nodo primario:
++
+[listing]
+----
+sudo reboot -f
+----
+
+
 |===
 
 NOTE: A partir de las herramientas de ONTAP no se admite el objetivo de punto de recuperación cero de VMware vSphere 10,3.

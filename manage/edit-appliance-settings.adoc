@@ -48,7 +48,7 @@ NOTE: Una vez habilitada la configuración de HA, no es posible volver a una con
 NOTE: Las herramientas ONTAP rellenan previamente la mayoría de las opciones de entrada con los detalles de la red del Nodo 1 para simplificar el flujo de trabajo.  Puedes editar los datos de entrada antes de ir a la última página del asistente. Puede ingresar detalles de la dirección IPv6 para los otros dos nodos solo cuando la dirección IPv6 esté habilitada en el nodo de administración de herramientas ONTAP .
 
 +
-Compruebe que un host ESXi contenga solo una máquina virtual de ONTAP Tools. Las entradas se validan cada vez que se mueve a la siguiente ventana.
+Asegúrate de que cada host ESXi contiene solo una VM de ONTAP tools. Las entradas se validan cada vez que pasas a la siguiente ventana.
 
 . Revise los detalles en la sección *Resumen* y *Guardar* los cambios.
 

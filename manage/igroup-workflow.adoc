@@ -223,6 +223,12 @@ Durante la migración:
 
 Esto garantiza el cumplimiento del modelo jerárquico.
 
+A partir de ONTAP tools 10.5P2, los igroups migrados se eliminan cuando ya no se utilizan. En versiones anteriores, los igroups migrados nunca se eliminaban. Ten en cuenta lo siguiente:
+
+* Los igrupos migrados no se pueden reutilizar en distintos almacenes de datos.
+* Los igroups personalizados (definidos por el usuario) nunca se eliminan y pueden seguir reutilizándose.
+
+
 .Temas relacionados
 https://docs.netapp.com/us-en/ontap/san-admin/igroups-concept.html["Acerca de iGroups"]
 

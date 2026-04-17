@@ -72,9 +72,6 @@ NOTE: Después de que el sistema ONTAP realice un cambio y un retorno, ejecute e
 
 
 
-.¿Cuál es el siguiente?
-Las herramientas ONTAP actualizan la lista para mostrar el nuevo backend de almacenamiento.
-
 --
 ====
 Las herramientas de ONTAP enumeran el back-end de almacenamiento recientemente agregado en la página *Back-ends de almacenamiento*.  Si un certificado vence en 30 días o menos, las herramientas de ONTAP muestran una advertencia en la columna de fecha de vencimiento del certificado.  Después del vencimiento, las herramientas ONTAP marcan el backend de almacenamiento como desconocido porque no puede conectarse al sistema de almacenamiento.

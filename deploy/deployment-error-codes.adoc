@@ -17,10 +17,10 @@ Si experimenta problemas de implementación, revise los registros y los códigos
 
 == Recoja los archivos de registro
 
-Puede recoger archivos de registro para las herramientas de ONTAP para VMware vSphere desde las opciones disponibles en la interfaz de usuario del gestor de herramientas de ONTAP. Es posible que el soporte técnico le solicite recoger los archivos de registro que sirven como ayuda para la solución de un problema.
+Puedes recopilar los archivos de registro de ONTAP tools for VMware vSphere desde las opciones disponibles en la interfaz de usuario de ONTAP tools Manager. El soporte técnico podría pedirte que recopiles los archivos de registro para ayudar a solucionar un problema.
 
 
-NOTE: La generación de registros desde el Administrador de herramientas de ONTAP incluye todos los registros para todas las instancias de vCenter Server. Los registros de generación desde la interfaz de usuario del cliente de vCenter se incluyen en la instancia de vCenter Server seleccionada.
+NOTE: La generación de registros desde el administrador de ONTAP tools incluye todos los registros de todas las instancias de vCenter Server. La generación de registros desde la interfaz de usuario del cliente vCenter está limitada al vCenter Server seleccionado.
 
 .Pasos
 . Inicie ONTAP TOOLS Manager desde un explorador web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
@@ -57,7 +57,7 @@ Los códigos de error tienen una longitud de cinco dígitos, donde los dos prime
 Todos los registros de errores se graban en el archivo ansible-perl-errors.log en el directorio /var/log para facilitar el seguimiento y la resolución de problemas.  Este archivo de registro contiene el código de error y la tarea de Ansible fallida.
 
 
-NOTE: Los códigos de error proporcionados en esta página son sólo de referencia. Póngase en contacto con el equipo de soporte si el error persiste o si no se menciona ninguna solución.
+NOTE: Los códigos de error proporcionados en esta página son solo de referencia. Contacta al equipo de soporte si el error persiste o si no se menciona una resolución.
 
 En la siguiente tabla se enumeran los códigos de error y los nombres de archivo correspondientes.
 
@@ -107,7 +107,7 @@ Los últimos tres dígitos del código de error indican el error de flujo de tra
 | 049 | Para la red y el script de perl de validación también los asignará en breve | - 
 
 
-| 050 | Fallo al generar la clave SSH | Reiniciar la máquina virtual primaria (VM). 
+| 050 | Error en la generación de claves SSH | Reiniciar la máquina virtual primaria (VM). 
 
 
 | 053 | Error al instalar RKE2 | Ejecute lo siguiente y reinicie el equipo virtual principal o vuelva a ponerlo en marcha:
@@ -118,10 +118,10 @@ Sudo rke2-uninstall.sh (todas las máquinas virtuales).
 | 054 | Fallo al definir kubeconfig | Volver a desplegar 
 
 
-| 055 | Fallo al desplegar el registro | Si el pod del registro está presente, espere a que el pod esté listo y, a continuación, reinicie la VM principal o vuelva a implementarla. 
+| 055 | Fallo al desplegar el registro | Si el pod de registro está presente, espera a que el pod esté listo y luego reinicia la máquina virtual principal o vuelve a desplegar. 
 
 
-| 059 | El despliegue de KubeVip ha fallado | Asegúrese de que la dirección IP virtual para el plano de control de Kubernetes y la dirección IP de las herramientas de ONTAP proporcionada durante la implementación pertenezcan a la misma VLAN y sean direcciones IP libres. Reinicie si todos los puntos anteriores son correctos. De lo contrario, vuelva a desplegar. 
+| 059 | El despliegue de KubeVip ha fallado | Asegúrate de que la dirección IP virtual para el plano de control de Kubernetes y la dirección IP de ONTAP tools proporcionadas durante el despliegue pertenezcan a la misma VLAN y sean direcciones IP libres. Reinicia si todos los puntos anteriores son correctos. Si no, vuelve a desplegar. 
 
 
 | 060 | Fallo en el despliegue del operador | Reinicie 
@@ -136,7 +136,14 @@ Sudo rke2-uninstall.sh (todas las máquinas virtuales).
 | 065 | No se puede acceder a la URL de la página de Swagger | Volver a desplegar 
 
 
-| 066 | Se ha producido un error en los pasos posteriores al despliegue del certificado de gateway | Realice lo siguiente para recuperar/completar la actualización: * Habilitar shell de diagnóstico. * Ejecutar el comando 'sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postDeploy'. * Compruebe los registros en /var/log/post-deploy-upgrade.log. 
+| 066 | Se ha producido un error en los pasos posteriores al despliegue del certificado de gateway  a| 
+Haz lo siguiente para recuperar/completar la actualización:
+
+* Habilita el shell de diagnóstico.
+* Ejecuta el comando 'sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postDeploy'.
+* Revisa los registros en /var/log/post-deploy-upgrade.log.
+
+
 
 
 | 088 | Fallo al configurar la rotación de log para el diario | Compruebe la configuración de red de la máquina virtual compatible con el host en el que se aloja la máquina virtual. Puede intentar migrar a otro host e intentar reiniciar la máquina virtual. 
@@ -149,6 +156,16 @@ Sudo rke2-uninstall.sh (todas las máquinas virtuales).
 
 
 | 108 | Fallo al iniciar el script | - 
+
+
+| 114 | Falló la actualización interna del certificado en la colección MongoDB  a| 
+Si el despliegue falla con el código de error 114, completa los siguientes pasos:
+
+* Habilita el shell de diagnóstico.
+* Ejecuta el siguiente comando: `sudo perl /home/maint/scripts/post-deploy-upgrade.pl --internal_cert_update_collection`
+* Revisa los registros en `/var/log/otvng/post-deploy-upgrade.log`.
+
+
 |===
 |===
 

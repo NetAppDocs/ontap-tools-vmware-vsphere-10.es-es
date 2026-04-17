@@ -25,7 +25,7 @@ NOTE: En VMware Live Site Recovery, los recursos pueden ser pools de recursos, h
 . Seleccione *Asignaciones de recursos* > *Nuevo* en la pestaña Administrar para crear una nueva asignación de recursos.
 . En el asistente Create Resource Mapping, realice lo siguiente:
 +
-.. Selecciona *Preparar automáticamente asignaciones para recursos con nombres coincidentes* y selecciona *Siguiente*.
+.. Selecciona *Automatically Prepare Mappings for Resources with Matching Names* y selecciona *Next*.
 .. Seleccione los objetos del centro de datos necesarios para los sitios protegidos y de recuperación y seleccione *Agregar asignaciones*.
 .. Seleccione *Siguiente* después de que las asignaciones se hayan creado correctamente.
 .. Seleccione el objeto utilizado anteriormente para crear una asignación inversa y luego seleccione *Finalizar*.
@@ -34,4 +34,4 @@ NOTE: En VMware Live Site Recovery, los recursos pueden ser pools de recursos, h
 
 
 .Resultado
-La página Resource Mappings muestra los recursos del sitio protegidos y los recursos del sitio de recuperación. Puede seguir los mismos pasos para otras redes del entorno.
+La página Resource Mappings muestra los recursos del sitio protegido y los recursos del sitio de recuperación. Puedes seguir los mismos pasos para otros recursos en tu entorno.

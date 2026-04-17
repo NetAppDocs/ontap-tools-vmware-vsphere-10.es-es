@@ -39,4 +39,4 @@ No es necesario realizar ninguna configuración adicional para habilitar HA para
 Las ONTAP tools for VMware vSphere no son compatibles con vCenter HA.
 
 ====
-Para utilizar la función HA, asegúrese de que la incorporación activa de CPU y la conexión activa de memoria estén habilitadas durante la implementación o más tarde en la configuración de la máquina virtual.
+Para utilizar la función HA, asegúrate de que la incorporación en caliente de CPU y la memoria conectable en caliente están activadas durante la implementación o en la configuración de la máquina virtual.

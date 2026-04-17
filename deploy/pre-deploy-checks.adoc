@@ -17,7 +17,7 @@ Asegúrese de cumplir los siguientes requisitos antes de continuar con la implem
 | Requisitos | Su estado 
 
 
-| La versión de vSphere, la versión de ONTAP y la versión del host ESXi son compatibles con la versión de las herramientas ONTAP. | ❏ sí ❏ No 
+| vSphere versión, versión de ONTAP y versión del host ESXi son compatibles con la versión de ONTAP tools. | ❏ sí ❏ No 
 
 
 | El entorno de vCenter Server está instalado y configurado | ❏ sí ❏ No 
@@ -63,7 +63,7 @@ Utilice la siguiente hoja de trabajo para recopilar la información necesaria pa
 | Dirección IP de la aplicación ONTAP tools. Esta es la dirección IP para acceder a la interfaz web del ONTAP tools manager (load balancer) en `\https://<ip>:8443/virtualization/ui/` |  
 
 
-| Dirección IP virtual de herramientas ONTAP para comunicación interna.  Esta dirección IP se utiliza para la comunicación interna en una configuración con múltiples instancias de herramientas ONTAP .  Esta dirección IP no debe ser la misma que la dirección IP de la aplicación de herramientas ONTAP (el plano de control de Kubernetes). |  
+| Dirección IP virtual de ONTAP tools para la comunicación interna. Esta dirección IP se utiliza para la comunicación interna en una configuración con varias instancias de ONTAP tools. Esta dirección IP no debe ser la misma que la dirección IP de la aplicación ONTAP tools. (Plano de control de Kubernetes) |  
 
 
 | Nombre de host DNS para el nodo de administración de herramientas ONTAP |  
@@ -96,7 +96,7 @@ Utilice la siguiente hoja de trabajo para recopilar la información necesaria pa
 | Puerta de enlace de la dirección IPv6 (opcional) |  
 |===
 
-NOTE: Cree registros DNS para todas las direcciones IP anteriores. Antes de asignar nombres de host, asígnelos a las direcciones IP libres en el DNS. Todas las direcciones IP deben estar en la misma VLAN seleccionada para la implementación.
+NOTE: Crea registros DNS para todas las direcciones IP anteriores. Antes de asignar nombres de host, asígnalos a las direcciones IP libres en DNS. Todas las direcciones IP deben estar en la misma VLAN seleccionada para el despliegue.
 
 
 

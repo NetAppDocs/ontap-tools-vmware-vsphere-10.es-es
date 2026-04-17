@@ -14,7 +14,7 @@ summary: En un escenario de protección en abanico, el grupo de consistencia est
 En un escenario de protección en abanico, el grupo de consistencia está doblemente protegido con una relación sincrónica en el primer clúster ONTAP de destino y con una relación asincrónica en el segundo clúster ONTAP de destino.  Los flujos de trabajo de creación, edición y eliminación de protección de sincronización activa de SnapMirror mantienen la protección sincrónica.  Los flujos de trabajo de conmutación por error y reprotección del dispositivo VMware Live Site Recovery mantienen la protección asincrónica.
 
 
-NOTE: La distribución en abanico no es compatible con el usuario SVM.
+NOTE: La salida en abanico no es compatible para los usuarios de SVM.
 
 Para configurar la protección en abanico, conecte los tres clústeres de sitios y las SVM.
 
@@ -44,14 +44,14 @@ Ejemplo:
 El siguiente diagrama muestra la configuración de protección de abanico:image:../media/fan-out-protection.png["Configuración de protección de abanico de salida"] image:../media/fan-out-protection-relationship.png["Relación de protección en abanico"]
 
 .Pasos
-. Seleccione un nuevo almacén de datos de marcador de posición.  Los criterios de selección del almacén de datos de marcador de posición para la protección por fases son:
+. Selecciona un nuevo almacén de datos de marcador de posición. Los criterios de selección del almacén de datos de marcador de posición para la protección por fases son:
 +
 ** No coloque el almacén de datos de marcador de posición en el clúster de host que está protegiendo.
-** Si necesita incluir el almacén de datos de marcador de posición en el clúster de host, agréguelo al dispositivo VMware Live Site Recovery antes de configurar la protección de sincronización activa de SnapMirror .  Con esta configuración, puede dejar el almacén de datos de marcador de posición fuera de protección.
+** Si necesitas incluir el almacén de datos de marcador de posición en el clúster de host, agrégalo al dispositivo VMware Live Site Recovery antes de configurar la protección de sincronización activa SnapMirror. Con esta configuración, puedes dejar el almacén de datos de marcador de posición fuera de la protección.
 +
 Para obtener más información, consulte https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/about-placeholder-virtual-machines/configure-a-placeholder-datastore.html["Seleccione un almacén de datos de marcador de posición"]
 
 
 
-. Agregue el almacén de datos a la protección del clúster del host siguiendo estos pasoslink:../manage/edit-hostcluster-protection.html["Modifique el clúster de hosts protegido"] .  Agregue tipos de políticas asincrónicas y sincrónicas.
+. Agrega los datastores a la protección del clúster de hosts siguiendo link:../manage/edit-hostcluster-protection.html["Modifique el clúster de hosts protegido"]. Agrega ambos tipos de políticas: asíncronas y síncronas.
 

@@ -40,7 +40,7 @@ curl --request POST \
 +
 Copie y guarde el token de acceso devuelto en la respuesta.
 
-. Emita la siguiente API desde Swagger o en Postman para migrar.
+. Emite la siguiente API desde Swagger o Postman para migrar.
 +
 [listing]
 ----
@@ -246,11 +246,11 @@ Después de la actualización, si el estado de cumplimiento de la máquina virtu
 En el plan de recuperación, el sitio protegido se refiere a la ubicación donde se ejecutan las máquinas virtuales, mientras que el sitio de recuperación es donde se recuperarán. La interfaz del dispositivo VMware Live Site Recovery muestra el estado del plan de recuperación con detalles sobre los sitios protegidos y de recuperación.  En el plan de recuperación, los botones LIMPIAR y REPROTEGER están deshabilitados, mientras que los botones PROBAR y EJECUTAR permanecen habilitados. Esto indica que el sitio está preparado para la recuperación de datos. Antes de migrar el SRA, verifique que un sitio esté en estado protegido y el otro en estado de recuperación.
 
 
-NOTE: No comience la migración si se ha completado la conmutación por error pero la re-protección está pendiente.  Asegúrese de que el proceso de re-protección se haya completado antes de continuar con la migración.  Si hay una conmutación por error de prueba en curso, limpie la conmutación por error de prueba e inicie la migración.
+NOTE: No inicies la migración si la conmutación por error se ha completado pero la reprotección está pendiente. Asegúrate de que el proceso de reprotección se haya completado antes de proceder con la migración. Si hay una conmutación por error de prueba en curso, limpia la conmutación por error de prueba e inicia la migración.
 
 . Siga estos pasos para eliminar el adaptador del SRA de herramientas de ONTAP para VMware vSphere 9.xx en VMware Site Recovery:
+. Ve a la página de gestión de la configuración de VMware Live Site Recovery.
 +
-.. Vaya a la página de gestión de configuración de VMware Live Site Recovery
 .. Vaya a la sección *Storage Replication Adapter*.
 .. En el menú de puntos suspensivos, seleccione *Restablecer configuración*.
 .. En el menú de puntos suspensivos, seleccione *Eliminar*.

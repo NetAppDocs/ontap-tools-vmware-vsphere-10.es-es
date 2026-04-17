@@ -17,6 +17,9 @@ Debe configurar los sistemas de almacenamiento antes de ejecutar Storage Replica
 
 == Configure SRA para entornos SAN
 
+
+NOTE: Los grupos de consistencia en flujos de trabajo SRA solo son compatibles con protocolos SAN (iSCSI y Fibre Channel) en sistemas de almacenamiento Unified y ASA r2.
+
 .Antes de empezar
 Debe tener los siguientes programas instalados en el sitio protegido y el sitio de recuperación:
 
@@ -27,9 +30,15 @@ https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/
 * SRA: Instale el adaptador en VMware Live Site Recovery.
 
 
+Para las configuraciones de protocolo iSCSI, ten en cuenta lo siguiente antes de ejecutar los flujos de trabajo de SRA:
+
+* *Sitio protegido*: los adaptadores de almacenamiento iSCSI y los detalles LIF de datos se configuran automáticamente cuando aprovisionas los almacenes de datos. No se requiere configuración manual.
+* *Sitio de recuperación*: los adaptadores de almacenamiento iSCSI deben configurarse manualmente en cada host ESXi que se incluya en la asignación de recursos para la recuperación de desastres. Para evitar configurar los adaptadores individualmente en cada host, crea un almacén de datos de marcador de posición de tipo iSCSI en el sitio de recuperación usando la SVM en la que se configuran los flujos de trabajo de SRA. Esto agrega automáticamente el adaptador iSCSI y las direcciones IP de LIF de datos necesarias a todos los hosts ESXi asignados. Consulta link:../protect/configure-placeholder-datastores.html["Configura los almacenes de datos de marcadores de posición en ONTAP tools"] para más detalles.
+
+
 .Pasos
 . Compruebe que los hosts ESXi principales están conectados a los LUN del sistema de almacenamiento principal en el sitio protegido.
-. Compruebe que LAS LUN se encuentran en iGroups que tienen el `ostype` Opción establecida en _VMware_ en el sistema de almacenamiento principal.
+. Verifica que los LUN estén en igroups que tienen la opción `ostype` establecida en _VMware_ en el sistema de almacenamiento principal.
 . Verifique que los hosts ESXi en el sitio de recuperación tengan conectividad iSCSI y Fibre Channel adecuada a la máquina virtual de almacenamiento (SVM).  Los hosts ESXi del sitio secundario deben tener acceso al almacenamiento del sitio secundario, y los hosts ESXi del sitio principal deben tener acceso al almacenamiento del sitio principal.
 +
 Puede hacerlo mediante la verificación de que los hosts ESXi tengan LUN locales conectados en la SVM o en el `iscsi show initiators` En las SVM.
@@ -41,6 +50,9 @@ Compruebe el acceso a los LUN asignados en el host ESXi para verificar la conect
 
 == Configure SRA para entornos NAS
 
+
+NOTE: Los grupos de consistencia no son compatibles con NFS en los flujos de trabajo de SRA. Si los volúmenes de los almacenes de datos NFS se colocan bajo un grupo de consistencia y se protegen, la operación Descubrir dispositivos fallará. No uses grupos de consistencia al proteger almacenes de datos NFS con SRA.
+
 .Antes de empezar
 Debe tener los siguientes programas instalados en el sitio protegido y el sitio de recuperación:
 
@@ -50,7 +62,7 @@ Debe tener los siguientes programas instalados en el sitio protegido y el sitio 
 
 .Pasos
 . Compruebe que los almacenes de datos del sitio protegido contienen máquinas virtuales registradas en vCenter Server.
-. Compruebe que los hosts ESXi del sitio protegido hayan montado los volúmenes NFS exporta de la máquina virtual de almacenamiento (SVM).
-. Verifique que se especifiquen direcciones válidas, como la dirección IP o el FQDN donde se encuentran las exportaciones NFS, en el campo *Direcciones NFS* al usar el asistente del Administrador de matrices para agregar matrices a VMware Live Site Recovery. No utilice el nombre de host NFS en el campo *Direcciones NFS*.
+. Verifica que los hosts ESXi del sitio protegido hayan montado los volúmenes de exportación NFS de la máquina virtual de almacenamiento (SVM).
+. Verifica que se especifiquen direcciones IP válidas en las que estén presentes las exportaciones NFS en el campo *NFS Addresses* cuando uses el asistente de Array Manager para añadir arrays a VMware Live Site Recovery. No uses el nombre de host NFS ni el FQDN en el campo *NFS Addresses*.
 . Utilice la `ping` Comando en cada host ESXi del sitio de recuperación para verificar que el host tiene un puerto de VMkernel que pueda acceder a las direcciones IP que se utilizan para servir exportaciones de NFS desde la SVM.
 

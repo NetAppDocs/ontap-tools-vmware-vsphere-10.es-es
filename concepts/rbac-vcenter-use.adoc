@@ -36,12 +36,12 @@ Todos los permisos se validan en la jerarquía del objeto de vSphere, excepto la
 
 == Roles incluidos con las herramientas de ONTAP para VMware vSphere 10
 
-Para simplificar el uso del control de acceso basado en roles de vCenter Server, las herramientas de ONTAP para VMware vSphere proporcionan roles predefinidos adaptados a diversas tareas de administración.
+Para simplificar el trabajo con vCenter Server RBAC, ONTAP tools for VMware vSphere proporciona roles predefinidos adaptados a diversas tareas administrativas.
 
 
-NOTE: Puede crear nuevos roles personalizados si es necesario. En este caso, debe clonar uno de los roles de herramientas de ONTAP existentes y editarlo según sea necesario. Después de realizar cambios en la configuración, los usuarios del cliente vSphere afectados deben cerrar la sesión y volver a iniciarla para activar los cambios.
+NOTE: Puedes crear nuevos roles personalizados si lo necesitas. Para hacerlo, clona uno de los roles existentes de ONTAP tools y edítalo según lo necesites. Después de hacer los cambios de configuración, los usuarios afectados del cliente vSphere deben cerrar sesión y volver a iniciarla para activar los cambios.
 
-Para ver las ONTAP tools for VMware vSphere , seleccione *Menú* en la parte superior de vSphere Client y haga clic en *Administración* y luego en *Roles* a la izquierda. Los siguientes privilegios deben incluirse en el rol asignado al usuario de vCenter responsable de implementar o incorporar vCenter. Asegúrese de que estos privilegios estén configurados como un requisito previo para el proceso de implementación o incorporación.
+Para ver las herramientas de ONTAP para los roles de VMware vSphere, selecciona *Menú* en la parte superior del vSphere Client y haz clic en *Administración* y luego en *Roles* a la izquierda. Los siguientes privilegios deben estar incluidos en el rol asignado al usuario vCenter responsable de desplegar o incorporar vCenter Server. Asegúrate de que estos privilegios estén configurados como requisito previo para el proceso de despliegue o incorporación.
 
 * Alarmas
 +

@@ -33,7 +33,7 @@ Debe haber conectado los sitios protegidos y de recuperación.
 .. Selecciona *Preparar automáticamente asignaciones para redes con nombres coincidentes* y selecciona *Siguiente*.
 .. Seleccione los objetos del centro de datos necesarios para los sitios protegidos y de recuperación y seleccione *Agregar asignaciones*.
 .. Seleccione *Siguiente* después de que las asignaciones se hayan creado correctamente.
-.. Seleccione el objeto utilizado anteriormente para crear una asignación inversa y, a continuación, seleccione * Finalizar *.
+.. Seleccione el objeto utilizado anteriormente para crear una asignación inversa y luego seleccione *Finalizar*.
 
 
 

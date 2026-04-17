@@ -34,11 +34,11 @@ Los roles DE REST se introdujeron con ONTAP 9.6 y se aplican generalmente a los 
 
 * Tradicional
 +
-Estas son las funciones heredadas que se incluyen antes de ONTAP 9.6. Siguen siendo un aspecto fundamental del RBAC. Los Privileges se definen en términos de acceso a los comandos de la CLI de la ONTAP.
+Estos son los roles heredados que existían antes de ONTAP 9.6. Siguen siendo un aspecto fundamental de RBAC. Los privilegios se definen en términos de acceso a los comandos CLI de ONTAP.
 
 
 
-Mientras que los roles REST se introdujeron más recientemente, los roles tradicionales tienen algunas ventajas. Por ejemplo, se pueden incluir parámetros de consulta adicionales de forma opcional para que Privileges defina con mayor precisión los objetos a los que se aplican.
+Aunque los roles REST se introdujeron más recientemente, los roles tradicionales ofrecen algunas ventajas. Por ejemplo, se pueden incluir parámetros de consulta adicionales para que los Privileges definan con mayor precisión los objetos a los que se aplican.
 
 .Ámbito
 Los roles de ONTAP pueden definirse con uno o dos ámbitos diferentes. Se pueden aplicar a una SVM de datos específico (nivel de SVM) o a todo el clúster de ONTAP (nivel de clúster).

@@ -15,7 +15,7 @@ El complemento NFS vStorage API for Array Integration (NFS VAAI) conecta VMware 
 
 .Antes de empezar
 * Descargue https://mysupport.netapp.com/site/products/all/details/nfsplugin-vmware-vaai/downloads-tab["Plugin NFS de NetApp para VAAI de VMware"] el paquete de instalación.
-* Asegúrese de que tiene el host ESXi y la revisión más reciente de vSphere 7.0U3 o versiones posteriores, y de ONTAP 9.14.1 o versiones posteriores.
+* Asegúrate de que tienes hosts ESXi con vSphere 7.0 U3 (último parche o posterior) y ONTAP 9.14.1 o posterior.
 * Montar un almacén de datos NFS.
 
 
@@ -25,13 +25,13 @@ El complemento NFS vStorage API for Array Integration (NFS VAAI) conecta VMware 
 . Selecciona *Configuración* > *Herramientas de VAAI NFS*.
 . Si ya ha cargado el complemento VAAI en vCenter Server, seleccione *Cambiar* en *Versión existente*.  Si no lo has hecho, selecciona *Subir*.
 . Busque y seleccione el `.vib` archivo y seleccione *Cargar* para cargar el archivo en las herramientas de ONTAP.
-. Seleccione *Instalar en el HOST ESXi*, seleccione el host ESXi en el que desea instalar el plugin VAAI NFS y, a continuación, seleccione *Instalar*.
+. Selecciona *Install on ESXi host*, selecciona el host ESXi en el que quieres instalar el complemento NFS VAAI y luego selecciona *Install*.
 +
 vSphere Web Client muestra solo los hosts ESXi que pueden instalar el complemento. Puede supervisar el progreso de la instalación en la sección de tareas recientes.
 
 . Reinicie el host ESXi manualmente después de la instalación.
 +
-Después de reiniciar el host ESXi, las ONTAP tools for VMware vSphere detectan y habilitan automáticamente el complemento NFS VAAI.
+Después de reiniciar el host ESXi, ONTAP tools for VMware vSphere detecta y habilita automáticamente el complemento NFS VAAI.
 
 
 

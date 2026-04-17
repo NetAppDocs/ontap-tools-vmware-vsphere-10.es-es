@@ -16,7 +16,7 @@ Cuando se quita la protección del clúster de hosts, los almacenes de datos se 
 .Pasos
 . Para ver la lista de clústeres de host protegidos, vaya a * Herramientas de NetApp ONTAP * > * Protección * > * Relaciones de clúster de host *.
 +
-En esta página, supervise los clústeres de host protegidos, el estado de protección, la relación de SnapMirror y el estado.  Seleccione grupos de consistencia para ver la capacidad, los almacenes de datos asociados y los grupos secundarios.
+En esta página, puedes supervisar los clústeres de host protegidos, el estado de protección, la relación SnapMirror y el estado. Selecciona los grupos de coherencia para ver la capacidad, los almacenes de datos asociados y los grupos secundarios.
 
 . En la ventana *Protección del clúster de host*, seleccione el menú de puntos suspensivos junto al clúster y seleccione *Eliminar protección*.
 +

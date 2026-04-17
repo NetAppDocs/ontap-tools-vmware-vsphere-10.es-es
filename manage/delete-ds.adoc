@@ -2,7 +2,7 @@
 permalink: manage/delete-ds.html 
 sidebar: sidebar 
 keywords: vVols datastore,delete vVol 
-summary: La acción Eliminar el almacén de datos elimina el almacén de datos. En el caso de un almacén de datos NFS o VMFS, se muestra un cuadro de diálogo con la lista de máquinas virtuales que utilizan el almacén de datos. 
+summary: La acción Eliminar almacén de datos elimina el almacén de datos. En el caso de un almacén de datos NFS o VMFS, aparece un cuadro de diálogo con la lista de máquinas virtuales que están utilizando el almacén de datos. 
 ---
 = Eliminar almacenes de datos en ONTAP tools
 :allow-uri-read: 
@@ -16,7 +16,7 @@ Esta página describe cómo eliminar almacenes de datos NFS, VMFS o vVols utiliz
 Al eliminar un almacén de datos, se realizan las siguientes acciones según el tipo de almacén de datos:
 
 * El contenedor vVol no está montado.
-* Si el igroup no está en uso, iqn se elimina del igroup.
+* Si el igroup no está en uso, sus iniciadores se eliminan del igroup.
 * Se elimina el contenedor vVol.
 * Los volúmenes flexibles se dejan en la matriz de almacenamiento.
 

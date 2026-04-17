@@ -26,7 +26,7 @@ Después de incorporar el almacenamiento y ejecutar el descubrimiento del almac�
 A partir de las ONTAP tools for VMware vSphere 10.3, puede crear un almacén de datos vVols en sistemas ASA r2 con eficiencia de espacio como thin.vVol.  El proveedor VASA crea un contenedor y los puntos finales de protocolo deseados mientras crea el almacén de datos vVol.  El proveedor VASA no asigna ningún volumen de respaldo a este contenedor.
 
 .Antes de empezar
-* Asegúrese de que los agregados raíz no estén asignados a SVM.
+* Asegúrate de que los agregados raíz no están asignados a la SVM.
 * Compruebe que el proveedor de VASA esté registrado en la instancia de vCenter seleccionada.
 * En el sistema de almacenamiento ASA r2, la SVM debe asignarse al agregado para el usuario SVM.
 
@@ -34,7 +34,7 @@ A partir de las ONTAP tools for VMware vSphere 10.3, puede crear un almacén de 
 .Pasos
 . Inicie sesión en el cliente de vSphere.
 . Haga clic con el botón derecho en un sistema host, un clúster de host o un centro de datos y seleccione *Herramientas de NetApp ONTAP * > *Crear almacén de datos*.
-. Seleccione vVols *Tipo de almacén de datos*.
+. Selecciona vVols como *tipo de almacén de datos*.
 . Introduzca la información de *Nombre del almacén de datos* y *Protocolo*.
 +
 
@@ -44,7 +44,7 @@ NOTE: El sistema R2 de ASA es compatible con los protocolos iSCSI y FC para vVol
 . En Opciones avanzadas:
 +
 ** Si selecciona la *Política de exportación personalizada*, asegúrese de ejecutar la detección en vCenter para todos los objetos.  Se recomienda que no utilice esta opción.
-** Puede seleccionar el nombre de *Grupo de iniciadores personalizado* para los protocolos iSCSI y FC.
+** Puedes seleccionar un nombre de *grupo iniciador personalizado* para los protocolos iSCSI y FC.
 +
 
 NOTE: En el sistema de almacenamiento ASA r2 tipo SVM, no se crean unidades de almacenamiento (LUN/espacio de nombres) porque el almacén de datos es solo un contenedor lógico.
@@ -53,7 +53,7 @@ NOTE: En el sistema de almacenamiento ASA r2 tipo SVM, no se crean unidades de a
 
 . En el panel *Atributos de almacenamiento*, puede crear nuevos volúmenes o utilizar los volúmenes existentes. Sin embargo, no es posible combinar estos dos tipos de volúmenes para crear un almacén de datos vVols.
 +
-Al crear un nuevo volumen, puede habilitar QoS en el almacén de datos.  De forma predeterminada, se crea un volumen por cada solicitud creada por LUN.  Omita este paso para los almacenes de datos vVols en sistemas de almacenamiento ASA r2.
+Al crear un nuevo volumen, puedes activar QoS en el almacén de datos. Por defecto, se crea un volumen por cada solicitud de creación de LUN. Omite este paso para los almacenes de datos vVols en los sistemas de almacenamiento ASA r2.
 
 . Revise su selección en el panel *Resumen* y seleccione *Finalizar*.
 
@@ -137,9 +137,9 @@ Para obtener más información sobre el uso de NVMe/FC con VMware vSphere 7,0, c
 .Pasos
 . Inicie sesión en el cliente de vSphere.
 . Haga clic con el botón derecho en un sistema host, un clúster de host o un centro de datos y seleccione *Herramientas de NetApp ONTAP * > *Crear almacén de datos*.
-. Seleccione el tipo de almacén de datos VMFS.
+. Selecciona el tipo de almacén de datos VMFS.
 . Ingrese el nombre del almacén de datos, el tamaño y la información del protocolo en el panel *Nombre y protocolo*.  Para agregar el nuevo almacén de datos a un clúster VMFS existente, seleccione el clúster del almacén de datos en Opciones avanzadas.
-. Seleccione Storage VM en el panel *Storage*. Proporcione el *Nombre de grupo iniciador personalizado* en la sección *Opciones avanzadas* según sea necesario. Es posible seleccionar un igroup existente para el almacén de datos o crear un igroup nuevo con un nombre personalizado.
+. Selecciona una VM de almacenamiento en el panel *Almacenamiento*. Proporciona el *nombre de grupo iniciador personalizado* en la sección *Opciones avanzadas* según sea necesario. Puedes elegir un igroup existente para el datastore o crear un nuevo igroup con un nombre personalizado.
 +
 Cuando se selecciona el protocolo NVMe/FC o NVMe/TCP, se crea un nuevo subsistema de espacio de nombres y se utiliza para la asignación de espacios de nombres.  Las herramientas ONTAP crean el subsistema de espacio de nombres utilizando el nombre generado automáticamente que incluye el nombre del almacén de datos.  Puede cambiar el nombre del subsistema de espacio de nombres en el campo *nombre del subsistema de espacio de nombres personalizado* en las opciones avanzadas del panel *Almacenamiento*.
 
@@ -162,7 +162,7 @@ NOTE: A partir de ONTAP 9.16.1, los sistemas de almacenamiento R2 de ASA admiten
 .. Seleccione *Usar volumen existente*, *Activar QoS* opciones según sea necesario, y proporcione los detalles.
 +
 
-NOTE: En el tipo de almacenamiento ASA r2, la creación o selección de volumen no se aplica a la creación de unidades de almacenamiento (LUN/espacio de nombres).  Por lo tanto, estas opciones no se muestran.
+NOTE: En el tipo de almacenamiento ASA r2, la creación o selección de volúmenes no se aplica a la creación de unidades de almacenamiento (LUN/Namespace). Por lo tanto, estas opciones no se muestran.
 
 +
 

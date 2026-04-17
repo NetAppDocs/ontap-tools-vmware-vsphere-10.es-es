@@ -22,7 +22,7 @@ Al agregar un nuevo almacén de datos, puede incluirlo en el grupo de almacenes 
 Debe emparejar los sitios protegidos y de recuperación creados mediante vSphere Client para habilitar el Storage Replication Adapter (SRA) para detectar los sistemas de almacenamiento.
 
 
-NOTE: El adaptador de replicación de almacenamiento (SRA) admite la distribución en abanico con una relación de sincronización de tipo dúplex de conmutación por error automatizada y una relación asincrónica SnapMirror en un grupo de consistencia. Sin embargo, no se admite la distribución en abanico con dos SnapMirror asíncronos en un grupo de consistencia ni la distribución en abanico de SnapMirrors en un volumen. Las relaciones SnapMirror de tipo bóveda no se consideran dentro de estas restricciones de distribución.
+NOTE: Storage Replication Adapter (SRA) admite fan-out con una relación de sincronización de tipo Automated Failover Duplex y relación asíncrona SnapMirror en grupo de consistencia. Sin embargo, no se admite fan-out con dos relaciones asíncronas SnapMirror en grupos de consistencia ni fan-out SnapMirror en volúmenes. Las relaciones SnapMirror de tipo bóveda no se consideran dentro de estas restricciones de fan-out. La compatibilidad con grupos de consistencia en SRA se limita a protocolos SAN (iSCSI y Fibre Channel) en sistemas de almacenamiento Unified y ASA r2. Los grupos de consistencia no son compatibles con NFS; si los volúmenes de almacén de datos NFS se colocan bajo un grupo de consistencia, la operación Descubrir dispositivos fallará.
 
 .Antes de empezar
 * Debe tener VMware Live Site Recovery instalado en los sitios protegidos y de recuperación.
@@ -62,7 +62,7 @@ Debe asegurarse de que los sitios de origen y destino están configurados para l
 . Inicie sesión en vCenter Server y seleccione *Site Recovery* > *Grupos de protección*.
 . En el panel *Grupos de protección*, selecciona *Nuevo*.
 . Especifique un nombre y una descripción para el grupo de protección, la dirección y seleccione *Siguiente*.
-. En el campo *Tipo*, seleccione la opción *Tipo...* como grupos de almacenes de datos (replicación basada en matrices) para almacenes de datos NFS y VMFS. El dominio de fallos no son más que máquinas virtuales de servicio (SVM) con replicación habilitada. Se muestran las SVM que solo tienen emparejamiento implementado y no presentan problemas.
+. En el campo *Type*, selecciona la opción *Type field option...* como grupos de almacenes de datos (replicación basada en arrays) para almacenes de datos NFS y VMFS. El dominio de fallos consiste en SVMs con replicación habilitada. Se muestran las SVMs que solo tienen implementado el peering y no tienen problemas.
 . En la pestaña Grupos de replicación, seleccione el par de matrices habilitado o los grupos de replicación que tienen la máquina virtual configurada y, a continuación, seleccione *Siguiente*.
 +
 Todas las máquinas virtuales del grupo de replicación se agregan al grupo de protección.

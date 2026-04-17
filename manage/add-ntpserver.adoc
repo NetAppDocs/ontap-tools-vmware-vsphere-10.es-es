@@ -19,6 +19,6 @@ Introduzca los detalles del servidor NTP para sincronizar los relojes de hora de
 . Seleccione la opción *Ajustes* > *Servidor NTP* > *Editar*.
 . Introduzca las direcciones del nombre de dominio completo (FQDN), IPv4 o IPv6 separadas por comas.
 +
-Actualice a la pantalla para ver los valores actualizados.
+Actualiza la pantalla para ver los valores actualizados.
 
 
