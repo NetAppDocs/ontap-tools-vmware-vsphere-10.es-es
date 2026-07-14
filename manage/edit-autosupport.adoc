@@ -15,6 +15,7 @@ Al configurar las ONTAP tools for VMware vSphere por primera vez, AutoSupport es
 
 
 
+[[disable-autosupport]]
 == Deshabilite AutoSupport
 
 Cuando deshabilita AutoSupport, ya no recibirá soporte ni supervisión proactiva.
@@ -31,6 +32,7 @@ NOTE: Se recomienda mantener AutoSupport habilitado, ya que ayuda a acelerar la 
 
 
 
+[[update-autosupport-proxy-url]]
 == Actualice la URL del proxy de AutoSupport
 
 Actualice la URL del proxy de AutoSupport para que la función AutoSupport enrute los datos a través del servidor proxy para una transmisión segura.

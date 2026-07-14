@@ -17,6 +17,7 @@ A partir de ONTAP tools for VMware vSphere 10.4, ONTAP tools crea y mantiene aut
 
 
 
+[[quick-behavior-summary]]
 == Resumen rápido del comportamiento
 
 * Los almacenes de datos VMFS gestionados con ONTAP tools utilizan igroups anidados: un igroup padre por contexto de almacén de datos e igroups hijos por host.
@@ -27,6 +28,7 @@ A partir de ONTAP tools for VMware vSphere 10.4, ONTAP tools crea y mantiene aut
 
 
 
+[[igroup-contexts]]
 == Contextos de igroup
 
 Las herramientas ONTAP para VMware vSphere manejan igroups en dos contextos.
@@ -47,6 +49,7 @@ image:../media/otv-managed2.png["igroup administrado por herramientas ONTAP con 
 
 
 
+[[naming-behavior]]
 == Comportamiento de la nomenclatura
 
 Cuando creas un almacén de datos y dejas el campo igroup en blanco, ONTAP tools crea una estructura igroup anidada por defecto.
@@ -59,6 +62,7 @@ La interfaz de sistemas de ONTAP muestra la relación entre los igroups padre e 
 
 
 
+[[behavior-by-scenario]]
 == Comportamiento por escenario
 
 [cols="25,25,25,25"]
@@ -79,6 +83,7 @@ La interfaz de sistemas de ONTAP muestra la relación entre los igroups padre e 
 |===
 
 
+[[custom-igroup-reuse-and-api-behavior]]
 == Reutilización personalizada de igroups y comportamiento de la API
 
 En la interfaz de usuario de las ONTAP tools, puedes reutilizar un igroup padre personalizado existente de la lista desplegable mientras creas un datastore.
@@ -90,6 +95,7 @@ NOTE: Sólo se pueden reutilizar los igroups personalizados. Los igroups migrado
 
 
 
+[[native-to-managed-conversion-view]]
 == Vista de conversión de nativo a gestionado
 
 Si creas el igroup y el datastore directamente en sistemas ONTAP y entornos VMware, ONTAP tools no gestiona estos objetos inicialmente. Esto da como resultado una estructura de igroup plana.
@@ -104,6 +110,7 @@ ONTAP tools for VMware vSphere no detecta ni gestiona los igroups que se crean e
 
 
 
+[[reuse-of-discovered-native-igroups]]
 == Reutilización de los igroups nativos descubiertos
 
 Después de que ONTAP tools gestione un igroup nativo descubierto, ese igroup estará disponible en la lista desplegable de nombres de grupos de iniciadores personalizados para la creación de datastores.

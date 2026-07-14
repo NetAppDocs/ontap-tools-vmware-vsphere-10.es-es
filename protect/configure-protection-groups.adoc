@@ -17,6 +17,7 @@ Al agregar un nuevo almacén de datos, puede incluirlo en el grupo de almacenes 
 
 
 
+[[pair-protected-and-recovery-sites]]
 == Sitios protegidos para pares y de recuperación
 
 Debe emparejar los sitios protegidos y de recuperación creados mediante vSphere Client para habilitar el Storage Replication Adapter (SRA) para detectar los sistemas de almacenamiento.
@@ -47,6 +48,7 @@ El cuadro de diálogo *Objetos* muestra los sitios protegidos y de recuperación
 
 
 
+[[configure-protection-groups]]
 == Configure los grupos de protección
 
 .Antes de empezar

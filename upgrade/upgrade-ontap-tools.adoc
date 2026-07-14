@@ -67,7 +67,7 @@ Referirse a link:../manage/backup-settings.html["Editar la configuración de la 
 . Desde vCenter Server, abra una consola a las herramientas de ONTAP.
 . Inicie sesión como el usuario de mantenimiento.
 . Introduzca *2* para seleccionar el menú *Configuración del sistema*.
-. Introduzca *7* para seleccionar la opción *Actualizar*.
+. Teclea *6* para seleccionar la opción *Upgrade*.
 . Proporciona las credenciales de vCenter cuando se te solicite. Esta es la instancia de vCenter donde se alojan las ONTAP tools.
 +
 Si estás usando las herramientas ONTAP en una topología de dos vCenter Server, donde el appliance se aloja en una instancia de vCenter y gestiona otra, puedes asignar un rol restringido para la instancia de vCenter que aloja las herramientas ONTAP. Puedes crear un usuario y un rol dedicados de vCenter con solo los permisos necesarios para el despliegue de plantillas OVF. Para más detalles, consulta los roles listados en link:../concepts/rbac-vcenter-use.html#vsphere-object-hierarchy["Roles incluidos con las herramientas de ONTAP para VMware vSphere 10"].

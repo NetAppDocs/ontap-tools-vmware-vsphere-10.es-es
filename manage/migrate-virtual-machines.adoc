@@ -15,6 +15,7 @@ ONTAP tools for VMware vSphere admiten todos los tipos principales de migración
 
 
 
+[[migrate-protected-virtual-machines]]
 == Migrar máquinas virtuales protegidas
 
 Puedes migrar máquinas virtuales protegidas a:
@@ -30,6 +31,7 @@ Para obtener información sobre la migración de máquinas virtuales, consulta l
 
 
 
+[[clone-protected-virtual-machines]]
 == Clonar máquinas virtuales protegidas
 
 Es posible clonar máquinas virtuales protegidas con las siguientes características:
@@ -56,6 +58,7 @@ Consulta la documentación de Broadcom: https://techdocs.broadcom.com/us/en/vmwa
 
 
 
+[[virtual-machine-snapshots]]
 == Instantáneas de máquinas virtuales
 
 Las herramientas ONTAP admiten instantáneas de máquinas virtuales a través de flujos de trabajo estándar de VMware. Las instantáneas son puntos de reversión a corto plazo pensados para casos de uso como pruebas y preparación de parches. No sustituyen la protección de datos basada en copias de seguridad o replicación. Ejecutar una máquina virtual en una instantánea durante periodos prolongados puede provocar inestabilidad y pérdida de datos.

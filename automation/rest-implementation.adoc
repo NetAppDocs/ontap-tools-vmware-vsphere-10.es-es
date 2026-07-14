@@ -20,6 +20,7 @@ La API de REST incluye varias categorías de recursos, como vCenter y agregados.
 
 
 
+[[how-to-access-the-rest-api]]
 == Cómo acceder a la API de REST
 
 Puede acceder a las herramientas de ONTAP para la API de REST DE VMware vSphere 10 a través de la dirección IP de las herramientas de ONTAP junto con el puerto. Hay varias partes en la URL completa, incluyendo:
@@ -47,12 +48,14 @@ Esta URL se puede utilizar para solicitar una lista de las instancias definidas 
 
 
 
+[[http-details]]
 == Detalles de HTTP
 
 Las herramientas de ONTAP para la API REST DE VMware vSphere 10 utilizan HTTP y parámetros relacionados para actuar sobre las instancias y las recopilaciones de los recursos. A continuación se presentan los detalles de la implementación HTTP.
 
 
 
+[[http-methods]]
 === Métodos HTTP
 
 Los métodos HTTP o verbos admitidos por la API REST se presentan en la siguiente tabla.
@@ -78,6 +81,7 @@ Los métodos HTTP o verbos admitidos por la API REST se presentan en la siguient
 |===
 
 
+[[request-and-response-headers]]
 === Encabezados de solicitud y respuesta
 
 En la siguiente tabla se resumen las cabeceras HTTP más importantes utilizadas con la API REST.
@@ -97,6 +101,7 @@ En la siguiente tabla se resumen las cabeceras HTTP más importantes utilizadas 
 |===
 
 
+[[http-status-codes]]
 === códigos de estado HTTP
 
 Los códigos de estado HTTP utilizados por la API de REST se describen a continuación.
@@ -137,6 +142,7 @@ Los códigos de estado HTTP utilizados por la API de REST se describen a continu
 |===
 
 
+[[authentication]]
 == Autenticación
 
 La autenticación de un cliente para la API de REST se realiza mediante un token de acceso. Las características relevantes del token y el proceso de autenticación incluyen:
@@ -151,6 +157,7 @@ Consulte link:../automation/first-call.html["Tu primera llamada a la API de REST
 
 
 
+[[synchronous-and-asynchronous-requests]]
 == Solicitudes síncronas y asíncronas
 
 La mayoría de las llamadas API DE REST se completan rápidamente y, por lo tanto, se ejecutan de forma síncrona. Es decir, devuelven un código de estado (como 200) después de que se haya completado una solicitud. Las solicitudes que tardan más en completarse se ejecutan de forma asíncrona mediante un trabajo en segundo plano.

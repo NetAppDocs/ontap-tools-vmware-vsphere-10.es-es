@@ -48,10 +48,12 @@ Asegúrese de cumplir los siguientes requisitos antes de continuar con la implem
 |===
 
 
+[[deployment-worksheet]]
 == Hoja de trabajo de despliegue
 
 
 
+[[for-single-node-deployment]]
 === Para la puesta en marcha de un nodo único
 
 Utilice la siguiente hoja de trabajo para recopilar la información necesaria para las herramientas ONTAP para la implementación inicial de VMware vSphere:
@@ -100,6 +102,7 @@ NOTE: Crea registros DNS para todas las direcciones IP anteriores. Antes de asig
 
 
 
+[[for-high-availability-ha-deployment]]
 === Para una puesta en marcha de alta disponibilidad
 
 Además de los requisitos de puesta en marcha de nodo único, necesitará la siguiente información para la puesta en marcha de alta disponibilidad:
@@ -132,12 +135,14 @@ Además de los requisitos de puesta en marcha de nodo único, necesitará la sig
 |===
 
 
+[[network-firewall-configuration]]
 == Configuración del firewall de red
 
 Asegúrese de que los puertos de firewall necesarios estén abiertos para todas las direcciones IP relevantes.  Las herramientas ONTAP requieren acceso al LIF a través del puerto 443.  Para obtener una lista completa de los puertos necesarios, consulte la sección de requisitos de puerto enlink:../deploy/prerequisites.html["Requisitos y límites de configuración de las herramientas ONTAP para VMware vSphere"] .
 
 
 
+[[ontap-storage-settings]]
 == Configuración de almacenamiento de ONTAP
 
 Para garantizar una integración perfecta del almacenamiento de ONTAP con las herramientas de ONTAP para VMware vSphere, tenga en cuenta los siguientes ajustes:

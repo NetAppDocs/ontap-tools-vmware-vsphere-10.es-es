@@ -18,6 +18,7 @@ ONTAP proporciona un entorno de control de acceso basado en roles sólido y ampl
 
 
 
+[[overview-of-the-administrative-options]]
 == Descripción general de las opciones administrativas
 
 Hay varias opciones disponibles cuando se utiliza el control de acceso basado en roles de ONTAP en función de su entorno y sus objetivos. A continuación se presenta una visión general de las principales decisiones administrativas. Consulte también https://docs.netapp.com/us-en/ontap-automation/rest/rbac_overview.html["Automatización ONTAP: Información general sobre la seguridad de control de acceso basado en roles"^] para obtener más información.
@@ -48,6 +49,7 @@ ONTAP proporciona un conjunto de roles predefinidos tanto a nivel de clúster co
 
 
 
+[[working-with-ontap-rest-roles]]
 == Trabajar con roles de REST DE ONTAP
 
 Hay varias consideraciones cuando se usan los roles DE REST DE ONTAP que se incluyen con las herramientas de ONTAP para VMware vSphere 10.

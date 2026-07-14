@@ -15,6 +15,7 @@ Si experimenta problemas de implementación, revise los registros y los códigos
 
 
 
+[[collect-the-log-files]]
 == Recoja los archivos de registro
 
 Puedes recopilar los archivos de registro de ONTAP tools for VMware vSphere desde las opciones disponibles en la interfaz de usuario de ONTAP tools Manager. El soporte técnico podría pedirte que recopiles los archivos de registro para ayudar a solucionar un problema.
@@ -49,6 +50,7 @@ NOTE: El paquete de logs generado sustituye el paquete de logs generado en los �
 
 
 
+[[deployment-error-codes]]
 == Códigos de error de despliegue
 
 Es posible que aparezcan códigos de error durante las herramientas de ONTAP para operaciones de implementación, reinicio y recuperación de VMware vSphere.

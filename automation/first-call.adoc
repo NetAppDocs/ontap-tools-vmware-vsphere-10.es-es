@@ -18,6 +18,7 @@ Puede emitir una llamada a la API mediante curl para empezar a utilizar las herr
 
 
 
+[[before-you-begin]]
 == Antes de empezar
 
 Debe revisar la información y los parámetros necesarios en los ejemplos de cURL.
@@ -58,6 +59,7 @@ echo $FQDN_IP
 ----
 
 
+[[step-1-acquire-an-access-token]]
 == Paso 1: Adquiera un token de acceso
 
 Es necesario adquirir un token de acceso para usar la API de REST. A continuación se presenta un ejemplo de cómo solicitar un token de acceso. Debe sustituir los valores adecuados para su entorno.
@@ -74,6 +76,7 @@ Copia y guarda el token de acceso proporcionado en la respuesta.
 
 
 
+[[step-2-issue-the-rest-api-call]]
 == Paso 2: Emita la llamada a la API de REST
 
 Después de tener un token de acceso, puede usar cURL para emitir una llamada a la API de REST. Incluya el token de acceso adquirido en el primer paso.

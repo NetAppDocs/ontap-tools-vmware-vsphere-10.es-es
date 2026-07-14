@@ -24,6 +24,7 @@ NOTE: Debe realizar la detección de almacenamiento después de crear, editar o 
 
 
 
+[[monitor-host-cluster-protection]]
 == Supervise la protección del clúster de hosts
 
 Supervise el estado de protección, las relaciones de SnapMirror , los almacenes de datos y el estado de SnapMirror para cada clúster de host protegido.
@@ -39,6 +40,7 @@ La columna de protección muestra un icono que indica el estado de protección.
 
 
 
+[[add-new-datastores-or-hosts]]
 == Añada hosts o almacenes de datos nuevos
 
 Agregue hosts o cree almacenes de datos en el clúster protegido mediante la interfaz de usuario de vCenter.
@@ -69,6 +71,7 @@ Las herramientas de ONTAP crean una tarea de vCenter y usted puede seguir su pro
 
 
 
+[[add-a-new-snapmirror-relationship]]
 == Añada una nueva relación de SnapMirror
 
 .Pasos
@@ -91,6 +94,7 @@ Las herramientas de ONTAP crean una tarea de vCenter y usted puede seguir su pro
 
 
 
+[[delete-an-existing-snapmirror-relationship]]
 == Eliminar una relación de SnapMirror existente
 
 Para eliminar una relación asincrónica de SnapMirror , asegúrese de que el SVM o clúster del sitio secundario se agregue como back-end de almacenamiento en las ONTAP tools for VMware vSphere.  No es posible eliminar todas las relaciones de SnapMirror a la vez.  Al eliminar una relación también se elimina la relación correspondiente del clúster ONTAP .  Cuando se elimina una relación SnapMirror de dúplex de conmutación por error automatizada, el sistema desasigna los almacenes de datos de destino y elimina el grupo de consistencia, los LUN, los volúmenes y los igroups del clúster ONTAP de destino.
@@ -118,6 +122,7 @@ Las herramientas de ONTAP crean una tarea de vCenter y usted puede seguir su pro
 
 
 
+[[modify-an-existing-snapmirror-relationship]]
 == Modifique una relación de SnapMirror existente
 
 Para modificar una relación asincrónica de SnapMirror , asegúrese de que el SVM o clúster del sitio secundario se agregue como back-end de almacenamiento en las ONTAP tools for VMware vSphere.  Para las relaciones SnapMirror dúplex de conmutación por error automatizada, puede actualizar la proximidad del host para configuraciones uniformes o el acceso del host para configuraciones no uniformes.  No se admite el cambio entre los tipos de políticas de dúplex de conmutación por error automatizada y asincrónica.  Puede configurar ajustes de proximidad o acceso para los hosts recién descubiertos en el clúster.

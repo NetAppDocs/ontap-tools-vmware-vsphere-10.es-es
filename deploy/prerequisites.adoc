@@ -17,6 +17,7 @@ Puedes usar las herramientas ONTAP para VMware vSphere con VMware vCenter Server
 
 
 
+[[system-requirements]]
 == Requisitos del sistema
 
 * * Requisitos de espacio del paquete de instalación por nodo*
@@ -47,6 +48,7 @@ NOTE: Cuando se habilita el backup, cada clúster de herramientas de ONTAP neces
 
 
 
+[[minimum-storage-and-application-requirements]]
 == Requisitos mínimos de almacenamiento y aplicaciones
 
 |===
@@ -82,6 +84,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 
 
 
+[[port-requirements]]
 == Requisitos de puertos
 
 La siguiente tabla describe los puertos de red que utiliza NetApp y sus funciones. Existen tres tipos diferentes de puertos:
@@ -158,6 +161,7 @@ NOTE: Para implementaciones de alta disponibilidad, asegúrese de que el puerto 
 ====
 
 
+[[configuration-limits-to-deploy-ontap-tools-for-vmware-vsphere-for-vvols-datastores]]
 == Límites de configuración para desplegar ONTAP tools for VMware vSphere para almacenes de datos vVols
 
 Puedes usar la siguiente tabla como guía para configurar ONTAP tools for VMware vSphere.
@@ -187,6 +191,7 @@ NOTE: Los recuentos de host en la tabla representan el total combinado de todos 
 
 
 
+[[configuration-limits-to-deploy-ontap-tools-for-vmware-vsphere-for-vmfs-and-nfs-datastores]]
 == Límites de configuración para desplegar ONTAP tools for VMware vSphere para almacenes de datos VMFS y NFS
 
 Los límites de configuración enumerados en esta sección están validados y respaldados por NetApp. Los límites reales pueden variar según tu entorno y carga de trabajo. Superar estos límites puede afectar el rendimiento o la capacidad de soporte y no se recomienda. Ten en cuenta lo siguiente al revisar la tabla:
@@ -218,6 +223,7 @@ Los límites de configuración enumerados en esta sección están validados y re
 |===
 
 
+[[ontap-tools-for-vmware-vsphere-storage-replication-adapter-sra]]
 == Herramientas de ONTAP para VMware vSphere: Storage Replication Adapter (SRA)
 
 La siguiente tabla muestra los números admitidos por instancia de VMware Live Site Recovery con las herramientas de ONTAP para VMware vSphere.

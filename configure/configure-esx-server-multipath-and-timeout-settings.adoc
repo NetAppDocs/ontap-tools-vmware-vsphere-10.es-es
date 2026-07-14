@@ -15,6 +15,7 @@ La configuración de rutas múltiples y tiempos de espera del servidor ESXi ayud
 
 
 
+[[configure-esxi-server-multipath-and-timeout-settings]]
 == Configure los ajustes de multivía y tiempo de espera del servidor ESXi
 
 Las herramientas de ONTAP para VMware vSphere comprueban y establecen la configuración de multivía del host ESXi y el tiempo de espera de HBA que funcionan mejor con los sistemas de almacenamiento de NetApp.
@@ -38,6 +39,7 @@ NOTE: Puede expandir el host ESXi para ver los valores actuales.
 
 
 
+[[set-esxi-host-values]]
 == Configure los valores de host ESXi
 
 Utilice las ONTAP tools for VMware vSphere para establecer tiempos de espera y otros valores en los hosts ESXi para lograr un rendimiento y una conmutación por error óptimos.  Establece estos valores en función de las pruebas de NetApp .
@@ -46,6 +48,7 @@ Puede configurar los siguientes valores en un host ESXi:
 
 
 
+[[hbacna-adapter-settings]]
 === Configuración del adaptador de HBA/CNA
 
 Establece los siguientes parámetros en los valores predeterminados:
@@ -58,6 +61,7 @@ Establece los siguientes parámetros en los valores predeterminados:
 
 
 
+[[mpio-settings]]
 === Configuración de MPIO
 
 La configuración de MPIO elige las mejores rutas para los sistemas de almacenamiento de NetApp .  La configuración de MPIO selecciona la mejor ruta y la utiliza.
@@ -69,6 +73,7 @@ NOTE: La configuración de MPIO no se aplica a los protocolos NVMe, NVMe/FC y NV
 
 
 
+[[nfs-settings]]
 === Configuración de NFS
 
 |===

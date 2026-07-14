@@ -15,6 +15,7 @@ Las instancias de vCenter Server son plataformas de gestión central que permite
 
 
 
+[[dissociate-storage-backends-with-the-vcenter-server-instance]]
 == Disocie los back-ends de almacenamiento con la instancia de vCenter Server
 
 La página enumerada de vCenter Server muestra el número asociado de back-ends de almacenamiento. Cada instancia de vCenter Server tiene la opción de asociar o desasociar con un back-end de almacenamiento.
@@ -29,6 +30,7 @@ La página enumerada de vCenter Server muestra el número asociado de back-ends 
 
 
 
+[[modify-a-vcenter-server-instance]]
 == Modifique una instancia de vCenter Server
 
 Siga los pasos a continuación para modificar las instancias de vCenter Server.
@@ -43,6 +45,7 @@ Siga los pasos a continuación para modificar las instancias de vCenter Server.
 
 
 
+[[remove-a-vcenter-server-instance]]
 == Quite una instancia de vCenter Server
 
 Elimine todos los backends de almacenamiento del vCenter Server antes de eliminarlo.
@@ -65,6 +68,7 @@ Cuando se quitan las instancias de vCenter Server en las herramientas de ONTAP, 
 
 
 
+[[renew-vcenter-server-certificate]]
 == Renovar el certificado de vCenter Server
 
 Las herramientas de ONTAP le notifican cuando el certificado de vCenter está próximo a vencer o ha vencido. Después de renovar el certificado de vCenter, cargue el nuevo certificado en las herramientas de ONTAP siguiendo los siguientes pasos:

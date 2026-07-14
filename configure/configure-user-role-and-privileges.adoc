@@ -49,6 +49,7 @@ Las herramientas ONTAP agregan el nuevo rol y usuario.  Puede ver los privilegio
 
 
 
+[[svm-aggregate-mapping-requirements]]
 == Requisitos de asignación de agregados de SVM
 
 Al aprovisionar almacenes de datos mediante credenciales de usuario de SVM, las ONTAP tools for VMware vSphere crean volúmenes en el agregado especificado en la API POST de almacenes de datos.  ONTAP evita que los usuarios de SVM creen volúmenes en agregados no asignados a SVM.  Asigne la SVM a los agregados necesarios mediante la API REST de ONTAP o la CLI antes de crear volúmenes.
@@ -67,6 +68,7 @@ sti115_vsim_ucs630f_aggr1 vserver show-aggregates                               
 ----
 
 
+[[create-ontap-user-and-role-manually]]
 == Crear el usuario y el rol de ONTAP manualmente
 
 Cree usuarios y roles manualmente sin el archivo JSON.
@@ -102,6 +104,7 @@ Agregue la *Ruta de API REST* y elija el acceso de la lista desplegable.
 
 
 
+[[list-of-minimum-privileges-required-for-non-admin-global-scoped-cluster-user]]
 === Lista de privilegios mínimos necesarios para el usuario de cluster de ámbito global no administrativo
 
 Esta página enumera los privilegios mínimos requeridos para un usuario de clúster con ámbito global que no sea administrador y que no tenga un archivo JSON. Si un clúster está en el ámbito local, use el archivo JSON para crear usuarios porque las ONTAP tools for VMware vSphere necesitan más que solo privilegios de lectura para el aprovisionamiento en ONTAP.
@@ -154,6 +157,7 @@ Puede acceder a la funcionalidad mediante API:
 |===
 
 
+[[create-ontap-tools-for-vmware-vsphere-ontap-api-based-cluster-scoped-user]]
 === Cree herramientas de ONTAP para usuario de ámbito de clúster basado en la API de VMware vSphere ONTAP
 
 
@@ -273,6 +277,7 @@ security login rest-role create -role <role-name> -api /api/storage/availability
 ----
 
 
+[[create-ontap-tools-for-vmware-vsphere-ontap-api-based-svm-scoped-user]]
 === Create ONTAP tools for VMware vSphere ONTAP API based SVM scoped user
 
 Ejecute los siguientes comandos para crear un usuario con ámbito SVM con todos los privilegios:
@@ -387,6 +392,7 @@ security login unlock -username testvpsraall -vserver C1_sti160-cluster
 ----
 
 
+[[upgrade-ontap-tools-for-vmware-vsphere-10-1-user-to-10-3-user]]
 == Actualice las herramientas de ONTAP para un usuario de VMware vSphere 10,1 a 10,3 usuario
 
 Para herramientas de ONTAP para usuarios de VMware vSphere 10,1 con un usuario en el ámbito del clúster creado con el archivo JSON, utilice los siguientes comandos de la CLI de ONTAP con la Privileges de administrador de usuario para actualizar a la versión 10,3.
@@ -464,6 +470,7 @@ vserver nvme subsystem modify
 ----
 
 
+[[upgrade-ontap-tools-for-vmware-vsphere-10-3-user-to-10-4-user]]
 == Actualice las herramientas de ONTAP para un usuario de VMware vSphere 10,3 a 10,4 usuario
 
 A partir de ONTAP 9.16.1, actualice las ONTAP tools for VMware vSphere 10.3 al usuario 10.4.

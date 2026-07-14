@@ -31,6 +31,7 @@ Cuando se habilita la opción de validación de certificados (establecida en ver
 
 
 
+[[verify-san-based-certificates-for-storage-backends]]
 == Verifica los certificados basados en SAN para backends de almacenamiento
 
 Para garantizar una comunicación segura y una validación adecuada, verifica que todos los backends de almacenamiento usen certificados basados en SAN:

@@ -15,6 +15,7 @@ Los back-ends de almacenamiento son los sistemas que los hosts ESXi utilizan par
 
 
 
+[[discover-storage]]
 == Descubra el almacenamiento
 
 Puede ejecutar el descubrimiento de un backend de almacenamiento a pedido sin esperar a que un descubrimiento programado actualice los detalles de almacenamiento de inmediato.  Para las configuraciones de MetroCluster , ejecute la detección de herramientas ONTAP manualmente después de un cambio.
@@ -32,6 +33,7 @@ Puede realizar un seguimiento del progreso en el panel de tareas recientes.
 
 
 
+[[modify-storage-backends]]
 == Modificar los back-ends de almacenamiento
 
 Puede modificar las credenciales del backend de almacenamiento o el nombre del puerto.  También puede modificar el backend de almacenamiento para clústeres ONTAP globales mediante el Administrador de herramientas ONTAP .  Si el certificado caducará en 30 días o menos, las herramientas ONTAP muestran una advertencia.  Modifique el backend de almacenamiento y cargue el nuevo certificado desde el administrador de ONTAP .
@@ -58,6 +60,7 @@ Modifique los clústeres globales de ONTAP con el Administrador de herramientas 
 
 
 
+[[remove-storage-backends]]
 == Retire los back-ends de almacenamiento
 
 Debes eliminar todos los almacenes de datos adjuntos al backend de almacenamiento antes de eliminarlo.  Siga los pasos a continuación para eliminar un backend de almacenamiento.
@@ -79,6 +82,7 @@ Puedes eliminar clústeres ONTAP globales usando ONTAP tools Manager.
 
 
 
+[[drill-down-view-of-storage-backend]]
 == Vista detallada del back-end de almacenamiento
 
 La página del backend de almacenamiento enumera todos los backends de almacenamiento.  Puede realizar operaciones de descubrimiento de almacenamiento, modificación y eliminación en los backends de almacenamiento que agregó, pero no en la SVM secundaria individual del clúster.

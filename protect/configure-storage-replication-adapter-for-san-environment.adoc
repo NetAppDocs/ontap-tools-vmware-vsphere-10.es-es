@@ -15,6 +15,7 @@ Debe configurar los sistemas de almacenamiento antes de ejecutar Storage Replica
 
 
 
+[[configure-sra-for-san-environments]]
 == Configure SRA para entornos SAN
 
 
@@ -48,6 +49,7 @@ Compruebe el acceso a los LUN asignados en el host ESXi para verificar la conect
 
 
 
+[[configure-sra-for-nas-environments]]
 == Configure SRA para entornos NAS
 
 
