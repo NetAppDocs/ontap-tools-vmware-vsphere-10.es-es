@@ -1,0 +1,55 @@
+---
+permalink: manage/protect-ds.html 
+sidebar: sidebar 
+keywords: protect VMFS datastore, SnapMirror datastore protection, create protection group, ONTAP tools disaster recovery 
+summary: Protege un almacén de datos VMFS que cumpla los requisitos añadiéndolo a un grupo de protección con replicación de SnapMirror. 
+---
+= Proteger un almacén de datos VMFS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utiliza esta tarea para proteger un almacén de datos VMFS que cumpla los requisitos añadiéndolo a un grupo de protección.
+
+.Antes de empezar
+* Asegúrate de que el almacén de datos utilice el protocolo iSCSI o FC.
+* Comprueba que dispones de privilegios de administración en vSphere.
+* Comprueba que el almacén de datos no forme ya parte de un grupo de protección.
+
+
+.Pasos
+. Inicia sesión en el vSphere Client.
+. Selecciona un clúster de hosts y selecciona *Almacenes de datos*.
+. Haz clic con el botón derecho en el almacén de datos VMFS elegible que quieras proteger y selecciona *NetApp ONTAP tools* > *Protect*.
++
+El sistema comprueba si el almacén de datos cumple los requisitos para la protección. Si el almacén de datos cumple los requisitos, el flujo de trabajo de protección continúa. Si el almacén de datos no cumple los requisitos, aparece un mensaje indicando los motivos y no puedes continuar.
+
+. Elige si deseas añadir el almacén de datos a un grupo de protección ya existente o crear un nuevo grupo de protección.
++
+.. Para utilizar un grupo de protección ya existente, selecciona el grupo de protección y continúa.
+.. Para crear un nuevo grupo de protección:
++
+... Introduce un nombre para el grupo de protección.
+... Seleccione *Añadir relación*.
+... En la ventana *Add SnapMirror Relationship*, seleccione la *Target storage VM* y el tipo *Policy*.
++
+El tipo de política puede ser *Asíncrona* o *AutomatedFailOverDuplex*.
+
++
+Si seleccionas *AutomatedFailOverDuplex*, añade la máquina virtual de almacenamiento de destino como backend de almacenamiento al mismo vCenter Server donde está implementado ONTAP tools for VMware vSphere.
+
++
+Para *AutomatedFailOverDuplex*, elige una configuración de host uniforme o no uniforme. Cuando seleccionas la opción *configuración de host uniforme*, la configuración del grupo de iniciadores del host se replica implícitamente en el sitio de destino. Para más información, consulta link:../concepts/ontap-tools-concepts-terms.html["Conceptos y términos clave"].
+
+... Si eliges una configuración de hosts no uniforme, selecciona el acceso al host (origen/destino) para cada host del clúster.
+
+
+
+
+. Selecciona *OK* para iniciar el flujo de trabajo de protección.
+
+
+.Resultado
+El almacén de datos aparece en el grupo de protección seleccionado. Puedes consultar y gestionar el estado de la protección desde el complemento ONTAP tools.

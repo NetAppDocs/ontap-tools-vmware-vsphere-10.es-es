@@ -1,8 +1,8 @@
 ---
 permalink: configure/dashboard-overview.html 
 sidebar: sidebar 
-keywords: user roles 
-summary: Al seleccionar el icono de ONTAP tools for VMware vSphere plug-in en la sección de accesos directos del cliente vCenter, la interfaz de usuario navega a la página de resumen. Esta página actúa como el panel principal, proporcionando un resumen de ONTAP tools for VMware vSphere plug-in. 
+keywords: ONTAP tools dashboard, vCenter plug-in overview, datastore and backend summary, Enhanced Linked Mode dashboard 
+summary: Consulta el panel de herramientas de ONTAP para ver un resumen del estado de los complementos, los almacenes de datos y los datos del servidor vCenter. 
 ---
 = Conoce el panel de ONTAP tools
 :allow-uri-read: 
@@ -16,6 +16,10 @@ Al seleccionar el ícono del complemento de ONTAP tools for VMware vSphere en la
 En el modo vinculado mejorado (ELM), aparece el menú desplegable de vCenter Server.  Seleccione un servidor vCenter para ver sus datos.  El menú desplegable está disponible en todas las vistas de lista del complemento. Al seleccionar un vCenter Server en una página, permanece igual al cambiar de pestaña en el complemento.image:../media/remote-plugin-dashboard.png["Información general del panel de control"]
 
 Desde la página de descripción general, puede ejecutar la acción *Descubrimiento*. La acción de descubrimiento detecta backends de almacenamiento, hosts, almacenes de datos y estados de protección o relaciones recientemente agregados o actualizados en el nivel de vCenter.  Ejecute el descubrimiento a pedido sin esperar el descubrimiento programado.
+
+Si añades un nuevo host a un clúster de hosts protegidos, la configuración de protección pasa a ser *Parcialmente protegido*.
+
+Para solucionar este estado, abre *Modificar configuración del clúster*, asigna el host al sitio correcto (origen o destino) y selecciona *Modificar*.
 
 
 NOTE: El botón *Detección* solo se activa si tienes el privilegio necesario para realizar la detección.

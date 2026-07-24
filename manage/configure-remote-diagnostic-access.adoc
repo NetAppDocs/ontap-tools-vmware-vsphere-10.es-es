@@ -1,8 +1,8 @@
 ---
 permalink: manage/configure-remote-diagnostic-access.html 
 sidebar: sidebar 
-keywords:  
-summary: Puede configurar herramientas de ONTAP para VMware vSphere a fin de habilitar el acceso SSH para el usuario diag. 
+keywords: remote diagnostic access, ONTAP tools SSH diag user, enable SSH diagnostics, appliance troubleshooting access 
+summary: Activa el acceso SSH para el usuario diag en ONTAP tools for VMware vSphere. 
 ---
 = Configura el acceso remoto de diagnóstico para las herramientas ONTAP
 :allow-uri-read: 
@@ -32,8 +32,9 @@ La sesión iniciada caduca a medianoche del día siguiente.
 
 
 .Pasos
-. Desde vCenter Server, abra una consola al proveedor VASA.
-. Inicie sesión como el usuario de mantenimiento.
+. Inicia sesión en el servidor vCenter.
+. Busca la máquina virtual de ONTAP tools e inicia la consola web.
+. Inicia sesión usando las credenciales de `maint`.
 . Ingrese `4` para seleccionar *Soporte y Diagnóstico*.
 . Ingresar `2` para seleccionar *Habilitar acceso a diagnóstico remoto*.
 . Introduzca `y` En el cuadro de diálogo confirmación para habilitar el acceso remoto a diagnóstico.

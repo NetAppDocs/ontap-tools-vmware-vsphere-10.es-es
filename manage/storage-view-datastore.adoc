@@ -1,8 +1,8 @@
 ---
 permalink: manage/storage-view-datastore.html 
 sidebar: sidebar 
-keywords: Remove vVol datastore 
-summary: La vista de almacenamiento ONTAP en la pestaña Configurar de ONTAP tools for VMware vSphere proporciona datos relacionados con el almacén de datos y sus volúmenes. 
+keywords: ONTAP storage view datastores, datastore volume details, NFS VMFS vVol datastore insights, ONTAP tools storage visibility 
+summary: Consulta los detalles del almacén de datos y del volumen en la página ONTAP Storage de ONTAP tools for VMware vSphere. 
 ---
 = Vistas de almacenamiento ONTAP para datastores en ONTAP tools
 :allow-uri-read: 
@@ -11,10 +11,10 @@ summary: La vista de almacenamiento ONTAP en la pestaña Configurar de ONTAP too
 
 
 [role="lead"]
-Las herramientas de ONTAP para VMware vSphere muestran la vista lateral del almacenamiento ONTAP de los almacenes de datos y sus volúmenes en la pestaña Configure.
+Utiliza la página ONTAP Storage en la pestaña *Configurar* para ver la información de los datastores y volúmenes.
 
 .Pasos
-. Desde el cliente vSphere, vaya al almacén de datos.
+. En el inventario de vSphere Client, selecciona el almacén de datos.
 . Seleccione la pestaña *Configure* en el panel derecho.
 . Seleccione * Herramientas NetApp ONTAP * > * Almacenamiento ONTAP *. La vista cambia según el tipo de almacén de datos.  Consulte la tabla a continuación:
 
@@ -25,11 +25,13 @@ Las herramientas de ONTAP para VMware vSphere muestran la vista lateral del alma
 | *Tipo de almacén de datos* | *Información disponible* 
 
 
-| Almacén de datos NFS | La página *Detalles de almacenamiento* contiene backends de almacenamiento, datos agregados e información de volumen. La página *NFS details* contiene datos relacionados con el almacén de datos NFS. 
+| Almacenes de datos NFS | La página *Detalles de almacenamiento* contiene backends de almacenamiento, agregados y información de volúmenes. La página *Detalles de NFS* contiene datos relacionados con el almacén de datos NFS. Nota: si el valor de nconnect se cambia fuera de ONTAP tools, el valor que se muestra en ONTAP tools podría no reflejar ese cambio externo. 
 
 
-| Almacenes de datos de VMFS | La página *Detalles de almacenamiento* contiene detalles de backend de almacenamiento, agregado, volumen y zona de disponibilidad de almacenamiento (SAZ). La página *Detalles de la unidad de almacenamiento* contiene detalles de la unidad de almacenamiento. 
+| Almacenes de datos de VMFS | La página *Detalles de almacenamiento* contiene detalles sobre el backend de almacenamiento, el agregado, el volumen y la zona de disponibilidad de almacenamiento (SAZ). La página *Detalles de la unidad de almacenamiento* contiene detalles sobre la unidad de almacenamiento. 
 
 
 | Almacenes de datos de vVols | Enumera todos los volúmenes. Puede expandir o eliminar almacenamiento desde el panel de almacenamiento de ONTAP . Las herramientas ONTAP no admiten esta vista para los almacenes de datos vVols basados ​​en el sistema ASA r2. 
 |===
+.Resultado
+Puedes consultar los detalles del almacén de datos en ONTAP según el tipo de almacén de datos que elijas.

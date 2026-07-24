@@ -1,8 +1,8 @@
 ---
 permalink: configure/configure-network-access.html 
 sidebar: sidebar 
-keywords: network access configuration, export policy, mount operation, ESXi hosts 
-summary: Si no se configuró el acceso a la red, de forma predeterminada todas las direcciones IP detectadas desde el host ESXi se añaden a la política de exportación. 
+keywords: configure network access, ONTAP export policy, ESXi host IP allowlist, ONTAP tools mount access 
+summary: Configura el acceso a la red para controlar qué direcciones IP de los hosts ESXi se añaden a las políticas de exportación en ONTAP tools. 
 ---
 = Configura el acceso a la red en ONTAP tools
 :allow-uri-read: 

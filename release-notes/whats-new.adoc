@@ -1,55 +1,126 @@
 ---
 permalink: release-notes/whats-new.html 
 sidebar: sidebar 
-keywords: 'what"s new, release notes, 10.5, ONTAP tools for VMware vSphere' 
-summary: Conozca las nuevas capacidades disponibles en las ONTAP tools for VMware vSphere 10.5. 
+keywords: ONTAP tools 10.6, VMware vSphere release notes, datastore protection, audit logging, nconnect 
+summary: Descubre las nuevas funciones y mejoras en ONTAP tools for VMware vSphere 10.6. 
 ---
-= Novedades en las ONTAP tools for VMware vSphere 10.5
+= Novedades de las herramientas de ONTAP para VMware vSphere 10.6
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Conozca las nuevas capacidades disponibles en las ONTAP tools for VMware vSphere 10.5.
-
-* *Calificación de plataforma*
-
-
-Las ONTAP tools for VMware vSphere 10.5 agregan soporte para sistemas ASA r2, brindando compatibilidad con las últimas configuraciones de hardware y software.  Esta versión también incluye integración con ONTAP 9.16.1 y 9.17.1, ampliando los entornos compatibles.
-
-* *Calificación y certificaciones de VMware*
-
-
-Las ONTAP tools for VMware vSphere 10.5 cumplen con los estándares actuales de certificación de interoperabilidad de VMware y son compatibles tanto con el host ESXi como con vCenter Server.
-
-* * Soporte MetroCluster *
-
-
-Esta versión presenta soporte para configuraciones de MetroCluster , mejorando las capacidades de alta disponibilidad y recuperación ante desastres.
-
-* *Seguridad y gestión de certificados*
-
-
-Esta versión introduce una gestión optimizada de certificados autofirmados, mejorando tanto la experiencia del usuario como el cumplimiento de los estándares de seguridad.  Proporciona flujos de trabajo de validación de certificados mejorados para proteger ONTAP y las ONTAP tools for VMware vSphere .
-
-* *Mejoras de replicación*
-
-
-Esta versión admite la replicación VMFS con un grupo de consistencia jerárquico que incluye SRA y sincronización activa de SnapMirror en sistemas ASA r2.  Admite copias de seguridad de RPO cero para mejorar la protección y recuperación de datos.
-
-* *Actualización y migración*
-
-
-El proceso de actualización y migración de versiones anteriores de las ONTAP tools for VMware vSphere a las ONTAP tools for VMware vSphere 10.5 está diseñado para ser fluido y eficiente, minimizando el tiempo de inactividad y garantizando una transición sin problemas.
+Descubre las nuevas funciones y mejoras en ONTAP tools for VMware vSphere 10.6.
 
 
 
-[[supported-ontap-platforms-and-vcenter-server-versions]]
-== Plataformas ONTAP compatibles y versiones de vCenter Server
+[[granular-datastore-protection]]
+== Protección granular del datastore
 
-ONTAP tools for VMware vSphere 10.5 P1 admite configuraciones de alta disponibilidad (HA) de vCenter para los componentes SRA y SnapMirror active sync. vVols no es compatible en esta configuración. Durante una conmutación por error de HA, vCenter podría no estar disponible durante varios minutos. En entornos grandes o si ocurre un error, los tiempos de conmutación por error pueden superar los 15 minutos.
+ONTAP tools 10.6 introduce la protección a nivel de almacén de datos, así que puedes aplicar protección a los almacenes de datos seleccionados en vez de a todo el clúster de hosts.
 
-Para más información, consulta el https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-availability/vcenter-server-high-availability.html["vCenter documentación sobre alta disponibilidad"^]. Para preguntas sobre vCenter HA, contacta con https://support.broadcom.com/["Soporte de Broadcom"^].
+Entre las principales mejoras se incluyen:
 
-Para obtener los detalles más recientes sobre la compatibilidad de versiones, consulte https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp"^] .
+* Protección a nivel de almacén de datos para sistemas ONTAP y sistemas ASA r2
+* Dúplex con conmutación automática al respaldo (AFD) y políticas de protección asíncronas
+* Compatibilidad con almacenes de datos VMFS de iSCSI y FC
+* Grupos jerárquicos de consistencia y configuraciones de fan-out
+* Control sobre la pertenencia a grupos de consistencia eligiendo qué almacenes de datos proteger juntos
+* Configuraciones de protección AFD uniformes y no uniformes
+* Posibilidad de modificar la protección añadiendo o eliminando almacenes de datos y hosts
+* Flujo de trabajo de protección de almacenes de datos en el complemento vCenter
+* Ruta de actualización de la protección de clúster de hosts a la protección a nivel de almacén de datos
+
+
+
+
+[[audit-logging]]
+== Registro de auditoría
+
+ONTAP tools 10.6 añade el registro de auditoría para mejorar la seguridad y la trazabilidad operativa.
+
+El registro de auditoría incluye:
+
+* Todas las llamadas a la API de REST que no sean GET, incluidos los detalles de la solicitud y la respuesta
+* Trabajos de detección, trabajos de paquetes de AutoSupport, trabajos de limpieza y operaciones de la consola de mantenimiento
+* Protección de la integridad de los archivos de registros de auditoría, incluidas las alertas de manipulación y eliminación
+* Compatibilidad con el reenvío de syslog
+
+
+Estas actualizaciones admiten los requisitos de cumplimiento y seguridad.
+
+
+
+[[nconnect-support-for-nfs-datastores]]
+== Compatibilidad de nconnect con los almacenes de datos NFS
+
+ONTAP tools 10.6 añade compatibilidad con nconnect para los almacenes de datos NFS de VMware, permitiendo múltiples conexiones TCP paralelas entre los hosts ESXi y los almacenes de datos NFS de ONTAP.
+
+Esta versión es compatible con:
+
+* nconnect para almacenes de datos NFSv3 durante el aprovisionamiento
+* nconnect para almacenes de datos NFSv4.1 durante el aprovisionamiento con vCenter 8.0U3 y versiones posteriores
+* Modificación del valor máximo de nconnect en los hosts ESXi
+
+
+Esto ayuda a mejorar el rendimiento y el rendimiento del almacén de datos NFS para cargas de trabajo con varias máquinas virtuales.
+
+
+
+[[smaller-default-deployment-with-xs-profile]]
+== Implementación predeterminada más reducida con el perfil XS
+
+ONTAP tools 10.6 introduce un perfil de implementación predeterminado más pequeño, extra-small (XS), para reducir la sobrecarga de recursos y simplificar la implementación inicial.
+
+Las mejoras incluyen:
+
+* XS como configuración predeterminada para la implementación inicial
+* Implementación de OVA con ajustes de hardware predeterminados optimizados
+* Compatibilidad con el aprovisionamiento de almacenes de datos, la protección, la activación del servicio SRA y el modo HA con XS
+* Cuatro perfiles de implementación disponibles en la interfaz de usuario de Manager: extra pequeño (XS), pequeño (S), mediano (M) y grande (L)
+
+
+Este modelo ofrece una inversión inicial menor y una trayectoria clara de ampliación.
+
+
+
+[[ease-of-deployment-improvement]]
+== Mejora de la facilidad de implementación
+
+ONTAP tools 10.6 habilita de forma predeterminada la incorporación en caliente de CPU y la conexión en caliente de memoria para las nuevas implementaciones de la máquina virtual principal de ONTAP tools.
+
+De este modo, ya no es necesario activar manualmente estos ajustes antes o después de la implementación.
+
+
+
+[[protection-workflow-improvement]]
+== Mejora del flujo de trabajo de protección
+
+ONTAP tools 10.6 elimina la necesidad de activar manualmente la detección de almacenamiento cuando los clústeres ONTAP no están disponibles, simplificando los flujos de trabajo de protección.
+
+
+
+[[platform-and-interoperability-qualification]]
+== Cualificación de la plataforma e interoperabilidad
+
+ONTAP tools 10.6 amplía la compatibilidad de la plataforma y la interoperabilidad con las principales versiones de ONTAP y VMware, lo que permite una integración perfecta del almacenamiento NetApp en entornos VMware.
+
+Esta versión se adapta a las configuraciones actuales de la plataforma ONTAP y a las versiones de VMware, reduciendo la complejidad operativa durante las actualizaciones de la plataforma y las renovaciones de la pila de VMware.
+
+
+
+[[supportability-enhancements]]
+== Mejoras en la capacidad de soporte
+
+ONTAP tools 10.6 mejora la resolución de problemas y la gestión del ciclo de vida.
+
+Las novedades clave incluyen:
+
+* Eliminación forzada de entradas de vCenter inaccesibles u obsoletas
+* Migración de `ntpd` a `chronyd` para la sincronización horaria, con migración automática de la configuración existente del servidor NTP durante la actualización
+* Opción de la consola de mantenimiento para renovar los certificados de los servicios internos, incluso después de su expiración
+* Compatibilidad tanto con servidores NTP tradicionales como con servidores chrony basados en RHEL a través del protocolo NTP estándar (puerto UDP 123)
+
+
+Para obtener la información más reciente sobre la compatibilidad entre versiones, consulta https://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^].

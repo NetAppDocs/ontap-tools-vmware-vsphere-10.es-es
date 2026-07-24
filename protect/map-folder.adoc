@@ -1,8 +1,8 @@
 ---
 permalink: protect/map-folder.html 
 sidebar: sidebar 
-keywords:  
-summary: Debe asignar sus carpetas en el sitio protegido y el sitio de recuperación para permitir la comunicación entre ellos. 
+keywords: folder mappings, protected and recovery sites, VMware Live Site Recovery, disaster recovery, ONTAP tools 
+summary: Asigna carpetas entre los sitios protegidos y de recuperación para preparar los flujos de trabajo de conmutación por error de VMware Live Site Recovery. 
 ---
 = Configura las asignaciones de carpetas en ONTAP tools
 :allow-uri-read: 

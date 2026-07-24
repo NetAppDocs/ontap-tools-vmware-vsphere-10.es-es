@@ -1,8 +1,8 @@
 ---
 permalink: manage/manage-storage-threshold.html 
 sidebar: sidebar 
-keywords:  
-summary: Es posible establecer el umbral para recibir notificaciones en vCenter Server cuando la capacidad del volumen y del agregado alcanzan ciertos niveles.  
+keywords: storage threshold alerts, ONTAP tools capacity thresholds, vCenter storage notifications, aggregate volume capacity warnings 
+summary: Configura las notificaciones de umbrales para los niveles de volumen y capacidad agregada en vCenter Server. 
 ---
 = Administra los umbrales de almacenamiento en ONTAP tools
 :allow-uri-read: 

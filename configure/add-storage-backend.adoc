@@ -1,7 +1,7 @@
 ---
 permalink: configure/add-storage-backend.html 
 sidebar: sidebar 
-keywords:  
+keywords: add storage backend, ONTAP tools storage backend, local and global storage backend, MetroCluster storage backend 
 summary: Agrega y administra backends de almacenamiento localmente para una instancia de vCenter o globalmente para el descubrimiento a nivel de clúster en las herramientas de ONTAP. 
 ---
 = Agrega un backend de almacenamiento a ONTAP tools
@@ -19,7 +19,7 @@ Para agregar un backend de almacenamiento global, use las credenciales del clús
 
 Consulta el artículo de KB: https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/OTV_10_What_is_storage_backend_global_and_local_scope["OTV 10: ¿Qué es el ámbito global y local del backend de almacenamiento?"^] para obtener más información sobre los backends de almacenamiento global y local.
 
-Si la compatibilidad con MetroCluster está habilitada en ONTAP, incorpore los clústeres de origen y destino como backends de almacenamiento locales o globales.
+Si la compatibilidad con NetApp MetroCluster está habilitada en ONTAP, incorpora tanto el clúster de origen como el de destino como backends de almacenamiento locales o globales.
 
 .Antes de empezar
 Verifique que el certificado incluya un campo de Nombre alternativo del sujeto (SAN) válido.  Los sistemas ONTAP utilizan el campo SAN para identificar LIF de administración de clústeres y SVM.

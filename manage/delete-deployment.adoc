@@ -1,8 +1,8 @@
 ---
 permalink: manage/delete-deployment.html 
 sidebar: sidebar 
-keywords: ONTAP tools,Storage Replication Adapter 
-summary: Cuando se utiliza un clúster dedicado de herramientas de ONTAP para ONTAP para la implementación de VMware, se crean muchos volúmenes de FlexVol sin utilizar. Después de eliminar las herramientas de ONTAP para VMware vSphere, debe eliminar los volúmenes de FlexVol para evitar que se vean posibles impactos en el rendimiento. 
+keywords: remove FlexVol after uninstall, ONTAP tools cleanup, delete unused FlexVol volumes, post-uninstall storage cleanup 
+summary: Elimina los volúmenes FlexVol que no se utilicen después de quitar la implementación de ONTAP tools para evitar impactos en el rendimiento. 
 ---
 = Elimina los volúmenes FlexVol después de desinstalar ONTAP tools
 :allow-uri-read: 

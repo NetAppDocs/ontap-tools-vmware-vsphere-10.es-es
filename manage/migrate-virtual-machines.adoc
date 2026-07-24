@@ -1,8 +1,8 @@
 ---
 permalink: manage/migrate-virtual-machines.html 
 sidebar: sidebar 
-keywords:  
-summary: Debes tener en cuenta algunas consideraciones a la hora de migrar las máquinas virtuales existentes en tu centro de datos. 
+keywords: virtual machine migration considerations, ONTAP tools VM cloning guidance, VMware storage vMotion considerations, VM migration best practices 
+summary: Revisa los aspectos clave que debes tener en cuenta antes de migrar las máquinas virtuales existentes en tu centro de datos. 
 ---
 = Consideraciones sobre la migración y clonación de máquinas virtuales para ONTAP tools
 :allow-uri-read: 
@@ -27,7 +27,7 @@ Puedes migrar máquinas virtuales protegidas a:
 
 Si se migra la máquina virtual a un volumen FlexVol diferente, el sistema actualiza el archivo de metadatos de ese volumen con la información de la máquina virtual. Si se migra una máquina virtual a un host ESXi diferente pero con el mismo almacenamiento, el archivo de metadatos del volumen FlexVol subyacente no se modificará.
 
-Para obtener información sobre la migración de máquinas virtuales, consulta la documentación de Broadcom: https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vcenter-and-host-management/migrating-virtual-machines-host-management.html["vSphere Migración de máquinas virtuales"]
+Para obtener información sobre la migración de máquinas virtuales, consulta https://techdocs.broadcom.com/["Documentación técnica de Broadcom"]
 
 
 
@@ -63,11 +63,11 @@ Consulta la documentación de Broadcom: https://techdocs.broadcom.com/us/en/vmwa
 
 Las herramientas ONTAP admiten instantáneas de máquinas virtuales a través de flujos de trabajo estándar de VMware. Las instantáneas son puntos de reversión a corto plazo pensados para casos de uso como pruebas y preparación de parches. No sustituyen la protección de datos basada en copias de seguridad o replicación. Ejecutar una máquina virtual en una instantánea durante periodos prolongados puede provocar inestabilidad y pérdida de datos.
 
-Puedes tomar snapshots consistentes con fallos (snapshots sin estado de memoria, que pueden usarse para reiniciar la máquina virtual a un estado consistente) en todos los tipos de datastore compatibles. También se admiten snapshots en reposo, que usan VMware Tools para volcar los datos en memoria al disco antes de capturar. Para una visión general de los tipos de snapshots y su comportamiento, consulta https://knowledge.broadcom.com/external/article/342618/overview-of-virtual-machine-snapshots-in.html["Visión general de las instantáneas de máquinas virtuales en vSphere"].
+Puedes tomar snapshots consistentes con fallos (snapshots sin estado de memoria, que pueden usarse para reiniciar la máquina virtual a un estado consistente) en todos los tipos de datastore compatibles. También se admiten snapshots en reposo, que usan VMware Tools para volcar los datos en memoria al disco antes de capturar. Para una visión general de los tipos de snapshots y su comportamiento, consulta https://techdocs.broadcom.com/["Documentación técnica de Broadcom"].
 
 
 NOTE: Las instantáneas de memoria capturan el estado de la memoria en ejecución y aturden temporalmente la máquina virtual. No están soportadas en los flujos de trabajo de ONTAP tools. Si una máquina virtual tiene una instantánea de memoria, debes eliminarla antes de que la máquina virtual pueda incluirse en un grupo de consistencia o en una relación de clúster de host gestionada por ONTAP tools.
 
 En los sistemas de almacenamiento ASA r2, el comportamiento de las instantáneas de máquinas virtuales difiere de otros tipos de almacenamiento. Las instantáneas son de solo lectura. Cuando enciendes la máquina virtual, VASA Provider crea un LUN a partir de la instantánea de solo lectura y habilita las IOPS. Cuando apagas la máquina virtual, VASA Provider elimina el LUN y deshabilita las IOPS.
 
-Para obtener información sobre la gestión de instantáneas de máquinas virtuales, consulta la documentación de Broadcom https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-virtual-machine-administration/managing-virtual-machinesvsphere-vm-admin/using-snapshots-to-manage-virtual-machinesvsphere-vm-admin.html["Administra máquinas virtuales con instantáneas"].
+Para obtener información sobre cómo gestionar instantáneas de máquinas virtuales, consulta https://techdocs.broadcom.com/["Documentación técnica de Broadcom"].

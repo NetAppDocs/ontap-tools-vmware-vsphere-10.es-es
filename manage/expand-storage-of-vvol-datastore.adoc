@@ -1,8 +1,8 @@
 ---
 permalink: manage/expand-storage-of-vvol-datastore.html 
 sidebar: sidebar 
-keywords: virtual volume datastores 
-summary: Cuando hace clic con el botón derecho en el objeto del almacén de datos en la vista de objetos de vCenter, las acciones admitidas de las herramientas de ONTAP para VMware vSphere se muestran en la sección sobre plugins. 
+keywords: expand vVols datastore, increase vVol datastore capacity, ONTAP tools vVol storage expansion, VMware virtual volumes scaling 
+summary: Amplía el almacenamiento del almacén de datos vVols desde la vista del objeto vCenter usando las acciones de ONTAP tools. 
 ---
 = Amplía los datastores vVols en ONTAP tools
 :allow-uri-read: 

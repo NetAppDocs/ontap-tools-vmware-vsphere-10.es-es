@@ -1,8 +1,8 @@
 ---
 permalink: manage/resize-datastores.html 
 sidebar: sidebar 
-keywords:  
-summary: El cambio de tamaño de un almacén de datos permite aumentar el almacenamiento de los archivos de las máquinas virtuales. Es posible cambiar el tamaño de un almacén de datos a medida que cambian los requisitos de infraestructura. 
+keywords: resize NFS VMFS datastore, increase datastore capacity, ONTAP tools datastore expansion, VMware datastore size change 
+summary: Cambia el tamaño de los almacenes de datos para aumentar el almacenamiento de archivos de las máquinas virtuales a medida que cambian los requisitos de la infraestructura. 
 ---
 = Redimensiona los almacenes de datos NFS y VMFS en ONTAP tools
 :allow-uri-read: 

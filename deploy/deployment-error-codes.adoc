@@ -1,8 +1,8 @@
 ---
 permalink: deploy/deployment-error-codes.html 
 sidebar: sidebar 
-keywords: upgrade 
-summary: En esta página se describen los códigos de error para las operaciones de implementación, reinicio y recuperación de las herramientas de ONTAP para el sistema VMware vSphere. 
+keywords: troubleshooting deployment errors, log bundles, error codes, ONTAP tools 
+summary: Usa los códigos de error de implementación de ONTAP tools para diagnosticar y resolver fallos de implementación, reinicio y recuperación. 
 ---
 = Soluciona errores de despliegue de ONTAP tools
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: En esta página se describen los códigos de error para las operaciones
 
 
 [role="lead"]
-Si experimenta problemas de implementación, revise los registros y los códigos de error para diagnosticar y resolver los problemas.  A partir de las ONTAP tools for VMware vSphere 10.5, los paquetes de registros recopilados de los pods incluyen registros de MongoDB, RabbitMQ y Vault, junto con el estado y las descripciones de todos los pods.  Estos se proporcionan además de los registros de servicio de las herramientas ONTAP existentes, lo que mejora la capacidad de soporte y la resolución de problemas.
+Si experimentas problemas de implementación, revisa los registros y los códigos de error para diagnosticar y resolver problemas. A partir de ONTAP tools for VMware vSphere 10.6, los paquetes de registros recopilados de los pods incluyen registros de MongoDB, RabbitMQ y Vault, junto con el estado y las descripciones de todos los pods. ONTAP tools 10.6 también añade registros de auditoría para mejorar la trazabilidad durante la resolución de problemas. Estos se proporcionan además de los registros de servicio existentes de ONTAP tools, mejorando la capacidad de soporte y la resolución de problemas.
 
 
 
@@ -56,7 +56,7 @@ NOTE: El paquete de logs generado sustituye el paquete de logs generado en los �
 Es posible que aparezcan códigos de error durante las herramientas de ONTAP para operaciones de implementación, reinicio y recuperación de VMware vSphere.
 Los códigos de error tienen una longitud de cinco dígitos, donde los dos primeros dígitos representan el script que encontró el problema, y los tres últimos dígitos representan el flujo de trabajo específico dentro de ese script.
 
-Todos los registros de errores se graban en el archivo ansible-perl-errors.log en el directorio /var/log para facilitar el seguimiento y la resolución de problemas.  Este archivo de registro contiene el código de error y la tarea de Ansible fallida.
+Todos los registros de errores se guardan en el archivo ansible-perl-errors.log, ubicado en el directorio /var/log/otvng, para facilitar el seguimiento y la resolución de problemas. Este archivo de registro contiene el código de error y la tarea de Ansible que falló.
 
 
 NOTE: Los códigos de error proporcionados en esta página son solo de referencia. Contacta al equipo de soporte si el error persiste o si no se menciona una resolución.
@@ -129,10 +129,10 @@ Sudo rke2-uninstall.sh (todas las máquinas virtuales).
 | 060 | Fallo en el despliegue del operador | Reinicie 
 
 
-| 061 | Fallo en el despliegue de servicios | Realice la depuración básica de Kubernetes como los pods GET, GET rs, GET svc, etc. en el espacio de nombres ntv-SYSTEM para obtener más detalles y registros de errores en /var/log/ansible-perl-errors.log y /var/log/ansible-run.log y vuelva a desplegar. 
+| 061 | Fallo en el despliegue de servicios | Realiza tareas básicas de depuración de Kubernetes como get pods, get rs, get svc, etc., en el espacio de nombres ntv-system para obtener más detalles y consultar los registros de errores en /var/log/otvng/ansible-perl-errors.log y /var/log/otvng/ansible-run.log y vuelve a implementar. 
 
 
-| 062 | Se ha producido un error en la implementación de ONTAP TOOLS Services | Consulte los registros de errores en /var/log/ansible-perl-errors.log para obtener más detalles y volver a desplegar. 
+| 062 | Se ha producido un error en la implementación de ONTAP TOOLS Services | Consulta los registros de errores en /var/log/otvng/ansible-perl-errors.log para obtener más detalles y vuelve a realizar la implementación. 
 
 
 | 065 | No se puede acceder a la URL de la página de Swagger | Volver a desplegar 
@@ -143,7 +143,7 @@ Haz lo siguiente para recuperar/completar la actualización:
 
 * Habilita el shell de diagnóstico.
 * Ejecuta el comando 'sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postDeploy'.
-* Revisa los registros en /var/log/post-deploy-upgrade.log.
+* Consulta los registros en /var/log/otvng/post-deploy-upgrade.log.
 
 
 
@@ -158,16 +158,6 @@ Haz lo siguiente para recuperar/completar la actualización:
 
 
 | 108 | Fallo al iniciar el script | - 
-
-
-| 114 | Falló la actualización interna del certificado en la colección MongoDB  a| 
-Si el despliegue falla con el código de error 114, completa los siguientes pasos:
-
-* Habilita el shell de diagnóstico.
-* Ejecuta el siguiente comando: `sudo perl /home/maint/scripts/post-deploy-upgrade.pl --internal_cert_update_collection`
-* Revisa los registros en `/var/log/otvng/post-deploy-upgrade.log`
-
-
 |===
 |===
 

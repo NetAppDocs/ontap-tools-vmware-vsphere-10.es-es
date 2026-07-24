@@ -1,8 +1,8 @@
 ---
 permalink: protect/configure-placeholder-datastores.html 
 sidebar: sidebar 
-keywords:  
-summary: 'Configure un almacén de datos de marcador de posición para reservar espacio en el inventario de vCenter en el sitio de recuperación para máquinas virtuales (VM) protegidas.  Los almacenes de datos de marcador de posición requieren una capacidad mínima, porque las máquinas virtuales de marcador de posición son pequeñas y normalmente utilizan solo unos pocos cientos de kilobytes.' 
+keywords: placeholder datastore, VMware Live Site Recovery, vCenter inventory, protected virtual machines, ONTAP tools 
+summary: Configura los almacenes de datos provisionales en el centro de recuperación para reservar espacio en el inventario de vCenter para las máquinas virtuales protegidas. 
 ---
 = Configura los almacenes de datos de marcadores de posición en ONTAP tools
 :allow-uri-read: 

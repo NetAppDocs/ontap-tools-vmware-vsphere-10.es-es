@@ -1,8 +1,8 @@
 ---
 permalink: manage/mount-datastores-on-host.html 
 sidebar: sidebar 
-keywords:  
-summary: El montaje de un almacén de datos permite acceder al almacenamiento a hosts adicionales. El almacén de datos se puede montar en los hosts adicionales después de añadir los hosts al entorno de VMware. 
+keywords: mount NFS VMFS datastore, datastore host access, ONTAP tools datastore mounting, add datastore to ESXi host 
+summary: Monta los almacenes de datos en hosts adicionales tras añadir hosts a tu entorno VMware. 
 ---
 = Monta almacenes de datos NFS y VMFS en ONTAP tools
 :allow-uri-read: 
@@ -14,7 +14,7 @@ summary: El montaje de un almacén de datos permite acceder al almacenamiento a 
 El montaje de un almacén de datos permite acceder al almacenamiento a hosts adicionales. El almacén de datos se puede montar en los hosts adicionales después de añadir los hosts al entorno de VMware.
 
 
-NOTE: Cuando agregue un nuevo host ESXi utilizando el https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/use-quickstart-to-add---host-to-a-cluster.html["Agregar un host ESX al flujo de trabajo de su clúster vSphere"] , espere a que finalice la detección de host programada antes de que aparezca en las herramientas de ONTAP . Como alternativa, puede ejecutar el descubrimiento manualmente desde la pantalla de resumen de herramientas de NetApp ONTAP .
+NOTE: Una vez añadido el host, espera a que finalice el proceso de detección programado para que aparezca en ONTAP tools. Como alternativa, puedes ejecutar manualmente la detección desde la pantalla de resumen de NetApp ONTAP tools. Para obtener información sobre cómo añadir un host ESXi a tu clúster de vSphere, consulta https://techdocs.broadcom.com/["Documentación técnica de Broadcom"].
 
 .Acerca de esta tarea
 * Algunas acciones de clic con el botón derecho quedan deshabilitadas o no disponibles según la versión del cliente de vSphere y el tipo de almacén de datos seleccionado.
@@ -24,6 +24,7 @@ NOTE: Cuando agregue un nuevo host ESXi utilizando el https://techdocs.broadcom.
 
 
 * vSphere deshabilita la opción de montaje de almacén de datos cuando el clúster host está protegido con configuraciones uniformes.
+* Cuando se monta un almacén de datos con nconnect en un nuevo host, ONTAP tools aplica el valor de nconnect del almacén de datos si este supera la configuración del host.
 
 
 .Pasos

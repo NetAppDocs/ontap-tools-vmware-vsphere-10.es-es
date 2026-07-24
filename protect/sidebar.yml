@@ -2,8 +2,12 @@
 section: protect
 title: Proteja los almacenes de datos y las máquinas virtuales
 entries:
-- title: Proteja mediante la protección del clúster de hosts
-  url: "/configure/protect-cluster.html"
+- title: Conceptos y elegibilidad de la protección granular de los almacenes de datos
+  url: "/protect/granular-datastore-protection-concept.html"
+- title: Configura el clúster para la protección del almacén de datos
+  url: "/protect/config-proximity.html"
+- title: Protege los almacenes de datos de un clúster
+  url: "/protect/protect-multiple-ds.html"
 - title: Protege usando la protección SRA
   entries:
   - title: Configurar SRA para proteger los almacenes de datos

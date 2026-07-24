@@ -1,0 +1,105 @@
+---
+permalink: manage/manage-protection-groups.html 
+sidebar: sidebar 
+keywords: manage protection groups, SnapMirror relationships, datastore disaster recovery, ONTAP tools replication groups 
+summary: Ver, editar y eliminar grupos de protección y sus relaciones en ONTAP tools. 
+---
+= Gestiona grupos de protección en ONTAP tools
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utiliza esta tarea para ver, editar y eliminar grupos de protección y sus relaciones desde la página Grupos de protección en ONTAP tools.
+
+.Antes de empezar
+* Asegúrate de tener privilegios de administración en vSphere.
+* Asegúrate de que tu cuenta de usuario de ONTAP tools tenga permisos para gestionar grupos de protección.
+
+
+
+IMPORTANT: Antes de editar o eliminar la protección, revisa los mensajes de advertencia que aparecen en el cuadro de diálogo. Eliminar relaciones puede afectar el comportamiento de las copias de seguridad y la coherencia.
+
+.Acerca de esta tarea
+* ONTAP tools actualiza los registros de protección local en la instancia seleccionada de ONTAP tools.
+* Si seleccionas *Eliminar elementos de almacenamiento asociados*, ONTAP tools elimina los elementos de almacenamiento del grupo de protección.
+* Si no seleccionas *Eliminar elementos de almacenamiento asociados*, elimina manualmente las relaciones y los elementos de almacenamiento del lado de destino en ONTAP.
+
+
+
+
+[[view-protection-groups]]
+== Ver grupos de protección
+
+.Pasos
+. En el complemento de ONTAP tools, ve a *Protección* > *Grupos de protección*.
++
+La lista de grupos de protección muestra las relaciones asociadas, incluidos los grupos de consistencia, las políticas de SnapMirror y los almacenes de datos protegidos.
+
+. Revisa los detalles del grupo de protección, incluido el número de datastores protegidos.
+
+
+
+
+[[edit-protection-group-relationships]]
+== Editar relaciones de grupos de protección
+
+.Pasos
+. En el complemento de ONTAP tools, ve a *Protección* > *Grupos de protección*.
+. Selecciona el icono de puntos suspensivos verticales (tres puntos) que aparece junto al grupo de protección que quieres editar.
+. Selecciona *Editar grupo de protección*.
+. Actualiza la configuración de las relaciones:
++
+.. Si un grupo de protección tiene una relación de dúplex con conmutación automática al respaldo (AFD), puedes añadir una relación asíncrona.
+.. Si un grupo de protección tiene una relación asíncrona, puedes añadir una relación Automated Failover Duplex (AFD).
+.. Si un grupo de protección tiene tanto relaciones de conmutación automática al respaldo dúplex (AFD) como relaciones asíncronas, puedes eliminar cualquiera de estas relaciones desde la ventana *Editar grupo de protección*.
+.. Cada grupo de protección solo puede tener una relación de Automated Failover Duplex (AFD) y una relación asíncrona.
+.. Para utilizar una relación AFD diferente, elimina la relación AFD existente y luego añade la nueva relación AFD.
+.. Si eliminas una relación existente en la ventana *Editar grupo de protección*, revisa la advertencia de que eliminar la relación puede afectar las copias de seguridad y la coherencia.
+.. Si eliminas una relación asíncrona en la ventana *Editar grupo de protección*, los recursos de almacenamiento del lado de destino no se eliminan automáticamente. Elimina manualmente las relaciones del lado de destino y los elementos de almacenamiento en ONTAP.
+
+
+
+
+
+NOTE: Las operaciones de edición se limitan a los ajustes de relación compatibles. Consulta tu política de protección y los requisitos del flujo de trabajo antes de guardar los cambios.
+
+
+
+[[remove-a-protection-group]]
+== Eliminar un grupo de protección
+
+.Pasos
+. En el complemento de ONTAP tools, ve a *Protección* > *Grupos de protección*.
+. Selecciona el icono de puntos suspensivos verticales (tres puntos) que aparece junto al grupo de protección que quieres eliminar.
+. Selecciona *Eliminar protección*.
+. En el cuadro de diálogo *Eliminar protección*, revisa el mensaje que indica que al eliminar la protección del clúster de hosts los almacenes de datos quedarán desprotegidos.
+. Opcional: Selecciona *Eliminar elementos de almacenamiento asociados* (limpiar artefactos) para eliminar los elementos de almacenamiento del grupo de protección.
++
+Los elementos de almacenamiento pueden incluir grupos de consistencia, volúmenes, unidades de almacenamiento e instantáneas.
+
+. Si no seleccionas *Eliminar elementos de almacenamiento asociados*, ONTAP tools solo elimina los registros de protección locales. Elimina manualmente las relaciones del lado de destino y los elementos de almacenamiento en ONTAP.
+
+
+[cols="1,1,1,1"]
+|===
+| Tipo de relación | Eliminar ámbito | Limpieza automática | Se requiere limpieza manual 
+
+
+| Dúplex con conmutación automática al respaldo (AFD) | Eliminar la protección en cualquiera de los sitios elimina la relación en ambos. | Los registros de relaciones se eliminan como parte del flujo de trabajo. | Si no seleccionas *Eliminar elementos de almacenamiento asociados*, elimina manualmente los elementos de almacenamiento restantes según sea necesario. 
+
+
+| Asíncrona | Eliminar solo se aplica a la instancia local de ONTAP tools; la eliminación entre sitios no está disponible. | Se eliminan los registros de protección locales. | Elimina manualmente las relaciones del lado de destino y los elementos de almacenamiento en ONTAP. 
+|===
+.Resultado
+* ONTAP tools elimina los registros de protección locales del grupo de protección seleccionado.
+* Si has seleccionado *Eliminar elementos de almacenamiento asociados*, ONTAP tools elimina los elementos de almacenamiento seleccionados en el grupo de protección.
+* Si quedan relaciones o elementos de almacenamiento del lado del destino, elimínalos manualmente en ONTAP.
+
+
+.Temas relacionados
+* link:../manage/protect-ds.html["Proteger un almacén de datos VMFS"]
+* link:../protect/protect-multiple-ds.html["Proteger varios almacenes de datos"]
+* link:../protect/config-proximity.html["Configura el clúster para la protección del almacén de datos con ONTAP tools"]
+

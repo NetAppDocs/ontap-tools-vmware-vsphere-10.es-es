@@ -1,8 +1,8 @@
 ---
 permalink: manage/recover-backup.html 
 sidebar: sidebar 
-keywords:  
-summary: A partir de las herramientas de ONTAP para VMware vSphere 10,3, el dispositivo usa un aprovisionador de almacenamiento dinámico, no puede lograr un objetivo de punto de recuperación cero. Sin embargo, puede lograr casi un objetivo de punto de recuperación cero. 
+keywords: recover ONTAP tools setup, appliance recovery workflow, near zero RPO recovery, restore ONTAP tools configuration 
+summary: Recupera las ONTAP tools desde una copia de seguridad y entiende el comportamiento de RPO cero y casi cero según la versión. 
 ---
 = Recuperar la configuración de las herramientas ONTAP
 :allow-uri-read: 
@@ -26,8 +26,9 @@ Asegúrese de que la nueva máquina virtual utilice la misma dirección IP de la
 
 
 . Apague la máquina virtual existente.  Luego, implemente una nueva máquina virtual utilizando el mismo archivo OVA que la implementación original.
-. Desde vCenter Server, abra la consola de mantenimiento.
-. Inicie sesión como el usuario de mantenimiento.
+. Inicia sesión en el servidor vCenter.
+. Localiza la máquina virtual de ONTAP tools recién implementada e inicia la consola web.
+. Inicia sesión usando las credenciales de `maint`.
 . Ingrese `4` para seleccionar *Soporte y Diagnóstico*.
 . Ingrese `2` para seleccionar la opción *Activar acceso a diagnóstico remoto* y crear una nueva contraseña para el acceso de diagnóstico.
 . Elija un archivo de respaldo del directorio descargado.  Consulte el archivo _OTV_backup_info.txt_ para identificar la última copia de seguridad.
@@ -48,7 +49,7 @@ NOTE: No altere la ruta de destino ni el nombre del archivo (/home/diag/system_r
 sudo perl /home/maint/scripts/post-deploy-upgrade.pl -recovery
 ----
 +
-Los registros se registran en el archivo _/var/log/post-deploy-upgrade.log_.
+Los registros se guardan en el archivo _/var/log/otvng/post-deploy-upgrade.log_.
 
 
 

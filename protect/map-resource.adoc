@@ -1,8 +1,8 @@
 ---
 permalink: protect/map-resource.html 
 sidebar: sidebar 
-keywords:  
-summary: Debe asignar los recursos en el sitio protegido y el sitio de recuperación de modo que las máquinas virtuales estén configuradas para conmutar al nodo de respaldo a un grupo de hosts o a otro. 
+keywords: resource mappings, ESXi hosts and clusters, VMware Live Site Recovery, failover configuration, ONTAP tools 
+summary: Asigna pools de recursos, hosts o clústeres entre los sitios protegidos y los de recuperación para ubicar correctamente las máquinas virtuales durante la conmutación por error. 
 ---
 = Configura las asignaciones de recursos en ONTAP tools
 :allow-uri-read: 

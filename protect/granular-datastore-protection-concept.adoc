@@ -1,0 +1,83 @@
+---
+permalink: protect/granular-datastore-protection-concept.html 
+sidebar: sidebar 
+keywords: granular datastore protection, VMFS datastore eligibility, protection group criteria, ONTAP tools datastore protection 
+summary: Infórmate sobre la protección granular de los almacenes de datos y los criterios de elegibilidad de los almacenes de datos antes de proteger los almacenes de datos en un clúster de hosts. 
+---
+= Criterios de elegibilidad para la protección granular de los almacenes de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Usa la protección granular de almacenes de datos para proteger los almacenes de datos VMFS seleccionados en un clúster de hosts en vez de proteger todo el clúster.
+
+La protección granular de los almacenes de datos está disponible con ONTAP tools for VMware vSphere 10.6 y versiones posteriores. Esta función permite planificar la protección a nivel de almacén de datos en lugar de una selección que abarque todo el clúster.
+
+Esta función te permite:
+
+* Protege solo los almacenes de datos seleccionados en un clúster de hosts.
+* Agrupa los almacenes de datos seleccionados en grupos de protección.
+* Aplica las relaciones y políticas de SnapMirror a nivel de grupo de protección.
+* Utiliza diferentes enfoques de protección para los distintos grupos de almacenes de datos en el mismo clúster.
+
+
+Esta función solo es compatible con almacenes de datos VMFS que usan los protocolos iSCSI o FC.
+
+Puedes utilizar los siguientes tipos de políticas para los almacenes de datos que cumplan los requisitos:
+
+* *AutomatedFailOverDuplex (AFD)*
++
+** *Configuración uniforme de los hosts*: Los hosts de ambas ubicaciones pueden acceder a los almacenes de datos protegidos.
+** *Configuración de hosts no uniforme*: El acceso a los hosts se limita a los hosts específicos de cada sitio.
+
+
+* *Asíncrono*: el sitio de destino mantiene una copia asíncrona para la recuperación.
+
+
+La protección contra la dispersión puede combinar AFD entre los sitios principales y la replicación asíncrona a un tercer sitio.
+
+
+
+[[eligibility-evaluation]]
+== Evaluación de elegibilidad
+
+La idoneidad se evalúa en dos etapas: inclusión en la lista y selección.
+
+Los almacenes de datos solo aparecen en la lista para la protección granular de los mismos cuando cumplen todos los criterios siguientes:
+
+* El tipo de almacén de datos es VMFS.
+* El protocolo es iSCSI o FC.
+* El almacén de datos solo está montado en los hosts del clúster de hosts seleccionado.
+* Las herramientas de ONTAP pueden evaluar el almacén de datos para protección cuando el almacén de datos está en el clúster de hosts seleccionado en vCenter Server.
+
+
+Una vez que un almacén de datos aparece en la lista, solo se puede seleccionar para protección cuando se cumplen todos los requisitos siguientes:
+
+* El almacén de datos aún no está protegido.
+* El almacén de datos permanece montado únicamente dentro del clúster de hosts seleccionado.
+* Las SVM de origen y destino están emparejadas e incorporadas en ONTAP tools.
+* La versión de ONTAP es 9.15.1 o posterior.
+* Solo se admiten combinaciones de nodos de clúster de origen y clúster de destino de 2x2 y 4x4.
+* Las configuraciones de MetroCluster no son elegibles.
+* El volumen FlexVol o el LUN que respalda el almacén de datos no forma parte de un grupo de consistencia existente.
+* El volumen FlexVol o el LUN que respalda el almacén de datos no forma parte de una relación existente de SnapMirror.
+
+
+Ten en cuenta los siguientes límites operativos y comportamientos:
+
+* Configura la proximidad del clúster antes de configurar la protección del datastore.
+* Un clúster de un solo host puede usar una configuración AFD uniforme o no uniforme, no ambas.
+* No se admite el traslado de almacenes de datos entre grupos de protección. Desprotege y luego vuelve a proteger en el grupo de destino.
+* No se admite la protección Cross-SVM en el mismo clúster de hosts, con un origen y varios destinos diferentes.
+* No se admiten políticas asíncronas personalizadas. Usa la política asíncrona predeterminada de ONTAP.
+* En configuraciones terciarias o solo asíncronas, la limpieza de las relaciones asíncronas es manual.
+* Activa la conmutación por error desde ONTAP System Manager. Configura ONTAP Mediator fuera de ONTAP tools.
+
+
+Al actualizar desde ONTAP tools 10.5, las configuraciones existentes de protección de clústeres de hosts se migran al formato de protección granular de almacenes de datos. Después de la actualización, verifica los grupos de protección y la pertenencia a los almacenes de datos.
+
+.Información relacionada
+* link:../protect/protect-multiple-ds.html["Protege los almacenes de datos en un clúster con ONTAP tools"]
+

@@ -1,8 +1,8 @@
 ---
 permalink: concepts/ontap-tools-concepts-terms.html 
 sidebar: sidebar 
-keywords:  
-summary: En la siguiente sección se describen los conceptos y términos clave utilizados en el documento. 
+keywords: key concepts, ONTAP tools terms, consistency group, dual stack 
+summary: Repasa los conceptos y términos clave utilizados en la documentación de ONTAP tools for VMware vSphere. 
 ---
 = Conceptos y términos clave en ONTAP tools
 :allow-uri-read: 

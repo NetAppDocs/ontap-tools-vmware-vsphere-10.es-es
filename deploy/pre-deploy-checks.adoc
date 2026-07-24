@@ -1,8 +1,8 @@
 ---
 permalink: deploy/pre-deploy-checks.html 
 sidebar: sidebar 
-keywords: ONTAP tools,Storage Replication Adapter 
-summary: Antes de implementar las herramientas de ONTAP para VMware vSphere, debería estar familiarizado con los requisitos de espacio para el paquete de implementación y algunos requisitos básicos del sistema host. 
+keywords: pre-deployment checklist, deployment worksheet, certificates, vCenter Server 
+summary: Completa la lista de comprobación previa a la implementación de ONTAP tools, incluyendo la compatibilidad con vSphere, el dimensionamiento, los certificados y los requisitos de red. 
 ---
 = Requisitos previos a la implementación de las ONTAP tools
 :allow-uri-read: 
@@ -58,14 +58,15 @@ Asegúrese de cumplir los siguientes requisitos antes de continuar con la implem
 
 Utilice la siguiente hoja de trabajo para recopilar la información necesaria para las herramientas ONTAP para la implementación inicial de VMware vSphere:
 
+[cols="3,1"]
 |===
 | Requisito | Su valor 
 
 
-| Dirección IP de la aplicación ONTAP tools. Esta es la dirección IP para acceder a la interfaz web del ONTAP tools manager (load balancer) en `\https://<ip>:8443/virtualization/ui/` |  
+| Dirección IP de ONTAP tools (anteriormente load balancer). Esta dirección IP externa se utiliza para acceder a la interfaz de ONTAP tools Manager en `\https://<ip>:8443/virtualization/ui/`, enviar llamadas API y acceder al complemento de ONTAP tools desde la interfaz de vCenter. |  
 
 
-| Dirección IP virtual de ONTAP tools para la comunicación interna. Esta dirección IP se utiliza para la comunicación interna en una configuración con varias instancias de ONTAP tools. Esta dirección IP no debe ser la misma que la dirección IP de la aplicación ONTAP tools. (Plano de control de Kubernetes) |  
+| Dirección IP virtual de ONTAP tools (anteriormente node interconnect). Esta dirección IP se asigna al servidor de la API de Kubernetes y actúa como dirección IP virtual para el plano de control de Kubernetes en implementaciones de un solo nodo y de varios nodos. Se utiliza para la comunicación interna del clúster y la gestión de Kubernetes, y debe ser diferente de la dirección IP de ONTAP tools. |  
 
 
 | Nombre de host DNS para el nodo de administración de herramientas ONTAP |  
@@ -80,7 +81,7 @@ Utilice la siguiente hoja de trabajo para recopilar la información necesaria pa
 | Dominio de búsqueda DNS |  
 
 
-| Dirección IPv4 para el nodo de gestión de ONTAP tools. Es una dirección IPv4 única para la interfaz de gestión del nodo en la red de gestión. Esto se usa para conectarte al appliance de ONTAP tools para acceso remoto de diagnóstico por SSH. |  
+| Dirección IPv4 para el nodo de gestión de ONTAP tools. En una implementación de un solo nodo, esta dirección se corresponde con el nombre de host especificado para la VM de ONTAP tools. En una implementación HA, debes proporcionar direcciones IPv4 adicionales para las dos VMs adicionales de ONTAP tools. |  
 
 
 | Máscara de subred para la dirección IPv4 |  
@@ -107,6 +108,7 @@ NOTE: Crea registros DNS para todas las direcciones IP anteriores. Antes de asig
 
 Además de los requisitos de puesta en marcha de nodo único, necesitará la siguiente información para la puesta en marcha de alta disponibilidad:
 
+[cols="3,1"]
 |===
 
 

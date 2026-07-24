@@ -1,8 +1,8 @@
 ---
 permalink: protect/configure-storage-replication-adapter-for-san-environment.html 
 sidebar: sidebar 
-keywords:  
-summary: 'Debe configurar los sistemas de almacenamiento antes de ejecutar el adaptador de replicación de almacenamiento \(SRA\) para VMware Live Site Recovery.' 
+keywords: SRA SAN configuration, VMware Live Site Recovery, iSCSI and Fibre Channel, SnapMirror, ONTAP tools 
+summary: Configura los sistemas de almacenamiento SAN y NAS antes de ejecutar flujos de trabajo SRA en VMware Live Site Recovery. 
 ---
 = Configura SRA en ONTAP tools para entornos SAN y NAS
 :allow-uri-read: 
@@ -19,7 +19,7 @@ Debe configurar los sistemas de almacenamiento antes de ejecutar Storage Replica
 == Configure SRA para entornos SAN
 
 
-NOTE: Los grupos de consistencia en flujos de trabajo SRA solo son compatibles con protocolos SAN (iSCSI y Fibre Channel) en sistemas de almacenamiento Unified y ASA r2.
+NOTE: Los grupos de consistencia en los flujos de trabajo de SRA solo son compatibles con los protocolos SAN (iSCSI y Fibre Channel) tanto en los sistemas de almacenamiento ONTAP como en los sistemas de almacenamiento ASA r2.
 
 .Antes de empezar
 Debe tener los siguientes programas instalados en el sitio protegido y el sitio de recuperación:

@@ -1,0 +1,158 @@
+---
+permalink: manage/audit-logs.html 
+sidebar: sidebar 
+keywords: ONTAP tools audit logs, security logging, compliance audit trail, audit log retention 
+summary: Revisa cómo ONTAP tools captura, conserva y supervisa los registros de auditoría para seguridad y cumplimiento. 
+---
+= Gestiona los registros de auditoría para ONTAP tools
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Usa esta tarea para gestionar el comportamiento del registro de auditoría y la respuesta operativa en ONTAP tools for VMware vSphere. Los registros de auditoría proporcionan un historial de eventos que muestra quién realizó una acción, qué acción se realizó, cuándo ocurrió, el origen de la solicitud y si tuvo éxito o falló.
+
+.Antes de empezar
+* Asegúrate de que tienes acceso de administrador a ONTAP tools Manager.
+* Asegúrate de tener acceso a la consola de mantenimiento si tienes previsto modificar la configuración de retención local.
+* Revisa los requisitos de seguridad y cumplimiento de tu organización para la retención, el reenvío y la respuesta ante incidentes.
+
+
+.Acerca de esta tarea
+ONTAP tools recopila eventos de auditoría completos para ofrecer visibilidad operativa y de cumplimiento.
+
+El alcance de la auditoría incluye:
+
+* Operaciones de usuario y de la API, como la creación/eliminación de almacenes de datos, la incorporación de vCenter y acciones del backend de almacenamiento
+* Llamadas de servicio interno, incluidas las interacciones del servicio VASA Provider
+* Tareas, incluidas la búsqueda, la protección y las operaciones de agregación
+* Actividades de la consola de mantenimiento
+
+
+Las entradas de auditoría pueden incluir:
+
+* Nombre de usuario, cuando esté disponible
+* Operación realizada
+* Marca de tiempo
+* Solicitar origen (UI, API o entre servicios)
+* Detalles de la solicitud y la respuesta con estado
+
+
+Los archivos de auditoría se generan a diario y están disponibles en el paquete de soporte generado en ONTAP tools Manager. Los archivos correspondientes a un día determinado están disponibles al día siguiente.
+
+El registro de auditoría tiene las siguientes limitaciones operativas:
+
+* No se admite la desactivación del registro de auditoría.
+* El tamaño del archivo de registro de auditoría no se puede configurar por el usuario.
+
+
+El manejo de datos sensibles está integrado:
+
+* Los datos sensibles, como contraseñas, tokens y material de clave privada, se ocultan.
+* Es posible que se trunquen las cargas útiles de las solicitudes y respuestas de gran tamaño.
+
+
+.Pasos
+. Genera un paquete de soporte desde ONTAP tools Manager:
++
+.. Inicie ONTAP TOOLS Manager desde un explorador web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+.. Inicia sesión con las credenciales de administrador de ONTAP tools for VMware vSphere.
+.. Seleccione *Log Bundles* en la barra lateral.
+.. Selecciona *Generar*.
+.. Introduce una etiqueta para el paquete de registros y selecciona *Generar*.
++
+Los registros de auditoría están disponibles en archivos diarios dentro del directorio audit del paquete de soporte descargado.
+
+
+
+. Opcional: configura la retención local desde la consola de mantenimiento:
++
+.. Inicia sesión en el servidor vCenter.
+.. Busca la máquina virtual de ONTAP tools e inicia la consola web.
+.. Inicia sesión usando las credenciales de `maint`.
+.. Introduce `1` para seleccionar *Configuración de la aplicación*.
+.. Introduce  `4` para seleccionar *Cambiar la retención del registro de auditoría*.
+.. Introduce el valor de retención en días y confirma el cambio.
++
+El periodo de retención predeterminado es de 30 días y el intervalo admitido va de 1 a 180 días.
+
++
+
+WARNING: Cambiar la retención del registro de auditoría reinicia los servicios y es una operación disruptiva.
+
+
+
+. Supervisa el estado de integridad del registro de auditoría en ONTAP tools Manager:
++
+.. En el panel de control de ONTAP tools Manager, revisa la tarjeta *Alertas* para ver si hay alertas activas.
+.. Selecciona el enlace del recuento de alertas o abre *Manage alerts* para ver los detalles y el estado de las alertas.
++
+ONTAP tools comprueba la integridad de los archivos de registro de auditoría cada 3 minutos. ONTAP tools mantiene un registro de los archivos esperados. Si falta un archivo o se ha alterado, ONTAP tools genera una alerta en ONTAP tools Manager.
+
+
+
+. Opcional: cambia el intervalo de comprobación de integridad de auditoría desde la consola de mantenimiento:
++
+.. Inicia sesión en el servidor vCenter.
+.. Busca la máquina virtual de ONTAP tools e inicia la consola web.
+.. Inicia sesión usando las credenciales de `maint`.
+.. Introduce `4` para seleccionar *Asistencia técnica y diagnóstico*.
+.. Introduce `2` para seleccionar *Habilitar acceso de diagnóstico*.
+.. Inicia sesión como el usuario  `diag`.
+.. Ejecuta el siguiente comando para cambiar el intervalo en segundos:
++
+`bash /home/maint/scripts/change_audit_integrity_check_interval.sh <value_in_seconds>`
+
++
+El intervalo mínimo admitido es de 60 segundos.
+
++
+
+WARNING: Cambiar el intervalo de comprobación de la integridad de la auditoría reinicia los servicios y es una operación disruptiva.
+
+
+
+. Opcional: Reenvía los registros de auditoría a un destino syslog externo. Usa el reenvío de syslog cuando necesites supervisión centralizada, retención a largo plazo o correlación de Security Information and Event Management (SIEM). Sigue las normas de tu organización para TLS, certificados, puertos y retención.
+. Si se produce una alerta de integridad, realiza acciones de respuesta ante incidentes.
++
+.. Recoge un paquete de soporte lo antes posible.
+.. Conserva los paquetes y archivos exportados de acuerdo con el proceso de respuesta ante incidentes de tu organización.
+.. Revisa los detalles de la alerta en ONTAP tools Manager y, si es necesario, ponte en contacto con el soporte de NetApp.
+
+
+
+
+
+
+[[example-audit-record]]
+== Ejemplo de registro de auditoría
+
+Los registros de auditoría incluyen un conjunto coherente de campos que facilitan la trazabilidad. Entre los campos habituales se incluyen:
+
+* Marca de tiempo (UTC)
+* Nombre de usuario (identidad del usuario autenticado)
+* Operación (método HTTP y URI de la solicitud)
+* Solicitar origen (UI, API o entre servicios)
+* Estado (éxito o fallo y código de estado)
+* Agente de usuario (identidad del cliente, si está disponible)
+* Identificador de la solicitud, cuando esté disponible (por ejemplo, correlation ID)
+* Identificador del trabajo, cuando esté disponible (para flujos de trabajo asíncronos)
+* Identificador de inquilino o de vCenter, cuando esté disponible
+
+
+El siguiente ejemplo muestra el tipo de información que se recoge. El conjunto exacto de campos puede variar en función del flujo de trabajo.
+
+[source, json]
+----
+{
+  "timestamp": "2026-01-29T08:21:51Z",
+  "username": "administrator",
+  "operation": "POST /virtualization/api/v1/vcenters/{vcguid}/traditional/datastores",
+  "status": "Success 202",
+  "user_agent": "Mozilla/5.0 ...",
+  "correlation_id": "9ee9a89e-900d-4538-bcab-79830d4ab7cc",
+  "job_id": "3416",
+  "type": "audit"
+}
+----

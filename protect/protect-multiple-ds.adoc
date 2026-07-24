@@ -1,0 +1,62 @@
+---
+permalink: protect/protect-multiple-ds.html 
+sidebar: sidebar 
+keywords: granular datastore protection, protection groups, SnapMirror relationship, AutomatedFailOverDuplex, uniform host configuration, non-uniform host configuration 
+summary: Protege varios almacenes de datos VMFS en un clúster de hosts agrupando los almacenes en grupos de protección y aplicando políticas de SnapMirror. 
+---
+= Protege los almacenes de datos en un clúster con ONTAP tools
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utiliza la protección granular de almacenes de datos cuando un clúster de hosts incluya almacenes de datos de varias máquinas virtuales de almacenamiento (SVM) y necesites proteger almacenes de datos seleccionados con políticas diferentes.
+
+.Antes de empezar
+Asegúrate de cumplir estos requisitos antes de proteger los almacenes de datos en un clúster de hosts:
+
+* Los almacenes de datos son almacenes VMFS que usan los protocolos iSCSI o FC.
+* Los almacenes de datos se detectan y están disponibles en ONTAP tools.
+* Las máquinas virtuales de almacenamiento de origen y destino están configuradas para relaciones de SnapMirror.
+
+
+.Pasos
+. Inicia sesión en el vSphere Client.
+. Haz clic con el botón derecho del ratón en un host o en un clúster de hosts y selecciona *NetApp ONTAP tools* > *Proteger almacenes de datos*.
+. Selecciona la *máquina virtual de almacenamiento* en el clúster.
++
+Se muestran los almacenes de datos de la SVM seleccionada.
+
+. El campo *Tipo de almacén de datos* aparece rellenado de forma predeterminada con VMFS como el único tipo de almacén de datos compatible con la protección y está desactivado.
+. En la lista que se muestra según los criterios de elegibilidad, selecciona los almacenes de datos que quieras proteger y haz clic en *Siguiente*.
+. En la ventana *Configuración de protección*, elige si deseas proteger los almacenes de datos seleccionados en un grupo de protección existente o en uno nuevo.
+. Si seleccionas *Crear nuevo*, introduce un nombre para el grupo de protección y selecciona *Add Relationship*.
+. En la ventana *Add SnapMirror Relationship*, seleccione la *Target storage VM* y el tipo *Policy*.
++
+El tipo de política puede ser Asynchronous o AutomatedFailOverDuplex. AutomatedFailOverDuplex solo es compatible con los almacenes de datos aprovisionados en ONTAP 9.15.1 con los protocolos iSCSI o FC y montados en el clúster de hosts.
+
++
+Si añades la relación SnapMirror como AutomatedFailOverDuplex, añade el almacenamiento de destino como backend de almacenamiento al mismo servidor vCenter donde está implementado ONTAP tools for VMware vSphere.
+
++
+En el tipo de política AutomatedFailOverDuplex, existen configuraciones de clúster uniformes y no uniformes. Para la configuración de clúster uniforme, la configuración del grupo de iniciadores del host se replica en el sitio de destino. Para más información, consulta link:../concepts/ontap-tools-concepts-terms.html["Conceptos y términos clave"].
+
+. En el caso de una configuración de clúster no uniforme, selecciona el acceso al host (origen o destino) para cada host del clúster. ONTAP tools crea las configuraciones correspondientes de los grupos de iniciadores de host en el almacenamiento de destino para proporcionar acceso del host a los objetos de almacenamiento de destino.
+. Seleccione *Guardar*.
+. Revisa la configuración en la ventana *Resumen* y selecciona *Proteger*.
+. Para ver los detalles de todos los grupos de protección disponibles, ve a *NetApp ONTAP tools* > *Protection* > *Protection groups*.
+
+
+.Resultado
+Se crea un nuevo grupo de protección con los almacenes de datos seleccionados y se añade la relación SnapMirror a ese grupo de protección. El sistema crea una tarea de vCenter con los detalles del ID de trabajo y muestra su progreso en el panel de tareas recientes. Esta es una tarea asíncrona; la interfaz de usuario solo muestra el estado de envío de la solicitud y no espera a que la tarea termine.
+
+[NOTE]
+====
+En el caso de los clústeres de almacenamiento ONTAP (ONTAP 9), no se admite la desprotección de un almacén de datos que no sea el último si el grupo de protección tiene una relación asíncrona.
+
+====
+.Información relacionada
+* link:../manage/protect-ds.html["Proteger un almacén de datos VMFS"]
+* link:../manage/unprotect-ds.html["Desproteger un almacén de datos VMFS"]
+

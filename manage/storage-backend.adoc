@@ -1,8 +1,8 @@
 ---
 permalink: manage/storage-backend.html 
 sidebar: sidebar 
-keywords:  
-summary: Los back-ends de almacenamiento son los sistemas que los hosts ESXi utilizan para el almacenamiento de datos. 
+keywords: manage storage backends, ONTAP backend systems, storage backend operations, VMware datastore backend configuration 
+summary: Administra los sistemas de almacenamiento que usan los hosts ESXi para almacenar datos. 
 ---
 = Administra los backends de almacenamiento en ONTAP tools
 :allow-uri-read: 
@@ -26,7 +26,7 @@ Siga estos pasos para detectar los back-ends de almacenamiento.
 . Inicie sesión en el cliente de vSphere.
 . En la página de accesos directos, seleccione *Herramientas de NetApp ONTAP* en la sección de plugins.
 . En el panel izquierdo de las herramientas de ONTAP , vaya a *Backends de almacenamiento* y seleccione un backend de almacenamiento.
-. Seleccione el menú de elipses verticales y seleccione *Descubrir almacenamiento*
+. Selecciona el menú de los tres puntos verticales y selecciona *Descubrir almacenamiento*
 
 
 Puede realizar un seguimiento del progreso en el panel de tareas recientes.
@@ -45,7 +45,7 @@ Siga los pasos de esta sección para modificar un back-end de almacenamiento.
 . Inicie sesión en el cliente de vSphere.
 . En la página de accesos directos, seleccione *Herramientas de NetApp ONTAP* en la sección de plugins.
 . En el panel izquierdo de las herramientas de ONTAP , vaya a *Backends de almacenamiento* y seleccione un backend de almacenamiento.
-. Seleccione el menú de elipses verticales y seleccione *Modificar* para modificar las credenciales o el nombre del puerto. Puede realizar un seguimiento del progreso en el panel de tareas recientes.
+. Selecciona el menú de los tres puntos verticales y elige *Modificar* para modificar las credenciales o el nombre del puerto. Puedes seguir el progreso en el panel de tareas recientes.
 
 
 Modifique los clústeres globales de ONTAP con el Administrador de herramientas de ONTAP de la siguiente manera.
@@ -54,7 +54,7 @@ Modifique los clústeres globales de ONTAP con el Administrador de herramientas 
 . Inicie sesión con las herramientas de ONTAP para las credenciales de administrador de VMware vSphere que proporcionó durante la implementación.
 . Seleccione los back-ends de almacenamiento en la barra lateral.
 . Seleccione el backend de almacenamiento que desea modificar.
-. Seleccione el menú de elipses verticales y seleccione *Modificar*.
+. Selecciona el menú de los tres puntos verticales y selecciona *Modificar*.
 . Puede modificar las credenciales o el puerto. Introduzca el *Nombre de usuario* y *Contraseña* para modificar el backend de almacenamiento.
 
 
@@ -68,7 +68,7 @@ Debes eliminar todos los almacenes de datos adjuntos al backend de almacenamient
 . Inicie sesión en el cliente de vSphere.
 . En la página de accesos directos, seleccione *Herramientas de NetApp ONTAP* en la sección de plugins.
 . En el panel izquierdo de las herramientas de ONTAP , vaya a *Backends de almacenamiento* y seleccione un backend de almacenamiento.
-. Seleccione el menú de puntos suspensivos verticales y seleccione *Eliminar*.  Asegúrese de que el backend de almacenamiento no contenga ningún almacén de datos.  Puede seguir el progreso en el panel de tareas recientes.
+. Selecciona el menú de los tres puntos verticales y elige *Eliminar*. Asegúrate de que el backend de almacenamiento no contenga ningún datastore. Puedes seguir el progreso en el panel de tareas recientes.
 
 
 Puedes eliminar clústeres ONTAP globales usando ONTAP tools Manager.
@@ -77,7 +77,7 @@ Puedes eliminar clústeres ONTAP globales usando ONTAP tools Manager.
 . Inicie sesión con las herramientas de ONTAP para las credenciales de administrador de VMware vSphere que proporcionó durante la implementación.
 . Seleccione *Backends de almacenamiento* en la barra lateral.
 . Seleccione el back-end de almacenamiento que desea quitar
-. Seleccione el menú de elipses verticales y seleccione *Eliminar*.
+. Selecciona el menú de los tres puntos verticales y selecciona *Eliminar*.
 
 
 

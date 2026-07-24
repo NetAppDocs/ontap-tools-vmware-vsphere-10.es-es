@@ -7,7 +7,7 @@ indexpage:
   - title: Manos a la obra
     links:
     - title: Notas de la versión
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3358876
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3383264
     - title: Obtenga información sobre las herramientas de ONTAP para VMware vSphere
       url: "/concepts/ontap-tools-overview.html"
     - title: Ponga en marcha herramientas de ONTAP para VMware vSphere

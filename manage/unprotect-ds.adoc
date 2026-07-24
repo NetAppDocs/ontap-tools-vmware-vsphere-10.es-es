@@ -1,0 +1,57 @@
+---
+permalink: manage/unprotect-ds.html 
+sidebar: sidebar 
+keywords: unprotect VMFS datastore, remove datastore protection group, SnapMirror protection removal, ONTAP tools DR cleanup 
+summary: Desprotege un almacén de datos VMFS y, si quieres, elimina los elementos de almacenamiento asociados en el lado de destino. 
+---
+= Desproteger un almacén de datos VMFS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utiliza esta tarea para desproteger un almacén de datos VMFS y, si lo deseas, eliminar los elementos de almacenamiento asociados del lado del destino en el sitio secundario.
+
+.Acerca de esta tarea
+Al desproteger un almacén de datos VMFS, ten en cuenta el siguiente comportamiento:
+
+* Al desproteger el último almacén de datos de un grupo de protección, se elimina el grupo de protección y el nombre de su configuración de protección.
+* Para el último almacén de datos, ONTAP tools muestra el nombre de la configuración de protección.
+
+
+.Antes de empezar
+* Asegúrate de tener privilegios de administración en vSphere.
+* Asegúrate de que tu cuenta de usuario de ONTAP tools tenga permisos para gestionar la configuración de protección.
+* Analiza el impacto de desproteger el último almacén de datos en un grupo de protección.
+* En los clústeres de ONTAP 9, la desprotección de un almacén de datos que no sea el último solo es compatible con las relaciones AutomatedFailOverDuplex.
+
+
+.Pasos
+. Inicia sesión en el vSphere Client.
+. Selecciona el clúster de host y luego selecciona *Almacenes de datos*.
+. Haz clic con el botón derecho en el almacén de datos VMFS elegible que quieras desproteger y selecciona *NetApp ONTAP tools* > *Unprotect datastore*.
++
+
+NOTE: Solo puedes desproteger un almacén de datos a la vez. No se admite la desprotección de varios almacenes de datos a la vez.
+
+. En el cuadro de diálogo de confirmación, revisa el mensaje *Esta acción elimina la protección del almacén de datos. ¿Deseas continuar?*.
+. Opcional: Selecciona *Eliminar elementos de almacenamiento asociados (LUN) e igroups del almacenamiento secundario* para eliminar los LUN replicados y los grupos de consistencia en el sitio de destino.
+. Selecciona *Desproteger almacén de datos*.
++
+
+NOTE: En el caso de los datastores que no sean los últimos, el comportamiento varía según el tipo de almacenamiento:
+
++
+** En ASA r2, al desproteger un almacén de datos que no es el último, aparece el mismo mensaje de confirmación y puedes eliminar recursos del sitio secundario desde el cuadro de diálogo.
+** Para el almacenamiento ONTAP con una relación asíncrona de SnapMirror, no se admite desproteger un almacén de datos que no sea el último.
+** Para el almacenamiento ONTAP con una relación AutomatedFailOverDuplex (AFD), al desproteger un datastore que no sea el último, se elimina la relación AFD y se vuelve a crear porque no se admite la reducción del grupo de consistencia.
++
+La operación de desprotección inicia un trabajo que puedes supervisar en ONTAP tools Manager.
+
+
+
+
+
+.Resultado
+El almacén de datos se elimina de la protección. Si se trataba del último almacén de datos del grupo de protección, ONTAP tools elimina el grupo de protección y la configuración de protección. Si seleccionaste la opción de eliminar, también se eliminan los LUN replicados en el lado de destino y los grupos de consistencia. Para los almacenes de datos elegibles que no sean los últimos en el almacenamiento ONTAP (AutomatedFailOverDuplex solo), ONTAP tools elimina y vuelve a crear la relación AFD como parte de la operación.

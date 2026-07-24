@@ -1,8 +1,8 @@
 ---
 permalink: manage/delete-virtual-machines.html 
 sidebar: sidebar 
-keywords:  
-summary: Use los pasos de esta sección para realizar la limpieza de VASA. 
+keywords: VASA cleanup, clean up VASA configurations, ONTAP tools VM removal cleanup, vVol metadata cleanup 
+summary: Ejecuta la limpieza de VASA tras eliminar las máquinas virtuales. 
 ---
 = Limpia las configuraciones VASA en ONTAP tools
 :allow-uri-read: 

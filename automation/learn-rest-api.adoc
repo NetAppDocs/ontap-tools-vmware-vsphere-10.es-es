@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: automation/learn-rest-api.html 
-keywords: ontap tools vmware vsphere rest api 
+keywords: REST API fundamentals, HTTP methods, JSON, authentication 
 summary: Las herramientas de ONTAP para VMware vSphere 10 son un conjunto de herramientas para la gestión del ciclo de vida de los equipos virtuales. Incluye una sólida API DE REST que puedes utilizar como parte de tus procesos de automatización. 
 ---
 = Conoce la API de REST de las herramientas ONTAP
@@ -55,7 +55,7 @@ Existen varios aspectos del entorno de ONTAP TOOLS Manager que debe tener en cue
 Las ONTAP tools for VMware vSphere 10 se implementan mediante la arquitectura de complemento remoto de vSphere.  El software, incluido el soporte para la API REST, se ejecuta en una máquina virtual separada.
 
 .Dirección IP de las herramientas de ONTAP
-Las herramientas de ONTAP para VMware vSphere 10 exponen una única dirección IP que proporciona una puerta de enlace a las funcionalidades de la máquina virtual. Es necesario proporcionar la dirección durante la configuración inicial y se asigna a un componente de equilibrador de carga interno. La dirección se utiliza en la interfaz de usuario del Administrador de herramientas de ONTAP, así como para acceder a la página de documentación de Swagger y a la API de REST directamente.
+Las ONTAP tools for VMware vSphere 10 exponen una única dirección IP externa (antes equilibrador de carga) que sirve como puerta de enlace a las capacidades de la máquina virtual. Proporcionas esta dirección durante la configuración inicial. La dirección la usa la interfaz de ONTAP tools Manager y también para acceder directamente a la página de documentación de Swagger y a la API de REST.
 
 .Dos API DE REST
 Además de las herramientas de ONTAP para la API DE REST DE VMware vSphere 10, el clúster de ONTAP tiene su propia API DE REST. El administrador de herramientas de ONTAP utiliza la API REST DE ONTAP como cliente para realizar tareas relacionadas con el almacenamiento. Es importante tener en cuenta que estas dos API son separadas y distintas. Para obtener más información, consulte https://docs.netapp.com/us-en/ontap-automation/["Automatización de ONTAP"^].
