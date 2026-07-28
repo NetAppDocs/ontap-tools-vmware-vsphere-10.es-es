@@ -3122,4 +3122,6 @@ Los códigos de error tienen una longitud de cinco dígitos, donde los dos prime
   <block id="3d3b22ece01725fa79df30b77fa3a31a" category="sidebar">Migra ONTAP tools for VMware vSphere 9.xx a 10.6</block>
   <block id="41a5e22b558335c66fd0b39340507737" category="sidebar">Conceptos y elegibilidad de la protección granular de los almacenes de datos</block>
   <block id="78b8a2472e1c8fa0502b3ca56bf4d2c2" category="sidebar">Configura el clúster para la protección del almacén de datos</block>
+  <block id="6449edcecf1e41dc6b7285ef82391ccf" category="section-title">Límites de configuración para la detección del backend de almacenamiento</block>
+  <block id="1bf037add08fddef448fa6335970a313" category="paragraph">Las herramientas de ONTAP permiten detectar el backend de almacenamiento de hasta 200 SVM y aproximadamente 10,000 LUN.</block>
 </blocks>

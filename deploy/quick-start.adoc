@@ -67,11 +67,6 @@ Agrega backends de almacenamiento local con credenciales de clúster o SVM usand
 [discrete]
 == Tareas siguientes opcionales
 
-
-
-[[optional-next-tasks]]
-== Tareas siguientes opcionales
-
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Una"] Configura los roles y privilegios de usuario de ONTAP
 [role="quick-margin-para"]
 Configura roles ONTAP personalizados para un acceso con privilegios mínimos en lugar de usar la cuenta admin predeterminada.

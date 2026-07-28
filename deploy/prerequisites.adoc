@@ -197,6 +197,13 @@ NOTE: Los recuentos de host en la tabla representan el total combinado de todos 
 
 
 
+[[configuration-limits-for-storage-backend-discovery]]
+== Límites de configuración para la detección del backend de almacenamiento
+
+Las herramientas de ONTAP permiten detectar el backend de almacenamiento de hasta 200 SVM y aproximadamente 10,000 LUN.
+
+
+
 [[configuration-limits-for-vmfs-and-nfs-datastores]]
 == Límites de configuración para los almacenes de datos VMFS y NFS
 
