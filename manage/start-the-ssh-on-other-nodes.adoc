@@ -11,7 +11,7 @@ summary: Inicia SSH en los demás nodos antes de ejecutar una actualización.
 
 
 [role="lead"]
-Debe iniciar SSH en otros nodos antes de actualizar.
+Antes de actualizar las herramientas de ONTAP para VMware vSphere, debes iniciar SSH en cada uno de los demás nodos de tu entorno.
 
 .Antes de empezar
 Habilite la extensión VASA Provider para su instancia de vCenter Server.

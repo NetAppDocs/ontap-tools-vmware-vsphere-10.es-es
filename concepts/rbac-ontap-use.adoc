@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: ONTAP RBAC deployment, custom roles, user configuration, JSON role definition 
 summary: Revisa las consideraciones de RBAC de ONTAP para ONTAP tools antes de usarlo en un entorno de producción. 
 ---
-= Consideraciones de ONTAP RBAC para ONTAP tools
+= RBAC de ONTAP en ONTAP tools for VMware vSphere
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Existen varios aspectos de las herramientas de ONTAP para la implementación del control de acceso basado en roles de VMware vSphere 10 con ONTAP que debería tener en cuenta antes de utilizarlo en un entorno de producción.
+ONTAP tools for VMware vSphere admite el control de acceso basado en roles (RBAC) a través de ONTAP, lo que te permite crear usuarios y roles personalizados que restringen el acceso a los recursos de almacenamiento. Entender el proceso de configuración y los niveles de privilegio te ayuda a configurar los controles de acceso adecuados antes de implementar ONTAP tools en un entorno de producción.
 
 
 
@@ -20,7 +20,7 @@ Existen varios aspectos de las herramientas de ONTAP para la implementación del
 
 Las ONTAP tools for VMware vSphere incluyen soporte para crear un usuario ONTAP con un rol personalizado.  Las definiciones están empaquetadas en un archivo JSON que puedes cargar en el clúster ONTAP .  Puede crear el usuario y adaptar el rol a su entorno y necesidades de seguridad.
 
-Los pasos de configuración principales se describen a un nivel superior a continuación. Consulte link:../configure/configure-user-role-and-privileges.html["Configure los roles y privilegios de usuario de ONTAP"]si desea obtener más información.
+En la siguiente sección se describen a grandes rasgos los principales pasos de configuración. Consulta link:../configure/configure-user-role-and-privileges.html["Configure los roles y privilegios de usuario de ONTAP"] para más detalles.
 
 .1. Prepare
 Debe disponer de credenciales administrativas para el Administrador de herramientas de ONTAP y el clúster de ONTAP.
@@ -32,7 +32,7 @@ Después de iniciar sesión en la interfaz de usuario del Administrador de herra
 Después de iniciar sesión en System Manager, puede crear el usuario y el rol:
 
 . Selecciona *Cluster* a la izquierda y luego *Settings*.
-. Desplácese hacia abajo hasta *Usuarios y roles* y haga clic en `-->`.
+. Desplázate hacia abajo hasta *Usuarios y roles* y selecciona  `-->`.
 . Seleccione *Agregar* en *Usuarios* y seleccione *Productos de virtualización*.
 . Seleccione el archivo JSON en su estación de trabajo local y cárguelo.
 
@@ -59,7 +59,7 @@ Las definiciones de RBAC se empaquetan como varias funcionalidades de producto, 
 [[privileges]]
 === Privilegios
 
-Los privilegios de rol se organizan en cuatro conjuntos basados en el nivel de acceso necesario para el almacenamiento ONTAP. Los privilegios en los que se basan los roles incluyen:
+Los privilegios de los roles se organizan en cuatro grupos en función del nivel de acceso necesario para el almacenamiento ONTAP. Los privilegios en los que se basan los roles son los siguientes:
 
 * Detección
 +
@@ -84,7 +84,7 @@ Este rol le permite destruir almacenamiento. También incluye todas las Privileg
 [[generate-the-user-with-a-role]]
 === Generar el usuario con un rol
 
-Después de haber seleccionado las opciones de configuración para su entorno, haga clic en *Agregar* y ONTAP crea el usuario y el rol. El nombre del rol generado es una concatenación de los siguientes valores:
+Una vez que hayas seleccionado las opciones de configuración para tu entorno, haz clic en *Add* y ONTAP crea el usuario y el rol. El nombre del rol generado es una concatenación de los siguientes valores:
 
 * Valor de prefijo constante definido en el archivo JSON (por ejemplo “OTV_10”)
 * Capacidad del producto que ha seleccionado
@@ -94,4 +94,4 @@ Después de haber seleccionado las opciones de configuración para su entorno, h
 .Ejemplo
 `OTV_10_VSC_Discovery_Create`
 
-El nuevo usuario se añadirá a la lista en la página "Usuarios y roles". Ten en cuenta que se admiten los métodos de inicio de sesión de usuario HTTP y ONTAPI.
+El nuevo usuario aparece en la lista de la página *Usuarios y roles*. Ten en cuenta que se admiten tanto el inicio de sesión mediante HTTP como mediante ONTAPI.

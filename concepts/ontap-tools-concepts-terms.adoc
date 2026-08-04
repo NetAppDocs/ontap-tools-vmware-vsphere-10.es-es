@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: key concepts, ONTAP tools terms, consistency group, dual stack 
 summary: Repasa los conceptos y términos clave utilizados en la documentación de ONTAP tools for VMware vSphere. 
 ---
-= Conceptos y términos clave en ONTAP tools
+= Términos y definiciones clave de las herramientas de ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-En la siguiente sección se describen los conceptos y términos clave utilizados en el documento.
+Familiarízate con los conceptos clave y la terminología utilizada en ONTAP tools for VMware vSphere. Las definiciones abarcan los storage backends, los volúmenes virtuales (vVols), la sincronización activa de SnapMirror, VASA, SRA y otros componentes fundamentales.
 
 
 
@@ -53,7 +53,7 @@ Una LUN es un número utilizado para identificar una unidad lógica dentro de un
 [[nvme-namespace-and-subsystem]]
 === Subsistema y espacio de nombres NVMe
 
-Un espacio de nombres NVMe es una cantidad de memoria no volátil que se puede formatear en bloques lógicos. Los espacios de nombres son el equivalente de LUN para los protocolos FC e iSCSI, y un subsistema NVMe es análogo a un igroup. Un subsistema NVMe se puede asociar con iniciadores para que los iniciadores asociados puedan acceder a espacios de nombres dentro del subsistema.
+Un espacio de nombres NVMe es una cantidad de memoria no volátil que se puede formatear en bloques lógicos. Los espacios de nombres son el equivalente a los LUN de los protocolos FC e iSCSI, y un subsistema NVMe es análogo a un igroup. Un subsistema NVMe puede asociarse a iniciadores, lo que les permite acceder a los espacios de nombres dentro del subsistema.
 
 
 
@@ -74,14 +74,14 @@ OVA es un estándar abierto para empaquetar y distribuir dispositivos virtuales 
 [[recovery-point-objective-rpo]]
 === Objetivo de punto de recuperación (RPO)
 
-El RPO mide la frecuencia con la que se realizan copias de seguridad o replican los datos. Especifica el momento exacto en el que se deben restaurar los datos tras una interrupción para reanudar las operaciones comerciales. Por ejemplo, si una organización tiene un objetivo de punto de recuperación de 4 horas, puede tolerar que se pierda hasta 4 horas de datos en caso de desastre.
+El RPO mide con qué frecuencia haces copias de seguridad o replicas datos. Especifica el punto exacto en el tiempo al que necesitas restaurar los datos después de una interrupción para reanudar las operaciones del negocio. Por ejemplo, si una organización tiene un RPO de cuatro horas, puede tolerar la pérdida de hasta cuatro horas de datos en caso de desastre.
 
 
 
 [[snapmirror-active-sync]]
 === SnapMirror síncrono activo
 
-La sincronización activa de SnapMirror permite que los servicios empresariales continúen funcionando incluso con un fallo completo del sitio, ya que permite a las aplicaciones conmutar por error de forma transparente mediante una copia secundaria. No se requiere intervención manual o secuencias de comandos personalizadas para activar una conmutación por error con la sincronización activa de SnapMirror. Más información sobre https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html["SnapMirror síncrono activo"].
+SnapMirror active sync permite que los servicios empresariales sigan funcionando incluso en caso de un fallo total del sitio, permitiendo que las aplicaciones realicen una conmutación por error de forma transparente usando una copia secundaria. SnapMirror active sync no requiere intervención manual ni scripts personalizados para activar una conmutación por error. Más información sobre https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html["SnapMirror síncrono activo"].
 
 
 
@@ -119,7 +119,7 @@ SVM es la unidad de multitenancy en ONTAP. Al igual que una máquina virtual que
 * * El acceso no uniforme del host* significa que los hosts en cada sitio están conectados solo al clúster en el mismo sitio. Las rutas entre sitios y las rutas extendidas no están conectadas.
 +
 
-NOTE: Se admite el acceso uniforme de hosts en cualquier implementación de sincronización activa de SnapMirror; el acceso no uniforme de host solo se admite para implementaciones activo-activo simétricas. Más información sobre https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html["Información general sobre la sincronización activa de SnapMirror en ONTAP"].
+NOTE: SnapMirror active sync admite el acceso uniforme a los hosts en cualquier implementación; solo las implementaciones simétricas activo/activo admiten el acceso no uniforme a los hosts. Más información sobre https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html["Información general sobre la sincronización activa de SnapMirror en ONTAP"].
 
 
 
@@ -135,7 +135,7 @@ VMFS es un sistema de archivos en clúster diseñado para almacenar archivos de 
 [[virtual-volumes-vvols]]
 === Volúmenes virtuales (vVols)
 
-vVols proporcionan una abstracción a nivel de volumen para el almacenamiento utilizado por una máquina virtual. Incluye varios beneficios y proporciona una alternativa al uso de un LUN tradicional. Un datastore vVol se asocia típicamente con un único LUN que actúa como contenedor para vVols.
+vVols proporcionan una abstracción a nivel de volumen para el almacenamiento utilizado por una máquina virtual. vVols ofrecen varias ventajas y constituyen una alternativa al uso de un LUN tradicional. Un almacén de datos vVol suele estar asociado a un único LUN que actúa como contenedor para vVols.
 
 
 
@@ -149,7 +149,7 @@ Las políticas de almacenamiento de máquinas virtuales se crean en vCenter Serv
 [[vmware-live-site-recovery]]
 === Recuperación de sitio en vivo de VMware
 
-Live Site Recovery de VMware, anteriormente conocido como Site Recovery Manager (SRM), proporciona continuidad de negocio, recuperación ante desastres, migración de sitios y capacidades de pruebas sin interrupciones para entornos virtuales de VMware.
+VMware Live Site Recovery, anteriormente conocido como Site Recovery Manager (SRM), ofrece funciones de continuidad del negocio, recuperación ante desastres, migración de sitios y pruebas sin interrupciones para entornos virtuales de VMware.
 
 
 

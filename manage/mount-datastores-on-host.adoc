@@ -11,7 +11,7 @@ summary: Monta los almacenes de datos en hosts adicionales tras añadir hosts a 
 
 
 [role="lead"]
-El montaje de un almacén de datos permite acceder al almacenamiento a hosts adicionales. El almacén de datos se puede montar en los hosts adicionales después de añadir los hosts al entorno de VMware.
+Montar un almacén de datos proporciona acceso al almacenamiento a los hosts adicionales después de añadirlos a tu entorno VMware.
 
 
 NOTE: Una vez añadido el host, espera a que finalice el proceso de detección programado para que aparezca en ONTAP tools. Como alternativa, puedes ejecutar manualmente la detección desde la pantalla de resumen de NetApp ONTAP tools. Para obtener información sobre cómo añadir un host ESXi a tu clúster de vSphere, consulta https://techdocs.broadcom.com/["Documentación técnica de Broadcom"].
@@ -20,11 +20,10 @@ NOTE: Una vez añadido el host, espera a que finalice el proceso de detección p
 * Algunas acciones de clic con el botón derecho quedan deshabilitadas o no disponibles según la versión del cliente de vSphere y el tipo de almacén de datos seleccionado.
 +
 ** Si utiliza vSphere Client 8,0 o versiones posteriores, algunas de las opciones del botón derecho están ocultas.
-** Desde las versiones de vSphere 7.0U3 a vSphere 8,0, aunque aparezcan las opciones, la acción se desactivará.
+** Al pasar de vSphere 7.0U3 a vSphere 8.0, aunque aparecen las opciones, la acción está desactivada.
 
 
 * vSphere deshabilita la opción de montaje de almacén de datos cuando el clúster host está protegido con configuraciones uniformes.
-* Cuando se monta un almacén de datos con nconnect en un nuevo host, ONTAP tools aplica el valor de nconnect del almacén de datos si este supera la configuración del host.
 
 
 .Pasos

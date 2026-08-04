@@ -11,11 +11,15 @@ summary: Configura las notificaciones de umbrales para los niveles de volumen y 
 
 
 [role="lead"]
-Es posible establecer el umbral para recibir notificaciones en vCenter Server cuando la capacidad del volumen y del agregado alcanzan ciertos niveles.
+Puedes configurar umbrales de almacenamiento para recibir notificaciones en vCenter Server cuando la capacidad de un volumen o un agregado alcance un cierto nivel.
 
-.Pasos:
+.Pasos
 . Inicie sesión en el cliente de vSphere.
 . En la página de accesos directos, seleccione *Herramientas de NetApp ONTAP* en la sección de plugins.
 . En el panel izquierdo de las herramientas de ONTAP , vaya a *Configuración* > *Configuración de umbral* > *Editar*.
-. En la ventana *Editar umbral*, proporcione los valores deseados en los campos *Casi lleno* y *Completo* y seleccione *Guardar*. Puede restaurar los valores umbrales a los valores predeterminados recomendados: 80 para Casi lleno y 90 para Lleno.
+. En la ventana *Editar umbral*, introduce los valores deseados en los campos *Casi lleno* y *Lleno* y selecciona *Guardar*.
++
+
+NOTE: Puedes restablecer los valores de umbral a los valores predeterminados recomendados: 80 para *Casi lleno* y 90 para *Lleno*.
+
 
