@@ -2016,8 +2016,6 @@ Los códigos de error tienen una longitud de cinco dígitos, donde los dos prime
   <block id="dc99d10a215fcfc7c9cc258f6b526f04" category="doc">Configura SRA usando el gestor de arrays en ONTAP tools</block>
   <block id="f825d08cca5235c68d18f5f167189a42" category="doc">Configura SRA en el dispositivo VMware Live Site Recovery usando ONTAP tools</block>
   <block id="8c8cc20f279873e3e2c26985f73dde50" category="doc">Configura los almacenes de datos de marcadores de posición en ONTAP tools</block>
-  <block id="7daa54a7e34530faf73a185cac6ff92e" category="doc">Configura sitios protegidos y de recuperación en ONTAP tools</block>
-  <block id="7f76078e340f36a84d5f402d8a9e9ed2" category="doc">Configura SRA en ONTAP tools para entornos altamente escalados</block>
   <block id="366099eedc535323fc065faade609247" category="doc">Configura SRA en ONTAP tools para entornos SAN y NAS</block>
   <block id="36acaddf44788c31be5317a19ff8bcfa" category="doc">Configura SRA en ONTAP tools para proteger los datastores</block>
   <block id="866ca228b7c9c7c4dd7f33b4edfe6343" category="doc">Protección fan-out en las herramientas ONTAP</block>
@@ -2851,7 +2849,6 @@ Los códigos de error tienen una longitud de cinco dígitos, donde los dos prime
   <block id="41d5b3331c49688beabf64a476565b2f" category="paragraph">Para más información, consulta<block ref="63042c288d643bd286f708c30aa7eeb1" category="inline-link-rx"></block></block>
   <block id="70ada8320af8255a677b6ffe7e62fb77" category="list-text">Agrega los datastores a la protección del clúster de hosts siguiendo <block ref="606bd525eb6add3259ec861686535f41" category="inline-link-macro-rx"></block>. Agrega ambos tipos de políticas: asíncronas y síncronas.</block>
   <block id="30c3acc62ace9fe8b9f51083513c9b1f" category="summary">Infórmate sobre la protección granular de los almacenes de datos y los criterios de elegibilidad de los almacenes de datos antes de proteger los almacenes de datos en un clúster de hosts.</block>
-  <block id="f8bdb2b4320068538b2e660cf5594097" category="doc">Criterios de elegibilidad para la protección granular de los almacenes de datos</block>
   <block id="7a6c5f13c11ac0091369e5de3372b041" category="paragraph">Usa la protección granular de almacenes de datos para proteger los almacenes de datos VMFS seleccionados en un clúster de hosts en vez de proteger todo el clúster.</block>
   <block id="94ba1053dfcb4c2f50ecb31c2a3a48e9" category="paragraph">La protección granular de los almacenes de datos está disponible con ONTAP tools for VMware vSphere 10.6 y versiones posteriores. Esta función permite planificar la protección a nivel de almacén de datos en lugar de una selección que abarque todo el clúster.</block>
   <block id="5885c3f17ed13c3b9ddcd82efb888751" category="paragraph">Esta función te permite:</block>
@@ -3123,4 +3120,7 @@ Los códigos de error tienen una longitud de cinco dígitos, donde los dos prime
   <block id="f02ba84a6292d236b6193eb515758b58" category="cell">La página muestra todos los volúmenes. Puedes ampliar o eliminar almacenamiento desde el panel de almacenamiento de ONTAP. ONTAP tools for VMware vSphere no admite esta vista para los datastores basados en sistemas ASA r2 vVols.</block>
   <block id="d6ac92fc703f8db58239689a33a3a860" category="doc">Desinstala tus ONTAP tools for VMware vSphere</block>
   <block id="675f332e8d70702f8454fa3cd1db7207" category="paragraph">La desinstalación de ONTAP tools for VMware vSphere elimina todos los datos de las herramientas, así que debes completar estos pasos para finalizar correctamente tu implementación y evitar una pérdida inesperada de datos.</block>
+  <block id="61aba9a185948f67b0e30c93c8bd8745" category="doc">Emparejar sitios y configurar grupos de protección en ONTAP tools</block>
+  <block id="2f1ee6929021bf5cd62c7d2d50b7d710" category="doc">Configuración del tiempo de espera de SRA para entornos altamente escalables en ONTAP tools</block>
+  <block id="ead0b27d7cf57e3420b139c5b99f4200" category="doc">Criterios de elegibilidad para la protección granular de almacenes de datos en las herramientas de ONTAP</block>
 </blocks>
