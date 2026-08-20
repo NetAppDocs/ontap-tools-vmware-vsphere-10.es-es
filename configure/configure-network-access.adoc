@@ -11,14 +11,14 @@ summary: Configura el acceso a la red para controlar qué direcciones IP de los 
 
 
 [role="lead"]
-De forma predeterminada, todas las direcciones IP detectadas desde el host ESXi se agregan automáticamente a la política de exportación, a menos que configure el acceso a la red.  Puede modificar la política de exportación para permitir el acceso sólo desde direcciones IP específicas.  Si un host ESXi excluido intenta una operación de montaje, la operación falla.
+De forma predeterminada, ONTAP tools añade automáticamente todas las direcciones IP detectadas en el host ESXi a la política de exportación, a menos que configures el acceso a la red. Puedes modificar la política de exportación para permitir el acceso solo desde direcciones IP específicas; las operaciones de montaje fallan para los hosts ESXi excluidos.
 
 .Pasos
 . Inicie sesión en el cliente de vSphere.
-. Seleccione *Herramientas de NetApp ONTAP* en la página de accesos directos en la sección de plugins.
+. Selecciona *NetApp ONTAP tools* en la página de accesos directos en la sección de complementos.
 . En el panel izquierdo de las herramientas de ONTAP , vaya a *Configuración* > *Administrar acceso a la red* > *Editar*.
 +
-Para agregar varias direcciones IP, separe la lista con comas, rango, enrutamiento entre dominios sin clases (CIDR) o una combinación de los tres.
+Para añadir varias direcciones IP, separa la lista con comas, rangos, notación Classless Inter-Domain Routing (CIDR) o una combinación de los tres.
 
 . Seleccione *Guardar*.
 

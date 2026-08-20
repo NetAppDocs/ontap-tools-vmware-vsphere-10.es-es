@@ -4,18 +4,18 @@ sidebar: sidebar
 keywords: ONTAP tools dashboard, vCenter plug-in overview, datastore and backend summary, Enhanced Linked Mode dashboard 
 summary: Consulta el panel de herramientas de ONTAP para ver un resumen del estado de los complementos, los almacenes de datos y los datos del servidor vCenter. 
 ---
-= Conoce el panel de ONTAP tools
+= Conoce el panel de control de las ONTAP tools for VMware vSphere
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Al seleccionar el ícono del complemento de ONTAP tools for VMware vSphere en la sección de accesos directos en el cliente vCenter, se abre la página de descripción general.  Este panel proporciona un resumen de las ONTAP tools for VMware vSphere .
+Selecciona el icono del complemento ONTAP tools for VMware vSphere en la sección de accesos directos del cliente vCenter para abrir el panel, que resume el estado del complemento, los datastores y los datos del servidor vCenter.
 
 En el modo vinculado mejorado (ELM), aparece el menú desplegable de vCenter Server.  Seleccione un servidor vCenter para ver sus datos.  El menú desplegable está disponible en todas las vistas de lista del complemento. Al seleccionar un vCenter Server en una página, permanece igual al cambiar de pestaña en el complemento.image:../media/remote-plugin-dashboard.png["Información general del panel de control"]
 
-Desde la página de descripción general, puede ejecutar la acción *Descubrimiento*. La acción de descubrimiento detecta backends de almacenamiento, hosts, almacenes de datos y estados de protección o relaciones recientemente agregados o actualizados en el nivel de vCenter.  Ejecute el descubrimiento a pedido sin esperar el descubrimiento programado.
+Desde la página de resumen, puedes ejecutar la acción *Discovery* para detectar backends de almacenamiento, hosts, almacenes de datos recién añadidos o actualizados, y el estado de protección o las relaciones a nivel de vCenter. Ejecuta un descubrimiento bajo demanda sin esperar al descubrimiento programado.
 
 Si añades un nuevo host a un clúster de hosts protegidos, la configuración de protección pasa a ser *Parcialmente protegido*.
 
@@ -40,10 +40,10 @@ La consola tiene varias tarjetas que muestran diferentes elementos del sistema. 
 | Back-ends de almacenamiento: Capacidad | Esta tarjeta muestra la capacidad agregada utilizada y disponible de todos los backends de almacenamiento para la instancia de vCenter Server seleccionada. Para los sistemas de almacenamiento ASA r2, los datos de capacidad no se muestran porque el almacenamiento está desagregado. 
 
 
-| Equipos virtuales | Esta tarjeta muestra las 10 máquinas virtuales principales ordenadas por métrica de rendimiento. Puede seleccionar el encabezado para obtener las 10 máquinas virtuales principales de la métrica seleccionada ordenadas por orden ascendente o descendente. Los cambios de clasificación y filtrado realizados en la tarjeta persisten hasta que cambie o borre la caché del navegador. 
+| Equipos virtuales | Esta ficha muestra las 10 máquinas virtuales principales ordenadas según un indicador de rendimiento. Puedes seleccionar el encabezado para ordenar las 10 máquinas virtuales principales según el indicador seleccionado, ya sea en orden ascendente o descendente. Los cambios de ordenación y filtrado realizados en la ficha se mantienen hasta que modifiques o borres la caché del navegador. 
 
 
-| Almacenes de datos | Esta tarjeta muestra los 10 almacenes de datos principales ordenados por métrica de rendimiento. Puede seleccionar el encabezado para obtener los 10 almacenes de datos principales para la métrica seleccionada ordenados por orden ascendente o descendente. Los cambios de clasificación y filtrado realizados en la tarjeta persisten hasta que cambie o borre la caché del navegador. Hay una lista desplegable de tipo de almacén de datos para seleccionar el tipo de almacenes de datos: NFS, VMFS o vVols. 
+| Almacenes de datos | Esta tarjeta muestra los 10 almacenes de datos principales ordenados según una métrica de rendimiento. Puedes seleccionar el encabezado para ordenar los 10 almacenes de datos principales según la métrica seleccionada, ya sea en orden ascendente o descendente. Los cambios de ordenación y filtrado realizados en la tarjeta se mantienen hasta que cambies o borres la caché del navegador. Usa la lista desplegable de tipo de almacén de datos para seleccionar el tipo de almacén: NFS, VMFS o vVols. 
 
 
 | Tarjeta de cumplimiento de normativas del host ESXi | Esta tarjeta muestra si todos los hosts ESXi (para el vCenter seleccionado) siguen la configuración recomendada de host NetApp por grupo o categoría. Puedes seleccionar el enlace *Aplicar configuración recomendada* para aplicar la configuración recomendada. Puedes seleccionar el estado de cumplimiento de los hosts para ver la lista de hosts. 

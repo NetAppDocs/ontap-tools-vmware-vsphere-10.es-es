@@ -4,16 +4,16 @@ sidebar: sidebar
 keywords: ONTAP tools igroup workflow, export policy management, initiator group mapping, VMware datastore access control 
 summary: Entiende cómo las herramientas de ONTAP crean y gestionan los igroups y las políticas de exportación para el acceso a los datastores. 
 ---
-= Cómo las herramientas de ONTAP gestionan los igroups y las políticas de exportación
+= Flujos de trabajo de Igroup y de políticas de exportación en ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Los grupos de iniciadores (igroups) son tablas de nombres de puertos mundiales (WWPN) de host de protocolo FC o nombres de nodos calificados de host iSCSI. Puede definir iGroups y asignarlas a LUN para controlar qué iniciadores tienen acceso a las LUN.
+Utiliza esta información para comprender cómo ONTAP tools for VMware vSphere crea y gestiona los igroups y las políticas de exportación para el acceso a los datastores.
 
-En ONTAP tools for VMware vSphere 9.x, los igroups se creaban y gestionaban en una estructura plana, donde cada datastore en vCenter se asociaba con un solo igroup. Este modelo limitaba la flexibilidad y la reutilización de los igroups en varios datastores. ONTAP tools for VMware vSphere 10.4 introduce igroups anidados, donde cada datastore en vCenter está asociado a un igroup padre, mientras que cada host está vinculado a un igroup hijo bajo ese padre. Puedes definir igroups padre personalizados con nombres definidos por el usuario para reutilizarlos en varios datastores y así facilitar la gestión de los igroups. Conoce el flujo de trabajo de los igroups para gestionar LUNs y datastores en ONTAP tools for VMware vSphere. Diferentes flujos de trabajo generan configuraciones de igroups variables, como se muestra en los siguientes ejemplos:
+En ONTAP tools for VMware vSphere 9.x, los igroups se creaban y gestionaban en una estructura plana, donde cada almacén de datos en vCenter se asociaba con un solo igroup. Este modelo limitaba la flexibilidad y la reutilización de los igroups en varios almacenes de datos. ONTAP tools for VMware vSphere 10.4 introduce igroups anidados, donde cada almacén de datos en vCenter está asociado a un igroup padre, mientras que cada host está vinculado a un igroup hijo bajo ese padre. Puedes definir igroups padre personalizados con nombres definidos por el usuario para reutilizarlos en distintos almacenes de datos y así facilitar la gestión de los igroups. Usa esta información para entender cómo ONTAP tools for VMware vSphere gestiona los LUN y los almacenes de datos a través de flujos de trabajo de igroup. Diferentes flujos de trabajo generan configuraciones de igroup variables, como se muestra en los siguientes ejemplos:
 
 
 NOTE: Los nombres mencionados son sólo para fines ilustrativos y no se refieren a nombres de igroups reales.  Los igroups administrados por herramientas ONTAP usan el prefijo “otv_”.  A los igroups personalizados se les puede dar cualquier nombre.
@@ -78,7 +78,7 @@ Montar el almacén de datos existente en un host adicional
 
 
 
-Las ONTAP tools for VMware vSphere crean un igroup secundario host2Igroup y lo agregan al igroup principal existente DS1Igroup.
+ONTAP tools for VMware vSphere crea un igroup secundario host2Igroup y lo añade al igroup principal existente DS1Igroup.
 
 .Ejemplo 3:
 Desmontar un almacén de datos de un host
@@ -203,7 +203,7 @@ Migración de las herramientas ONTAP 9 a 10 (normalización de igroups)
 
 *Flujo de trabajo*
 
-Las herramientas ONTAP para las versiones VMware vSPhere 9.x no admiten igroups jerárquicos.  Durante la migración a versiones 10.3 o superiores, los igroups deben normalizarse en la estructura jerárquica.
+ONTAP tools for VMware vSphere 9.x no admiten igroups jerárquicos. Durante la migración a 10.3 o versiones superiores, los igroups deben normalizarse en la estructura jerárquica.
 
 Antes de la migración:
 
@@ -243,7 +243,7 @@ Al crear un almacén de datos NFS en las herramientas de ONTAP para VMware vSphe
 
 Al montar un almacén de datos NFS en un nuevo host ESXi, las herramientas de ONTAP para VMware vSphere agregan la dirección IP del host a la política de exportación existente asociada al almacén de datos. Esto permite que el nuevo host acceda al almacén de datos sin crear una nueva política de exportación.
 
-Cuando elimina o desmonta un almacén de datos NFS de un host ESXi, las ONTAP tools for VMware vSphere eliminan la dirección IP del host de la política de exportación. Si ningún otro host utiliza esa política de exportación, se eliminará. Cuando elimina un almacén de datos NFS, las ONTAP tools for VMware vSphere eliminan la política de exportación asociada con ese almacén de datos si no la reutilizan otros almacenes de datos. Si se reutiliza la política de exportación, conserva la dirección IP del host y no cambia. Cuando se eliminan los almacenes de datos, la política de exportación anula la asignación de la dirección IP del host y asigna una política de exportación predeterminada, de modo que los sistemas ONTAP puedan acceder a ellos si es necesario.
+Cuando eliminas o desmontas un almacén de datos NFS de un host ESXi, ONTAP tools for VMware vSphere elimina la dirección IP del host de la política de exportación. Si ningún otro host está usando esa política de exportación, se eliminará. Cuando eliminas un almacén de datos NFS, ONTAP tools for VMware vSphere elimina la política de exportación asociada a ese almacén de datos si no la reutiliza ningún otro almacén de datos. Si la política de exportación se reutiliza, mantiene la dirección IP del host y no cambia. Cuando eliminas almacenes de datos, ONTAP tools elimina la dirección IP del host de la política de exportación y asigna la política de exportación predeterminada si ONTAP requiere acceso.
 
 La asignación de la política de exportación varía según se reutilice en diferentes almacenes de datos. Al reutilizar la política de exportación, se puede añadir la nueva dirección IP del host. Al eliminar o desmontar un almacén de datos que utiliza una política de exportación compartida, esta no se eliminará. Permanecerá sin cambios y la dirección IP del host no se eliminará, ya que se comparte con los demás almacenes de datos. No se recomienda reutilizar las políticas de exportación, ya que puede causar problemas de acceso y latencia.
 

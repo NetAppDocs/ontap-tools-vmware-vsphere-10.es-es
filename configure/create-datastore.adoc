@@ -11,9 +11,12 @@ summary: Crea almacenes de datos NFS, VMFS o vVols en ONTAP tools a nivel de hos
 
 
 [role="lead"]
-Cuando crea un almacén de datos en el nivel del clúster de host, las herramientas de ONTAP lo montan en todos los hosts de destino y habilitan la acción solo si tiene los privilegios necesarios.
+Crea un almacén de datos NFS, VMFS o vVols a nivel de host o de clúster de hosts. Cuando creas un almacén de datos a nivel de clúster de hosts, ONTAP tools lo monta en todos los hosts de destino, siempre que tengas los Privileges necesarios.
 
-*Interoperabilidad entre almacenes de datos nativos con vCenter Server y almacenes de datos administrados por herramientas ONTAP*
+
+
+[[interoperability-between-native-datastores-and-ontap-tools-managed-datastores]]
+== Interoperabilidad entre los almacenes de datos nativos y los almacenes de datos gestionados por ONTAP tools
 
 A partir de las ONTAP tools for VMware vSphere 10.4, las herramientas ONTAP crean igroups anidados para almacenes de datos, con igroups principales específicos para los almacenes de datos y igroups secundarios asignados a los hosts.  Puede crear igroups planos desde ONTAP System Manager y usarlos para crear almacenes de datos VMFS sin utilizar herramientas ONTAP . Referirse a https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html["Administrar iniciadores SAN y igroups"] Para más información.
 
@@ -43,7 +46,7 @@ NOTE: El sistema R2 de ASA es compatible con los protocolos iSCSI y FC para vVol
 . Seleccione la máquina virtual de almacenamiento donde desea crear el almacén de datos.
 . En *Opciones avanzadas*:
 +
-** Si seleccionas la *política de exportación personalizada*, ejecuta el proceso de detección en vCenter para todos los objetos antes de continuar. Te recomendamos que no uses esta opción.
+** Si seleccionas la *Política de exportación personalizada*, ejecuta el proceso de detección en vCenter para todos los objetos antes de continuar. NetApp recomienda que no uses esta opción.
 ** Puedes seleccionar un nombre de *grupo iniciador personalizado* para los protocolos iSCSI y FC.
 +
 
@@ -61,7 +64,7 @@ Al crear un nuevo volumen, puedes activar QoS en el almacén de datos. Por defec
 --
 .Cree un almacén de datos NFS
 --
-Un almacén de datos NFS conecta los hosts ESXi al almacenamiento compartido mediante el protocolo NFS. Es sencillo y flexible y se utiliza en entornos VMware vSphere.
+Un almacén de datos NFS conecta los hosts ESXi al almacenamiento compartido mediante el protocolo NFS. Es sencillo y flexible, y los entornos VMware vSphere lo utilizan habitualmente.
 
 .Pasos
 . Inicia sesión en el vSphere Client.
@@ -84,7 +87,7 @@ NOTE: La autenticación Kerberos solo está disponible cuando se selecciona el p
 NOTE: No se puede crear un almacén de datos NFS utilizando la política de volumen raíz o predeterminada de SVM.
 
 +
-** En las *Opciones avanzadas*, el botón de selección *Asimétrico* solo aparece si se selecciona rendimiento o capacidad en el menú desplegable de la plataforma. Sin embargo, la opción *Asimétrico* no se aplica a la creación de datastore NFS.
+** En las *Opciones avanzadas*, el botón de selección *Asimétrico* solo aparece si seleccionas rendimiento o capacidad en la lista desplegable de plataformas. Sin embargo, la opción *Asimétrico* no se aplica a la creación de datastore NFS.
 ** Cuando eliges la opción *Any* en el menú desplegable de la plataforma, todas las SVM en el vCenter son visibles. La plataforma y la configuración asimétrica no afectan la visibilidad.
 
 
@@ -118,7 +121,7 @@ NOTE: VMware vSphere 7,0 U3 y las versiones posteriores admiten el protocolo NVM
 
 * Si utilizas el protocolo NVMe/FC, sigue estos pasos para configurar el host ESXi:
 +
-.. Si aún no está habilitado, habilita NVMe over Fabrics (NVMe-oF) en tus hosts ESXi.
+.. Si aún no está activado, activa NVMe over Fabrics (NVMe-oF) en tus hosts ESXi.
 .. Complete la división en zonas de SCSI.
 .. Asegúrese de que los hosts ESXi y el sistema ONTAP estén conectados en una capa física y lógica.
 

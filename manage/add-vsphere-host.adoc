@@ -11,15 +11,15 @@ summary: Agrega hosts de VMware vSphere a ONTAP tools for VMware vSphere.
 
 
 [role="lead"]
-Agregue nuevos hosts de VMware vSphere a las ONTAP tools for VMware vSphere para administrar y proteger los almacenes de datos en los hosts.
+Añade nuevos hosts de VMware vSphere a ONTAP tools for VMware vSphere para que puedas gestionar y proteger los almacenes de datos de los hosts.
 
 .Pasos
 . Agrega un host a tu clúster de VMware vSphere siguiendo las https://techdocs.broadcom.com/["Documentación técnica de Broadcom"] instrucciones.
-. Después de agregar el host, vaya al menú principal de herramientas ONTAP y seleccione *Descubrir* en el panel de resumen. Espere a que finalice el proceso de descubrimiento. Como alternativa, puede esperar a que finalice la detección de host programada.
+. Después de añadir el host, ve al menú principal de ONTAP tools y selecciona *Discover* en el panel de resumen, o espera a que finalice la detección programada del host.
 
 
 .Resultado
-El nuevo host ahora es detectado y administrado por las ONTAP tools for VMware vSphere. Puede proceder a administrar el almacén de datos en el nuevo host.
+El nuevo host ahora es detectado y gestionado por ONTAP tools for VMware vSphere. Ahora puedes gestionar los almacenes de datos en el host.
 
 .Temas relacionados
 * link:../manage/mount-a-vvols-datastore.html["Monte un almacén de datos vVols"]en nuevos hosts.

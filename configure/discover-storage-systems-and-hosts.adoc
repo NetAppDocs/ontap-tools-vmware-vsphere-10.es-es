@@ -11,7 +11,7 @@ summary: Descubre los hosts ESXi, los LUN, las exportaciones NFS y los sistemas 
 
 
 [role="lead"]
-Cuando las ONTAP tools for VMware vSphere se inician en vSphere Client por primera vez, descubren automáticamente los hosts ESXi, sus LUN asociados y las exportaciones NFS, así como los sistemas de almacenamiento NetApp que poseen estos recursos.
+Cuando inicias por primera vez ONTAP tools for VMware vSphere en el vSphere Client, detecta automáticamente los hosts ESXi, sus LUN y exportaciones NFS asociadas, y los sistemas de almacenamiento NetApp que son propietarios de estos recursos.
 
 .Antes de empezar
 * Asegúrese de que todos los hosts ESXi estén encendidos y conectados.
@@ -25,7 +25,7 @@ Al detectar los sistemas de almacenamiento, las herramientas de ONTAP para VMwar
 
 .Pasos
 . Desde la página de inicio del cliente de vSphere, selecciona *Hosts y clústeres*.
-. Haz clic con el botón derecho en el centro de datos requerido y selecciona *NetApp ONTAP tools* > *Actualizar datos de host y almacenamiento*.
+. Haz clic con el botón derecho del ratón en el centro de datos que desees y selecciona *NetApp ONTAP tools* > *Actualizar datos del host y del almacenamiento*.
 +
 En el cuadro de diálogo *Confirmar*, confirme su elección.
 

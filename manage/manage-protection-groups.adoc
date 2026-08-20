@@ -19,7 +19,7 @@ Utiliza esta tarea para ver, editar y eliminar grupos de protección y sus relac
 
 
 
-IMPORTANT: Antes de editar o eliminar la protección, revisa los mensajes de advertencia que aparecen en el cuadro de diálogo. Eliminar relaciones puede afectar el comportamiento de las copias de seguridad y la coherencia.
+IMPORTANT: Antes de editar o eliminar un grupo de protección, revisa los mensajes de advertencia que aparecen en el cuadro de diálogo. Eliminar relaciones puede afectar el comportamiento de las copias de seguridad y la coherencia.
 
 .Acerca de esta tarea
 * ONTAP tools actualiza los registros de protección local en la instancia seleccionada de ONTAP tools.

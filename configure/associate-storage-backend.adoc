@@ -4,19 +4,25 @@ sidebar: sidebar
 keywords: associate storage backend, ONTAP tools backend mapping, global storage backend association, vCenter storage backend 
 summary: Asocia un backend de almacenamiento global con una instancia de vCenter Server en ONTAP tools. 
 ---
-= Asocia un backend de almacenamiento con una instancia de vCenter Server en ONTAP tools
+= Asocie un back-end de almacenamiento a una instancia de vCenter Server
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Utiliza esta tarea para asociar un backend de almacenamiento global con una instancia de vCenter Server. Un backend de almacenamiento global es un backend añadido en ONTAP tools Manager que aún no está asociado a instancias específicas de vCenter Server. Para configuraciones de NetApp MetroCluster, cuando asocies un clúster de backend de almacenamiento, también asocia su clúster par con el vCenter Server.
+Asocia un backend de almacenamiento global, uno añadido en ONTAP tools Manager pero que aún no está vinculado a una instancia específica de vCenter Server, con una instancia de vCenter Server. Para configuraciones de NetApp MetroCluster, asocia también el clúster peer con el vCenter Server.
 
 .Pasos
 . Inicie ONTAP TOOLS Manager desde un explorador web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Inicie sesión con las herramientas de ONTAP para las credenciales de administrador de VMware vSphere que proporcionó durante la implementación.
-. Seleccione vCenter en la barra lateral.
+. Selecciona *vCenter* en la barra lateral.
 . Selecciona los tres puntos verticales junto a la instancia de vCenter Server a la que quieres conectar los backends de almacenamiento.
 . En el menú desplegable, seleccione el backend de almacenamiento que desea asociar con la instancia de vCenter Server seleccionada.
 
+
+
+NOTE: Para configuraciones de NetApp MetroCluster, cuando asocies un clúster de backend de almacenamiento, también asocia su clúster par con el vCenter Server.
+
+.El futuro
+ONTAP tools asocia el backend de almacenamiento seleccionado con la instancia de vCenter Server, lo que lo hace disponible para las operaciones del almacén de datos en ese entorno de vCenter Server.

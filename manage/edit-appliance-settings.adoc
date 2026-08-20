@@ -11,7 +11,7 @@ summary: 'Escala el dispositivo ONTAP tools y configura la alta disponibilidad (
 
 
 [role="lead"]
-Utiliza ONTAP tools Manager para ampliar la capacidad de tu appliance y configurar la alta disponibilidad (HA). De forma predeterminada, ONTAP tools for VMware vSphere se implementa como una configuración de un solo nodo sin alta disponibilidad.
+Utiliza ONTAP tools Manager para ampliar la capacidad del appliance o configurar la alta disponibilidad (HA). De forma predeterminada, ONTAP tools for VMware vSphere se implementa como una configuración de un solo nodo, sin HA.
 
 .Antes de empezar
 * Asegúrate de que tu plantilla OVA coincida con la versión de Node 1 (el nodo de implementación inicial).
@@ -30,7 +30,7 @@ NOTE: Solo puedes aumentar el tamaño del nodo, no reducirlo. Las implementacion
 . En la sección *Configuración*, selecciona el nuevo tamaño del nodo y activa el interruptor HA para habilitar la alta disponibilidad.
 . En la página *Configuración de HA*, comprueba lo siguiente:
 +
-** La biblioteca de contenidos se encuentra en el mismo vCenter Server donde se ejecutarán las máquinas virtuales de ONTAP tools.
+** La biblioteca de contenidos se encuentra en el mismo servidor vCenter donde se ejecutan las máquinas virtuales (VM) de ONTAP tools.
 ** Las máquinas virtuales de las ONTAP tools se implementan en un clúster o en un pool de recursos, no directamente en un host ESXi.
 +
 
@@ -40,7 +40,7 @@ IMPORTANT: Después de habilitar la alta disponibilidad (HA), no puedes volver a
 
 . En la sección *Configuración de HA*, introduce los datos de red de los nodos 2 y 3. ONTAP tools admite tres nodos en modo HA.
 +
-ONTAP tools rellena automáticamente la mayoría de los campos con la configuración de red de Node 1. Puedes editar estos valores antes de completar el asistente. Las entradas de dirección IPv6 solo están disponibles si IPv6 está habilitado en el nodo de gestión. Asegúrate de que cada host ESXi aloje solo una ONTAP tools VM.
+Las herramientas ONTAP rellenan automáticamente la mayoría de los campos con la configuración de red del Nodo 1. Puedes editar estos valores antes de finalizar el asistente. Las entradas de direcciones IPv6 solo están disponibles si IPv6 está habilitado en el nodo de gestión. Asegúrate de que cada host ESXi ejecute solo una VM de ONTAP tools.
 
 . Revisa el resumen y haz clic en *Guardar*.
 

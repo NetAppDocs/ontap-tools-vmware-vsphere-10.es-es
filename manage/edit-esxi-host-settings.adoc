@@ -11,23 +11,23 @@ summary: Edita la configuración del host ESXi desde el panel de control de ONTA
 
 
 [role="lead"]
-Utilice el panel de herramientas de ONTAP en VMware vSphere para identificar problemas de configuración, seleccionar hosts ESXi, revisar las configuraciones recomendadas de NetApp y aplicarlas.
+Utiliza el panel de herramientas de ONTAP en VMware vSphere para identificar problemas de configuración, consultar los ajustes recomendados de NetApp para los hosts ESXi seleccionados y aplicarlos.
 
 .Antes de empezar
 El portlet de sistemas host ESXi muestra problemas con la configuración del host ESXi.  Seleccione un problema para ver el nombre del host o la dirección IP.
 
 .Pasos
-. Inicie sesión en el cliente de vSphere.
-. En la página de accesos directos, seleccione *Herramientas de NetApp ONTAP* en la sección de plugins.
-. Vaya al portlet *Conformidad de host ESXi* en la descripción general (panel de control) de las herramientas de ONTAP para el complemento VMware vSphere.
-. Selecciona *Aplicar ajustes recomendados* link.
-. En la ventana *Aplicar configuración de host recomendada*, seleccione los hosts que desea que utilicen la configuración de host recomendada de NetApp y seleccione *Siguiente*.
+. Inicia sesión en el vSphere Client.
+. En la página de accesos directos, selecciona *NetApp ONTAP tools* en la sección de complementos.
+. Ve al portlet *Cumplimiento del host ESXi* en el panel de control de Resumen del complemento ONTAP tools for VMware vSphere.
+. Selecciona el enlace *Aplicar la configuración recomendada*.
+. En la ventana *Aplicar la configuración recomendada para los hosts*, selecciona los hosts a los que deseas aplicar la configuración recomendada por NetApp y luego selecciona *Siguiente*.
 +
 
 NOTE: Puede expandir el host ESXi para ver los valores actuales.
 
-. En la página settings, seleccione los valores recomendados según sea necesario.
-. En el panel de resumen, compruebe los valores y seleccione *Finalizar*. Puede realizar un seguimiento del progreso en el panel de tareas recientes.
+. En la página Configuración, selecciona los valores recomendados según sea necesario.
+. En el panel de resumen, comprueba los valores y selecciona *Finalizar*. Puedes seguir el progreso en el panel de tareas recientes.
 
 
 .Información relacionada

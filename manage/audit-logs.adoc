@@ -11,7 +11,7 @@ summary: Revisa cómo ONTAP tools captura, conserva y supervisa los registros de
 
 
 [role="lead"]
-Usa esta tarea para gestionar el comportamiento del registro de auditoría y la respuesta operativa en ONTAP tools for VMware vSphere. Los registros de auditoría proporcionan un historial de eventos que muestra quién realizó una acción, qué acción se realizó, cuándo ocurrió, el origen de la solicitud y si tuvo éxito o falló.
+Gestiona el registro de auditoría en ONTAP tools for VMware vSphere. Los registros de auditoría muestran quién realizó una acción, qué ocurrió, cuándo sucedió, la fuente de la solicitud y si la acción tuvo éxito o falló.
 
 .Antes de empezar
 * Asegúrate de que tienes acceso de administrador a ONTAP tools Manager.

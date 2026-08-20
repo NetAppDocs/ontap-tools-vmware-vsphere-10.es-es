@@ -4,16 +4,16 @@ sidebar: sidebar
 keywords: ONTAP tools igroups, nested igroup management, initiator group handling, VMware host access mapping 
 summary: Descubre cómo ONTAP tools representa y gestiona los igroups anidados para una asignación eficiente de hosts y almacenes de datos. 
 ---
-= Cómo las herramientas de ONTAP gestionan los igroups
+= Gestión de igroups anidados en ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Si gestionas tanto máquinas virtuales de ONTAP tools como sistemas de almacenamiento ONTAP, necesitas entender cómo se comportan los igroups, especialmente al mover datastores desde entornos no gestionados por ONTAP tools a aquellos que sí lo están. ONTAP tools for VMware vSphere representa y gestiona los igroups usando un modelo de igroup anidado, y entender este modelo te ayuda a interpretar las diferencias de comportamiento entre versiones anteriores y la implementación actual.
+Si trasladas almacenes de datos desde entornos no gestionados por ONTAP tools a entornos que sí lo están, debes comprender cómo se comportan los igroups. ONTAP tools for VMware vSphere utiliza un modelo de igroups anidados, lo que ayuda a explicar las diferencias de comportamiento entre versiones anteriores y la implementación actual.
 
-A partir de ONTAP tools for VMware vSphere 10.4, ONTAP tools crea y mantiene automáticamente objetos ONTAP y vCenter, lo que simplifica la gestión de datastores en entornos de centros de datos VMware. A partir de ONTAP tools for VMware vSphere 10.5 P2, los igroups migrados también se eliminan automáticamente cuando ya no están en uso.
+A partir de ONTAP tools for VMware vSphere 10.4, ONTAP tools crea y mantiene automáticamente los objetos de ONTAP y de vCenter, lo que simplifica la gestión de los datastores en entornos de centros de datos de VMware. A partir de ONTAP tools for VMware vSphere 10.5 P2, ONTAP tools también elimina automáticamente los igroups migrados cuando ya no se usan.
 
 
 

@@ -4,16 +4,16 @@ sidebar: sidebar
 keywords: recover ONTAP tools setup, appliance recovery workflow, near zero RPO recovery, restore ONTAP tools configuration 
 summary: Recupera las ONTAP tools desde una copia de seguridad y entiende el comportamiento de RPO cero y casi cero según la versión. 
 ---
-= Recuperar la configuración de las herramientas ONTAP
+= Recupera ONTAP tools for VMware vSphere desde una copia de seguridad
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Puedes recuperar la configuración de ONTAP tools for VMware vSphere restaurándola desde un archivo de copia de seguridad almacenado en el datastore. A partir de ONTAP tools for VMware vSphere 10.5, la función de copia de seguridad está activada de forma predeterminada, así que tendrás una copia de seguridad reciente si necesitas volver a implementar o recuperar el appliance.
+Recupera las herramientas ONTAP para VMware vSphere restaurando un archivo de copia de seguridad almacenado en el datastore. A partir de ONTAP tools for VMware vSphere 10.5, la copia de seguridad está habilitada de forma predeterminada, así que normalmente hay una copia de seguridad reciente disponible si necesitas volver a implementar o recuperar el appliance.
 
-El almacén de datos donde se implementan las ONTAP tools for VMware vSphere almacena los archivos de respaldo.  Una carpeta que lleva el nombre de la dirección IP de las herramientas ONTAP (puntos reemplazados por guiones bajos y con el sufijo _OTV_backup_) guarda los dos archivos de respaldo más recientes (_OTV_backup_1.tar.enc_ y _OTV_backup_2.tar.enc_) y un archivo de información (_OTV_backup_info.txt_) que contiene el nombre de la última copia de seguridad.
+El almacén de datos donde implementas ONTAP tools for VMware vSphere máquinas virtuales almacena los archivos de copia de seguridad. Una carpeta con el nombre de la dirección IP de ONTAP tools almacena los dos archivos de copia de seguridad más recientes (_OTV_backup_1.tar.enc_ y _OTV_backup_2.tar.enc_) y el archivo de información (_OTV_backup_info.txt_), que identifica la copia de seguridad más reciente.
 
 Asegúrese de que la nueva máquina virtual utilice la misma dirección IP de las herramientas ONTAP y coincida con la configuración inicial del sistema, incluidos los servicios habilitados, el tamaño del nodo y el modo HA.
 

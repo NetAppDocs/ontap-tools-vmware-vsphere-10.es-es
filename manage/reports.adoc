@@ -11,10 +11,10 @@ summary: Consulta los informes sobre máquinas virtuales y almacenes de datos en
 
 
 [role="lead"]
-El complemento ONTAP tools for VMware vSphere ofrece informes que te ayudan a supervisar las máquinas virtuales y los datastores respaldados por el almacenamiento ONTAP. Para ver estos informes, selecciona el icono del complemento ONTAP tools for VMware vSphere en la sección de accesos directos del cliente vCenter y luego selecciona la pestaña Reports.
+El complemento ONTAP tools for VMware vSphere ofrece informes que te ayudan a supervisar máquinas virtuales y almacenes de datos respaldados por almacenamiento ONTAP. Para ver los informes, selecciona el icono del complemento ONTAP tools for VMware vSphere en la sección de accesos directos de la vSphere Client y luego selecciona la pestaña *Informes*.
 
-El informe «Máquinas virtuales» muestra una lista de las máquinas virtuales detectadas que tienen al menos un disco en un almacén de datos basado en almacenamiento ONTAP, junto con métricas de rendimiento. Al desplegar el registro de la máquina virtual, la interfaz muestra toda la información del almacén de datos relacionada con el disco.
+El informe «Máquinas virtuales» muestra una lista de las máquinas virtuales detectadas que tienen al menos un disco en un almacén de datos basado en almacenamiento ONTAP, junto con métricas de rendimiento. Cuando amplías el registro de una máquina virtual, puedes ver toda la información del almacén de datos para sus discos.
 
 El informe de almacenes de datos muestra los almacenes de datos que detecta ONTAP tools for VMware vSphere y que utilizan almacenamiento ONTAP, junto con las métricas de rendimiento.
 
-Puede utilizar la opción Gestionar columnas para ocultar o mostrar columnas diferentes.
+Puedes utilizar la opción *Manage Columns* para ocultar o mostrar columnas.

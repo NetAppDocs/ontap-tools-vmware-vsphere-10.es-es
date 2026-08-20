@@ -11,7 +11,7 @@ summary: Gestiona las herramientas de ONTAP y los certificados del proveedor VAS
 
 
 [role="lead"]
-Se genera un certificado autofirmado para las herramientas ONTAP y el proveedor VASA de forma predeterminada durante la implementación. Puede utilizar la interfaz del Administrador de herramientas de ONTAP para renovar este certificado o reemplazarlo con un certificado CA personalizado. En implementaciones de varios vCenter, es necesario utilizar certificados CA personalizados.
+Las herramientas de ONTAP y VASA Provider utilizan un certificado autofirmado de forma predeterminada. En ONTAP tools Manager, puedes renovar ese certificado o reemplazarlo por un certificado CA personalizado. Las implementaciones multi-vCenter requieren certificados CA personalizados.
 
 
 WARNING: Si los certificados caducan sin renovarse a tiempo, ONTAP tools deja de funcionar. Renueva los certificados antes de que caduquen para mantener el funcionamiento continuo y evitar interrupciones en el servicio.
@@ -25,7 +25,7 @@ Deberías tener lo siguiente antes de empezar:
 
 
 
-NOTE: La dirección IP de ONTAP tools debe estar asociada a un dominio completo (FQDN). Los certificados deben contener el mismo FQDN asociado a la dirección IP de ONTAP tools en el campo sujeto o en los nombres alternativos del sujeto.
+NOTE: La dirección IP de una herramienta ONTAP debe corresponder a un nombre de dominio completo (FQDN). Los certificados deben contener el mismo FQDN en el campo Subject Alternative Name (SAN).
 
 
 NOTE: No se puede pasar de un certificado firmado por CA a un certificado autofirmado.
@@ -34,7 +34,7 @@ NOTE: No se puede pasar de un certificado firmado por CA a un certificado autofi
 ====
 .Actualizar el certificado de herramientas de ONTAP
 --
-La pestaña Herramientas de ONTAP muestra detalles como el tipo de certificado (autofirmado/firmado por CA) y el nombre de dominio. Durante la implementación, se genera un certificado autofirmado de forma predeterminada. Puede renovar el certificado o actualizar el certificado a CA.
+La pestaña ONTAP tools muestra detalles como el tipo de certificado (autofirmado o firmado por una CA) y el nombre de dominio. Durante la implementación, ONTAP tools genera un certificado autofirmado de forma predeterminada. Puedes renovar el certificado o actualizarlo a un certificado firmado por una CA.
 
 .Pasos
 . Inicie ONTAP TOOLS Manager desde un explorador web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
@@ -45,7 +45,7 @@ Puedes renovar el certificado si ha caducado o se acerca su fecha de caducidad. 
 
 +
 
-NOTE: El sistema estará fuera de línea hasta que se renueve el certificado y se cerrará la sesión en la interfaz del Administrador de herramientas de ONTAP.
+NOTE: El sistema está fuera de línea hasta que se complete la renovación del certificado y ONTAP tools Manager te cierre la sesión.
 
 . Para actualizar el certificado autofirmado a un certificado de CA personalizado, seleccione la opción *Certificados* > *Herramientas de ONTAP* > *Actualizar a CA*.
 +
@@ -62,7 +62,7 @@ NOTE: El sistema estará fuera de línea hasta que se complete la actualización
 --
 .Actualizar el certificado de proveedor VASA
 --
-Las herramientas de ONTAP para VMware vSphere se ponen en marcha con un certificado autofirmado para el proveedor VASA. Con esto, solo se puede gestionar una instancia de vCenter Server para almacenes de datos vVols. Cuando se gestionan varias instancias de vCenter Server y se desea habilitar la funcionalidad vVols en ellas, debe cambiar el certificado autofirmado a un certificado de CA personalizado.
+ONTAP tools for VMware vSphere utiliza un certificado autofirmado para VASA Provider de forma predeterminada. Con ese certificado, solo puedes gestionar una instancia de servidor vCenter para los datastores de vVols. Cuando gestionas varias instancias de servidor vCenter y quieres habilitar la capacidad de vVols en ellas, necesitas cambiar el certificado autofirmado por un certificado CA personalizado.
 
 .Pasos
 . Inicie ONTAP TOOLS Manager desde un explorador web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`

@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: protect VMFS datastore, SnapMirror datastore protection, create protection group, ONTAP tools disaster recovery 
 summary: Protege un almacén de datos VMFS que cumpla los requisitos añadiéndolo a un grupo de protección con replicación de SnapMirror. 
 ---
-= Proteger un almacén de datos VMFS
+= Protege un almacén de datos VMFS en ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Utiliza esta tarea para proteger un almacén de datos VMFS que cumpla los requisitos añadiéndolo a un grupo de protección.
+Protege un almacén de datos VMFS que cumpla los requisitos añadiéndolo a un grupo de protección.
 
 .Antes de empezar
 * Asegúrate de que el almacén de datos utilice el protocolo iSCSI o FC.
@@ -24,7 +24,7 @@ Utiliza esta tarea para proteger un almacén de datos VMFS que cumpla los requis
 . Selecciona un clúster de hosts y selecciona *Almacenes de datos*.
 . Haz clic con el botón derecho en el almacén de datos VMFS elegible que quieras proteger y selecciona *NetApp ONTAP tools* > *Protect*.
 +
-El sistema comprueba si el almacén de datos cumple los requisitos para la protección. Si el almacén de datos cumple los requisitos, el flujo de trabajo de protección continúa. Si el almacén de datos no cumple los requisitos, aparece un mensaje indicando los motivos y no puedes continuar.
+El sistema comprueba si el almacén de datos cumple los requisitos para recibir protección. Si el almacén de datos cumple los requisitos, el flujo de trabajo de protección continúa. Si el almacén de datos no cumple los requisitos, aparece un mensaje indicando los motivos y no puedes continuar.
 
 . Elige si deseas añadir el almacén de datos a un grupo de protección ya existente o crear un nuevo grupo de protección.
 +

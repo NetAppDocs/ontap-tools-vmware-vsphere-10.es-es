@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: unprotect VMFS datastore, remove datastore protection group, SnapMirror protection removal, ONTAP tools DR cleanup 
 summary: Desprotege un almacén de datos VMFS y, si quieres, elimina los elementos de almacenamiento asociados en el lado de destino. 
 ---
-= Desproteger un almacén de datos VMFS
+= Desproteger un almacén de datos VMFS en ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -16,7 +16,7 @@ Utiliza esta tarea para desproteger un almacén de datos VMFS y, si lo deseas, e
 .Acerca de esta tarea
 Al desproteger un almacén de datos VMFS, ten en cuenta el siguiente comportamiento:
 
-* Al desproteger el último almacén de datos de un grupo de protección, se elimina el grupo de protección y el nombre de su configuración de protección.
+* Al desproteger el último almacén de datos de un grupo de protección, se elimina el grupo y su configuración de protección.
 * Para el último almacén de datos, ONTAP tools muestra el nombre de la configuración de protección.
 
 

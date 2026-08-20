@@ -11,7 +11,7 @@ summary: Elimina un almacén de datos NFS, VMFS o vVols y revisa las máquinas v
 
 
 [role="lead"]
-Utiliza esta tarea para eliminar almacenes de datos NFS, VMFS o vVols usando las herramientas de ONTAP en vCenter Server. El comportamiento de la eliminación y las opciones de limpieza varían según el tipo de almacén de datos.
+Elimina los almacenes de datos NFS, VMFS o vVols en vCenter Server usando ONTAP tools. El comportamiento de la eliminación y las opciones de limpieza varían según el tipo de almacén de datos.
 
 .Comportamiento de eliminación para los almacenes de datos NFS y VMFS
 * No puedes eliminar un almacén de datos que están usando máquinas virtuales.
@@ -24,7 +24,7 @@ Para los almacenes de datos vVols, se realizan las siguientes acciones:
 * El contenedor vVol no está montado.
 * Si el igroup no está en uso, sus iniciadores se eliminan del igroup.
 * Se elimina el contenedor vVol.
-* Los volúmenes flexibles se dejan en la matriz de almacenamiento.
+* Los volúmenes Flex se mantienen en el backend de almacenamiento.
 
 
 Para los almacenes de datos vVols, solo puedes eliminar el almacén de datos si no hay ningún vVols presente en el almacén de datos seleccionado.
@@ -50,7 +50,7 @@ Para los almacenes de datos vVols, solo puedes eliminar el almacén de datos si 
 |===
 .Pasos
 . Inicia sesión en el vSphere Client.
-. Haga clic con el botón derecho en un sistema host, un clúster de host o un centro de datos y seleccione *Herramientas de NetApp ONTAP * > *Eliminar almacén de datos*.
+. Haz clic con el botón derecho del ratón en un sistema anfitrión, un clúster de sistemas anfitriones o un centro de datos y selecciona *NetApp ONTAP tools* > *Eliminar almacén de datos*.
 +
 
 NOTE: No puedes eliminar un almacén de datos que estén usando máquinas virtuales. Mueve las máquinas virtuales a otro almacén de datos antes de eliminarlo.

@@ -16,14 +16,14 @@ Utiliza esta tarea para desmontar un almacén de datos NFS o VMFS de los hosts E
 A partir de ONTAP tools 10.6, la operación de desmontaje está bloqueada para los almacenes de datos VMFS protegidos.
 
 .Pasos
-. Inicie sesión en el cliente de vSphere.
+. Inicia sesión en el vSphere Client.
 . Haz clic con el botón derecho del ratón en un objeto de almacén de datos NFS o VMFS y selecciona *Desmontar almacén de datos*.
 +
-El cliente vSphere abre un cuadro de diálogo y muestra los hosts ESXi que montan el almacén de datos. Si el almacén de datos está protegido, ONTAP tools bloquea la solicitud y muestra un mensaje que indica que el almacén de datos está bajo protección y no se puede desmontar.
+El vSphere Client abre un cuadro de diálogo y muestra los hosts ESXi que montan el almacén de datos. Si el almacén de datos está protegido, ONTAP tools bloquea la solicitud y muestra un mensaje indicando que el almacén de datos está bajo protección y no se puede desmontar.
 
 . Seleccione uno o varios hosts ESXi para desmontar el almacén de datos.
 +
-No es posible desmontar el almacén de datos de todos los hosts. La interfaz de usuario sugiere que se utilice la operación de eliminación del almacén de datos en su lugar.
+No puedes desmontar el almacén de datos de todos los hosts. La interfaz de usuario sugiere usar la operación eliminar almacén de datos en su lugar.
 
 . Seleccione el botón *Desmontar*.
 +

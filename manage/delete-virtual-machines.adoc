@@ -11,14 +11,14 @@ summary: Ejecuta la limpieza de VASA tras eliminar las máquinas virtuales.
 
 
 [role="lead"]
-Para completar el proceso de limpieza de VASA, siga estos pasos.
+Sigue estos pasos para completar la limpieza de VASA en ONTAP tools.
 
 
-NOTE: Se recomienda eliminar cualquier almacén de datos vVols antes de iniciar la limpieza de VASA.
+NOTE: Elimina cualquier almacén de datos de vVols antes de iniciar la limpieza de VASA.
 
 .Pasos
-. Desde \https://OTV_IP:8143/Register.html para cancelar el registro del plugin
+. Abre `\https://OTV_IP:8143/Register.html` para dar de baja el complemento.
 . Compruebe que el plugin ya no esté disponible en vCenter Server.
-. Cierre las herramientas de ONTAP para la máquina virtual de VMware vSphere.
+. Apaga las ONTAP tools for VMware vSphere virtual machine (VM).
 . Elimine las herramientas de ONTAP para VMware vSphere VM.
 

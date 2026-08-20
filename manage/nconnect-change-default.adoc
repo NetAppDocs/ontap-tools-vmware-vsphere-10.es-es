@@ -11,7 +11,7 @@ summary: Cambia el valor predeterminado de nconnect para los hosts ESXi en un se
 
 
 [role="lead"]
-Utiliza esta tarea para cambiar el número predeterminado de conexiones (nconnect) para los hosts ESXi en un vCenter Server seleccionado.
+Cambia el número predeterminado de conexiones (nconnect) para los hosts ESXi en un vCenter Server seleccionado.
 
 .Acerca de esta tarea
 * El valor de nconnect establecido en esta página es el valor predeterminado a nivel de host.

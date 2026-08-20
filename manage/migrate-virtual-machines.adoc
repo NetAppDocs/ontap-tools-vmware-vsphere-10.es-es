@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: virtual machine migration considerations, ONTAP tools VM cloning guidance, VMware storage vMotion considerations, VM migration best practices 
 summary: Revisa los aspectos clave que debes tener en cuenta antes de migrar las máquinas virtuales existentes en tu centro de datos. 
 ---
-= Infórmate sobre la migración y la clonación de máquinas virtuales en ONTAP tools
+= Migración y clonación de máquinas virtuales en ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ONTAP tools for VMware vSphere admite todos los principales tipos de migración de máquinas virtuales, incluidas las de solo computación (vMotion), las de solo almacenamiento (Storage vMotion) y las migraciones combinadas de computación y almacenamiento en todos los almacenes de datos. Comprender estas consideraciones y mejores prácticas sobre migración y clonación te ayuda a obtener resultados satisfactorios, independientemente del tipo de almacén de datos subyacente.
+Consulta las consideraciones sobre la migración y clonación de máquinas virtuales para ONTAP tools for VMware vSphere, incluyendo migración solo de cómputo (vMotion), solo de almacenamiento (Storage vMotion) y migración combinada de cómputo y almacenamiento entre los tipos de datastore compatibles.
 
 
 

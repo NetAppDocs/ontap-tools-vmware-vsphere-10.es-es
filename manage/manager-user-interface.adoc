@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools Manager UI, appliance administration interface, tenant and backend management, ONTAP tools manager portal 
 summary: Utiliza ONTAP tools Manager para gestionar el appliance, los tenants y los storage backends. 
 ---
-= Conoce la interfaz de usuario de ONTAP tools Manager
+= Interfaz de usuario del gestor de herramientas de ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,8 +12,6 @@ summary: Utiliza ONTAP tools Manager para gestionar el appliance, los tenants y 
 
 [role="lead"]
 ONTAP tools Manager es una consola basada en web que tú usas para gestionar ONTAP tools for VMware vSphere, incluidas las instancias de vCenter Server, los backends de almacenamiento y la configuración del appliance, como la alta disponibilidad (HA) y el escalado de nodos. Admite multi-tenancy, así que puedes gestionar varias instancias de vCenter Server desde una sola interfaz.
-
-ONTAP Tools Manager es una consola basada en web para administrar ONTAP tools for VMware vSphere, instancias de vCenter Server, backends de almacenamiento y configuración de dispositivos como alta disponibilidad (HA) y escalamiento de nodos.
 
 El administrador de herramientas de ONTAP ofrece las siguientes capacidades:
 
@@ -38,7 +36,7 @@ image:../media/ontap-tools-manager-overview.png["Información general de la cons
 | Tarjeta del aparato | La tarjeta del dispositivo muestra el estado general del dispositivo de herramientas ONTAP , los detalles de configuración y el estado de los servicios habilitados.  Para ver más información, seleccione el enlace *Ver detalles*.  Si cambia la configuración de un dispositivo, la tarjeta muestra el estado del trabajo y los detalles hasta que se complete el cambio. 
 
 
-| Tarjeta de alertas | La tarjeta Alertas muestra alertas de herramientas ONTAP categorizadas por tipo, incluidas las alertas a nivel de nodo de HA.  Puede ver alertas detalladas haciendo clic en el hipervínculo de recuento, que lo llevará a la página de alertas filtrada por el tipo de alerta seleccionado. 
+| Tarjeta de alertas | La tarjeta de Alertas muestra las alertas de ONTAP tools clasificadas por tipo, incluidas las alertas a nivel de nodo HA. Puedes ver alertas detalladas seleccionando el enlace del recuento, que te lleva a la página de alertas filtrada por el tipo de alerta seleccionado. 
 
 
 | Tarjeta vCenters | La tarjeta vCenters muestra el estado de salud de todas las instancias de vCenter Server administradas por herramientas ONTAP .  Puede ver los detalles de cada vCenter seleccionando el enlace correspondiente, que lo llevará a una página con más información sobre la instancia seleccionada. 

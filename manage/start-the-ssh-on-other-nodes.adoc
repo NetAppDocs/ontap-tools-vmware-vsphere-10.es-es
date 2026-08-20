@@ -11,7 +11,7 @@ summary: Inicia SSH en los demás nodos antes de ejecutar una actualización.
 
 
 [role="lead"]
-Antes de actualizar las herramientas de ONTAP para VMware vSphere, debes iniciar SSH en cada uno de los demás nodos de tu entorno.
+Antes de actualizar ONTAP tools for VMware vSphere, inicia SSH en cada uno de los otros nodos de tu entorno.
 
 .Antes de empezar
 Habilite la extensión VASA Provider para su instancia de vCenter Server.
@@ -23,8 +23,8 @@ Repita este procedimiento en cada nodo antes de actualizar.
 . Inicia sesión en el servidor vCenter.
 . Ubica la máquina virtual del nodo de ONTAP tools e inicia la consola web.
 . Inicia sesión usando las credenciales de `maint`.
-. Introduzca `4` Para seleccionar Support and Diagnostics.
-. Introduzca `1` Para seleccionar el shell de diagnóstico de Access.
+. Ingrese `4` para seleccionar *Soporte y Diagnóstico*.
+. Escribe  `1` para seleccionar *Access diagnostic shell*.
 . Introduzca `y` para continuar.
-. Ejecute el comando _sudo systemctl restart ssh_.
+. Ejecuta el comando  `sudo systemctl restart ssh`.
 

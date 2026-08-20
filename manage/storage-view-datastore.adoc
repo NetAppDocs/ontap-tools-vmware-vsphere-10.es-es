@@ -11,7 +11,7 @@ summary: Consulta los detalles del almacén de datos y del volumen en la página
 
 
 [role="lead"]
-ONTAP tools for VMware vSphere muestra la vista del lado del almacenamiento ONTAP de los datastores y sus volúmenes en la pestaña Configurar, incluyendo detalles del backend de almacenamiento, el agregado y el volumen para cada tipo de datastore.
+ONTAP tools for VMware vSphere muestra detalles del lado de ONTAP para los almacenes de datos y sus volúmenes en la pestaña *Configurar*, incluyendo el backend de almacenamiento, el agregado y los detalles del volumen para cada tipo de almacén de datos.
 
 .Pasos
 . En el inventario de vSphere Client, selecciona el almacén de datos.
