@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: troubleshooting deployment errors, log bundles, error codes, ONTAP tools 
 summary: Usa los códigos de error de implementación de ONTAP tools para diagnosticar y resolver fallos de implementación, reinicio y recuperación. 
 ---
-= Soluciona errores de despliegue de ONTAP tools
+= Códigos de error en la implementación de ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

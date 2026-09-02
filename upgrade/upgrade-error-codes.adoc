@@ -119,6 +119,37 @@ Los últimos tres dígitos del código de error indican el error de flujo de tra
 | 089 | Fallo al cambiar la propiedad del archivo de configuración de rotación de registro de resumen | Vuelva a intentar la actualización. 
 
 
+| 094 | La configuración de NTP falló y el sistema volvió a NTPsec  a| 
+Si la actualización falla debido a un error en la instalación de Chrony:
+
+. Comprueba si Chrony está instalado:
++
+[listing]
+----
+systemctl status chrony
+----
+. Si tienes instalado Chrony y el problema radica en los servidores NTP que has indicado, comprueba si se puede acceder a dichos servidores:
++
+[listing]
+----
+sudo chronyc -N sources -v
+sudo chronyc tracking
+----
++
+Si se puede acceder a los servidores, el problema no está relacionado con la accesibilidad de los mismos. Si un servidor es realmente inaccesible, elimínalo de ONTAP tools Manager y proporciona en su lugar un servidor NTP accesible.
+
+. Si la actualización falla debido a cualquier otro problema durante la actualización de NTP, comprueba los siguientes registros:
++
+[listing]
+----
+/var/log/otvng/ansible-perl-errors.log
+/var/log/otvng/ntp_configure.log
+/var/log/ansible-perl-errors.log
+----
+
+
+
+
 | 095 | Error en la actualización del SO | Sin recuperación para la actualización del sistema operativo. Los servicios de herramientas de ONTAP se han renovado y se ejecutarán nuevos pods. 
 
 

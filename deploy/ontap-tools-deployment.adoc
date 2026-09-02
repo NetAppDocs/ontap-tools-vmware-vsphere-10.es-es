@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: deploy ONTAP tools, OVA, content library, single-node configuration 
 summary: Implementa ONTAP tools for VMware vSphere como un appliance extrapequeño de un solo nodo. 
 ---
-= Implementa las herramientas ONTAP
+= Implementa ONTAP tools como un appliance de un solo nodo
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
