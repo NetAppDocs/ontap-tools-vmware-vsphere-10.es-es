@@ -1910,7 +1910,6 @@ Los códigos de error tienen una longitud de cinco dígitos, donde los dos prime
   <block id="6f8b3b7e42dadd9b7806e6e98d7d0a77" category="list-text">El identificador de red primario (PNID) del vCenter Server debe incluirse en los detalles de la SAN. El PNID y el nombre DNS deben ser idénticos y resolubles en DNS.</block>
   <block id="dbabfcb48125f6c3a069313029fdada8" category="list-text">Para más información, consulta la documentación de VMware:</block>
   <block id="381b5a0822c9882ced35624a3338ea81" category="inline-link">vSphere requisitos de certificados para diferentes vías de solución</block>
-  <block id="38e7ce10f91b93ef8eecb43d98853cb3" category="list-text"><block ref="38e7ce10f91b93ef8eecb43d98853cb3" category="inline-link-rx"></block></block>
   <block id="bab39c0d7f700e0dbd68e4761a2c9ac4" category="inline-link">Sustituye el certificado SSL de máquina de vCenter por un certificado firmado por una autoridad de certificación personalizada</block>
   <block id="81c3c30e39dc6db9cf179ead4dc53c00" category="list-text"><block ref="81c3c30e39dc6db9cf179ead4dc53c00" category="inline-link-rx"></block></block>
   <block id="4ce004ede8d7c5a94bcc602e81d0dd46" category="inline-link">Error: el campo Subject Alternate Name (SAN) no contiene el PNID. Por favor, proporciona un certificado válido</block>
@@ -3138,4 +3137,5 @@ Los códigos de error tienen una longitud de cinco dígitos, donde los dos prime
   <block id="4ea2f2639373a757d002c323f4650ae1" category="list-text">Si tienes instalado Chrony y el problema radica en los servidores NTP que has indicado, comprueba si se puede acceder a dichos servidores:</block>
   <block id="4db51794b7899f8781b7e514861f9c54" category="paragraph">Si se puede acceder a los servidores, el problema no está relacionado con la accesibilidad de los mismos. Si un servidor es realmente inaccesible, elimínalo de ONTAP tools Manager y proporciona en su lugar un servidor NTP accesible.</block>
   <block id="58d802804e6af6816051d4101a78cd4b" category="list-text">Si la actualización falla debido a cualquier otro problema durante la actualización de NTP, comprueba los siguientes registros:</block>
+  <block id="f5589bd09ceeb2368f74d5725fa2dcc7" category="list-text"><block ref="f5589bd09ceeb2368f74d5725fa2dcc7" category="inline-link-rx"></block></block>
 </blocks>

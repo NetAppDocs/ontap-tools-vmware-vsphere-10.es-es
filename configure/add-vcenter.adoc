@@ -40,7 +40,7 @@ Si el certificado no incluye una extensión SAN, o si la extensión SAN no conti
 * Implementa vCenter Server usando su nombre de dominio completo (FQDN) y asegúrate de que el SAN en el certificado incluya DNS Name=machine_FQDN para una compatibilidad y soporte óptimos.
 * Para más información, consulta la documentación de VMware:
 +
-** https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-authentication/vsphere-security-certificates-authentication/certificate-requirements-for-different-solution-paths-authentication.html["vSphere requisitos de certificados para diferentes vías de solución"]
+** https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-authentication/vsphere-security-certificates/certificate-requirements-for-different-solution-paths.html["vSphere requisitos de certificados para diferentes vías de solución"]
 ** https://knowledge.broadcom.com/external/article/316601/replace-vcenter-machine-ssl-certificate.html["Sustituye el certificado SSL de máquina de vCenter por un certificado firmado por una autoridad de certificación personalizada"]
 ** https://knowledge.broadcom.com/external/article/406282/error-subject-alternate-name-san-field-d.html["Error: el campo Subject Alternate Name (SAN) no contiene el PNID. Por favor, proporciona un certificado válido"]
 
