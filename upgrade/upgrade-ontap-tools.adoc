@@ -84,7 +84,7 @@ Durante la actualización, si alguno de los certificados de backend de almacenam
 .. El complemento remoto se ha actualizado
 .. Los certificados de ONTAP y vCenter Server se validan y se agregan a las herramientas de ONTAP
 .. La copia de seguridad está habilitada
-.. Si existen ajustes de protección del clúster de host de la versión 10.5 o anteriores, ONTAP tools crea un elemento de navegación independiente denominado *Configuración de protección del clúster* durante la actualización.
+.. Si existen ajustes de protección de clústeres de host de ONTAP tools for VMware vSphere 10.5 o anterior, ONTAP tools los convierte en protección granular de almacenes de datos y crea un elemento de navegación independiente de *Configuración de protección de clústeres*.
 
 
 
@@ -96,6 +96,7 @@ Después de actualizar a ONTAP tools for VMware vSphere 10.6:
 * Elimina el adaptador SRA de ONTAP tools 10.4 o 10.5 y carga el archivo tar del adaptador SRA 10.6.
 * Ejecute el comando de instalación después de cargar el archivo tar del adaptador SRA. Luego, vuelva a escanear los adaptadores SRA para actualizar la página Adaptadores de replicación de almacenamiento de VMware Site Recovery.
 * Abre *Cluster protection configuration* y verifica que los ajustes de protección de clúster de los hosts existentes estén presentes y mapeados correctamente.
+* Para obtener más información sobre las funciones de protección granular de los almacenes de datos y los requisitos para optar a ellas, consulta link:../protect/granular-datastore-protection-concept.html["Criterios de elegibilidad para la protección granular de almacenes de datos en las herramientas de ONTAP"].
 
 
 Después de actualizar podrás:

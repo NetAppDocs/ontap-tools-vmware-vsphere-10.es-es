@@ -20,7 +20,12 @@ Esta función te permite:
 * Protege solo los almacenes de datos seleccionados en un clúster de hosts.
 * Agrupa los almacenes de datos seleccionados en grupos de protección.
 * Aplica las relaciones y políticas de SnapMirror a nivel de grupo de protección.
-* Utiliza diferentes enfoques de protección para los distintos grupos de almacenes de datos en el mismo clúster.
+* Utiliza diferentes estrategias de protección para los distintos grupos de almacenes de datos en el mismo clúster de hosts.
+* Asigna varios ajustes de protección a un único clúster de hosts.
+* Configura los ajustes de protección en la misma máquina virtual de almacenamiento (SVM), en distintas SVM o en distintos sistemas de almacenamiento.
+* Deja algunos almacenes de datos de un clúster de hosts sin proteger.
+* Quita la protección de un almacén de datos concreto.
+* Protege un almacén de datos durante el aprovisionamiento.
 
 
 Esta función solo es compatible con almacenes de datos VMFS que usan los protocolos iSCSI o FC.
@@ -76,7 +81,7 @@ Ten en cuenta los siguientes límites operativos y comportamientos:
 * Activa la conmutación por error desde ONTAP System Manager. Configura ONTAP Mediator fuera de ONTAP tools.
 
 
-Al actualizar desde ONTAP tools 10.5, las configuraciones existentes de protección de clústeres de hosts se migran al formato de protección granular de almacenes de datos. Después de la actualización, verifica los grupos de protección y la pertenencia a los almacenes de datos.
+Al actualizar desde ONTAP tools for VMware vSphere 10.5, la configuración existente de protección de clústeres de hosts se convierte automáticamente en protección granular de almacenes de datos. Tras la actualización, comprueba los grupos de protección y la pertenencia a los almacenes de datos.
 
 .Información relacionada
 * link:../protect/protect-multiple-ds.html["Protege los almacenes de datos en un clúster con ONTAP tools"]

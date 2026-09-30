@@ -850,7 +850,6 @@ Los códigos de error tienen una longitud de cinco dígitos, donde los dos prime
   <block id="cd976ca49583a8080802261ae61aa5a0" category="list-text">Seleccione los almacenes de datos que desea montar y seleccione *Mount*.</block>
   <block id="267de19ac03e71a99875cacf87972c29" category="list-text">Selecciona *Ajustes* en la barra lateral.</block>
   <block id="f0833ce92c23eb056dde238669740988" category="list-text"><block ref="523efdef8100699453c6b07ce8f4921c" category="inline-link-macro-rx"></block> Creado en herramientas de ONTAP para VMware vSphere.</block>
-  <block id="b2aac3a919762e9dd0f89ef1b3999500" category="list-text">Elimine todos los back-ends de almacenamiento. Consulte <block ref="c97897721457f9108ce9caf2b3f0d235" category="inline-link-macro-rx"></block>.</block>
   <block id="11e59432e8c34141d30396d503dc7c73" category="list-text">Seleccione *Adaptadores de replicación de almacenamiento*.</block>
   <block id="51853e46fcef4ee8c2608d1c9995935a" category="list-text">Confirme que conoce los resultados de eliminar el adaptador y seleccione *Eliminar*.</block>
   <block id="7ecf25a7ff85dee8180a09f0f8a71a56" category="list-text">En Live Site Recovery de VMware, seleccione *Array Managers* &gt; *Add Array Manager*.</block>
@@ -938,9 +937,7 @@ Los códigos de error tienen una longitud de cinco dígitos, donde los dos prime
   <block id="c961da7f498e50ff48715252d593d099" category="cell">*Información disponible*</block>
   <block id="b5380e34617914719b059f6d55b97b66" category="cell">Almacenes de datos de VMFS</block>
   <block id="e122a7a507ac1f580cc5b9f2632a851c" category="cell">Almacenes de datos de vVols</block>
-  <block id="5a43e80953e87c7df463deaedcab9879" category="section-title">Disocie los back-ends de almacenamiento con la instancia de vCenter Server</block>
   <block id="9a9ef84d994bd8c482cd3e98feba5977" category="list-text">Seleccione *Dissociar backend de almacenamiento*.</block>
-  <block id="02a713a12e2b216b65a52896d0728a0a" category="list-text">Desasocie todos los back-ends de almacenamiento de la instancia de vCenter Server. Consulte <block ref="8f766e539ddb39a7c07c0c84dded1670" category="inline-link-macro-rx"></block>.</block>
   <block id="f75d6048a8fcc9f4822dcc0f5eef23d2" category="inline-link-macro">Configure el SRA en el dispositivo VMware Live Site Recovery</block>
   <block id="7f17c0be45130bf2b12d5bf5ec2ead98" category="list-text">Debería haber descargado<block ref="d6f1afa70d6145a212d9dc6bc8a2fa64" prefix=" " category="inline-code"></block> el archivo SRA Adapter de la<block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block>.</block>
   <block id="bc7d4efb983c07650bf67ebd23206b42" category="doc">Obtenga más información sobre las herramientas de ONTAP para el control de acceso basado en roles de VMware vSphere 10</block>
@@ -1047,7 +1044,6 @@ Los códigos de error tienen una longitud de cinco dígitos, donde los dos prime
   <block id="cdb9fe2a322209ab095ba01e8388697d" category="list-text">Quite el adaptador de SRA de VMware Live Site Recovery:</block>
   <block id="1435a5cf1efdb19e83d0f140a2ca4f4f" category="list-text">Inicie sesión como administrador en la interfaz de gestión del dispositivo VMware Live Site Recovery mediante el puerto 5480.</block>
   <block id="2ec2edd0a7db2ac9b3f23b9db6dda124" category="list-text">Seleccione la tarjeta SRA apropiada y, en el menú desplegable, seleccione *Eliminar*.</block>
-  <block id="d34cead72810ffa475c9303607018d30" category="list-text">Elimine las instancias del servidor de vCenter incorporadas a las herramientas ONTAP para VMware vSphere. Consulte <block ref="71e9ea3cb5165d1231d572643ddb35cb" category="inline-link-macro-rx"></block>.</block>
   <block id="3014a29195e86ef40c71c31cde3ad9e7" category="list-text">Apague las herramientas de ONTAP para máquinas virtuales de VMware vSphere desde vCenter Server y elimine las máquinas virtuales.</block>
   <block id="056110d308abee4fb5305efd8c8994d0" category="paragraph"><block ref="056110d308abee4fb5305efd8c8994d0" category="inline-link-macro-rx"></block></block>
   <block id="af97740fd99b637615a0fe129d5fc42f" category="list-text">Inicie ONTAP TOOLS Manager desde un explorador web:<block ref="a2fad8db83c338dbc95675bd05c70607" prefix=" " category="inline-code"></block></block>
@@ -2699,7 +2695,6 @@ Los códigos de error tienen una longitud de cinco dígitos, donde los dos prime
   <block id="1ecc48e7d703ccee72239ae065025e8b" category="list-text">Protege solo los almacenes de datos seleccionados en un clúster de hosts.</block>
   <block id="36c8c92fa35e1f64c72f630ce6180299" category="list-text">Agrupa los almacenes de datos seleccionados en grupos de protección.</block>
   <block id="7d99b8f7ded10f4f2921239a1a9c9a43" category="list-text">Aplica las relaciones y políticas de SnapMirror a nivel de grupo de protección.</block>
-  <block id="76b1a8b712394da72e5366b816d6419b" category="list-text">Utiliza diferentes enfoques de protección para los distintos grupos de almacenes de datos en el mismo clúster.</block>
   <block id="1947b0d44f9e85eca7623e1cab6b8bae" category="paragraph">Esta función solo es compatible con almacenes de datos VMFS que usan los protocolos iSCSI o FC.</block>
   <block id="632923e99d3fb84490cf1fed11f3d12a" category="paragraph">Puedes utilizar los siguientes tipos de políticas para los almacenes de datos que cumplan los requisitos:</block>
   <block id="b1f095471f89f11c20fe033a35afe72f" category="list-text">*AutomatedFailOverDuplex (AFD)*</block>
@@ -2731,7 +2726,6 @@ Los códigos de error tienen una longitud de cinco dígitos, donde los dos prime
   <block id="ab5d207d269446dad86a9b15cec92d6a" category="list-text">No se admiten políticas asíncronas personalizadas. Usa la política asíncrona predeterminada de ONTAP.</block>
   <block id="224a5056830c20959480843b73cf0533" category="list-text">En configuraciones terciarias o solo asíncronas, la limpieza de las relaciones asíncronas es manual.</block>
   <block id="4f948c7d9b938caffddb97c0d0f8394c" category="list-text">Activa la conmutación por error desde ONTAP System Manager. Configura ONTAP Mediator fuera de ONTAP tools.</block>
-  <block id="9aab7c7432877f8502ee090eee7abdc2" category="paragraph">Al actualizar desde ONTAP tools 10.5, las configuraciones existentes de protección de clústeres de hosts se migran al formato de protección granular de almacenes de datos. Después de la actualización, verifica los grupos de protección y la pertenencia a los almacenes de datos.</block>
   <block id="7f6120908ce94360b9a41585185a9108" category="inline-link-macro">Protege los almacenes de datos en un clúster con ONTAP tools</block>
   <block id="c1b7f8376d6217ab8332bd89d741aae1" category="list-text"><block ref="c1b7f8376d6217ab8332bd89d741aae1" category="inline-link-macro-rx"></block></block>
   <block id="aa80a3d8f54a41c521c248368b7227fa" category="summary">Asigna carpetas entre los sitios protegidos y de recuperación para preparar los flujos de trabajo de conmutación por error de VMware Live Site Recovery.</block>
@@ -2855,7 +2849,6 @@ Los códigos de error tienen una longitud de cinco dígitos, donde los dos prime
   <block id="a6e5efc1d16eb34745bb75a77226d583" category="list-text">Activa la copia de seguridad con un RPO bajo y asegúrate de que haya una copia de seguridad visible en la interfaz de vSphere Client. Descarga la carpeta de copia de seguridad antes de la actualización.</block>
   <block id="bbac914a781e9dc109fcf5bab03d2c11" category="list-text">Localiza la máquina virtual principal de ONTAP tools e inicia la consola web.</block>
   <block id="034b9e64b5ae759244f5eecd018ed221" category="list-text">El certificado de la puerta de enlace se renueva con un periodo de validez de un año. Al eliminar el adaptador SRA anterior y subir el nuevo adaptador 10.6, la validez del certificado SRA pasa de 10 años a 1 año.</block>
-  <block id="9b63ec403219c80e52e7dae8c3a61d23" category="list-text">Si existen ajustes de protección del clúster de host de la versión 10.5 o anteriores, ONTAP tools crea un elemento de navegación independiente denominado *Configuración de protección del clúster* durante la actualización.</block>
   <block id="1e271ba64f48de298f8de2968b529b3a" category="paragraph">Después de actualizar a ONTAP tools for VMware vSphere 10.6:</block>
   <block id="7e07903e1b79156be237c3f4f9194ffe" category="list-text">Elimina el adaptador SRA de ONTAP tools 10.4 o 10.5 y carga el archivo tar del adaptador SRA 10.6.</block>
   <block id="2d96dfea27764d22dbafb174af190a36" category="list-text">Abre *Cluster protection configuration* y verifica que los ajustes de protección de clúster de los hosts existentes estén presentes y mapeados correctamente.</block>
@@ -3138,4 +3131,18 @@ Los códigos de error tienen una longitud de cinco dígitos, donde los dos prime
   <block id="4db51794b7899f8781b7e514861f9c54" category="paragraph">Si se puede acceder a los servidores, el problema no está relacionado con la accesibilidad de los mismos. Si un servidor es realmente inaccesible, elimínalo de ONTAP tools Manager y proporciona en su lugar un servidor NTP accesible.</block>
   <block id="58d802804e6af6816051d4101a78cd4b" category="list-text">Si la actualización falla debido a cualquier otro problema durante la actualización de NTP, comprueba los siguientes registros:</block>
   <block id="f5589bd09ceeb2368f74d5725fa2dcc7" category="list-text"><block ref="f5589bd09ceeb2368f74d5725fa2dcc7" category="inline-link-rx"></block></block>
+  <block id="345a87b70523fdb5dd79038a7e873845" category="admonition">No instales la máquina virtual de ONTAP tools dentro de una vApp de VMware en vCenter Server.</block>
+  <block id="b86439358b560760313055a90bd5812c" category="list-text">Elimina las instancias de vCenter Server integradas en ONTAP tools for VMware vSphere. Consulta <block ref="71e9ea3cb5165d1231d572643ddb35cb" category="inline-link-macro-rx"></block>.</block>
+  <block id="26adf559940dd20d02f0bdec74d0cc28" category="paragraph">Al eliminar una instancia de vCenter Server, las herramientas de ONTAP pueden guiarte durante la limpieza necesaria. Si se te solicita en el cuadro de diálogo *Eliminar vCenter*, selecciona *Eliminar todos los artefactos de almacenamiento de este vCenter Server* y *Entiendo que los datastores asociados ya no serán gestionados por las herramientas de ONTAP* y, a continuación, selecciona *Forzar eliminación*.</block>
+  <block id="c4d716c88a05e0d00551ac8ea6da15a0" category="paragraph">Antes de usar *Force delete*, asegúrate de que se hayan eliminado o migrado todos los almacenes de datos de vVols, de que todos los almacenes de datos protegidos estén desprotegidos y de que no haya ninguna tarea de detección en ejecución.</block>
+  <block id="7eb5227d0f36e7346167a93b856b0fa7" category="paragraph">Si no se puede acceder al servidor vCenter durante el proceso de eliminación, ONTAP tools solo elimina el registro del servidor vCenter. Debes anular manualmente el registro del complemento de VMware vCenter Server.</block>
+  <block id="38fbd92f67469b25016c6a83c8a94171" category="list-text">Utiliza diferentes estrategias de protección para los distintos grupos de almacenes de datos en el mismo clúster de hosts.</block>
+  <block id="a56b4b9b7649b05781df3dab1c45651b" category="list-text">Asigna varios ajustes de protección a un único clúster de hosts.</block>
+  <block id="4bf2e3d77c651d3fb73aa4b90e436796" category="list-text">Configura los ajustes de protección en la misma máquina virtual de almacenamiento (SVM), en distintas SVM o en distintos sistemas de almacenamiento.</block>
+  <block id="20d81ee1f8e1f28cd4b2b539fbf352ee" category="list-text">Deja algunos almacenes de datos de un clúster de hosts sin proteger.</block>
+  <block id="e472ea4c0e1a3e6d590c155e00c141db" category="list-text">Quita la protección de un almacén de datos concreto.</block>
+  <block id="aa398ba1f850bdbde5e4cba259662cc0" category="list-text">Protege un almacén de datos durante el aprovisionamiento.</block>
+  <block id="47d11b58a635ad0e3f489449a130c627" category="paragraph">Al actualizar desde ONTAP tools for VMware vSphere 10.5, la configuración existente de protección de clústeres de hosts se convierte automáticamente en protección granular de almacenes de datos. Tras la actualización, comprueba los grupos de protección y la pertenencia a los almacenes de datos.</block>
+  <block id="c3f0c8b4da16f3b290431c535f98a9f7" category="list-text">Si existen ajustes de protección de clústeres de host de ONTAP tools for VMware vSphere 10.5 o anterior, ONTAP tools los convierte en protección granular de almacenes de datos y crea un elemento de navegación independiente de *Configuración de protección de clústeres*.</block>
+  <block id="744e01cbfcb5b5f86287c1c9beac6075" category="list-text">Para obtener más información sobre las funciones de protección granular de los almacenes de datos y los requisitos para optar a ellas, consulta <block ref="9a8072c85e6a05ec4ad84b9967b3caa6" category="inline-link-macro-rx"></block>.</block>
 </blocks>
