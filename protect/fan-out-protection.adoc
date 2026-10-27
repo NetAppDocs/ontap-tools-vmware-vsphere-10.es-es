@@ -14,7 +14,7 @@ summary: Protege un grupo de consistencia con protección fan-out usando replica
 Utiliza la protección fan-out para proteger un grupo de consistencia en dos clústeres ONTAP de destino. ONTAP tools mantiene la relación sincrónica a través de los flujos de trabajo de protección de sincronización activa de crear, editar y eliminar SnapMirror, y VMware Live Site Recovery mantiene la relación asincrónica a través de los flujos de trabajo de conmutación por error y de reprotección.
 
 
-NOTE: La salida en abanico no es compatible para los usuarios de SVM.
+NOTE: La protección fan-out no es compatible con los usuarios de SVM. La protección fan-out requiere una relación asíncrona además de la relación AutomatedFailOverDuplex, y ONTAP tools no admite crear protección asíncrona para un backend de almacenamiento añadido con credenciales de usuario de SVM.
 
 Para configurar la protección en abanico, conecte los tres clústeres de sitios y las SVM.
 
